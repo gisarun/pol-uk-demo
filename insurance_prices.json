@@ -1,0 +1,165 @@
+[{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_ST",
+    "SKU": "INSTR_ST",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "21.24"
+},{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_ST_ANNUAL",
+    "SKU": "INSTR_ST_ANNUAL",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "39.29"
+},{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_COV_COVID",
+    "SKU": "INSTR_COV_COVID",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "15.14"
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_COV_DISRUPTION",
+    "SKU": "INSTR_COV_DISRUPTION",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "7.43"
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_COV_GADGET",
+    "SKU": "INSTR_COV_GADGET",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "15.07"
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_COV_SPORTS",
+    "SKU": "INSTR_COV_SPORTS",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "7.43"
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_COV_EXCESS",
+    "SKU": "INSTR_COV_EXCESS",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "1.98"
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_EXT_CR",
+    "SKU": "INSTR_EXT_CR",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "4.00",
+    "CascadeVoid": true
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_EXT_MT",
+    "SKU": "INSTR_EXT_MT",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "18.05",
+    "CascadeVoid": true
+},
+{
+    "Type": "1",
+    "RetailerId": "defaultRetailer",
+    "ProductCode": "INSTR_MT",
+    "SKU": "INSTR_MT",
+    "StartDate": {
+        "f": 1,
+        "value": "20180411"
+    },
+    "EndDate": {
+        "f": 1,
+        "value": "21180411"
+    },
+    "CurrencyId": "GBP",
+    "Amount": "39.29",
+    "CascadeVoid": true
+}
+]
+
+
+

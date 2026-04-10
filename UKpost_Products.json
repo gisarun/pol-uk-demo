@@ -1,0 +1,469 @@
+[
+    {
+        "id": "UB400",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "UB400",
+        "Name": "12 x 2nd Class Stamp Book",
+        "Desc": "One pack of stamps, containing 12 second-class stamps.",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL": "https://shop.royalmail.com/media/catalog/product/cache/3541af23d7a0b2cd4fd132ad21fe3039/1/2/12x2nd_retail_book_closed_oct_2016.jpg",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "UB400",
+                "Name": "12 x 2nd Class Stamp Book",
+                "Desc": "One pack of stamps, containing 12 second-class stamps.",
+                "isDeleted": 0,
+                "ImageUrl": "https://shop.royalmail.com/media/catalog/product/cache/3541af23d7a0b2cd4fd132ad21fe3039/1/2/12x2nd_retail_book_closed_oct_2016.jpg",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "UB400"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "SpecialDelivery_1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "SpecialDelivery_1",
+        "Name": "Special Delivery Guaranteed by 1PM 2KG",
+        "Desc": "Parcel_9632565325",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "SpecialDelivery_1",
+                "Name": "Special Delivery Guaranteed by 1PM 2KG",
+                "Desc": "Parcel_9632565325",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "SpecialDelivery_1"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "CASH_WITHDRAWAL",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "CASH_WITHDRAWAL",
+        "Name": "Cash Withdrawal Account  *******63",
+        "Desc": "",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL": "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POLBankWithdrawal.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "CASH_WITHDRAWAL",
+                "Name": "Cash Withdrawal Account  *******63",
+                "Desc": "",
+                "isDeleted": 0,
+                "ImageUrl": "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POLBankWithdrawal.png",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "CASH_WITHDRAWAL"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "PARCEL1STCL1KG",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL1STCL1KG",
+        "Name": "Small Parcel 1st Class 1kg",
+        "Desc": "1 day delivery aim",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL" : "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POL_PARCEL_1st.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "PARCEL1STCL1KG",
+                "Name": "Small Parcel 1st Class 1kg",
+                "Desc": "1 day delivery aim",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "PARCEL1STCL1KG"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "PARCEL1STCL2KG",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL1STCL2KG",
+        "Name": "Small Parcel 1st Class 2kg",
+        "Desc": "1 day delivery aim",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL" : "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POL_PARCEL_1st.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "PARCEL1STCL2KG",
+                "Name": "Small Parcel 1st Class 2kg",
+                "Desc": "1 day delivery aim",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "PARCEL1STCL2KG"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "PARCEL2SDCL1KG",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL2SDCL1KG",
+        "Name": "Small Parcel 2nd Class 1kg",
+        "Desc": "1 day delivery aim",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL" : "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POL_PARCEL_2nd.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "PARCEL2SDCL1KG",
+                "Name": "Small Parcel 2nd Class 1kg",
+                "Desc": "1 day delivery aim",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "PARCEL2SDCL1KG"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "PARCEL2SDCL2KG",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL2SDCL2KG",
+        "Name": "Small Parcel 2nd Class 2kg",
+        "Desc": "1 day delivery aim",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL" : "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POL_PARCEL_2nd.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "PARCEL2SDCL2KG",
+                "Name": "Small Parcel 2nd Class 2kg",
+                "Desc": "1 day delivery aim",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "PARCEL2SDCL2KG"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "PARCELSIGNED1STCL1KG",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCELSIGNED1STCL1KG",
+        "Name": "Signed For® 1st Class 1kg",
+        "Desc": "1 day delivery aim",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL" : "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POL_PARCEL_1st.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "PARCELSIGNED1STCL1KG",
+                "Name": "Signed For® 1st Class 1kg",
+                "Desc": "1 day delivery aim",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "PARCELSIGNED1STCL1KG"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "id": "PARCELSIGNED2SDCL1KG",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCELSIGNED2SDCL1KG",
+        "Name": "Signed For® 2nd Class 1kg",
+        "Desc": "3 days delivery aim",
+        "Style": "",
+        "IsLayawayable": 0,
+        "IsTaxExemptible": 1,
+        "isDeleted": 0,
+        "AllowDiscounts": 1,
+        "ProductType": "Merchandise",
+        "MainImageId": "",
+        "productURL" : "https://sales-endlessaisle.s3.amazonaws.com/assets/Images/POL_DEMO/POL_PARCEL_1st.png",
+        "MerchandiseGroups": {
+            "MerchandiseGroup": ["products"]
+        },
+        "propertiesJson": {
+            "product": {
+                "maximum": "999",
+                "minimum": "1",
+                "maxPrice": "100000",
+                "minPrice": "1",
+                "maxNoOfDiscounts": "99",
+                "isPriceOverridable": "1",
+                "isRefundAllowed": "1",
+                "isDiscountable": "1",
+                "isQuotable": "0",
+                "isQuantityEditable": "1",
+                "allowZeroQtyOnVR": "0",
+                "isVoidable": "1",
+                "AllowDiscounts": "1",
+                "Status": "2",
+                "isDeleted": "0"
+            }
+        },
+        "ProductSkus": {
+            "Sku": [{
+                "id": "PARCELSIGNED2SDCL1KG",
+                "Name": "Signed For® 2nd Class 1kg",
+                "Desc": "3 days delivery aim",
+                "isDeleted": 0,
+                "ImageUrl": "",
+                "Barcodes": {
+                    "type": [{
+                        "id": "SKU",
+                        "value": "PARCELSIGNED2SDCL1KG"
+                    }]
+                }
+            }]
+        }
+    }
+]

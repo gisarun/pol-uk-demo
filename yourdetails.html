@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="robots" content="noindex">
+      <title>Personal Details</title>
+      <link rel="icon" href="img/favicon.png" type="image/png">
+      <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+      <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+   </head>
+   <!--[if lte IE 9 ]>
+   <body role="document" id="" class="ie9">
+      <![endif]-->
+      <!--[if (gt IE 9)|!(IE)]>-->
+      <body role="document" class="" ng-app='PomsApp' ng-controller="SharedController">
+         <!--<![endif]-->
+         <header class="header-funnel">
+            <div class="header-funnel__container-top padding-left-30 mobile-left-padding10">
+               <div class="header-funnel__logo">
+                  <a href="index.html">
+                  <!-- <img class="header-funnel__logo-image" src="img/Post-Office-Logo.svg" alt="Logo" /> -->
+                  <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                  </a>
+               </div>
+               <div class="header-funnel__help">
+                  <span class="header-funnel__help-action" data-qtip="true">Need Help?</span>
+                  <div class="qtip-text">
+                     <strong>0330 123 1387</strong><br />
+                     UK Call Line<br />
+                     Mon - Sat: 9am-5:30pm<br />
+                     Closed Sundays
+                     <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                     <span type="button" class="closing-icon" onclick="closeTooltipsWindowT('qtip-0')">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="header-funnel__container">
+               <div class="header-funnel__top-title">Travel Insurance</div>
+               <div class="stepper">
+                  <div class="stepper__item" data-active=true data-current=false>
+                     <span class="stepper__num"><span><i>1</i></span></span>
+                     <span class="stepper__title" style="">Trip Details</span>
+                  </div>
+                  <div class="stepper__item" data-active=true data-current=false>
+                     <span class="stepper__num"><span><i>2</i></span></span>
+                     <span class="stepper__title" style="">Quote</span>
+                  </div>
+                  <div class="stepper__item" data-active=true data-current=false>
+                     <span class="stepper__num"><span><i>3</i></span></span>
+                     <span class="stepper__title" style="">Additional Cover</span>
+                  </div>
+                  <div class="stepper__item" data-active=true data-current=true>
+                     <span class="stepper__num"><span><i>4</i></span></span>
+                     <span class="stepper__title" style="">Personal Details</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>5</i></span></span>
+                     <span class="stepper__title" style="">Pay</span>
+                  </div>
+               </div>
+               <h1 class="header-funnel__title">Personal Details</h1>
+            </div>
+         </header>
+         <script>
+            function closeTooltipsWindowT(closingIcon) {
+                var closingIco = document.getElementById(closingIcon);
+                $(closingIco).attr("style", "display:none; z-index:150000;");
+            }
+            
+         </script>
+         <div class="container main no-container-padding main-form-container " role="main">
+            <div class="col-md-8 col-main no-container-padding  ">
+               <!-- <form action="/web/travel/quote/yourdetails?E=0" id="form" method="get" novalidate=""> -->
+                  <form action="pay.html" id="form" method="get" novalidate="" autocomplete="off">
+                  <div class="personal-details">
+                     <div class="personal-details__body">
+                        <div class="callout">
+                           <div class="callout__title">Almost there!</div>
+                           <div class="callout__message">
+                              <p>We just need a few more details. To understand what we use your details for, please read our <a href="#" target="_blank">privacy policy</a>.</p>
+                           </div>
+                        </div>
+                        <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                           <div class="panel2 panel2--summary">
+                              <div class="panel2__body panel2__body--no-padding">
+                                 <div class="summary summary--collapsed">
+                                    <h3 class="summary__title">Summary of cover<span class="summary__toggle" data-summary-toggle></span></h3>
+                                    <span class="hide">177800176_TC0152699338Q/00_177745415</span>
+                                    <div class="summary__data" id="tillrecipt">
+                                       <div class="summary__item summary__item--caption" id="prices" ng-model="price" ng-init="price = additionalCoverPrice()">
+                                          <div class="summary__label">
+                                             Price to pay
+                                             <span class="qtip__icon" data-qtip="true"></span>
+                                             <div class="qtip-text">
+                                                Includes Insurance Premium Tax at the current rate (if applicable)            
+                                             </div>
+                                          </div>
+                                          <div class="summary__value totalPrice_value">£{{totalPrice | number:2}}</div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Standard cover</div>
+                                          <div class="summary__value standardCover_value">£{{standardCover | number:2}}</div>
+                                       </div>
+                                       <!-- <div class="summary__item j">
+                                          <div class="summary__label"><span class="pd-right-5">+</span>Cruise Cover</div>
+                                          <div class="summary__value">£17.54</div>
+                                       </div> -->
+                                       <!--
+                                          <div class="summary__item" ng-init="initOptionalLabel('0', '0')" ng-show="showOptionalLabel">
+                                              <div class="summary__label"><strong>j</strong></div>
+                                          </div>
+                                          -->
+                                       <!--<script>
+                                          function getAdditionalCovers() {
+                                              return window.localStorage.getItem('selectedAdditionalCovers');
+                                          }
+                                          
+                                          const sac = window.localStorage.getItem('selectedAdditionalCovers');
+                                          var sacArray = sac.split('|');
+                                          
+                                          for (let j = 0; j < sacArray.length; j++) {
+                                              var item = 'show_' + sacArray[j].replace(' ', '');
+                                              if (item == 'show_GadgetCover') {
+                                                  show_GadgetCover = true;
+                                              }
+                                              //setAdditionalCoverShow(item);
+                                              //alert(item);
+                                              //  $scope[item] = true;
+                                              //item = true;
+                                              //alert($scope[item]);
+                                              //alert(item);
+                                          }-->
+                                       <!--</script>-->
+                                    </div>
+                                    <div class="summary__data">
+                                       <div class="summary__item">
+                                          <div class="summary__caption">Trip Details</div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Policy type</div>
+                                          <div class="summary__value ">{{policyType}}</div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Area of travel</div>
+                                          <div class="summary__value" >
+                                             {{address}}
+                                          </div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Departing On</div>
+                                          <div class="summary__value departingOn_value"> {{departingOn}} </div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Returning On</div>
+                                          <div class="summary__value"> {{returningOn}} </div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Who's covered</div>
+                                          <div class="summary__value coverType_value">{{coverType}}</div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Cancellation limit</div>
+                                          <div class="summary__value">&#163;3,000</div>
+                                       </div>
+                                       <div class="summary__item">
+                                          <div class="summary__label">Medical limit</div>
+                                          <div class="summary__value">&#163;7,500,000</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="personal-details__title">Traveller's information</div>
+                        <div ng-class="(0 == 1-1) ? 'form-details form-details--border' : 'form-details'" style="margin-top:15px">
+                           <div class="form-details__name">
+                              Traveller 1
+                              <!-- Traveller 1 -
+                              <strong>
+                              22/07/1995
+                              </strong> -->
+                           </div>
+                           <div class="form-details__group form-details__group--personal">
+                              <div class="form-details__item">
+                                 <label for="Policies_0__Risk_0__Traveller_Title">Title</label>
+                                 <div class="form-group2">
+                                    <div class="error-section" ng-init="Policies[0].Risk[0].Traveller.Title=''">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.Title" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <div class="form-select">
+                                          <select class="form-control" data-val="true" data-val-required="Please select title of traveller" id="Policies_0__Risk_0__Traveller_Title" name="Policies[0].Risk[0].Traveller.Title" ng-model="Policies[0].Risk[0].Traveller.Title" title="Please fill out this field">
+                                             <option value="">Title</option>
+                                             <option value="Mr">Mr</option>
+                                             <option value="Mrs">Mrs</option>
+                                             <option value="Miss">Miss</option>
+                                             <option value="Ms">Ms</option>
+                                             <option value="Sr">Sir</option>
+                                             <option value="Lady">Lady</option>
+                                             <option value="Dr">Doctor</option>
+                                             <option value="Rev">Reverend</option>
+                                             <option value="Lord">Lord</option>
+                                             <option value="Dame">Dame</option>
+                                             <option value="Mx">Mx</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Policies_0__Risk_0__Traveller_FirstName">First Name(s)</label>
+                                 <div class="form-group2">
+                                    <div class="error-section">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.FirstName" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <input class="form-control capital" data-val="true" data-val-regex="Please enter first name of traveller" data-val-regex-pattern="^[a-zA-Z- &#39;]+$" data-val-required="Please enter first name of traveller" id="Policies_0__Risk_0__Traveller_FirstName" name="Policies[0].Risk[0].Traveller.FirstName" ng-model="Policies[0].Risk[0].Traveller.FirstName" placeholder="First Name(s)" title="Please enter first name of traveller" type="text" value="" />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Policies_0__Risk_0__Traveller_LastName">Last Name</label>
+                                 <div class="form-group2">
+                                    <div class="error-section">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.LastName" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <input class="form-control capital" data-val="true" data-val-regex="Please enter surname of traveller" data-val-regex-pattern="^[a-zA-Z- &#39;]+$" data-val-required="Please enter surname of traveller" id="Policies_0__Risk_0__Traveller_LastName" name="Policies[0].Risk[0].Traveller.LastName" ng-model="Policies[0].Risk[0].Traveller.LastName" placeholder="Last Name" title="Please fill out this field" type="text" value="" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="personal-details__title">Policy contact details</div>
+                        <div class="form-details">
+                           <div class="form-details__group form-details__group--column">
+                              <div class="form-details__item">
+                                 <label for="Account_PrimaryPhone">Phone number</label>
+                                 <div class="form-group2">
+                                    <div class="error-section">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.PrimaryPhone" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <!-- <input class="form-control" data-val="true" data-val-maxlength="The field Primary Phone must be a string or array type with a maximum length of &#39;15&#39;." data-val-maxlength-max="15" data-val-regex="Please enter valid contact number" data-val-regex-pattern="^(((\+44\s?[0-7]\d{3}|\(?0[0-7]\d{3}\)?)\s?\d{3}\s?\d{3})|((\+44\s?[0-7]\d{3}|\(?0[0-7]\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?[0-7]\d{1}|\(?0[0-7]\d{1}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$" data-val-required="" id="Account_PrimaryPhone" name="Account.PrimaryPhone" ng-model="Account.PrimaryPhone" placeholder="like 045123232323" title="" type="number" value="" /> "^[7-9][0-9]{9}$"-->
+                                       <input class="form-control" data-val="true" data-val-maxlength="The field Primary Phone must be a string or array type with a maximum length of &#39;15&#39;." data-val-maxlength-max="15"  data-val-regex="Please enter valid contact number"  data-val-required="" id="Account_PrimaryPhone" name="Account.PrimaryPhone" ng-model="Account.PrimaryPhone" placeholder="Phone number" title="" type="number" value="" />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Account_MobilePhone">Mobile number</label>
+                                 <div class="form-group2">
+                                    <div class="error-section">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.MobilePhone" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <!-- <input class="form-control" data-val="true" data-val-regex="Please enter valid mobile number" data-val-regex-pattern="^(0[1-7]{1}[0-9]{7,9})|^(\\+44[1-7]{1}[0-9]{7,9})|^(0044[1-7]{1}[0-9]{7,9})?$" id="Account_MobilePhone" name="Account.MobilePhone" ng-model="Account.MobilePhone" placeholder="Mobile number" title="" type="number" value="" /> -->
+                                       <input class="form-control" data-val="true" data-val-regex="Please enter valid mobile number"  id="Account_MobilePhone" name="Account.MobilePhone" ng-model="Account.MobilePhone" placeholder="Mobile number" title="" type="number" value="" />
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Account_Email">Email address</label>
+                                 <div class="form-group2">
+                                    <div class="error-section">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.Email" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <input class="form-control" data-val="true" data-val-email="" data-val-length="The field Email must be a string with a minimum length of 7 and a maximum length of 254." data-val-length-max="254" data-val-length-min="7" data-val-regex="" data-val-required="Please enter a valid email address" id="Account_Email" name="Account.Email" ng-model="Account.Email" placeholder="Email address" title="" type="email" value="" />
+                                    </div>
+                                 </div>
+                                 <span class="form-details__description" id="after-email-text">You will receive a confirmation email</span>
+                              </div>
+                              <div class="form-details__error" id="email-error-section">
+                                 <div class="invalid-section">
+                                    <div class="invalid-msg no-padding" id="invalid-message-email-div"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="address-lookup" class="address-lookup mg-bottom-30">
+                           <div class="personal-details__title">Address</div>
+                           <div class="form-details">
+                              <div class="form-details__group form-details__group--column" ng-init="showManualAddress=false">
+                                 <div class="form-details__item" ng-class="showManualAddress ? '':'hidden'">
+                                    <label for="Account_Address_Line1">Line 1</label>
+                                    <div class="form-group2">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.Address.Line1" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <input class="form-control capital" data-val="true" data-val-regex="" data-val-required="Please enter address details" id="Account_Address_Line1" name="Account.Address.Line1" ng-model="Account.Address.Line1" placeholder="Enter Address 1" title="Please fill out this field " type="text" value="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-details__item" ng-class="showManualAddress ? '':'hidden'">
+                                    <label for="Account_Address_Line2">Line 2</label>
+                                    <div class="form-group2">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.Address.Line2" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <input class="form-control capital" data-val-regex="" id="Account_Address_Line2" name="Account.Address.Line2" ng-model="Account.Address.Line2" placeholder="Enter Address 2" title="Please fill out this field " type="text" value="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-details__item" ng-class="showManualAddress ? '':'hidden'">
+                                    <label for="Account_Address_City">City</label>
+                                    <div class="form-group2">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.Address.City" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <input class="form-control capital" data-val="true" data-val-regex="" data-val-required="Please enter address details" id="Account_Address_City" name="Account.Address.City" ng-model="Account.Address.City" placeholder="Enter City" title="Please fill out this field " type="text" value="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-details__item" ng-class="showManualAddress ? '':'hidden'">
+                                    <label for="Account_Address_County">County</label>
+                                    <div class="form-group2">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.Address.County" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <input class="form-control capital" data-val="true" data-val-length="The field County must be a string with a minimum length of 1 and a maximum length of 60." data-val-length-max="60" data-val-length-min="1" data-val-regex="Please enter valid county" data-val-regex-pattern="^[a-zA-Z ]*$" id="Account_Address_County" name="Account.Address.County" ng-model="Account.Address.County" placeholder="Enter County" title="Please fill out this field " type="text" value="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-details__item" ng-class="showManualAddress ? '':'hidden'">
+                                    <label for="Account_Address_PostCode">Postcode</label>
+                                    <div class="form-group2">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.Address.PostCode" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <input class="form-control capital" data-val="true" data-val-length="The field Post Code must be a string with a minimum length of 5 and a maximum length of 8." data-val-length-max="8" data-val-length-min="5" data-val-regex="" data-val-regex-pattern="^[a-zA-Z0-9_ ]*$" data-val-required="Please enter valid postcode" id="Account_Address_PostCode" name="Account.Address.PostCode" ng-model="Account.Address.PostCode" placeholder="Enter Postcode" title="Please fill out this field " type="text" value="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-details__group no-mgtop" ng-class="showManualAddress ? 'hidden no-validate':''">
+                                 <div class="form-details__item">
+                                    <label for="AddressLookup_Address_PostCode">Postcode</label>
+                                    <div class="form-group2">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="AddressLookup.Address.PostCode" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <input class="form-control capital" data-val="true" data-val-length="The field Post Code must be a string with a minimum length of 5 and a maximum length of 8." data-val-length-max="8" data-val-length-min="5" data-val-regex="Please enter valid postcode." data-val-regex-pattern="^[a-zA-Z0-9_ ]*$" data-val-required="Please enter address details" id="AddressLookup_Address_PostCode" name="AddressLookup.Address.PostCode" ng-model="AddressLookup.Address.PostCode" placeholder="Enter Postcode" title="" type="text" value="" />
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- <div class="form-details__action">
+                                    <button type="button" class="btn2" id="address-md-btn" onclick="return false;" ng-click="address('find');"><span>Find Address</span></button>
+                                 </div> -->
+                              </div>
+                              <div class="form-details__additional">
+                                 <button type="button" class="btn2 btn2--link" onclick="return false;" ng-click="showManualAddress = true" ng-class="showManualAddress ? 'hidden':''"><span>Enter address manually</span></button>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="div-billingInfo" class="your-details__billing">
+                           <div class="your-details__label">Is the lead passenger the cardholder?</div>
+                           <div class="form-group2 radio-group">
+                              <div class="">
+                                 <div class="invalid-msg hide">
+                                    <span class="field-validation-valid" data-valmsg-for="radio-NeedBillingAddress" data-valmsg-replace="true"></span>
+                                 </div>
+                              </div>
+                              <div class="form-details__radios">
+                                 <label for="NeedBillingAddress-True" class="radio " title="">
+                                 <input data-val="true" data-val-required="Please specify if the cardholder is the lead passenger" id="NeedBillingAddress-True"
+                                    name="radio-NeedBillingAddress" value="Yes" type="radio">
+                                 <span>Yes</span>
+                                 </label>
+                                 <label for="NeedBillingAddress-False" class="radio " title="">
+                                 <input data-val="true" data-val-required="Please specify if the cardholder is the lead passenger" id="NeedBillingAddress-False"
+                                    name="radio-NeedBillingAddress" value="No" type="radio">
+                                 <span>No</span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-details hide" id="div-billingAddress">
+                           <div class="form-details__group form-details__group--column">
+                              <div class="form-details__item">
+                                 <label for="Billing_Address_Mobile">Mobile Number</label>
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Billing.Address.Mobile" data-valmsg-replace="true">Please enter valid mobile number</span>
+                                    </div>
+                                    <input class="form-control ng-pristine ng-valid ng-touched" data-val="true"
+                                       data-val-required="Please enter mobile number"
+                                       data-val-regex="Please enter valid mobile number" data-val-regex-pattern="^(0[1-7]{1}[0-9]{7,9})|^(\\+44[1-7]{1}[0-9]{7,9})|^(0044[1-7]{1}[0-9]{7,9})?$"
+                                       id="Billing_Address_Mobile" name="Billing.Address.Mobile" placeholder="Mobile number" title="" type="number" value="" aria-invalid="false">
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Billing_Address_EMail">Email Address</label>
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Billing.Address.Email" data-valmsg-replace="true">Please enter a valid email address</span>
+                                    </div>
+                                    <input class="form-control " data-val="true" data-val-email=""
+                                       data-val-length="The field Email must be a string with a minimum length of 7 and a maximum length of 254."
+                                       data-val-length-max="254" data-val-length-min="7" data-val-regex="" data-val-required="Please enter a valid email address"
+                                       id="Billing_Address_Email" name="Billing.Address.Email" placeholder="Email Address" title="Please fill out this field"
+                                       type="email" value="" aria-invalid="false">
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Billing_Address_Line1">Line 1</label>
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Billing.Address.Line1" data-valmsg-replace="true">Please enter address details</span>
+                                    </div>
+                                    <input class="form-control capital" data-val="true" data-val-regex="" data-val-required="Please enter address details"
+                                       id="Billing_Address_Line1" name="Billing.Address.Line1"
+                                       placeholder="Enter Address 1" title="Please fill out this field " type="text" value="" aria-invalid="false">
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Billing_Address_Line2">Line 2</label>
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Billing.Address.Line2" >Please enter address details</span>
+                                    </div>
+                                    <input class="form-control capital" data-val-regex="" id="Billing_Address_Line2" name="Billing.Address.Line2"
+                                       placeholder="Enter Address 2" title="Please fill out this field " type="text" value="" aria-invalid="false">
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Billing_Address_City">City</label>
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Billing.Address.City" data-valmsg-replace="true">Please enter address details</span>
+                                    </div>
+                                    <input class="form-control capital" data-val="true" data-val-regex="" data-val-required="Please enter address details"
+                                       id="Billing_Address_City" name="Billing.Address.City" placeholder="Enter City" title="Please fill out this field " type="text" value="" aria-invalid="false">
+                                 </div>
+                              </div>
+                              <div class="form-details__item">
+                                 <label for="Billing_Address_PostCode">Postcode</label>
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid billing-postcode-error" data-valmsg-for="Billing.Address.PostCode">Please enter address details</span>
+                                    </div>
+                                    <input class="form-control capital"
+                                       data-val="true"
+                                       data-val-required="Please enter address details"
+                                       id="Billing_Address_PostCode" name="Billing.Address.PostCode"
+                                       onmouseout="PostCodeFocusout()"
+                                       onblur="PostCodeFocusout()"
+                                       placeholder="Enter Postcode" title="Please fill out this field " type="text" value="" aria-invalid="false">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <script type="text/javascript">
+                           function PostCodeFocusout() {
+                               if ($("#Billing_Address_PostCode").val().trim().length === 0) {
+                                   $("#Billing_Address_PostCode").siblings(1).removeClass("hide");
+                                   $("#Billing_Address_PostCode").parent(0).addClass("invalid-section error-section");
+                                   $(".billing-postcode-error").text("The field Post Code must be a string with a minimum length of 5 and a maximum length of 8.");
+                               }
+                               else {
+                                   var isPatterenValid = new RegExp("^[a-zA-Z0-9_ ]*$");
+                                   var postCodeValue = $("#Billing_Address_PostCode").val().trim();
+                                   if (postCodeValue.length < 5 || isPatterenValid.test(postCodeValue) === false) {
+                                       $("#Billing_Address_PostCode").siblings(1).removeClass("hide");
+                                       $("#Billing_Address_PostCode").parent(0).addClass("invalid-section error-section");
+                                       $(".billing-postcode-error").text("The field Post Code must be a string with a minimum length of 5 and a maximum length of 8.");
+                                   }
+                                   else {
+                                       $("#Billing_Address_PostCode").siblings(1).addClass("hide");
+                                       $("#Billing_Address_PostCode").parent(0).removeClass("invalid-section error-section");
+                                   }
+                               }
+                           }
+                        </script>
+                        <div class="form-details">
+                           <div class="form-details__item">
+                              <label for="Account_MarketingContactType">How did you hear about us?</label>
+                              <div class="form-group2">
+                                 <div class="error-section" ng-init="Account.MarketingContactType=''">
+                                    <div class="invalid-msg hide">
+                                       <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.MarketingContactType" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="form-select">
+                                       <select class="form-control" data-ufe-br-name="Account.MarketingContactType" data-ufe-br-toggleID="branch" data-ufe-br-values="ViaaPostOffice" data-val="true" data-val-required="Please select how you heard about us" id="Account_MarketingContactType" name="Account.MarketingContactType" ng-model="Account.MarketingContactType" title="How you heard about us ">
+                                          <option value="">Select an option</option>
+                                          <option value="ViaaPostOffice">Via a Post Office</option>
+                                          <option value="AnnualRenewalNotice">Annual Renewal Notice</option>
+                                          <option value="PreviouslyInsured">Previously Insured</option>
+                                          <option value="OnlineAdvertising">Online advertising</option>
+                                          <option value="PressAdvertising">Press advertising</option>
+                                          <option value="TV">TV</option>
+                                          <option value="Other">Other</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-details" id="branch">
+                           <div class="form-details__item">
+                              <label for="Account_BranchCode">Branch Code (if known)</label>
+                              <div class="form-group2">
+                                 <div class="error-section">
+                                    <div class="invalid-msg hide">
+                                       <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Account.BranchCode" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <input class="form-control capital" data-val="true" data-val-regex="Please enter valid branch code" data-val-regex-pattern="^[a-zA-Z0-9]{1,10}$" id="Account_BranchCode" name="Account.BranchCode" ng-model="Account.BranchCode" placeholder="" title="" type="text" value="" />
+                                 </div>
+                              </div>
+                              <span class="form-details__description" id="after-email-text">
+                                 <span class="qtip__icon" data-qtip="true"></span>
+                                 <div class="qtip-text">
+                                    <p style="color:white;font-weight:bold;">Find your branch code</p>
+                                    <p>The branch code can be found on your receipt.</p>
+                                 </div>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="your-details__preferences">
+                           <div class="your-details__preferences-title">Cancellation rights </div>
+                           <div class="your-details__preferences-content">You have a right to cancel up to 14 days from the date you receive the policy documents.  You will be entitled to a refund of premium provided that you have not started a trip to which the insurance applies and you have not made or intend to make a claim. Following the expiry of your 14-day cancellation period you continue to have the right to cancel your policy at any time during its term by contacting us, but no refund of premium will be available.
+                              For Annual Multi-Trip policies, the 14-day cancellation period is extended up to the start date of your policy.
+                           </div>
+                        </div>
+                        <div class="your-details__preferences">
+                           <div class="your-details__preferences-title">Important Information about your policy</div>
+                           <div class="your-details__preferences-content">Travel insurance provides cover for a wide range of unforeseen or unexpected circumstances that could happen before the start of a holiday or during the trip but does not cover every possible situation or event.</div>
+                        </div>
+                        <div class="your-details__preferences">
+                           <div>
+                              <span class="panel-title">
+                                 <fieldset>
+                                    <legend class="your-details__preferences-title">
+                                       About your documents
+                                       <span class="accordion-icon pull-right">
+                                       <i id="mycclick" style="color: #d00f39" class="icon-poms icon-arrowdown icon-sm" onclick="onClickPostDocumentSection(this)"></i>
+                                       </span>
+                                    </legend>
+                                 </fieldset>
+                              </span>
+                              <section class="no-padding">
+                                 <div id="div_PostDocument" class="hide">
+                                    <p>Access your documents any time, anywhere from your phone, tablet or laptop.</p>
+                                    <p>PLEASE NOTE: It is not necessary to have printed copies of your documentation with you when you travel. Digital copies stored on your phone, laptop or tablet will suffice.</p>
+                                    <p>The Post Office recognises its environmental responsibilities and is committed to minimising our environmental impact, therefore please consider the environment before requesting posted documents.</p>
+                                    <P><strong>We will provide your documents via</strong></P>
+                                    <div class="form-select" style="width:200px;">
+                                       <select id="Account_PostDocumentIndicator" name="Account.PostDocumentIndicator" class="form-control" title="We will provide your documents via" aria-invalid="false" style="height:40px;font-size:12px;">
+                                          <option value="false"  selected>Email</option>
+                                          <option value="true"  >Post</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <br />
+                              </section>
+                           </div>
+                        </div>
+                        <script type="text/javascript">
+                           function onClickPostDocumentSection(obj) {
+                               if ($(obj).hasClass("icon-arrowdown")) {
+                                   $(obj).removeClass("icon-arrowdown").addClass("icon-arrowup");
+                                   $("#div_PostDocument").removeClass("hide");
+                               }
+                               else {
+                                   $(obj).removeClass("icon-arrowup").addClass("icon-arrowdown");
+                                   $("#div_PostDocument").addClass("hide");
+                               }
+                           }
+                        </script>
+                        <div class="your-details__preferences" style="margin-top:11px;">
+                           <div class="your-details__preferences-title">Marketing preference</div>
+                           <div class="your-details__preferences-content">
+                              <p>
+                                 We wouldn’t want you to miss out on offers, exclusive deals and the latest information on products and services that are available to you from across Post Office Ltd and its subsidiaries.
+                                 <br />
+                                 <br />
+                                 Our Privacy Policy informs you about how we use your personal details for marketing and what to do if you change your mind.
+                                 <br />
+                                 <br />
+                                 Please tick the boxes below to indicate how you’d prefer to receive these offers and we’ll do the rest
+                              </p>
+                              <div class="row col-md-12 keeping-informed-checkbox-container">
+                                 <div ng-init="Account.MarketingMethodEmail=False" class="">
+                                    <div class="checkboxes-group checkboxes-inline-col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                                       <div class="invalid-msg hide">
+                                          <span class="field-validation-valid" data-valmsg-for="Account.MarketingMethodEmail" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <div class="checkbox-section">
+                                          <div class="checkbox__item lebel">
+                                             <label for="Account_MarketingMethodEmail" class="checkbox">
+                                             <input aria-hidden="true" data-msg-required="" id="Account_MarketingMethodEmail" name="Account.MarketingMethodEmail" type="checkbox" value="true" /><input name="Account.MarketingMethodEmail" type="hidden" value="false" />
+                                             <span></span>
+                                             </label>
+                                          </div>
+                                          <div class="checkbox__label-horizontal" >
+                                             <p>Email</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div ng-init="Account.MarketingMethodSms=False" class="">
+                                    <div class="checkboxes-group checkboxes-inline-col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                                       <div class="invalid-msg hide">
+                                          <span class="field-validation-valid" data-valmsg-for="Account.MarketingMethodSms" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <div class="checkbox-section">
+                                          <div class="checkbox__item lebel">
+                                             <label for="Account_MarketingMethodSms" class="checkbox">
+                                             <input aria-hidden="true" data-msg-required="" id="Account_MarketingMethodSms" name="Account.MarketingMethodSms" type="checkbox" value="true" /><input name="Account.MarketingMethodSms" type="hidden" value="false" />
+                                             <span></span>
+                                             </label>
+                                          </div>
+                                          <div class="checkbox__label-horizontal" >
+                                             <p>Text</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div ng-init="Account.MarketingMethodPhone=False" class="">
+                                    <div class="checkboxes-group checkboxes-inline-col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                                       <div class="invalid-msg hide">
+                                          <span class="field-validation-valid" data-valmsg-for="Account.MarketingMethodPhone" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <div class="checkbox-section">
+                                          <div class="checkbox__item lebel">
+                                             <label for="Account_MarketingMethodPhone" class="checkbox">
+                                             <input aria-hidden="true" data-msg-required="" id="Account_MarketingMethodPhone" name="Account.MarketingMethodPhone" type="checkbox" value="true" /><input name="Account.MarketingMethodPhone" type="hidden" value="false" />
+                                             <span></span>
+                                             </label>
+                                          </div>
+                                          <div class="checkbox__label-horizontal" >
+                                             <p>Phone</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div ng-init="Account.MarketingMethodMail=False" class="">
+                                    <div class="checkboxes-group checkboxes-inline-col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                                       <div class="invalid-msg hide">
+                                          <span class="field-validation-valid" data-valmsg-for="Account.MarketingMethodMail" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <div class="checkbox-section">
+                                          <div class="checkbox__item lebel">
+                                             <label for="Account_MarketingMethodMail" class="checkbox">
+                                             <input aria-hidden="true" data-msg-required="" id="Account_MarketingMethodMail" name="Account.MarketingMethodMail" type="checkbox" value="true" /><input name="Account.MarketingMethodMail" type="hidden" value="false" />
+                                             <span></span>
+                                             </label>
+                                          </div>
+                                          <div class="checkbox__label-horizontal" >
+                                             <p>Post</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <p>
+                                 Don't forget you can also change your marketing contact preferences at any time by emailing pol_marketpermissions@response-services.co.uk, for email, by using the unsubscribe links which you'll find on all Post Office marketing emails. For further information please see the Privacy Policy.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="your-details__preferences">
+                           <div class="panel2 panel2--summary">
+                              <div class="panel2__body panel2__body--no-padding">
+                                 <div class="summary summary-cover">
+                                    <h3 class="summary__title2 pd-left-0">Summary of cover</h3>
+                                    <div class="summary__data2 pd-left-0" style="box-shadow:none;">
+                                       <div class="summary__item2">
+                                          <div class="summary__label">Policy type</div>
+                                          <div class="summary__value policyType_value">{{policyType}}</div>
+                                       </div>
+                                       <div class="summary__item2">
+                                          <div class="summary__label">Area</div>
+                                          <div class="summary__value address_value"> {{address}}
+                                          </div>
+                                       </div>
+                                       <!-- <div class="summary__item2">
+                                          <div class="summary__label">Trip start date</div>
+                                          <div class="summary__value">{{departingOn}}</div>
+                                       </div>
+                                       <div class="summary__item2">
+                                          <div class="summary__label">Trip end date</div>
+                                          <div class="summary__value">{{returningOn}}</div>
+                                       </div> -->
+                                       <div class="summary__item2">
+                                          <div class="summary__label">Who's covered</div>
+                                          <div class="summary__value coverType_value">{{coverType}}</div>
+                                       </div>
+                                       <div class="summary__item2">
+                                          <div class="summary__label">Level of cover</div>
+                                          <div class="summary__value">Standard</div>
+                                       </div>
+                                       <!-- <div class="summary__item2">
+                                          <div class="summary__label">Additional cover </div>
+                                          <div class="summary__value"> Cruise Cover</div>
+                                       </div> -->
+                                       <div class="summary__item2">
+                                          <div class="summary__label">Medical</div>
+                                          <div class="summary__value">
+                                             You have not told us about any existing medical conditions                        
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="your-details__preferences your-details__preferences--no-border">
+                           <div class="your-details__preferences-content">
+                              <strong>
+                              </strong>
+                           </div>
+                        </div>
+                        <div class="your-details__preferences your-details__preferences--gray mobile-min-height-520">
+                           <div class="your-details__preferences-content">
+                              <div ng-init="Account.TermsAndConditions=&#39;&#39;" class="">
+                                 <div class="checkboxes-group checkboxes-inline col-xs-12 col-sm-12 col-md-12 col-lg-12 error-section">
+                                    <div class="invalid-msg hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Account.TermsAndConditions" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <div class="checkbox-section">
+                                       <div class="checkbox__item lebel">
+                                          <label for="Account_TermsAndConditions" class="checkbox">
+                                          <input aria-hidden="true" data-msg-required="Please confirm you have read and accept the terms and conditions below" data-val="true" data-val-required="The Terms And Conditions field is required." id="Account_TermsAndConditions" name="Account.TermsAndConditions" required="required" type="checkbox" value="true" /><input name="Account.TermsAndConditions" type="hidden" value="false" />
+                                          <span></span>
+                                          </label>
+                                       </div>
+                                       <div class="checkbox__label" >
+                                          <p>
+                                             <span>By ticking this box, you confirm that the summary of cover meets your needs. You also understand that you can change the way your policy will renew by either calling us or by logging into your account. You also confirm that you understand that there is no cover provided on this policy if the FCDO has current advice in place against all travel to your destination at the time you travel and where any of the UK governments have implemented travel bans against travel within the UK or internationally, there will be no cover provided by any policy for these trips.</span>
+                                             <br /><br/>
+                                             <span>Lastly that you have had the opportunity to view, read and download the policy documents below which form the basis of the contract of insurance.</span>
+                                             <br />
+                                          <div class="col-xs-12 no-padding">
+                                             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 no-padding">
+                                                <span class="icon-poms icon-document icon-list-icon icon-round padding"></span>
+                                                <a id="policy-ipid" href="#" target="_blank">Insurance Product Information</a>
+                                             </div>
+                                             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 no-padding">
+                                                <span class="icon-poms icon-document icon-list-icon icon-round padding"></span>
+                                                <a id="policy-wording" href="#" target="_blank">Policy Wording</a>
+                                             </div>
+                                             <div id="health-declaration" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding">
+                                                <span class="icon-poms icon-document icon-list-icon icon-round padding"></span>
+                                                <a id="business-terms" href="#" target="_blank">Terms of Business</a>
+                                             </div>
+                                          </div>
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="actions" id="buttons">
+                           <div class="actions__item actions__item--forward">
+                              <button class="btn2 btn222--forward" id="yourdetails-next" name="nextstep" type="submit" value="next"><span>Next</span></button>
+                              <!-- <a href="pay.html" class="btn2 btn2--forward" id="yourdetails-next" name="nextstep" type="submit" value="next"><span>Next</span></a> -->
+                           </div>
+                           <div class="actions__item actions__item--back text-xs-center">
+                              <button type="button" class="btn2 btn2--back">
+                                 <span>
+                                    <!-- <a href="/web/travel/quote/additionalcovers?E=0" id="yourdetails-back" style="color:black">Go back a step</a> -->
+                                    <a href="additionalcovers.html" id="yourdetails-back" style="color:black">Go back a step</a>
+                                 </span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="myModal" class="modal fade" role="dialog">
+                     <div class="modal-dialog">
+                        <div id="global-modal" class="modal-content">
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="no-container-padding col-md-4 hidden-sm">
+               <div class="panel2 panel2--summary hidden-xs">
+                  <div class="panel2__body panel2__body--no-padding">
+                     <div class="summary">
+                        <h3 class="summary__title">Summary of cover<span class="summary__toggle" data-summary-toggle></span></h3>
+                        <span class="hide">177800176_TC0152699338Q/00_177745415</span>
+                        <div class="summary__data" id="tillrecipt">
+                           <div class="summary__item summary__item--caption" id="prices" ng-model="price" ng-init="price = additionalCoverPrice()">
+                              <div class="summary__label">
+                                 Price to pay
+                                 <span class="qtip__icon" data-qtip="true"></span>
+                                 <div class="qtip-text">
+                                    Includes Insurance Premium Tax at the current rate (if applicable)            
+                                 </div>
+                              </div>
+                              <div class="summary__value totalPrice_value">£{{totalPrice | number:2}}</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Standard cover</div>
+                              <div class="summary__value standardCover_value">£{{standardCover}}</div>
+                           </div>
+                           <!-- <div class="summary__item j">
+                              <div class="summary__label"><span class="pd-right-5">+</span>Cruise Cover</div>
+                              <div class="summary__value">£{{Gadget_cover}}</div>
+                           </div>  -->
+                           <div class="summary__item j" ng-show="gadgetCover_val!=0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Gadget cover</div>
+                              <div class="summary__value gadgetCover_value">{{gadgetCover}}</div>
+                           </div>
+                           <div class="summary__item j" ng-show="excessWaiver_val!=0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Excess waiver</div>
+                              <div class="summary__value excessWaiver_value">{{excessWaiver}}</div>
+                           </div>
+                           <div class="summary__item j" ng-show="sportsandActivities_val!=0">
+                              <div class="summary__label"><span class="pd-right-5 ">+</span> Sports and Activities (including Golf)</div>
+                              <div class="summary__value sportsandActivities_value">{{sportsandActivities}}</div>
+                           </div>
+                           <div class="summary__item j" ng-show="tripDisruptionCover_val!=0">
+                              <div class="summary__label"><span class="pd-right-5 ">+</span> Trip Disruption cover (Including Natural Catastrophe, Terrorism and Air Space disruption)</div>
+                              <div class="summary__value tripDisruptionCover_value">{{tripDisruptionCover}}</div>
+                           </div>
+                           <div class="summary__item j" ng-show="covidCover_val!=0">
+                              <div class="summary__label"><span class="pd-right-5 ">+</span> Covid-19 Cover</div>
+                              <div class="summary__value covidCover_value">{{covidCover}}</div>
+                           </div>
+                            <!--
+                           <div class="summary__item j" ng-show="travelExtensionCover_val!=0">
+                              <div class="summary__label"><span class="pd-right-5 ">+</span>    </div>
+                              <div class="summary__value travelExtensionCover_value">{{travelExtensionCover}}</div>
+                           </div> -->
+                           <div class="summary__item j" id="travelInsuranceExtensionCruise_value">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Extension Cruise</div>
+                              <div class="summary__value travelInsuranceExtensionCruise_value">£4.00</div>
+                           </div>
+                          <!-- <div class="summary__item j" id="travelInsuranceAnnualMultiTrip_value">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Annual Multi Trips</div>
+                              <div class="summary__value travelInsuranceAnnualMultiTrip_value">£39.29</div>
+                           </div>
+                           
+                              <div class="summary__item" ng-init="initOptionalLabel('0', '0')" ng-show="showOptionalLabel">
+                                  <div class="summary__label"><strong>j</strong></div>
+                              </div>
+                              -->
+                           <!--<script>
+                              function getAdditionalCovers() {
+                                  return window.localStorage.getItem('selectedAdditionalCovers');
+                              }
+                              
+                              const sac = window.localStorage.getItem('selectedAdditionalCovers');
+                              var sacArray = sac.split('|');
+                              
+                              for (let j = 0; j < sacArray.length; j++) {
+                                  var item = 'show_' + sacArray[j].replace(' ', '');
+                                  if (item == 'show_GadgetCover') {
+                                      show_GadgetCover = true;
+                                  }
+                                  //setAdditionalCoverShow(item);
+                                  //alert(item);
+                                  //  $scope[item] = true;
+                                  //item = true;
+                                  //alert($scope[item]);
+                                  //alert(item);
+                              }-->
+                           <!--</script>-->
+                        </div>
+                        <div class="summary__data">
+                           <div class="summary__item">
+                              <div class="summary__caption">Trip Details</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Policy type</div>
+                              <div class="summary__value policyType_value"> {{policyType}} </div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Area of travel</div>
+                              <div class="summary__value address_value"> {{address}}
+                              </div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Departing On</div>
+                              <div class="summary__value departingOn_value">{{departingOn}}</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Returning On</div>
+                              <div class="summary__value returningOn_value"> {{returningOn}} </div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Who's covered</div>
+                              <div class="summary__value cover coverType_value">{{coverType}}</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Cancellation limit</div>
+                              <div class="summary__value">&#163;3,000</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Medical limit</div>
+                              <div class="summary__value">&#163;7,500,000</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer class="footer-funnel  no-mgtop" >
+            <div class="footer-funnel__top">
+               <div class="footer-funnel__container">
+                  <div class="footer-funnel__logo">
+                     <!-- <img src="img/Post-Office-Logo.svg" alt="Post Office logo" style="width: 80px;"/> -->
+                     <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                  </div>
+                  <div class="footer-funnel__links">
+                     <a tabindex="0" target="_blank" href="#">Privacy Policy</a>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-funnel__bottom">
+               <div class="footer-funnel__container">
+                  <div class="footer-funnel__copyright">© Copyright 2022 The Post Office</div>
+               </div>
+            </div>
+         </footer>
+         <script src="js/trip/POMS/libs/Modernizr/modernizr-2.6.2.js"></script>
+         <script src="js/trip/POMS/libs/Modernizr/modernizr-2.8.3.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery-3.0.0.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery-1.10.2.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery.actual.min.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery.qtip.js"></script>
+         <script src="js/trip/POMS/libs/Validation/jquery.validate.js"></script>
+         <script src="js/trip/POMS/libs/Validation/jquery.validate.unobtrusive.js"></script>
+         <script src="js/trip/scripts/AdrumUtility.js"></script>
+         <script src="//rum-static.pingdom.net/pa-5fa2dbe25eacee00150002f1.js" async></script>
+        
+         <script src="js/trip/scripts/adrum.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular.min.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular-aria.min.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular-smooth-scroll.js"></script>
+       
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap-datepicker.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap-session-timeout.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/respond.js"></script>
+         <script src="js/trip/POMS/scripts/Global/app.js"></script>
+\         <script src="js/trip/POMS/scripts/Global/globalize.js"></script>
+         <script src="js/trip/POMS/scripts/Global/poms.js"></script>
+         <script src="js/trip/POMS/scripts/DatePicker/datepickers.js"></script>
+         <script src="js/trip/POMS/scripts/Radio/radio-toggle.js"></script>
+         <script src="js/trip/POMS/scripts/Moment/moment-with-locales.js"></script>
+         <script src="js/trip/POMS/scripts/Moment/moment.js"></script>
+         <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+         <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+         <script>
+             window.localStorage.setItem("currentpage", 'yourdetails');
+            $( document ).ready(function(){
+               var Policies = [{}];
+                if(window.localStorage.getItem("tripDetailsData") != " "){
+                    Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                }
+
+                            var policyType = Policies[0].PolicyType;
+                            var departingOn = '';
+                            var returningOn = '';
+                            if(policyType === 'S'){
+                                policyType = 'Single Trip';
+                                Policies[0].EffectiveDate = '';
+                                departingOn = Policies[0].TripStartDate;
+                                returningOn = Policies[0].TripEndDate;
+                            }else if (policyType === 'A'){
+                                policyType = 'Annual Multi Trip';
+                                Policies[0].TripStartDate = '';
+                                departingOn = Policies[0].EffectiveDate;
+                            }else{
+                                policyType = 'Back Packers';
+                                departingOn = Policies[0].TripStartDate;
+                                returningOn = Policies[0].TripEndDate;
+                            }
+
+                            if(policyType != 'Annual Multi Trip'){
+                             //   document.getElementById("travelInsuranceAnnualMultiTrip_value").style.display = 'none';
+                            }
+
+                            if(window.localStorage.getItem("isGoingOnCruise")==='false'){
+                                document.getElementById("travelInsuranceExtensionCruise_value").style.display = 'none';
+                            }
+
+
+                    var standardCover= window.localStorage.getItem("priceSingleTrip");
+                    var gadgetCover=window.localStorage.getItem("Gadget_cover")??0;
+                    var excessWaiver=window.localStorage.getItem("Excess_waiver")??0;
+                    var sportsandActivities=window.localStorage.getItem("Sports_and_Activities")??0;
+                    var tripDisruptionCover=window.localStorage.getItem("Trip_Disruption_cover")??0;
+                    var covidCover = window.localStorage.getItem("Covid-19_Cover")??0;
+                    var travelExtensionCover = window.localStorage.getItem("Travel_Insurance_Extension_Cover")??0;
+
+                    var totalPrice=0;
+                    var coverTypes=JSON.parse(window.localStorage.getItem("covertypes"));
+                    if(coverTypes){
+                        coverTypes.forEach(async (item,index)=>{
+                           totalPrice+=Number(item.Amount);
+                        });
+                     }
+                     totalPrice=totalPrice+Number(standardCover);
+                     
+                     //var annualMultiTripPrice = 39.29;
+                           var goingOnCruisePrice = 4.00;
+
+                              if(policyType === 'Annual Multi Trip'){
+                                // totalPrice=totalPrice+Number(annualMultiTripPrice);
+                              }
+
+                           if(window.localStorage.getItem("isGoingOnCruise")==='true'){
+                                 totalPrice=totalPrice+Number(goingOnCruisePrice);
+                           }
+
+                     var coversItems=JSON.parse(window.localStorage.getItem("coversItems"));
+                    
+                    $(".totalPrice_value").html('');
+                      $(".totalPrice_value").html('£'+totalPrice.toFixed(2));
+                      $(".standardCover_value").html('');
+                      $(".standardCover_value").html('£'+Number(standardCover).toFixed(2));
+                      $(".gadgetCover_value").html('');
+                      $(".gadgetCover_value").html('£'+gadgetCover);
+                      $(".excessWaiver_value").html('');
+                      $(".excessWaiver_value").html('£'+excessWaiver);
+                      $(".sportsandActivities_value").html('');
+                      $(".sportsandActivities_value").html('£'+sportsandActivities);
+                      $(".tripDisruptionCover_value").html('');
+                      $(".tripDisruptionCover_value").html('£'+tripDisruptionCover);
+                      $(".covidCover_value").html('');
+                      $(".covidCover_value").html('£'+covidCover);
+                      $(".travelExtensionCover_value").html('');
+                      $(".travelExtensionCover_value").html('£'+travelExtensionCover);
+                      
+                $(".policyType_value").html('')
+                $(".policyType_value").html(policyType)
+               var address = Policies[0].UFEDestination; 
+                      if( address == 'W'){
+                        address = "Worldwide excluding USA, Canada, Bermuda, The Caribbean, Mexico and Greenland";
+                         }else if(address == 'EUR'){
+                         address = "Cape Verde, Cyprus, Spain, Balearic Islands, Canary Islands, Turkey";
+                         }else{
+                         address = "UK"
+                         }
+                         $(".address_value").html('')
+                      $(".address_value").html(address)
+
+                $(".departingOn_value").html('')
+                $(".departingOn_value").html(departingOn)
+                $(".returningOn_value").html('')
+                $(".returningOn_value").html(returningOn)
+
+               var coverType = Policies[0].CoverType;
+                      if(coverType == 'IND'){
+                        coverType = 'Just me';
+                      }else if(coverType == 'COU'){
+                        coverType = 'Me and my partner';
+                      }else if(coverType == 'FAM'){
+                        coverType = 'My family';
+                      }else{
+                        coverType = 'My friends';
+                      }
+                      $(".coverType_value").html('')
+                       $(".coverType_value").html(coverType);
+                $('#Policies_0__PromotionCodes').keydown(function(event){
+                    if(event.keyCode == 13) {
+                        if ($("#promo").valid()){
+                            applyPromoCode();
+                        }
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+                $("#Policies_0__PromotionCodes").focusout(function(){
+                    return false;
+                });
+            });
+            
+            $('input, select, button').each(function () {
+                $(this).bind('blur', function () {
+                  //  CheckTimeOut();
+                });
+            });
+         </script>
+         <script src="js/trip/POMS/scripts/YourDetails.js"></script>
+         <script>
+            //BillingAddressToggle();
+          //  AutoRenewToggle();
+         </script>
+   </body>
+</html>

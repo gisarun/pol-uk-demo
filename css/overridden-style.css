@@ -1,0 +1,1066 @@
+/*@media only screen and (min-width: 48rem) {
+    .o-section li,.o-section p {
+        font-size: 1.125rem !important;
+        line-height: 1.55556 !important
+    }
+}*/
+
+.o-section h2 {
+    font-weight: bold
+}
+
+.mortgage-affordability-calculator h2 {
+    font-weight: normal !important;
+}
+
+.c-wizard-slider__text h2.u-space--2--bottom {
+    font-weight: normal;
+}
+
+.u-text--bold,
+strong {
+    font-family: ProbaPro-Bold, Arial, sans-serif !important
+}
+
+.u-text--bold,
+strong {
+    font-family: ProbaPro-Bold, Arial, sans-serif !important
+}
+
+.o-section p,
+.o-content-block__body p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.o-content-block__body a {
+    color: inherit;
+    text-decoration: none
+}
+
+#pom .o-content-small_print {
+    font-size: 0.875rem
+}
+
+.o-content-block__footer a.btn:hover {
+    text-decoration: none !important
+}
+
+.o-section.cust-identifier-banner a {
+    color: #333;
+}
+
+@media only screen and (max-width: 767px) {
+    .o-section.cust-identifier-banner a {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+.o-section.cust-identifier-banner a:hover {
+    text-decoration: underline;
+}
+
+.o-content-block__body p {
+    margin-bottom: 1em !important;
+}
+
+.o-content-block__body .content-large-section1-bodytext p:last-child {
+    margin-bottom: 0.625rem !important;
+}
+
+@media only screen and (min-width: 48rem) {
+    .c-blockquote__cite {
+        font-size: 22px !important;
+        font-size: 1.375rem !important;
+        line-height: 1.27273 !important;
+    }
+}
+
+.c-blockquote__cite {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-family: ProbaPro-Bold, Arial, sans-serif;
+    margin-bottom: 0;
+}
+
+p.c-blockquote__cite cite {
+    font-size: 1.375rem;
+}
+
+.c-button--primary {
+    border-color: #d71440;
+    background-color: #d71440;
+    color: #fff !important;
+}
+
+.c-button--secondary {
+    border-color: #d71440 !important;
+    background-color: #fff !important;
+    color: #d71440 !important;
+}
+
+.o-content-block__header h2 {
+    font-weight: bold;
+}
+
+.u-space--4--top .c-slider .slick-arrow.slick-prev {
+    display: none !important;
+}
+
+.u-space--4--top .c-slider .slick-arrow.slick-next {
+    display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+    p.c-blockquote__cite cite {
+        font-size: 1.125rem;
+        line-height: 1;
+    }
+}
+
+
+/*.o-section__trim path {
+    stroke: #FFFFFF;
+}*/
+
+
+/* Mortgage Hero Banner */
+
+#pom .o-content-block__header h2 {
+    font-weight: normal
+}
+
+#pom .c-hero-banner__nav.mob {
+    display: none
+}
+
+
+/* Mortgage types */
+
+#pom .mortgage-types .c-article-card__content p {
+    font-size: 1rem !important;
+}
+
+
+/* Mortgage faq */
+
+ul.c-list.c-list--spaced li a.open-new {
+    background-image: none;
+}
+
+
+/* FindMortgage*/
+
+.find-mortgage-result .c-product-card__content .c-product-card__content-body .u-text--small.u-text--semibold,
+.find-mortgage-result .u-spaced-xs-top--small.u-text--small,
+.find-mortgage-result .u-spaced-top--small.u-text--small {
+    font-size: .875em !important;
+}
+
+.find-mortgage-result .c-product-card__content .c-button.c-button--icon-only.c-button--abbey.c-input__button {
+    line-height: 50% !important;
+    padding: 15px !important;
+}
+
+.find-mortgage-result .o-content-block__title.c-heading--two.u-text--align-center.u-space--4--bottom {
+    font-weight: 400;
+}
+
+#pom .c-box--slim .u-text--medium {
+    font-size: 1em !important;
+}
+
+#pom .u-text--light-gray {
+    color: #000;
+}
+
+#partnership-banner .u-text--medium {
+    font-size: 1em !important;
+}
+
+#pom .c-lightbox__close {
+    cursor: pointer;
+}
+
+#pom .c-results-grouped-list__header h2 {
+    font-weight: normal;
+}
+
+#pom .c-product-card__detailed-title h2 {
+    font-weight: normal;
+}
+
+#pom .u-type h4.topMargin {
+    margin-top: 2.5rem;
+}
+
+#pom .c-product-card__detail-value span.product-fee-value {
+    font-size: 1.625rem;
+}
+
+#pom .representative-copy {
+    margin-top: 3.125rem;
+}
+
+#pom h4.top-padding {
+    margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+    #pom .representative-copy {
+        margin-top: 1.875rem;
+    }
+}
+
+
+/* Real device bug fixes */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .o-section__trim_scale {
+        transform: scale(1.1);
+    }
+    #pom .o-section__trim {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact-banner .o-section__inner {
+        padding-top: 0px !important;
+        margin-top: 6.25rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .c-wizard__answer-wrapper .c-wizard-slider__cta a {
+        display: inline-block !important;
+    }
+    .c-wizard__answer-wrapper .c-link-with-icon--end .c-icon {
+        bottom: 4px !important;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #pom .c-list--icon.check-list li {
+        padding-left: 3.75rem;
+    }
+}
+
+#pom .c-list--icon.check-list li {
+    padding-left: 2.8125rem;
+}
+
+#pom ul.dot-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#pom ul.dot-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+#pom ul.dot-list li:before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #d00f39;
+}
+
+
+/* mortgage results tab accordion content component CMS issue fixed */
+
+#pom .c-product-card-cms {
+    display: inline-block;
+}
+
+#pom .c-product-card__detailed-title-cms {
+    display: inline-block;
+    width: 32%;
+}
+
+#pom .c-product-card__details-cms {
+    display: inline-block;
+}
+
+#pom .c-product-card__expander-cms {
+    float: right;
+    width: 15%;
+    padding-top: 6%;
+    padding-bottom: 45px;
+    margin-bottom: -15px;
+}
+
+
+/* mortgage results tab accordion content component CMS issue fixed END ...*/
+
+#pom .u-space--5--bottom-list {
+    margin-bottom: 3.125rem;
+}
+
+#pom .u-space--1--top-list {
+    margin-top: .9375rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .u-space--5--bottom-list {
+        margin-bottom: 1.875rem;
+    }
+    #pom .u-space--1--top-list {
+        margin-top: .625rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pom .retrieve-application .cta-mobile-align {
+        margin-left: 0px;
+        text-align: center;
+        margin-top: 2.1875rem;
+    }
+}
+
+#pom .o-content-block__body .c-accordion__content.c-accordion_remove_padding p {
+    margin-bottom: 0 !important;
+}
+
+#pom .u-space--3--font-weight {
+    font-weight: inherit;
+}
+
+
+/* DTT-1812 mortgage accordion result css changes */
+
+#pom .c-results-grouped-list__inner .o-container--large.o-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#pom .rep-example .c-results-grouped-list__inner .o-container--large.o-container:last-child {
+    margin-bottom: 0px;
+}
+
+#pom .rep-ex-accordion {
+    padding-bottom: 5rem;
+}
+
+#pom .rep-example .c-product-card:first-child {
+    margin-top: 20px;
+}
+
+#pom .rep-example .c-results-grouped-list__inner:first-child {
+    padding-top: 0px;
+}
+
+#pom .representative-copy .o-container {
+    padding-left: 0px;
+    padding-right: 0px
+}
+
+@media screen and (max-width: 767px) {
+    #pom .rep-ex-accordion {
+        clear: both;
+        padding-bottom: 2.5rem;
+        overflow: hidden;
+    }
+}
+
+
+/* DTT-1812 mortgage accordion result css changes - END */
+
+
+/* DTT-1871 small print css */
+
+#pom .o-content-small_print-container {
+    margin: 1.25rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .o-content-small_print-container {
+        margin: 0.9375rem;
+    }
+}
+
+
+/* DTT-1871 small print css END*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #pom .mortgage-affordability-calculator .tab__link.tab__link-button {
+        height: 7.625rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #pom .c-product-card__expander {
+        border-left: 0px;
+        margin-left: 0px;
+    }
+    #pom .c-product-card__detailed-title {
+        border-bottom: 0px;
+    }
+}
+
+#pom .content-single-column .c-accordion__content p {
+    padding-bottom: 0px !important;
+}
+
+#pom .provider-wording {
+    font-family: ProbaPro-bold, Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.875;
+}
+
+#pom .mortgage-affordability-calculator .c-input__wrapper--unit .c-input__unit {
+    line-height: 3.125rem;
+}
+
+#pom .affordability-calculator-retirement .c-input__wrapper--unit .c-input__unit {
+    height: 3.4rem;
+}
+
+#pom .affordability-calculator-retirement .c-input__input {
+    height: 3.4rem;
+}
+
+#pom .c-home-hero-banner__trim {
+    bottom: -3px;
+}
+
+#pom .c-borrowing-results h2 {
+    font-weight: normal
+}
+
+#pom .container-top-padding {
+    padding-top: 4.5rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #pom .container-top-padding {
+        padding-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pom .container-top-padding {
+        padding-top: 3rem;
+    }
+}
+
+#pom .c-results-banner h2 {
+    font-weight: normal
+}
+
+#pom .c-box--simple .u-space--3--bottom.no-bottom-margin {
+    margin-bottom: 0px;
+}
+
+#pom .category-container h2 {
+    font-weight: normal
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #pom .sec-3.c-button {
+        font-size: 1rem;
+    }
+}
+
+
+/* Affordability calc errors */
+
+#pom .aff-calc-error {
+    padding: .625rem 1.5625rem .625rem;
+    border: 1px solid #d00f39;
+    color: #d00f39;
+    position: relative;
+    background-color: #fff;
+    border-radius: .625rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#pom .aff-calc-error:before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-style: none double solid;
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    vertical-align: middle;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -11px;
+    border-bottom: 10px solid #d00f39;
+}
+
+#pom .aff-calc-error:after {
+    top: -10px;
+    border-bottom: 10px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-style: none double solid;
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    vertical-align: middle;
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+#pom .u-space-mobile--3--bottom-empty {
+    margin-bottom: 0px
+}
+
+
+/* image hero banner SVG background colour only for mobile device */
+
+#pom .svg-begolour-grey path {
+    fill: #f3f3f3;
+}
+
+#pom .svg-begolour-white path {
+    fill: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .svg-begolour-grey path {
+        fill: #f3f3f3;
+    }
+    #pom .margin-top-with-grey {
+        margin-top: 1.25rem;
+    }
+    #pom .c-image-hero-banner__nav--mobile-grey {
+        display: block;
+        padding: 1.875rem 0 .625rem;
+        text-align: center;
+        border-bottom: 1px solid #e9e9e9;
+        margin-bottom: 0px;
+    }
+}
+
+
+/* Fixed icons misaligned issue for mortgage scenario example component */
+
+#pom .c-icon-number-circle__front {
+    top: 56%;
+    transform: translateY(-58%) translateX(-50%);
+}
+
+#pom .c-icon-text__copy-lend-text {
+    display: inline-block;
+    position: relative;
+    bottom: 6px;
+}
+
+#pom .c-page-scroller__icon-wrapper-nocurve {
+    display: block;
+    background: #d00f39;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 42%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-70%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    width: 1.875em;
+    height: 1.875em;
+}
+
+
+/* Fixed icons misaligned issue for mortgage scenario example component END */
+
+#pom #find-a-mortgage-form .c-input__wrapper--unit .c-input__unit {
+    line-height: 3.125rem;
+}
+
+#pom #mortgage-res-success.o-container {
+    padding-top: 3.125rem;
+}
+
+#pom .u-hr-bottom-margin {
+    margin-bottom: 0px;
+}
+
+
+/* add top marging for callout component only visible in IE */
+
+@media (-ms-high-contrast:none),
+screen and (-ms-high-contrast:active) {
+    #pom .o-container.o-container--huge.top-padding {
+        margin-top: 5rem;
+    }
+}
+
+
+/* Mortgage result banner new css */
+
+#pom .not-eligible-parent {
+    display: table;
+}
+
+#pom .not-eligible-child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#pom .o-section--red .o-section__trim.fill_grey path {
+    fill: #f3f3f3!important;
+}
+
+#pom .o-section--red .o-section__trim.fill_white path {
+    fill: #fff!important;
+}
+
+
+/* */
+
+#pom .c-input__select-dropdown {
+    cursor: pointer;
+}
+
+#pom .c-input__select-icon {
+    pointer-events: none;
+}
+
+#pom .first-start-calculator-code {
+    color: #FFFFFF !important;
+}
+
+#pom .c-page-scroller.remove-rpadding {
+    padding-right: 0px;
+}
+
+#pom .c-button-top-margin {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-button-align-center {
+        text-align: center;
+    }
+    #pom .c-button-top-margin {
+        margin-top: 2.1875rem;
+    }
+}
+
+#pom .c-button_override_disable_style[disabled] {
+    pointer-events: all;
+    border-color: #d00f39;
+    background-color: #d00f39;
+}
+
+
+/* optional bottom padding to Content Block (Single Column) component */
+
+#pom .optional-margin-bottom {
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .optional-margin-bottom {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-image-hero-banner .c-page-scroller,
+    #pom .c-home-hero-banner .c-page-scroller,
+    #pom .c-hero-banner .c-page-scroller {
+        z-index: 0 !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-button {
+        padding: 12px 25px 12px 25px;
+        height: auto;
+        white-space: normal;
+        line-height: normal;
+    }
+}
+
+#pom .o-col-md-6-tabthree {
+    flex-basis: 33.33% !important;
+    /*  max-width: 50%; */
+}
+
+@media screen and(-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    #pom .o-col-md-6-tabthree {
+        flex-basis: 30.89% !important;
+    }
+}
+
+#pom .tab_icons_fix {
+    width: 33.33% !important;
+}
+
+#pom .c-icon-tabthree {
+    stroke-width: 1;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-icon-tabthree {
+        font-size: .75em;
+    }
+}
+
+#pom .tab-opt-header {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    padding: 5rem 0 1.25rem 0;
+    text-align: center;
+    font-family: ProbaPro-Regular, Arial, sans-serif;
+    font-weight: normal;
+}
+
+#pom .tab-opt-text {
+    padding: 0 0 1.25rem 0;
+    text-align: center;
+}
+
+#pom .op-header-container {
+    padding-bottom: 1.25rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .tab-opt-header {
+        padding-top: 2.5rem;
+    }
+}
+
+#pom .content-block-cta {
+    margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .content-block-cta {
+        margin-top: 1.875rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #pom .o-col-sm-6-tab {
+        flex-basis: 90%;
+        max-width: 90%;
+    }
+}
+
+#pom .c-modal__content .c-rates-table__cell p {
+    margin-bottom: 0px !important;
+}
+
+#pom .c-broadband-card-group .c-broadband-card__detail-upfront p {
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+}
+
+#pom .c-broadband-card-group .c-broadband-card__detail-more p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#pom .c-broadband-card-group .c-broadband-card__package h2 {
+    font-weight: normal;
+}
+
+#pom .c-product-information-card .c-list.c-list--even-spaced p {
+    margin-bottom: 0px !important;
+}
+
+#pom .c-contract-card.bb-contract-card p {
+    padding: 0px;
+}
+
+#pom .text-line-through {
+    text-decoration: line-through;
+}
+
+#pom .c-broadband-choose-contract h2 {
+    font-weight: normal;
+}
+
+#pom .c-contract-card-group .award-icon {
+    width: 18px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+#pom .c-contract-card__cost-offer.bb-contract p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#pom .c-contract-card__cost-setup.bb-set-up p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#pom .contract-fee-small-print {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#pom .icon-size {
+    width: 102px;
+    height: 102px;
+}
+
+#pom #broadband-choose-contract .c-contract-card__delivery p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#pom #broadband-choose-contract div.c-contract-card__cost-setup>p>strong>span.u-text--xlarge {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+#pom #broadband-choose-contract div.c-contract-card__cost-setup>p>span.u-text--large {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#pom .c-router-tabs .tab__link div.icon_inactive {
+    display: block;
+}
+
+#pom .c-router-tabs .tab__link.is-active div.icon_inactive {
+    display: none;
+}
+
+#pom .c-router-tabs .tab__link div.icon_active {
+    display: none;
+}
+
+#pom .c-router-tabs .tab__link.is-active div.icon_active {
+    display: block;
+}
+
+#pom .c-router-tabs .tab__link>div>img {
+    width: 80px;
+    height: 80px;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-router-tabs .tab__link>div>img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+#pom .c-info-card--none-box {
+    background-color: unset;
+}
+
+#pom .guild-tips-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-list--icon-large li {
+        padding-bottom: 0.9375rem;
+    }
+}
+
+#pom .card-price-clear-styles {
+    all: unset;
+}
+
+
+/* broadband home phone addon */
+
+#pom .c-add-on-card__label p {
+    padding-bottom: 0px;
+}
+
+#pom .c-add-on-card__label-bottom-padding {
+    padding-bottom: 0px !important;
+}
+
+#pom .p-accordion__title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+#pom .c-add-on-card__label-small {
+    font-size: 14.625px;
+    float: right;
+    font-family: ProbaPro-bold, Arial, sans-serif;
+    margin-bottom: .625rem;
+    padding-bottom: 0px;
+    line-height: 18px;
+}
+
+
+/* END broadband home phone addon */
+
+
+/* fixed accordion height issue */
+
+#pom .c-results-grouped-list__item.is-open .c-results-grouped-list__content {
+    max-height: 100% !important;
+}
+
+#pom .c-form-steps__item.is-open .c-form-steps__content {
+    max-height: 100% !important;
+}
+
+
+/* END */
+
+@media screen and (min-width: 1024px) {
+    #pom .c-wizard-slider__cta {
+        padding: 0px 15px;
+    }
+}
+
+#pom .c-wizard-slider__cta .wiz-cta {
+    display: block;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+
+#pom .wiz-start-again {
+    color: #333;
+    font-size: 1rem;
+    font-family: ProbaPro-bold, Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .wiz-start-again {
+        margin-top: 2.1875rem;
+    }
+}
+
+#pom .wiz-start-again .c-icon {
+    font-size: .9375em;
+    vertical-align: -3px;
+}
+
+#pom .wiz-start-again.wiz-reset-btn {
+    margin-top: 3.125rem;
+}
+
+@media screen and (max-width: 767px) {
+    #pom .c-wizard-card.c-box.c-box--filled {
+        padding-bottom: 1.875rem;
+    }
+    #pom .wiz-start-again.wiz-reset-btn {
+        margin-top: 1.875rem;
+    }
+    #pom .wiz-start-again>a {
+        font-size: 0.875rem;
+    }
+}
+
+
+/* Mortgage types component css changes */
+
+#pom .c-box.c-box-link {
+    cursor: pointer;
+}
+
+#pom .chevron-right-white {
+    color: #fff !important;
+}
+
+#pom .chevron-right-red {
+    color: #d71440 !important;
+}
+
+#pom .c-article-card__content.new-padding {
+    padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+}
+
+#pom .c-article-card-body-text {
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+#pom .c-button-m-type {
+    height: 50px;
+}
+
+#pom .mtype-section-separator {
+    padding: 5rem 1.25rem 0 1.25rem;
+}
+
+#pom .o-section-with-line {
+    padding: 5rem 0 0 0;
+}
+
+#pom .mtype-separator-line {
+    margin: 0 auto;
+    border: #d4d6d8 1px solid;
+}
+
+#pom .c-article-card__cta {
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #pom .mtype-section-separator {
+        padding: 5rem 20px 0 20px;
+    }
+    #pom .mtype-separator-line {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pom .o-section-with-line {
+        padding: 2.5rem 0 0 0;
+    }
+    #pom .c-button-m-type {
+        height: 100%;
+    }
+    #pom .mtype-section-separator {
+        padding: 2.5rem 15px 0 15px;
+    }
+    #pom .mtype-separator-line {
+        width: 100%;
+    }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    #pom .c-article-card__content.new-padding {
+        padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+    }
+}
+
+#pom .c-accordion__content li:before {
+    content: "·";
+    font-size: 57px;
+    vertical-align: middle;
+    line-height: 0px;
+    margin-right: 10px;
+    margin-left: 25px;
+}
+
+
+
+
+
+/* End */

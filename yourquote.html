@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=8">
+        <meta name="robots" content="noindex">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>Your Quote</title>
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+        <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+    </head>
+    <!--[if lte IE 9 ]>
+    <body role="document" id="" class="ie9">
+        <![endif]-->
+        <!--[if (gt IE 9)|!(IE)]>-->
+        <body role="document" ng-app="PomsApp" ng-controller="SharedController" class="page--your-quote">
+            <!--<![endif]-->
+            <header class="header-funnel">
+                <div class="header-funnel__container-top padding-left-30 mobile-left-padding10">
+                    <div class="header-funnel__logo">
+                        <a href="index.html">
+                        <!-- <img class="header-funnel__logo-image" src="img/Post-Office-Logo.svg" alt="Logo" /> -->
+                        <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                        </a>
+                    </div>
+                    <div class="header-funnel__help">
+                        <span class="header-funnel__help-action" data-qtip="true">Need Help?</span>
+                        <div class="qtip-text">
+                            <strong>0330 123 1387</strong><br />
+                            UK Call Line<br />
+                            Mon - Sat: 9am-5:30pm<br />
+                            Closed Sundays
+                            <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span type="button" class="closing-icon" onclick="closeTooltipsWindowT('qtip-0')">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-funnel__container">
+                    <div class="header-funnel__top-title">Travel Insurance</div>
+                    <div class="stepper">
+                        <div class="stepper__item" data-active=true data-current=false>
+                            <span class="stepper__num"><span><i>1</i></span></span>
+                            <span class="stepper__title">Trip Details</span>
+                        </div>
+                        <div class="stepper__item" data-active=true data-current=true>
+                            <span class="stepper__num"><span><i>2</i></span></span>
+                            <span class="stepper__title">Quote</span>
+                        </div>
+                        <div class="stepper__item" data-active=false data-current=false>
+                            <span class="stepper__num"><span><i>3</i></span></span>
+                            <span class="stepper__title">Additional Cover</span>
+                        </div>
+                        <div class="stepper__item" data-active=false data-current=false>
+                            <span class="stepper__num"><span><i>4</i></span></span>
+                            <span class="stepper__title">Personal Details</span>
+                        </div>
+                        <div class="stepper__item" data-active=false data-current=false>
+                            <span class="stepper__num"><span><i>5</i></span></span>
+                            <span class="stepper__title">Pay</span>
+                        </div>
+                    </div>
+                    <h1 class="header-funnel__title">Your Quote</h1>
+                    <h1 class="header-funnel__subtitle">Cover available from &#163; <span id="amnt"></span></h1>
+                    <!-- <div class="header-funnel__sub-header">
+                        <span class="header-funnel__sub-header-text">Upgrade to an Annual policy for just £18.05 more</span>
+                        <span class="header-funnel__quote-scroll ng-isolate-scope"  scroll-to="tripupgrade"></span>
+                    </div> -->
+                    <div class="header-funnel__top-message">To help you choose the right level of cover, you will need to read the summary of cover table below. Consider things like the cost of having to cancel your holiday, or the value of the baggage you are taking with you. If you need more details on each level of cover provided, please click on the Insurance Product Information Document (IPID). All limits and excesses are per person except for Personal Liability and Legal Expenses which are per policy</div>
+                </div>
+            </header>
+            <script>
+                function closeTooltipsWindowT(closingIcon) {
+                var closingIco = document.getElementById(closingIcon);
+                $(closingIco).attr("style", "display:none; z-index:150000;");
+                }
+                
+            </script>
+            <!---->
+            <div class="layout layout__one-col " role="main">
+                <form action="/web/travel/quote/yourquote?E=0" id="form" method="get" novalidate="" autocomplete="off">
+                    <div class="panel2 panel2--quote" ng-init="showAnnualRows=true" id="topsection">
+                        <div class="panel2__body panel2__body--no-padding">
+                            <div class="actions" style="display:flex;flex-direction:row;justify-content:space-between;align-items:center;">
+                                <div class="actions__item actions__item--back">
+                                    <!-- <div><button class="btn2 btn2--back" name="nextstep" type="submit" value="back-tripdetails" href="tripdetails.html"><span>Go back a step</span></button></div> -->
+                                    <div><a class="btn2 btn2--back" name="nextstep" type="submit" value="back-tripdetails" ng-click="backToTripDetails()" href="tripdetails.html"><span>Go back a step</span></a></div>
+                                </div>
+                                <div class="actions__item divSaveQuote" style="display: block">
+                                    <div>
+                                        <button class="" type="button" data-toggle="modal" data-target="#divSaveQuotePopup" style="font-weight:600; font-size:18px; color: #d00f39; background-color: transparent; border: none">
+                                        <!-- <span>Save Quote</span>  -->
+                                        <a class="btn2 btn2--forward" name="nextstep" type="submit" href="additionalcovers.html"><span>Continue</span></a>                
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div id="quotetable">
+                                <div class="your-quote">
+                                    <div class="your-quote__col">
+                                        <div class="your-quote__col-top"></div>
+                                        <div class="your-quote__title">
+                                            <h3>Economy Annual Multi-Trip</h3>
+                                        </div>
+                                        <div class="your-quote__price">
+                                            £80.53
+                                        </div>
+                                        <div class="your-quote__ipid">
+                                            <a href="#" target="_blank" class="your-quote__ipid-link">View IPID</a>
+                                        </div>
+                                        <div class="your-quote__coverage">
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Individual Trip Limit">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Individual Trip Limit</p>
+                                                        <p>This shows the maximum trip duration for any one trip. There is a maximum of 183 days travel, in total, during the policy year. For any trips within the UK, there must be a minimum of two nights pre-booked accommodation. (See the <a class="tooltip-link" data-pol="true" href="#" target="_blank">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">Individual Trip Limit</p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="17 days">17 days</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="The amount you need to pay to make a claim">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Excess</p>
+                                                        <p>The excess is the amount deducted from the claim payment. The excess is payable per person, per section and for each incident giving rise to a separate claim, where a policy excess applies. You can choose to remove your excess, simply by selecting the "excess waiver" option in our "Additional Cover Options".</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">Excess</p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="£125">£125</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for partaking in certain winter sports">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Winter Sports</p>
+                                                        <p>This is a compulsory cover as you are going on a winter sports trip. Protection for accidents and injury including when skiing and snowboarding off-piste within recognised paths and resort boundaries. There’s also cover for damaged or stolen ski equipment, piste & avalanche closure and lift passes. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Winter Sports                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Cover for partaking in certain winter sports" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for trips taken aboard cruise vessels">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cruise Cover</p>
+                                                        <p>This is a compulsory cover as you are going on a cruise trip. Protection for missed departure, missed connection, missed port, cruise interruption and evening dress hire cover available. (See the <a data-pol="true" id="cruise-cover" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cruise Cover                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Cover for trips taken aboard cruise vessels" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for irrevocable costs in the event of illness and other specific risks">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Medical & Repatriation Expenses</p>
+                                                        <p>Cover for necessary emergency medical and other costs in the event of unexpected illness, injury or death while you're travelling. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Medical & Repatriation Expenses                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;5,000,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £5,000,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for irrevocable costs in the event of trip cancellation due to illness and other specific risk">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cancellation</p>
+                                                        <p>You’re protected if you cannot travel due to certain events beyond your control. For example, due to your, a travelling companion’s or close relative’s unexpected illness, injury or death. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cancellation                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;1,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £1,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cutting Short your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cutting Short your trip</p>
+                                                        <p>You're protected if you have to cut your trip short and need to return home due to certain events beyond your control. For Example, due to your, a travelling companion's or a close relative's unexpected illness, injury or death. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cutting Short your trip                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;1,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £1,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for loss, theft or damage to baggage">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Baggage</p>
+                                                        <p>Cover if your baggage and its contents get lost, stolen or damaged in the course of your trip. There are additional limits that apply to single articles, valuables, cigarettes/tobacco and alcohol, mobile/smartphones, items at a beach or poolside and also where proof of ownership cannot be provided. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Baggage                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;1,500" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £1,500                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Single Article Limit
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;150">£150</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Total for all Valuables
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;150">£150</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Mobile/Smart Phone Limit
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;100">£100</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for loss, theft or damage to your cash or passport">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Money</p>
+                                                        <p>For Premier customers only, can be increased to £750 if you have purchased your travel currency through a Post Office or on a Post Office Travel Money Card the cash limit will increase from £500 to £750. Proof of purchase will be required in the event of a claim.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Money                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;250" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £250                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover to replace your lost or stolen passport
+                                                    ">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Replacement Passport</p>
+                                                        <p>
+                                                            We’ll contribute to the necessary cost of obtaining an emergency travel document (including photos, transport and accommodation costs), if your passport is lost or stolen when it's on your person or locked in a safety deposit box during a trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)
+                                                        </p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Replacement Passport
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;250">£250</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="The max payable should you need to stay overnight in hospital">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Hospital Benefit</p>
+                                                        <p>We'll pay you an amount for every day that you spend in hospital as an in-patient during your trip up to the limit shown. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Hospital Benefit                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;150" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £150                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover if you are delayed for 4 hours or more on your first outward or final inward part of your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Travel Delay (per 4hr period/Max)</p>
+                                                        <p>If the first outward or the final inward part of your trip is delayed for more than 4 hours, we’ll compensate you for each 4 hours you are delayed up to the limit shown. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Travel Delay (per 4hr period/Max)                                    
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">X</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid based on the duration of a delay in scheduled transport on which you are booked">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Flight Delay Assistance Plus</p>
+                                                        <p>For Premier customers only - If you are delayed by 1 hour or more you can claim up to £50 or a lounge voucher per person. Pre-flight registration is required.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Flight Delay Assistance Plus                                    
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">X</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover if you miss your departure due to unforeseen circumstances">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Missed Departure</p>
+                                                        <p>We’ll cover you in the case of unforeseen circumstances causing you to miss your departure such as transport delays due to adverse weather, breakdown or a major accident causing traffic jams or road closures. (See the <a href="#" target="_blank" data-pol="true" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Missed Departure                                    
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">X</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover in case you become liable for accidental injury, death or damage to property during your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Liability</p>
+                                                        <p>We'll help protect you if you're involved in an accident that causes injury, death or damage to property while you're away. Cover is towards the amounts you are legally obliged to pay in compensation, and can include legal costs if the claim is contested. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Liability                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;2,000,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £2,000,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid if an accident causes serious injury during your trip and results in loss of limb/sight, death or permanent disability">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Accident</p>
+                                                        <p>Cover against a loss of limb or sight, permanent disability or death caused by an accident during your trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Accident                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;10,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £10,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid if an injury sustained on trip results in death or permanent disability">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Legal Expenses</p>
+                                                        <p>Cover for legal costs, if you or a representative take legal proceedings to pursue compensation for illness, injury or death suffered on a trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Legal Expenses                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;25,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £25,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for non-refundable pre-paid kennel or cattery fees">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Pet Care (Cancellation)</p>
+                                                        <p>Cover for your unused non-refundable pre-paid kennel and/or cattery fees you may incur.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Pet Care (Cancellation)                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;250" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £250                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover in case of insolvency of travel company such as airline or hotel operator">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">End Supplier Failure</p>
+                                                        <p>Provides cover against irrecoverable sums paid for each person in case of insolvency of airlines, hotel operators and trains. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        End Supplier Failure                                    
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">X</div>
+                                            </div>
+                                        </div>
+                                        <div class="your-quote__action">
+                                            <a class="btn2 btn2--forward" id="selectmob_Annual_Economy" name="nextstep" type="submit" value="next_Annual_A_Economy" href="additionalcovers.html"><span>Select</span></a>                
+                                        </div>
+                                    </div>
+                                    <div class="your-quote__col">
+                                        <div class="your-quote__col-top"></div>
+                                        <div class="your-quote__title">
+                                            <h3>Standard Annual Multi-Trip</h3>
+                                        </div>
+                                        <div class="your-quote__price">
+                                            £101.18
+                                        </div>
+                                        <div class="your-quote__ipid">
+                                            <a href="#" target="_blank" class="your-quote__ipid-link">View IPID</a>
+                                        </div>
+                                        <div class="your-quote__coverage">
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Individual Trip Limit">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Individual Trip Limit</p>
+                                                        <p>This shows the maximum trip duration for any one trip. There is a maximum of 183 days travel, in total, during the policy year. For any trips within the UK, there must be a minimum of two nights pre-booked accommodation. (See the <a class="tooltip-link" data-pol="true" href="#" target="_blank">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">Individual Trip Limit</p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="17 days">17 days</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="The amount you need to pay to make a claim">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Excess</p>
+                                                        <p>The excess is the amount deducted from the claim payment. The excess is payable per person, per section and for each incident giving rise to a separate claim, where a policy excess applies. You can choose to remove your excess, simply by selecting the "excess waiver" option in our "Additional Cover Options".</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">Excess</p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="£99">£99</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for partaking in certain winter sports">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Winter Sports</p>
+                                                        <p>This is a compulsory cover as you are going on a winter sports trip. Protection for accidents and injury including when skiing and snowboarding off-piste within recognised paths and resort boundaries. There’s also cover for damaged or stolen ski equipment, piste & avalanche closure and lift passes. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Winter Sports                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Cover for partaking in certain winter sports" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for trips taken aboard cruise vessels">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cruise Cover</p>
+                                                        <p>This is a compulsory cover as you are going on a cruise trip. Protection for missed departure, missed connection, missed port, cruise interruption and evening dress hire cover available. (See the <a data-pol="true" id="cruise-cover" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cruise Cover                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Cover for trips taken aboard cruise vessels" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for irrevocable costs in the event of illness and other specific risks">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Medical & Repatriation Expenses</p>
+                                                        <p>Cover for necessary emergency medical and other costs in the event of unexpected illness, injury or death while you're travelling. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Medical & Repatriation Expenses                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;7,500,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £7,500,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for irrevocable costs in the event of trip cancellation due to illness and other specific risk">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cancellation</p>
+                                                        <p>You’re protected if you cannot travel due to certain events beyond your control. For example, due to your, a travelling companion’s or close relative’s unexpected illness, injury or death. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cancellation                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;3,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £3,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cutting Short your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cutting Short your trip</p>
+                                                        <p>You're protected if you have to cut your trip short and need to return home due to certain events beyond your control. For Example, due to your, a travelling companion's or a close relative's unexpected illness, injury or death. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cutting Short your trip                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;3,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £3,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for loss, theft or damage to baggage">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Baggage</p>
+                                                        <p>Cover if your baggage and its contents get lost, stolen or damaged in the course of your trip. There are additional limits that apply to single articles, valuables, cigarettes/tobacco and alcohol, mobile/smartphones, items at a beach or poolside and also where proof of ownership cannot be provided. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Baggage                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;2,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £2,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Single Article Limit
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;250">£250</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Total for all Valuables
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;250">£250</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Mobile/Smart Phone Limit
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;100">£100</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for loss, theft or damage to your cash or passport">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Money</p>
+                                                        <p>For Premier customers only, can be increased to £750 if you have purchased your travel currency through a Post Office or on a Post Office Travel Money Card the cash limit will increase from £500 to £750. Proof of purchase will be required in the event of a claim.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Money                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;350" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £350                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover to replace your lost or stolen passport
+                                                    ">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Replacement Passport</p>
+                                                        <p>
+                                                            We’ll contribute to the necessary cost of obtaining an emergency travel document (including photos, transport and accommodation costs), if your passport is lost or stolen when it's on your person or locked in a safety deposit box during a trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)
+                                                        </p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Replacement Passport
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;350">£350</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="The max payable should you need to stay overnight in hospital">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Hospital Benefit</p>
+                                                        <p>We'll pay you an amount for every day that you spend in hospital as an in-patient during your trip up to the limit shown. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Hospital Benefit                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;300" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £300                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover if you are delayed for 4 hours or more on your first outward or final inward part of your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Travel Delay (per 4hr period/Max)</p>
+                                                        <p>If the first outward or the final inward part of your trip is delayed for more than 4 hours, we’ll compensate you for each 4 hours you are delayed up to the limit shown. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Travel Delay (per 4hr period/Max)                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;90" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £90                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid based on the duration of a delay in scheduled transport on which you are booked">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Flight Delay Assistance Plus</p>
+                                                        <p>For Premier customers only - If you are delayed by 1 hour or more you can claim up to £50 or a lounge voucher per person. Pre-flight registration is required.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Flight Delay Assistance Plus                                    
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">X</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover if you miss your departure due to unforeseen circumstances">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Missed Departure</p>
+                                                        <p>We’ll cover you in the case of unforeseen circumstances causing you to miss your departure such as transport delays due to adverse weather, breakdown or a major accident causing traffic jams or road closures. (See the <a href="#" target="_blank" data-pol="true" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Missed Departure                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;750" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £750                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover in case you become liable for accidental injury, death or damage to property during your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Liability</p>
+                                                        <p>We'll help protect you if you're involved in an accident that causes injury, death or damage to property while you're away. Cover is towards the amounts you are legally obliged to pay in compensation, and can include legal costs if the claim is contested. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Liability                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;2,000,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £2,000,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid if an accident causes serious injury during your trip and results in loss of limb/sight, death or permanent disability">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Accident</p>
+                                                        <p>Cover against a loss of limb or sight, permanent disability or death caused by an accident during your trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Accident                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;15,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £15,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid if an injury sustained on trip results in death or permanent disability">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Legal Expenses</p>
+                                                        <p>Cover for legal costs, if you or a representative take legal proceedings to pursue compensation for illness, injury or death suffered on a trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Legal Expenses                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;25,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £25,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for non-refundable pre-paid kennel or cattery fees">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Pet Care (Cancellation)</p>
+                                                        <p>Cover for your unused non-refundable pre-paid kennel and/or cattery fees you may incur.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Pet Care (Cancellation)                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;250" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £250                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover in case of insolvency of travel company such as airline or hotel operator">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">End Supplier Failure</p>
+                                                        <p>Provides cover against irrecoverable sums paid for each person in case of insolvency of airlines, hotel operators and trains. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        End Supplier Failure                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;3,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £3,000                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="your-quote__action">
+                                            <a class="btn2 btn2--forward" id="selectmob_Annual_Economy" name="nextstep" type="submit" value="next_Annual_A_Economy" href="additionalcovers.html"><span>Select</span></a>                
+                                        </div>
+                                    </div>
+                                    <div class="your-quote__col">
+                                        <div class="your-quote__col-top">
+                                            <span>LOWEST EXCESS</span>
+                                        </div>
+                                        <div class="your-quote__title">
+                                            <h3>Premier Annual Multi-Trip</h3>
+                                        </div>
+                                        <div class="your-quote__price">
+                                            £140.13
+                                        </div>
+                                        <div class="your-quote__ipid">
+                                            <a href="#" target="_blank" class="your-quote__ipid-link">View IPID</a>
+                                        </div>
+                                        <div class="your-quote__coverage">
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Individual Trip Limit">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Individual Trip Limit</p>
+                                                        <p>This shows the maximum trip duration for any one trip. There is a maximum of 183 days travel, in total, during the policy year. For any trips within the UK, there must be a minimum of two nights pre-booked accommodation. (See the <a class="tooltip-link" data-pol="true" href="#" target="_blank">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">Individual Trip Limit</p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="31 days">31 days</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="The amount you need to pay to make a claim">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Excess</p>
+                                                        <p>The excess is the amount deducted from the claim payment. The excess is payable per person, per section and for each incident giving rise to a separate claim, where a policy excess applies. You can choose to remove your excess, simply by selecting the "excess waiver" option in our "Additional Cover Options".</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">Excess</p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="£50">£50</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for partaking in certain winter sports">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Winter Sports</p>
+                                                        <p>This is a compulsory cover as you are going on a winter sports trip. Protection for accidents and injury including when skiing and snowboarding off-piste within recognised paths and resort boundaries. There’s also cover for damaged or stolen ski equipment, piste & avalanche closure and lift passes. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Winter Sports                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Cover for partaking in certain winter sports" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for trips taken aboard cruise vessels">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cruise Cover</p>
+                                                        <p>This is a compulsory cover as you are going on a cruise trip. Protection for missed departure, missed connection, missed port, cruise interruption and evening dress hire cover available. (See the <a data-pol="true" id="cruise-cover" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cruise Cover                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Cover for trips taken aboard cruise vessels" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for irrevocable costs in the event of illness and other specific risks">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Medical & Repatriation Expenses</p>
+                                                        <p>Cover for necessary emergency medical and other costs in the event of unexpected illness, injury or death while you're travelling. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Medical & Repatriation Expenses                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;10,000,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £10,000,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for irrevocable costs in the event of trip cancellation due to illness and other specific risk">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cancellation</p>
+                                                        <p>You’re protected if you cannot travel due to certain events beyond your control. For example, due to your, a travelling companion’s or close relative’s unexpected illness, injury or death. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cancellation                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;5,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £5,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cutting Short your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Cutting Short your trip</p>
+                                                        <p>You're protected if you have to cut your trip short and need to return home due to certain events beyond your control. For Example, due to your, a travelling companion's or a close relative's unexpected illness, injury or death. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Cutting Short your trip                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;5,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £5,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for loss, theft or damage to baggage">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Baggage</p>
+                                                        <p>Cover if your baggage and its contents get lost, stolen or damaged in the course of your trip. There are additional limits that apply to single articles, valuables, cigarettes/tobacco and alcohol, mobile/smartphones, items at a beach or poolside and also where proof of ownership cannot be provided. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Baggage                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;3,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £3,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Single Article Limit
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;400">£400</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Total for all Valuables
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;400">£400</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px; padding-left:0px;" title="">
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        - Mobile/Smart Phone Limit
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;100">£100</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for loss, theft or damage to your cash or passport">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Money</p>
+                                                        <p>For Premier customers only, can be increased to £750 if you have purchased your travel currency through a Post Office or on a Post Office Travel Money Card the cash limit will increase from £500 to £750. Proof of purchase will be required in the event of a claim.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Money                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;500" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £500*
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="2">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover to replace your lost or stolen passport
+                                                    ">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Replacement Passport</p>
+                                                        <p>
+                                                            We’ll contribute to the necessary cost of obtaining an emergency travel document (including photos, transport and accommodation costs), if your passport is lost or stolen when it's on your person or locked in a safety deposit box during a trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)
+                                                        </p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Replacement Passport
+                                                    </p>
+                                                </div>
+                                                <div class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;" title="&#163;500">£500</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="The max payable should you need to stay overnight in hospital">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Hospital Benefit</p>
+                                                        <p>We'll pay you an amount for every day that you spend in hospital as an in-patient during your trip up to the limit shown. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Hospital Benefit                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;500" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £500                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover if you are delayed for 4 hours or more on your first outward or final inward part of your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Travel Delay (per 4hr period/Max)</p>
+                                                        <p>If the first outward or the final inward part of your trip is delayed for more than 4 hours, we’ll compensate you for each 4 hours you are delayed up to the limit shown. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Travel Delay (per 4hr period/Max)                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;150" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £150                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid based on the duration of a delay in scheduled transport on which you are booked">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Flight Delay Assistance Plus</p>
+                                                        <p>For Premier customers only - If you are delayed by 1 hour or more you can claim up to £50 or a lounge voucher per person. Pre-flight registration is required.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Flight Delay Assistance Plus                                    
+                                                    </p>
+                                                </div>
+                                                <div title="Benefit paid based on the duration of a delay in scheduled transport on which you are booked" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">&check;</div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover if you miss your departure due to unforeseen circumstances">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Missed Departure</p>
+                                                        <p>We’ll cover you in the case of unforeseen circumstances causing you to miss your departure such as transport delays due to adverse weather, breakdown or a major accident causing traffic jams or road closures. (See the <a href="#" target="_blank" data-pol="true" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Missed Departure                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;1,500" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £1,500                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover in case you become liable for accidental injury, death or damage to property during your trip">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Liability</p>
+                                                        <p>We'll help protect you if you're involved in an accident that causes injury, death or damage to property while you're away. Cover is towards the amounts you are legally obliged to pay in compensation, and can include legal costs if the claim is contested. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Liability                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;2,000,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £2,000,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid if an accident causes serious injury during your trip and results in loss of limb/sight, death or permanent disability">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Personal Accident</p>
+                                                        <p>Cover against a loss of limb or sight, permanent disability or death caused by an accident during your trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Personal Accident                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;20,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £20,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Benefit paid if an injury sustained on trip results in death or permanent disability">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Legal Expenses</p>
+                                                        <p>Cover for legal costs, if you or a representative take legal proceedings to pursue compensation for illness, injury or death suffered on a trip. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for the full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Legal Expenses                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;25,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £25,000                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover for non-refundable pre-paid kennel or cattery fees">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">Pet Care (Cancellation)</p>
+                                                        <p>Cover for your unused non-refundable pre-paid kennel and/or cattery fees you may incur.</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        Pet Care (Cancellation)                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;250" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £250                                            
+                                                </div>
+                                            </div>
+                                            <div class="your-quote__coverage-item" data-coverage-item="1">
+                                                <div class="your-quote__coverage-title" style="font-family: 'ProbaPro-Regular'; font-weight: 400; font-size: 14px; width: 240px;" title="Cover in case of insolvency of travel company such as airline or hotel operator">
+                                                    <span class="qtip__icon your-quote__coverage-qtip" data-qtip="true" style="margin-right:10px;"></span>
+                                                    <div class="qtip-text">
+                                                        <p class="policy-destination-p">End Supplier Failure</p>
+                                                        <p>Provides cover against irrecoverable sums paid for each person in case of insolvency of airlines, hotel operators and trains. (See the <a data-pol="true" href="#" target="_blank" style="color:white;">Policy Wording</a> for full policy terms.)</p>
+                                                        <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="your-quote__coverage-label" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                        End Supplier Failure                                    
+                                                    </p>
+                                                </div>
+                                                <div title="&#163;5,000" class="your-quote__coverage-premium" style="font-family: 'ProbaPro-Regular'; font-weight:400; font-size:14px;">
+                                                    £5,000                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="your-quote__action">
+                                            <a class="btn2 btn2--forward" id="selectmob_Annual_Economy" name="nextstep" type="submit" value="next_Annual_A_Economy" href="additionalcovers.html"><span>Select</span></a>                
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    function closeTooltipsWindow(closingIcon) {
+                                    const qtipId = $(closingIcon).closest('.qtip')[0].id;
+                                    $('#' + qtipId).attr("style", "display:none;");
+                                    }
+                                    
+                                </script>
+                            </div> -->
+                            <div class="well3" style="display: none;">
+                                <p class="center">
+                                    These Prices include Insurance Premium Tax at the current rate (if applicable).<br />
+                                    If you're living in The Channel Islands and registered with a GP we'll remove the IPT cost before you make your policy payment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" tabindex="-1" role="dialog" id="divSaveQuotePopup">
+                        <div class="modal-dialog">
+                            <div id="global-modal1" class="modal-content">
+                                <div class="close-modal-window pull-right">
+                                    <svg class="" data-dismiss="modal" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 3L27 27" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M27 3L3 27" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="modal-header">
+                                    <div>
+                                        <h4 class="modal-title pd-top-30">Enter your email address to save your quote</h4>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-horizontal">
+                                                <div class="email-addres-input-label">Email address</div>
+                                                <div class="">
+                                                    <div id="errorsection" class="form-horizontal">
+                                                        <div class="error-section">
+                                                            <div id="emailError" class="invalid-msg hide">
+                                                                Please enter a valid email address.
+                                                            </div>
+                                                            <input type="email" id="txtEmail" class="form-control" data-val="" placeholder="Email address" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 pd-top-20 pd-bottom-30">
+                                            <span>The email address entered here will only be used to send you a link to your saved quote. It will not be used for any other purpose.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer col-md-12 pd-left-0 pd-right-0" id="divSaveQuoteButtons">
+                                    <div class="col-xs-6">
+                                        <button class="btn btnSaveQuoteCancel cancel-quote-button pull-left" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <button class="btn btnSaveQuoteOk save-quote-button" data-dismiss="modal">Save quote</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="one-col">
+                    <div class="panel2 panel2--summary ">
+                        <div class="panel2__body panel2__body--no-padding">
+                            <div class="summary">
+                                <h3 class="summary__title">Summary of cover<span class="summary__toggle" data-summary-toggle></span></h3>
+                                <span class="hide">177782249_TC0152688254Q/00_177727458</span>
+                                <div class="summary__data">
+                                    <div class="summary__item">
+                                        <div class="summary__label">Policy type</div>
+                                        <div class="summary__value policyType_value">{{policyType}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Area of travel</div>
+                                        <div class="summary__value address_value">{{address}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Cover start date</div>
+                                        <div class="summary__value cover departingOn_value">{{departingOn}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Who's covered</div>
+                                        <div class="summary__value coverType_value">{{coverType}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-col">
+                    <form action="/web/travel/quote/yourquote?E=0" id="promo" method="get" novalidate="" autocomplete="off">
+                        <div style="display:block">
+                            <div class="promo-code" ng-init="showPromoCodeApplied=false">
+                                <!-- <div class="promo-code__cta">
+                                    <span data-promo-code>I have a promotional code</span>
+                                </div> -->
+                                <div class="promo-code__body hide">
+                                    <fieldset>
+                                        <h3 class="promo-code__title">Enter your Promo Code</h3>
+                                        <div class="promo-code__form form-group" id="promocodeinput" ng-class="showPromoCodeApplied ? 'hide':''" style="display:flex;flex-direction:column">
+                                            <div class="promo-code__text">
+                                                <div class="promo-code__input">
+                                                    <div class="invalid-msg hide">
+                                                        <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Policies[0].PromotionCodes" data-valmsg-replace="true"></span>
+                                                    </div>
+                                                    <input class="form-control capital" data-val="true" data-val-custom="This is not a valid promo code" data-val-regex="" data-val-regex-pattern="^[a-zA-Z0-9]{1,11}$" data-val-unknown-error="An error occurred while applying promo code" id="Policies_0__PromotionCodes" name="Policies[0].PromotionCodes" ng-model="Policies[0].PromotionCodes" placeholder="Enter code here" title="" type="text" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="promo-code__action" style="margin-top:15px;">
+                                                <button type="button" class="btn2" id="apply-promocode" onclick="applyPromoCode()">Apply promotion</button>
+                                            </div>
+                                        </div>
+                                        <div class="promo-code__success" id="prmocodeapplied" ng-class="showPromoCodeApplied ? '':'hide'">
+                                            Promotion code <span data-promo-code-val></span> applied!
+                                        </div>
+                                        <div class="promo-code__error hide" id="prmocodeerror">
+                                            Invalid code
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="annualPopup" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div id="global-modal3" class="modal-content">
+                            <div class="modal-header" >
+                                <button type="button" class="close" data-dismiss="modal" style="font-size:28px;margin-right:8px;">x</button>
+                                <div style="margin-bottom:-10px;">
+                                    <h4 class="modal-title" style="text-align: center">Please note</h4>
+                                </div>
+                            </div>
+                            <div class="modal-body" style="display:flex;flex-direction:row;justify-content:center;">
+                                <div style="width:350px;">
+                                    <div id="text" style="text-align:center;font-weight:bold">
+                                        Please note, for cancellation cover to begin immediately the start date of your policy will be set to today.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer col-md-12" id="cytibuttons" style="display:flex;flex-direction:row;justify-content:center">
+                                <div class="col-xs-10 col-md-8">
+                                    <div class="col-xs-6">
+                                        <button style="background-color:white;border:1px solid black;color:black" class="btn btn-secondary cancel pull-left annualpopup-next-step-button" id="cancel-btn" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <button class="btn btn2--forward annualpopup-next-step-button" style="padding-top: 4px; padding-bottom: 4px;" onclick="return annualButtonClick()" id="annualPopupButton" name="nextstep" type="button" value=""><span>OK</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer-funnel " >
+                <div class="footer-funnel__top">
+                    <div class="footer-funnel__container">
+                        <div class="footer-funnel__logo">
+                            <!-- <img src="img/Post-Office-Logo.svg" alt="Post Office logo" style="width: 80px;"/> -->
+                            <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                        </div>
+                        <div class="footer-funnel__links">
+                            <a tabindex="0" target="_blank" href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-funnel__bottom">
+                    <div class="footer-funnel__container">
+                        <div class="footer-funnel__copyright">© Copyright 2022 The Post Office</div>
+                    </div>
+                </div>
+            </footer>
+            <script src="js/trip/POMS/libs/Modernizr/modernizr-2.6.2.js"></script>
+            <script src="js/trip/POMS/libs/Modernizr/modernizr-2.8.3.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery-3.0.0.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery-1.10.2.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery.actual.min.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery.qtip.js"></script>
+            <script src="js/trip/POMS/libs/Validation/jquery.validate.js"></script>
+            <script src="js/trip/POMS/libs/Validation/jquery.validate.unobtrusive.js"></script>
+            <script src="js/trip/scripts/AdrumUtility.js"></script>
+            <script src="//rum-static.pingdom.net/pa-5fa2dbe25eacee00150002f1.js" async></script>
+           
+            <script src="js/trip/scripts/adrum.js"></script>
+            <script src="js/trip/POMS/libs/angular/angular.min.js"></script>
+            <script src="js/trip/POMS/libs/angular/angular-aria.min.js"></script>
+            <script src="js/trip/POMS/libs/angular/angular-smooth-scroll.js"></script>
+           
+            <script src="js/trip/POMS/libs/bootstrap/bootstrap-datepicker.js"></script>
+            <script src="js/trip/POMS/libs/bootstrap/bootstrap-session-timeout.js"></script>
+            <script src="js/trip/POMS/libs/bootstrap/bootstrap.js"></script>
+            <script src="js/trip/POMS/libs/bootstrap/respond.js"></script>
+            <script src="js/trip/POMS/scripts/Global/app.js"></script>
+   \            <script src="js/trip/POMS/scripts/Global/globalize.js"></script>
+            <script src="js/trip/POMS/scripts/Global/poms.js"></script>
+            <script src="js/trip/POMS/scripts/DatePicker/datepickers.js"></script>
+            <script src="js/trip/POMS/scripts/Radio/radio-toggle.js"></script>
+            <script src="js/trip/POMS/scripts/Moment/moment-with-locales.js"></script>
+            <script src="js/trip/POMS/scripts/Moment/moment.js"></script>
+            <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+            <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+            <script>
+                $( document ).ready(function(){
+                    var Policies = [{}];
+                            if(window.localStorage.getItem("tripDetailsData")){
+                               Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                               }
+                       var policyType = Policies[0].PolicyType;
+
+                       console.log("policyType === ", policyType)
+                       if(policyType === 'S'){
+                        policyType = 'Single Trip'
+                        Policies[0].EffectiveDate = '';
+                       }else if (policyType === 'A'){
+                        policyType = 'Annual Multi Trip';
+                        Policies[0].TripStartDate = '';
+                       }else{
+                        policyType = 'Back Packers'
+                       }
+                       console.log("policyType",policyType)
+                       $(".policyType_value").html('')
+                       $(".policyType_value").html(policyType)
+                    var address = Policies[0].UFEDestination; 
+                      if( address == 'W'){
+                        address = "Worldwide excluding USA, Canada, Bermuda, The Caribbean, Mexico and Greenland";
+                         }else if(address == 'EUR'){
+                         address = "Cape Verde, Cyprus, Spain, Balearic Islands, Canary Islands, Turkey";
+                         }else{
+                         address = "UK"
+                         }
+                         $(".address_value").html('')
+                      $(".address_value").html(address)
+                      if(!Policies[0].EffectiveDate)
+                        departingOn = Policies[0].TripStartDate;
+                      else
+                        departingOn = Policies[0].EffectiveDate;
+                       $(".departingOn_value").html('')
+                       $(".departingOn_value").html(departingOn)
+                       var returningOn = Policies[0].TripEndDate;
+                       $(".returningOn _value").html('')
+                       $(".returningOn _value").html(returningOn)
+                      var coverType = Policies[0].CoverType;
+                      if(coverType == 'IND'){
+                        coverType = 'Just me';
+                      }else if(coverType == 'COU'){
+                        coverType = 'Me and my partner';
+                      }else if(coverType == 'FAM'){
+                        coverType = 'My family';
+                      }else{
+                        coverType = 'My friends';
+                      }
+                      console.log("coverType",coverType)
+                      $(".coverType_value").html('')
+                       $(".coverType_value").html(coverType);
+                $('#Policies_0__PromotionCodes').keydown(function(event){
+                if(event.keyCode == 13) {
+                    if ($("#promo").valid()){
+                        applyPromoCode();
+                    }
+                    event.preventDefault();
+                    return false;
+                }
+                });
+                $("#Policies_0__PromotionCodes").focusout(function(){
+                return false;
+                });
+                });
+                
+                $('input, select, button').each(function () {
+                $(this).bind('blur', function () {
+               // CheckTimeOut();
+                });
+                });
+               
+            </script>
+            <script src="js/trip/POMS/scripts/YourQuote.js"></script>
+           
+    </body>
+</html>

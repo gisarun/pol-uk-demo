@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'icon-poms';
+    src: url('../../font/icon-poms.eot');
+    src: url('../../font/icon-poms.eot') format('embedded-opentype'), url('../../font/icon-poms.ttf') format('truetype'), url('../../font/icon-poms.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-poms {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon-poms' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+    content: "\e900";
+}
+
+.icon-tick:before {
+    content: "\e910";
+}
+
+.icon-tick-right {
+    font-family: "icon-poms";
+    line-height: initial;
+    display: inline-block;
+    padding: 6px 12px 10px !important;
+}
+
+    .icon-tick-right:after {
+        font-family: "icon-poms";
+        content: "\e910";
+        margin-left: 10px;
+        position:relative;
+        top:2px;
+        font-size:20px;
+    }
+
+
+.icon-document:before {
+    content: "\e907";
+}
+
+.icon-Single_Trip:before {
+    content: "\e911";
+}
+
+.icon-UK:before {
+    content: "\e912";
+}
+
+.icon-Backpacker:before {
+    content: "\e913";
+}
+
+.icon-World:before {
+    content: "\e914";
+}
+
+.icon-Multi_Trip:before {
+    content: "\e915";
+}
+
+.icon-arrowdown:before {
+    content: "\e902";
+}
+
+.icon-arrowleft:before {
+    content: "\e903";
+}
+
+.icon-arrowright:before {
+    content: "\e904";
+}
+
+.icon-arrowup:before {
+    content: "\e905";
+}
+
+.icon-Cal:before {
+    content: "\e906";
+}
+
+.icon-closebtn:before {
+    content: "\e908";
+}
+
+.icon-cross:before {
+    content: "\e909";
+}
+
+.icon-error:before {
+    content: "\e90a";
+}
+
+.icon-europe:before {
+    content: "\e90b";
+}
+
+.icon-information:before {
+    content: "\e90c";
+}
+
+.icon-medical:before {
+    content: "\e90d";
+}
+
+.icon-newwindow:before {
+    content: "\e90e";
+}
+
+.icon-pay:before {
+    content: "\e90f";
+}
+
+.icon-Policy:before {
+    content: "\e916";
+}
+
+.icon-Quote:before {
+    content: "\e917";
+}
+.icoline
+{
+    width: 69px!important;
+    height: 81px;
+    object-fit: contain;
+}
+.icon-text:hover .icoline, .radio-group .select-options input[type="radio"]:checked + .icon-text .icoline{filter: invert(1);}
+.header-funnel__logo-image{width: 82px;}

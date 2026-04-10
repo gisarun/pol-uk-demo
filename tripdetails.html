@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="robots" content="noindex">
+      <title>Trip Details</title>
+      <link rel="icon" href="img/favicon.png" type="image/png">
+      <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+      <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+     
+      <style type="text/css">
+      [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}
+      .ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+      </style>
+   </head>
+   <!--[if lte IE 9 ]>
+   <body role="document" id="" class="ie9">
+      <![endif]-->
+      <!--[if (gt IE 9)|!(IE)]>-->
+      <body role="document" class="" ng-app='PomsApp' ng-controller="SharedController">
+         <!--<![endif]-->
+         <header class="header-funnel">
+            <div class="header-funnel__container-top padding-left-30 mobile-left-padding10">
+               <div class="header-funnel__logo">
+                  <a href="index.html">
+                  <!-- <img class="header-funnel__logo-image" src="img/Post-Office-Logo.svg" alt="Logo" /> -->
+                  <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                  </a>
+               </div>
+               <div class="header-funnel__help">
+                  <span class="header-funnel__help-action" data-qtip="true">Need Help?</span>
+                  <div class="qtip-text">
+                     <strong>0330 123 1387</strong><br />
+                     UK Call Line<br />
+                     Mon - Sat: 9am-5:30pm<br />
+                     Closed Sundays
+                     <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                     <span type="button" class="closing-icon" onclick="closeTooltipsWindowT('qtip-0')">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="header-funnel__container">
+               <div class="header-funnel__top-title">Travel Insurance</div>
+               <div class="stepper">
+                  <div class="stepper__item" data-active=true data-current=true>
+                     <span class="stepper__num"><span><i>1</i></span></span>
+                     <span class="stepper__title" style="">Trip Details</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>2</i></span></span>
+                     <span class="stepper__title" style="">Quote</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>3</i></span></span>
+                     <span class="stepper__title" style="">Additional Cover</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>4</i></span></span>
+                     <span class="stepper__title" style="">Personal Details</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>5</i></span></span>
+                     <span class="stepper__title" style="">Pay</span>
+                  </div>
+               </div>
+               <h1 class="header-funnel__title">Trip Details</h1>
+            </div>
+         </header>
+         <script>
+            function closeTooltipsWindowT(closingIcon) {
+                var closingIco = document.getElementById(closingIcon);
+                $(closingIco).attr("style", "display:none; z-index:150000;");
+            }
+            
+         </script>
+         <div class="container main no-container-padding main-form-container  " role="main" >
+            <div class="col-md-8 col-main no-container-padding">
+               <!-- <form action="/web/travel/quote/tripdetails?E=0" id="form" method="get" novalidate="">    <input type="hidden" id="hdn_on_load_IsOneUnderwriter" value="True" /> -->
+               <form action="yourquote.html" id="form" method="get" novalidate="" autocomplete="off">
+                  <input type="hidden" id="hdn_on_load_IsOneUnderwriter" value="True" />
+                  <input type="hidden" id="hdn_on_load_IsBranch" value="False" />
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <div>
+                           <div class="row">
+                              <div class="col-xs-12 important-statements-p">
+                                 <p>
+                                    Please be advised that there is no cover provided on this policy if the FCDO has current advice in place against all travel and where any of the UK governments have implemented travel bans against travel within the UK or internationally. If the FCDO have advised to only undertake essential travel to a destination and your trip is not essential and you choose to travel, we will only cover a claim if the cause is not linked to the reason for the FCDO advice. This limitation applies even if you have purchased an optional trip disruption upgrade. You may be able to travel with full cover if we authorise in writing that your trip is essential before you depart. Should you like to request this, please email; travelinsurancefeedback@postoffice.co.uk
+                                 </p>
+                                 <p>All of our policies include some cover for coronavirus as standard under the 'Cancellation', 'Cutting short your trip', 'Emergency Medical and Repatriation Expenses' sections of the policy. A new 'Covid-19' optional extra is now available on the 'Additional Cover' page. Continue your quote to find further information.</p>
+                              </div>
+                           </div>
+                           <!--
+                              <div id="importantStatements" class="row mg-left-5">
+                                  <div class="row col-xs-12 mg-bottom-10">
+                                      <h2 class="header-idd">Important Statement</h2>
+                                  </div>
+                              
+                                  <div class="row col-xs-12">
+                                      <p>
+                                          Please answer all questions honestly and to the best of your knowledge as any incorrect information provided may invalidate a claim or your policy.
+                                      </p>
+                                      <p>
+                                          You agree that you and anyone to be covered by this policy:
+                                      </p>
+                                      <ul>
+                                          <li>
+                                              Are UK residents and registered with a GP (Doctor) in the UK
+                              (a UK resident is a person whose main home is in the UK, Channel islands or Isle of Man.)
+                                          </li>
+                                          <li>Have not already started a trip</li>
+                                          <li>Are travelling from and returning to the UK</li>
+                                          <li>Are not aware of any reason why you may need to claim</li>
+                                          <li> Have not been diagnosed with a terminal illness</li>
+                                          <li>Do not have an undiagnosed medical condition, or a medical condition where you are awaiting the diagnosis.</li>
+                                      </ul>
+                                  </div>
+                              
+                                  <div class="row col-xs-12">
+                              
+                              
+                                  <div ng-init="Account.UkResident=&#39;&#39;" class="">
+                                      <div class="form-group checkbox-group col-xs-12 col-sm-12 col-md-12 col-lg-12 error-section">
+                                          <div class="invalid-msg hide">
+                                               <span class="field-validation-valid" data-valmsg-for="Account.UkResident" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <div class="checkbox-section">
+                                              <div class="col-md-1 col-sm-1 col-xs-2 no-padding lebel">
+                                                  <label for="Account_UkResident" class="checkbox">
+                                                          <input aria-hidden="true" data-msg-required="Please read and agree to continue" data-val="true" data-val-required="The Uk Resident field is required." id="Account_UkResident" name="Account.UkResident" required="required" type="checkbox" value="true" /><input name="Account.UkResident" type="hidden" value="false" />
+                                                      <span></span>
+                                                  </label>
+                                              </div>
+                                              <div class="col-xs-10 col-sm-11 col-md-11 mg-top-5" >
+                                                  <p>Yes, I have read and agree to the above statements</p>
+                                              </div>
+                                              </div>
+                                      </div>
+                                  </div>
+                                  </div>
+                              </div>
+                              -->
+                           <input id="NBStartDate" name="NBStartDate" type="hidden" value="17-05-2021" />
+                           <input id="AMTStartDate" name="AMTStartDate" type="hidden" value="11-03-2021" />
+                           <input id="setCnfgAmtDate" name="setCnfgAmtDate" type="hidden" value="false" />
+                           <input id="setCnfgNbDate" name="setCnfgNbDate" type="hidden" value="false" />
+                           <div class="row">
+                              <div class="col-sm-12 col-xs-12">
+                                 <fieldset>
+                                    <legend class="row mg-right-0 mg-left-0">
+                                       <span class="col-xs-11 col-sm-11 pd-left-0">
+                                       What type of policy would you like?
+                                       </span>
+                                       <span class="icon-poms icon-md pull-right small-screen-svg" data-qtip="true">
+                                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333" />
+                                             <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </span>
+                                       <div class="qtip-text">
+                                          <h5>We offer three types of cover</h5>
+                                          <p>Please be aware that all trips must start from and return to the UK</p>
+                                          <p class="policy-destination-p">Single Trip</p>
+                                          <p>Going away just the once this year?</p>
+                                          <p>Cover for a one-off trip in the UK or abroad.</p>
+                                          <p class="policy-destination-p">Annual Multi-Trip</p>
+                                          <p>Consider an Annual Multi-Trip policy if you’re going away more than once in a year as it could save you money.</p>
+                                          <p>It means you can pop abroad multiple times, for a weekend break, to see a band or a game, or whatever takes your fancy and you won’t have to worry about sorting out cover because you’ll already be insured.</p>
+                                          <p class="policy-destination-p">Backpackers </p>
+                                          <p>Our Backpacker cover is for 18 to 60 year olds and covers you for a single trip for up to 18 months.</p>
+                                          <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                          </span>
+                                       </div>
+                                    </legend>
+                                 </fieldset>
+                                 <div class="form-group radio-group">
+                                    <div class="invalid-msg invalid-msgs hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Policies[0].PolicyType" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <fieldset id="Policies_0__PolicyType">
+                                       <div ng-init="Policies[0].PolicyType">
+                                          <div class="select-options-container">
+                                             <div class="equal-width text-center mg-right-10">
+                                                <label for="Policies_0__PolicyType-S" class="select-options">
+                                                   <input aria-hidden="true" data-val="true" data-val-required="Please select which type of cover you would like" id="Policies_0__PolicyType-S" name="Policies[0].PolicyType" ng-model="Policies[0].PolicyType" type="radio" value="S" />
+                                                   <span class="icon-text">
+                                                      <span class="icons">
+                                                         <i class="icon-poms icon-Single_Trip icon-4x"></i>
+                                                         <!-- <img src="img/trip/ico.png" class="icoline"> -->
+                                                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+                                                            <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"></path>
+                                                          </svg> -->
+                                                      </span>
+                                                      <span>Single Trip</span>
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="equal-width text-center mg-right-10">
+                                                <label for="Policies_0__PolicyType-A" class="select-options">
+                                                   <input aria-hidden="true" data-val-required="Please select which type of cover you would like" id="Policies_0__PolicyType-A" name="Policies[0].PolicyType" ng-model="Policies[0].PolicyType" type="radio" value="A" />
+                                                   <span class="icon-text">
+                                                      <span class="icons">
+                                                         <i class="icon-poms icon-Multi_Trip icon-4x"></i>
+                                                         <!-- <img src="img/trip/ico2.png" class="icoline"> -->
+                                                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" fill="currentColor" class="bi bi-airplane-engines" viewBox="0 0 16 16">
+                                                            <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0ZM7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7V3Z"></path>
+                                                          </svg> -->
+                                                      </span>
+                                                      <span>Annual Multi-Trip</span>
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="equal-width text-center mg-right-10">
+                                                <label for="Policies_0__PolicyType-L" class="select-options">
+                                                   <input aria-hidden="true" data-val-required="Please select which type of cover you would like" id="Policies_0__PolicyType-L" name="Policies[0].PolicyType" ng-model="Policies[0].PolicyType" type="radio" value="L" />
+                                                   <span class="icon-text">
+                                                      <span class="icons">
+                                                         <i class="icon-poms icon-Backpacker icon-4x"></i>
+                                                         <!-- <img src="img/trip/ico1.png" class="icoline"> -->
+                                                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                          </svg> -->
+                                                      </span>
+                                                      <span>Backpackers</span>
+                                                   </span>
+                                                </label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </fieldset>
+                                    <hr class="line-break" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-sm-12 col-xs-12">
+                                 <fieldset>
+                                    <legend class="row mg-right-0 mg-left-0">
+                                       <span class="col-xs-11 col-sm-11 pd-left-0">
+                                       Where are you travelling?
+                                       </span>
+                                       <span class="icon-poms icon-md pull-right small-screen-svg" data-qtip="true">
+                                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333" />
+                                             <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </span>
+                                       <div class="qtip-text">
+                                          <p class="policy-destination-p">(Single) UK</p>
+                                          <p>That’s Great Britain, Northern Ireland, the Isle of Man, Jersey and Guernsey. Oh, and even though they are much closer to France than the UK, Alderney, Sark and Herm too.</p>
+                                          <p class="policy-destination-p">(Single) Europe</p>
+                                          <p>Those countries listed under UK. Plus this impressive list. Albania, Algeria, Andorra, Armenia, Austria, Azerbaijan, Azores,
+                                             Belarus, Belgium, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic, Denmark (including Faroe Islands), Estonia, Finland, France (including Corsica), Georgia, Germany, Gibraltar, Greece (including Greek Islands*), Hungary, Iceland, Ireland (Republic of),
+                                             Italy (including Aeolian Islands, Sardinia, Sicily), Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, Macedonia, Madeira, Malta, Moldova, Monaco,
+                                             Montenegro, Netherlands (Holland), Norway (including Jan Mayen, Svalbard Islands), Poland, Portugal, Romania, Russia, San Marino, Serbia,
+                                             Slovakia, Slovenia, Sweden, Switzerland, Tunisia, Ukraine and Vatican City State (Holy See).
+                                          </p>
+                                          <p class="font-10">* There are many Greek Islands but some of the most well known are Corfu, Crete, Kefalonia, Kos, Mykonos, Rhodes, Santorini, Skiathos and Zante (Zakynthos)</p>
+                                          <p><strong>You can also pay a slightly higher premium and add to the list above.</strong></p>
+                                          <p>Cape Verde, Cyprus, Spain** (including Balearic Islands and Canary Islands) and Turkey.</p>
+                                          <p class="font-10">** Balearic Islands (Ibiza, Majorca/Mallorca, Menorca/Minorca and Formentera) and Canary Islands (Fuerteventura, Gran Canaria, Lanzarote, La Gomera, La Palma and Tenerife)</p>
+                                          <p class="policy-destination-p">(Single) Worldwide</p>
+                                          <p>There are two definitions of worldwide for our insurance purposes. Because of the
+                                             high costs of medical treatment in these countries, one excludes the United States,
+                                             Canada, Bermuda, Greenland, the Caribbean and Mexico. The alternative definition includes
+                                             them but typically means you may have to pay a slightly higher premium.
+                                          </p>
+                                          <p class="policy-destination-p">(Annual) UK</p>
+                                          <p>That’s Great Britain, Northern Ireland, the Isle of Man, Jersey and Guernsey. Oh, and even though they are much closer to France than the UK, Alderney, Sark and Herm too.</p>
+                                          <p class="policy-destination-p">(Annual) Europe</p>
+                                          <p>Those countries listed under UK. Plus this impressive list.
+                                             Albania, Algeria, Andorra, Armenia, Austria, Azerbaijan, Azores, Belarus, Belgium, Bosnia-Herzegovina, Bulgaria, Cape Verde, Croatia, Cyprus,
+                                             Czech Republic, Denmark (including Faroe Islands), Estonia, Finland, France (including Corsica), Georgia,
+                                             Germany, Gibraltar, Greece (including Greek Islands*), Hungary, Iceland, Ireland (Republic of), Italy (including Aeolian Islands, Sardinia, Sicily),
+                                             Kosovo, Latvia, Liechtenstein, Lithuania, Luxembourg, Macedonia, Madeira, Malta, Moldova, Monaco, Montenegro, Netherlands (Holland), Norway (including
+                                             Jan Mayen, Svalbard Islands), Poland, Portugal, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain (including Balearic Islands and Canary Islands**),
+                                             Sweden, Switzerland, Tunisia, Turkey, Ukraine and Vatican City State (Holy See).
+                                          </p>
+                                          <p class="font-10">* There are many Greek Islands but some of the most well known are Corfu, Crete, Kefalonia, Kos, Mykonos, Rhodes, Santorini, Skiathos and Zante (Zakynthos)</p>
+                                          <p class="font-10">** Balearic Islands (Ibiza, Majorca/Mallorca, Menorca/Minorca and Formentera) and Canary Islands (Fuerteventura, Gran Canaria, Lanzarote, La Gomera, La Palma and Tenerife</p>
+                                          <p class="policy-destination-p">(Annual) Worldwide</p>
+                                          <p> 
+                                             There are two definitions of worldwide for our insurance purposes. Because of the high costs of medical treatment in these countries, one excludes
+                                             the United States, Canada, Bermuda, Greenland, the Caribbean and Mexico. The alternative definition includes them but typically means you may have to pay a
+                                             slightly higher premium.
+                                          </p>
+                                          <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                          </span>
+                                       </div>
+                                    </legend>
+                                 </fieldset>
+                                 <div class="form-group radio-group">
+                                    <div class="invalid-msg invalid-msgs hide">
+                                       <span class="field-validation-valid" data-valmsg-for="Policies[0].UFEDestination" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <fieldset id="Policies_0__UFEDestination">
+                                       <div ng-init="Policies[0].UFEDestination">
+                                          <div class="select-options-container">
+                                             <div class="equal-width text-center mg-right-10">
+                                                <label for="Policies_0__UFEDestination-UK" class="select-options">
+                                                   <input aria-hidden="true" data-val="true" data-val-required="Please specify the area you are travelling" id="Policies_0__UFEDestination-UK" name="Policies[0].UFEDestination" ng-model="Policies[0].UFEDestination" type="radio" value="UK" />
+                                                   <span class="icon-text">
+                                                      <span class="icons">
+                                                         <i class="icon-poms icon-UK icon-4x"></i>
+                                                         <!-- <img src="img/trip/ico3.png" class="icoline"> -->
+                                                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                                                            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                                                            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"></path>
+                                                          </svg> -->
+                                                      </span>
+                                                      <span>UK</span>
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="equal-width text-center mg-right-10">
+                                                <label for="Policies_0__UFEDestination-EUR" class="select-options">
+                                                   <input aria-hidden="true" data-val-required="Please specify the area you are travelling" id="Policies_0__UFEDestination-EUR" name="Policies[0].UFEDestination" ng-model="Policies[0].UFEDestination" type="radio" value="EUR" />
+                                                   <span class="icon-text">
+                                                      <span class="icons">
+                                                         <i class="icon-poms icon-europe icon-4x"></i>
+                                                         <!-- <img src="img/trip/ico4.png" class="icoline"> -->
+                                                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                                                            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                                                            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"></path>
+                                                          </svg> -->
+                                                      </span>
+                                                      <span>Europe</span>
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="equal-width text-center mg-right-10">
+                                                <label for="Policies_0__UFEDestination-W" class="select-options">
+                                                   <input aria-hidden="true" data-val-required="Please specify the area you are travelling" id="Policies_0__UFEDestination-W" name="Policies[0].UFEDestination" ng-model="Policies[0].UFEDestination" type="radio" value="W" />
+                                                   <span class="icon-text">
+                                                      <span class="icons">
+                                                         <i class="icon-poms icon-World icon-4x"></i>
+                                                         <!-- <img src="img/trip/ico5.png" class="icoline"> -->
+                                                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                                                            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                                                            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"></path>
+                                                          </svg> -->
+                                                      </span>
+                                                      <span>Worldwide</span>
+                                                   </span>
+                                                </label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </fieldset>
+                                    <hr class="line-break" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-xs-12">
+                                 <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                       <fieldset id="eur">
+                                          <legend class="row mg-right-0 mg-left-0">
+                                             <span id="section-title" class="col-xs-11 col-sm-11 pd-left-0">
+                                                <h3>Will you be visiting any of these countries?</h3>
+                                                <ul class="li-destination">
+                                                   <li>Cape Verde</li>
+                                                   <li>Cyprus</li>
+                                                   <li>Spain</li>
+                                                   <li>Balearic Islands</li>
+                                                   <li>Canary Islands</li>
+                                                   <li>Turkey</li>
+                                                </ul>
+                                             </span>
+                                          </legend>
+                                       </fieldset>
+                                    </div>
+                                 </div>
+                                 <script>
+                                    function closeTooltipsWindow(closingIcon) {
+                                        //aria - describedby
+                                        //$(closingIcon).closest('.qtip').attr("style", "display:none;");
+                                        const qtipId = $(closingIcon).closest('.qtip')[0].id;
+                                        $('#' + qtipId).attr("style", "display:none;");
+                                    }
+                                    
+                                 </script>
+                                 <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                       <fieldset id="w">
+                                          <legend class="row mg-right-0 mg-left-0">
+                                             <span id="section-title" class="col-xs-11 col-sm-11 pd-left-0">
+                                                <h3>Will you be visiting any of these countries?</h3>
+                                                <ul class="li-destination">
+                                                   <li>USA</li>
+                                                   <li>Canada</li>
+                                                   <li>Bermuda</li>
+                                                   <li>The Caribbean</li>
+                                                   <li>Mexico</li>
+                                                   <li>Greenland</li>
+                                                </ul>
+                                             </span>
+                                          </legend>
+                                       </fieldset>
+                                    </div>
+                                 </div>
+                                 <script>
+                                    function closeTooltipsWindow(closingIcon) {
+                                        //aria - describedby
+                                        //$(closingIcon).closest('.qtip').attr("style", "display:none;");
+                                        const qtipId = $(closingIcon).closest('.qtip')[0].id;
+                                        $('#' + qtipId).attr("style", "display:none;");
+                                    }
+                                    
+                                 </script>
+                                 <div class="form-group radio-group">
+                                    <div class="">
+                                       <div class="invalid-msg hide">
+                                          <span class="field-validation-valid" data-valmsg-for="Policies[0].Destination" data-valmsg-replace="true"></span>
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12" ng-init="Policies[0].Destination">
+                                       <div id="Policies_0__Destination" class=" who-to-cover-container  ">
+                                          <label for="Policies_0__Destination-W1" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-val="true" data-val-required="Please specify the area you are travelling" id="Policies_0__Destination-W1" name="Policies[0].Destination" ng-model="Policies[0].Destination" title="" type="radio" value="W1" />
+                                          <span>No
+                                          </span>
+                                          </label>
+                                          <label for="Policies_0__Destination-W2" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-val-required="Please specify the area you are travelling" id="Policies_0__Destination-W2" name="Policies[0].Destination" ng-model="Policies[0].Destination" title="" type="radio" value="W2" />
+                                          <span>Yes
+                                          </span>
+                                          </label>
+                                          <label for="Policies_0__Destination-EUR1" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-val-required="Please specify the area you are travelling" id="Policies_0__Destination-EUR1" name="Policies[0].Destination" ng-model="Policies[0].Destination" title="" type="radio" value="EUR1" />
+                                          <span>No
+                                          </span>
+                                          </label>
+                                          <label for="Policies_0__Destination-EUR2" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-val-required="Please specify the area you are travelling" id="Policies_0__Destination-EUR2" name="Policies[0].Destination" ng-model="Policies[0].Destination" title="" type="radio" value="EUR2" />
+                                          <span>Yes
+                                          </span>
+                                          </label>
+                                          <label for="Policies_0__Destination-UK" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-val-required="Please specify the area you are travelling" id="Policies_0__Destination-UK" name="Policies[0].Destination" ng-model="Policies[0].Destination" title="" type="radio" value="UK" />
+                                          <span>UK</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-legend-style">
+                              <div class="row pd-bottom-30">
+                                 <div class="col-md-12 col-xs-12">
+                                    <hr class="line-break" />
+                                    <fieldset id="cruise-cover">
+                                       <legend class="row mg-right-0 mg-left-0">
+                                          <span class="col-xs-11 col-sm-11 pd-left-0">During your trip will you be taking part in any of the below?</span>
+                                          <span class="col-xs-1 col-sm-1 icon-poms icon-md pull-right small-screen-svg" data-qtip="true">
+                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333" />
+                                                <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                          </span>
+                                          <div class="qtip-text crazy-index">
+                                             <p class="policy-destination-p">Winter Sports</p>
+                                             <p>Protection for accidents and injury including when skiing and snowboarding off-piste within recognised paths and resort boundaries. There’s also cover for damaged or stolen ski equipment, piste and avalanche closure and lift passes.</p>
+                                             <p class="policy-destination-p">Cruise Cover</p>
+                                             <p>As well as protecting you if you’re ill or require emergency medical treatment on board you will be covered if you miss your cruise departure due to transport delays. Cover is also available for cruise interruption and missed port and increased personal baggage. A cruise is defined as a trip involving a sea or river voyage of more than 3 days in total duration.</p>
+                                             <p>If you are doing neither, please select No.</p>
+                                             <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                   <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                             </span>
+                                          </div>
+                                       </legend>
+                                    </fieldset>
+                                    <div class="form-group checkbox-group cruise-cover-question" ng-init="Policies[0].GoingOnCruise;Policies[0].WinterSports; Neither=false">
+                                       <div class="error-section">
+                                          <div class="invalid-msg hide">
+                                             <span class="field-validation-valid">Please specify what you will be doing on your trip</span>
+                                          </div>
+                                          <!--   <div class="col-xs-offset-4 col-sm-offset-5 col-md-offset-5">-->
+                                          <div class="trip-options-container">
+                                             <div id="WinterSports"
+                                                class="equal-width trip-options-element col-md-4">
+                                                <label for="CruiseAndWinterSports-WinterSports" class="checkbox trip-option-label" title="">
+                                                   <input aria-hidden="true" id="CruiseAndWinterSports-WinterSports" name="CruiseAndWinterSports" ng-model="Policies[0].WinterSports" title="" type="checkbox" value="True" class="ng-valid ng-dirty ng-touched" aria-checked="true" aria-invalid="false" required>
+                                                   <span class="trip-option-svg">
+                                                      <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M24.9282 30.9725C26.5728 32.1421 27.8572 32.7842 29.4725 33.0472C30.1803 33.1624 30.8966 33.2198 31.6141 33.219C33.8084 33.2177 35.9637 32.6954 37.695 31.7394C39.8972 30.5165 41.3264 28.6751 41.7894 26.434C42.5543 22.7373 41.6547 19.3235 39.1973 16.6328C35.8416 12.9545 29.6204 10.8008 22.5343 10.8008C15.5657 10.8008 9.36683 12.8341 5.92675 16.3051C3.6798 18.5718 2.66313 21.3916 3.01267 24.4171C3.32437 27.1092 4.40044 29.2733 6.18692 30.767C7.94549 32.2373 10.3365 33.0094 13.2781 33.0922L13.6071 33.0925C15.9177 33.0925 17.6594 32.4382 19.3669 31.2123C19.6463 31.0118 19.8508 30.8542 20.2798 30.5154C21.3097 29.7008 21.6636 29.489 22.3277 29.3652C22.6116 29.3652 23.1395 29.6735 24.3497 30.5546C24.6343 30.7619 24.7629 30.855 24.9282 30.9725ZM36.823 30.1647C35.3681 30.9681 33.5118 31.4179 31.6123 31.419C30.9922 31.4197 30.3731 31.3701 29.7617 31.2706C28.4739 31.0609 27.4115 30.5298 25.9714 29.5057C25.8134 29.3933 25.6886 29.3029 25.4093 29.0995C23.7839 27.9162 23.183 27.5652 22.3233 27.5652C22.1727 27.5659 22.0269 27.581 21.8837 27.6103C20.9488 27.7958 20.4061 28.1205 19.1637 29.1032C18.7562 29.425 18.5673 29.5706 18.3172 29.7502C16.8954 30.7709 15.5069 31.2925 13.6071 31.2925H13.3034C10.7653 31.2208 8.76223 30.5739 7.34151 29.3861C5.92653 28.203 5.06165 26.4636 4.80075 24.2103C4.51502 21.737 5.3372 19.4567 7.20516 17.5723C10.266 14.4839 16.007 12.6008 22.5343 12.6008C29.1558 12.6008 34.895 14.5877 37.8679 17.8463C39.9315 20.1059 40.6761 22.9312 40.0267 26.0695C39.6734 27.7797 38.5792 29.1895 36.823 30.1647Z" fill="" />
+                                                         <path d="M12.3362 21.1739C11.9847 21.5253 11.4149 21.5253 11.0634 21.1739C10.7119 20.8224 10.7119 20.2525 11.0634 19.9011L13.027 17.9374C13.3785 17.586 13.9484 17.586 14.2998 17.9374C14.6513 18.2889 14.6513 18.8588 14.2998 19.2102L12.3362 21.1739Z" fill="" />
+                                                         <path d="M13.3186 27.064C12.9672 27.4155 12.3973 27.4155 12.0458 27.064C11.6944 26.7126 11.6944 26.1427 12.0458 25.7912L17.9367 19.9003C18.2882 19.5489 18.8581 19.5489 19.2095 19.9003C19.561 20.2518 19.561 20.8216 19.2095 21.1731L13.3186 27.064Z" fill="" />
+                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M40.2549 20.5367C40.2549 21.0338 40.6578 21.4367 41.1549 21.4367H43.1423C43.1775 21.5478 43.2003 21.6953 43.2003 21.8573V24.7189C43.2003 25.0423 43.1375 25.3329 43.0384 25.5276H41.2406C40.7435 25.5276 40.3406 25.9306 40.3406 26.4276C40.3406 26.9247 40.7435 27.3276 41.2406 27.3276H43.2262C44.3697 27.3276 45.0003 26.0951 45.0003 24.7189V21.8573C45.0003 20.6953 44.4571 19.6367 43.4231 19.6367H41.1549C40.6578 19.6367 40.2549 20.0397 40.2549 20.5367ZM43.0817 25.5383C43.1122 25.5341 43.1593 25.5276 43.2264 25.5276H43.0385C43.0322 25.5451 43.0447 25.5433 43.0817 25.5383Z" fill="" />
+                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.76048 25.5276C4.25754 25.5276 4.66048 25.9306 4.66048 26.4276C4.66048 26.9247 4.25754 27.3276 3.76048 27.3276H1.77444C0.630918 27.3276 0 26.0951 0 24.7189V21.8573C0 20.6953 0.543492 19.6367 1.57746 19.6367H3.84545C4.34251 19.6367 4.74545 20.0397 4.74545 20.5367C4.74545 21.0338 4.34251 21.4367 3.84545 21.4367H1.85805C1.82288 21.5478 1.8 21.6953 1.8 21.8573V24.7189C1.8 25.0422 1.8629 25.3328 1.95731 25.5172C1.95939 25.5213 3.76048 25.5276 3.76048 25.5276ZM1.77434 25.5276H1.96191C1.96817 25.545 1.95569 25.5433 1.91862 25.5382C1.88818 25.5341 1.84117 25.5276 1.77434 25.5276ZM1.88924 21.347C1.89042 21.3458 1.89151 21.3447 1.8925 21.3436L1.88924 21.347ZM1.8925 21.3436L1.89697 21.3388L1.8993 21.3342C1.89799 21.3368 1.89574 21.3399 1.8925 21.3436Z" fill="" />
+                                                      </svg>
+                                                   </span>
+                                                   <span>Winter Sports</span>
+                                                </label>
+                                             </div>
+                                             <div id="CruiseTrip"
+                                                class="equal-width trip-options-element col-md-4">
+                                                <label for="CruiseAndWinterSports-Cruise" class="checkbox trip-option-label" title="">
+                                                   <input aria-hidden="true" data-val="true" id="CruiseAndWinterSports-Cruise" name="CruiseAndWinterSports" ng-model="Policies[0].GoingOnCruise" title="" type="checkbox" value="True" class="ng-valid ng-dirty ng-touched ng-valid-parse" aria-checked="true" aria-invalid="false" required>
+                                                   <span class="trip-option-svg">
+                                                      <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path d="M43.284 35.832C43.7811 35.832 44.184 36.235 44.184 36.732C44.184 37.2291 43.7811 37.632 43.284 37.632C40.9216 37.632 38.7284 39.2292 37.7086 41.7376C37.7048 41.7469 37.6981 41.7699 37.681 41.8367C37.6515 41.9525 37.6365 42.0066 37.6098 42.0843C37.3338 42.8864 36.2031 42.8964 35.913 42.0993C35.8818 42.0135 35.865 41.9543 35.834 41.8342C35.8161 41.7648 35.8097 41.7429 35.8063 41.7345C34.7907 39.2312 32.5947 37.632 30.2332 37.632C27.8694 37.632 25.6732 39.2312 24.6552 41.7376C24.6515 41.7468 24.6448 41.7699 24.6265 41.8422C24.5988 41.9518 24.5824 42.0107 24.5575 42.084C24.2828 42.8928 23.1414 42.8998 22.8568 42.0944C22.8294 42.017 22.8113 41.9536 22.7857 41.8551C22.7624 41.7648 22.7554 41.741 22.7529 41.7345C21.7372 39.2309 19.541 37.632 17.1772 37.632C14.8157 37.632 12.6202 39.2316 11.6048 41.736C11.6009 41.7455 11.5942 41.7681 11.5763 41.8376C11.5732 41.8494 11.5732 41.8494 11.5699 41.8621C11.5454 41.9566 11.5267 42.021 11.4995 42.0972C11.2146 42.895 10.0857 42.8932 9.80339 42.0944C9.77588 42.0166 9.7577 41.953 9.73223 41.8543C9.70904 41.7642 9.70216 41.7406 9.69978 41.7345C8.6842 39.2312 6.48816 37.632 4.12667 37.632C3.67342 37.632 3.19815 37.7082 2.61325 37.8782C2.13593 38.0168 1.63657 37.7423 1.49789 37.265C1.35921 36.7877 1.63373 36.2883 2.11105 36.1496C2.85034 35.9349 3.49165 35.832 4.12667 35.832C6.7564 35.832 9.18428 37.2982 10.6522 39.653C12.1184 37.2994 14.5465 35.832 17.1772 35.832C19.8085 35.832 22.2366 37.2976 23.7047 39.652C25.1725 37.2987 27.6011 35.832 30.2332 35.832C32.8639 35.832 35.2927 37.2993 36.7587 39.6513C38.2268 37.2972 40.653 35.832 43.284 35.832Z" />
+                                                         <path d="M24.7775 18.4562V35.4195C24.7775 35.9166 24.3746 36.3195 23.8775 36.3195C23.3805 36.3195 22.9775 35.9166 22.9775 35.4195V17.3262C22.9775 16.7478 23.5152 16.3196 24.0789 16.449L40.6119 20.245L42.6419 20.7123C43.1654 20.8328 43.4674 21.3819 43.2889 21.8885L36.9111 39.9847C36.7459 40.4535 36.2319 40.6996 35.7631 40.5344C35.2943 40.3692 35.0482 39.8552 35.2135 39.3864L41.2563 22.2404L40.2086 21.9992L24.7775 18.4562Z" />
+                                                         <path d="M35.69 13.5852C35.193 13.5852 34.79 13.1822 34.79 12.6852C34.79 12.1881 35.193 11.7852 35.69 11.7852H39.0885C39.5323 11.7852 39.9099 12.1087 39.9779 12.5473L41.22 20.563C41.2962 21.0541 40.9597 21.514 40.4685 21.5902C39.9773 21.6663 39.5174 21.3298 39.4413 20.8386L38.3172 13.5852H35.69Z" />
+                                                         <path d="M35.2119 9.78828H23.8775C23.3805 9.78828 22.9775 9.38534 22.9775 8.88828C22.9775 8.39122 23.3805 7.98828 23.8775 7.98828H36.1119C36.609 7.98828 37.0119 8.39122 37.0119 8.88828V12.6852C37.0119 13.1822 36.609 13.5852 36.1119 13.5852H23.8775C23.3805 13.5852 22.9775 13.1822 22.9775 12.6852C22.9775 12.1881 23.3805 11.7852 23.8775 11.7852H35.2119V9.78828Z" />
+                                                         <path d="M6.51532 22.2232L12.698 38.9116C12.8707 39.3777 12.6328 39.8956 12.1667 40.0682C11.7006 40.2409 11.1828 40.0031 11.0101 39.537L4.47149 21.8877C4.2828 21.3784 4.58482 20.8193 5.1142 20.6979L7.14496 20.232L23.6772 16.4488C24.2407 16.3199 24.7779 16.7481 24.7779 17.3262V42.2168C24.7779 42.7138 24.375 43.1168 23.8779 43.1168C23.3809 43.1168 22.9779 42.7138 22.9779 42.2168V18.4554L7.54696 21.9865L6.51532 22.2232Z" />
+                                                         <path d="M7.89205 20.8386C7.81593 21.3298 7.35603 21.6663 6.86484 21.5902C6.37365 21.514 6.03716 21.0541 6.11328 20.563L7.35547 12.5473C7.42344 12.1087 7.80102 11.7852 8.24485 11.7852H11.6433C12.1403 11.7852 12.5433 12.1881 12.5433 12.6852C12.5433 13.1822 12.1403 13.5852 11.6433 13.5852H9.01612L7.89205 20.8386Z" />
+                                                         <path d="M23.8775 11.7852C24.3746 11.7852 24.7775 12.1881 24.7775 12.6852C24.7775 13.1822 24.3746 13.5852 23.8775 13.5852H11.6432C11.1461 13.5852 10.7432 13.1822 10.7432 12.6852V8.88828C10.7432 8.39122 11.1461 7.98828 11.6432 7.98828H23.8775C24.3746 7.98828 24.7775 8.39122 24.7775 8.88828C24.7775 9.38534 24.3746 9.78828 23.8775 9.78828H12.5432V11.7852H23.8775Z" />
+                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M28.1525 5.32881C28.1525 3.53005 26.6651 2.08203 24.8416 2.08203H22.3067C20.5856 2.08203 19.1807 3.44956 19.1807 5.14886V8.88828C19.1807 9.38534 19.5836 9.78828 20.0807 9.78828H27.2525C27.7496 9.78828 28.1525 9.38534 28.1525 8.88828V5.32881ZM24.8416 3.88203C25.6816 3.88203 26.3525 4.53515 26.3525 5.32881V7.98828H20.9807V5.14886C20.9807 4.45469 21.569 3.88203 22.3067 3.88203H24.8416Z" />
+                                                      </svg>
+                                                   </span>
+                                                   <span>Going on a cruise</span>
+                                                </label>
+                                             </div>
+                                             <div id="NeitherTrip"
+                                                class="equal-width trip-options-element col-md-4">
+                                                <label for="CruiseAndWinterSports-Neither" class="checkbox trip-option-label" title="">
+                                                   <input aria-hidden="true" id="CruiseAndWinterSports-Neither" name="CruiseAndWinterSports" ng-model="Neither" title="" type="checkbox" value="false" class="ng-valid ng-dirty ng-touched" aria-checked="false" aria-invalid="false" required>
+                                                   <span class="trip-option-svg">
+                                                      <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.7998 22.5008C1.7998 33.9331 11.0675 43.2008 22.4998 43.2008C33.9321 43.2008 43.1998 33.9331 43.1998 22.5008C43.1998 11.0685 33.9321 1.80078 22.4998 1.80078C11.0675 1.80078 1.7998 11.0685 1.7998 22.5008ZM41.3998 22.5008C41.3998 32.939 32.938 41.4008 22.4998 41.4008C12.0616 41.4008 3.5998 32.939 3.5998 22.5008C3.5998 12.0626 12.0616 3.60078 22.4998 3.60078C32.938 3.60078 41.3998 12.0626 41.3998 22.5008Z" fill="" />
+                                                         <path d="M18.1858 28.0869C17.8343 28.4384 17.2645 28.4384 16.913 28.0869C16.5615 27.7355 16.5615 27.1656 16.913 26.8142L26.3737 17.3534C26.7252 17.002 27.295 17.002 27.6465 17.3534C27.998 17.7049 27.998 18.2748 27.6465 18.6262L18.1858 28.0869Z" fill="" />
+                                                         <path d="M26.3738 28.0869C26.7252 28.4384 27.2951 28.4384 27.6466 28.0869C27.998 27.7355 27.998 27.1656 27.6466 26.8142L18.1858 17.3534C17.8344 17.002 17.2645 17.002 16.9131 17.3534C16.5616 17.7049 16.5616 18.2748 16.9131 18.6262L26.3738 28.0869Z" fill="" />
+                                                      </svg>
+                                                   </span>
+                                                   <span>No</span>
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <!--   </div>-->
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <input id="Policies_0__WinterSports" name="Policies[0].WinterSports" type="hidden" value="" />
+                                 <input data-val="true" data-val-required="The field Going On Cruise is invalid." id="Policies_0__GoingOnCruise" name="Policies[0].GoingOnCruise" type="hidden" value="" />
+                              </div>
+                              <hr class="line-break" />
+                           </div>
+                           <div class="row pd-bottom-30">
+                              <div class="col-xs-12">
+                                 <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                       <fieldset id="trip-dates">
+                                          <legend class="row mg-right-0 mg-left-0">
+                                             <span id="section-title" class="col-xs-11 col-sm-11 pd-left-0">
+                                             When will you be travelling?
+                                             </span>
+                                             <span class="icon-poms icon-md pull-right small-screen-svg" data-qtip="true">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333" />
+                                                   <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                             </span>
+                                             <div class="qtip-text">
+                                                <p class="policy-destination-p trip">Single Trip policy</p>
+                                                <p>You’ll have holiday cancellation cover from the moment you buy your policy.</p>
+                                                <p>So it’s a good idea to buy it as soon as your trip is booked.</p>
+                                                <p class="policy-destination-p">Annual policy</p>
+                                                <p>Our Annual Multi-Trip cover insures you to travel multiple times over the next 12 months. For cancellation cover to begin immediately for any trips you’ve already booked, make sure you choose today’s date as the start date for the policy.</p>
+                                                <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                      <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                          </legend>
+                                       </fieldset>
+                                    </div>
+                                 </div>
+                                 <script>
+                                    function closeTooltipsWindow(closingIcon) {
+                                        //aria - describedby
+                                        //$(closingIcon).closest('.qtip').attr("style", "display:none;");
+                                        const qtipId = $(closingIcon).closest('.qtip')[0].id;
+                                        $('#' + qtipId).attr("style", "display:none;");
+                                    }
+                                    
+                                 </script>
+                                 <div class="pd-bottom-10 hide" id="dvTripStartDateMsg">
+                                    <div class="col-xs-12">
+                                       For cancellation cover to begin immediately, select today as the start date.
+                                    </div>
+                                 </div>
+                                 <div class="form-horizontal-parent">
+                                    <div id="tripstartdate" class="trip-date ng-hide" ng-show="Policies[0].PolicyType == 'S'||Policies[0].PolicyType == 'L'" aria-hidden="true">
+                                       <div class="form-horizontal  error-section col-xs-12 departing-on col-lg-4 col-md-4">
+                                          <div class="datepickers">
+                                             <div class="form-group  ">
+                                                <div class="col-xs-12 col-lg-12-col-md-12 control-label date-label no-padding">
+                                                   <label for="Policies_0__TripStartDate">Starting On</label>
+                                                </div>
+                                                <div class="">
+                                                   <div class="form-date-picker no-padding  col-xs-12 col-sm-12 col-md-12 " ng-init="Policies[0].TripStartDate">
+                                                      <div class="invalid-msg hide">
+                                                         <span class="field-validation-valid" data-valmsg-for="Policies[0].TripStartDate" data-valmsg-replace="true"></span>
+                                                      </div>
+                                                      <input class="form-control datepicker new-date-picker ng-pristine ng-untouched ng-valid" data-datepicker-ed="+12m" data-datepicker-sd="-0m" data-format="dd/mm/yyyy" data-title="Select a date" data-ufe-br-name="Policies[0].PolicyType" data-ufe-br-toggleid="tripstartdate" data-ufe-br-values="S|L" data-val="true" data-val-date="The field Trip Start Date must be a date." data-val-required="Please select your departure date" id="Policies_0__TripStartDate" name="Policies[0].TripStartDate" ng-model="Policies[0].TripStartDate" placeholder="dd/mm/yyyy" readonly="" title="Start Date" type="text" value="" aria-invalid="false">
+                                                      <span class="form-date-picker-icon" aria-hidden="true">
+                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.8839 15.5088H1.97058C1.65911 15.5088 1.36455 15.3649 1.1825 15.1239C1.0019 14.8849 0.950717 14.5735 1.04971 14.2914L1.98941 11.6013C2.09178 11.3111 2.33709 11.0899 2.64324 11.0044L5.93702 10.1067C6.01042 10.0865 6.0872 10.0753 6.16543 10.072C5.41792 9.18876 4.99684 7.99844 4.99684 6.73665C4.99684 4.12519 6.80429 2 9.02461 2C11.2454 2 13.0524 4.12519 13.0524 6.73665C13.0524 7.99844 12.6303 9.18876 11.8823 10.072C11.9606 10.0753 12.0393 10.0865 12.1141 10.1077L15.4045 11.0044C15.7146 11.0899 15.9565 11.3111 16.0584 11.6013L17 14.2914" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                         </svg>
+                                                      </span>
+                                                      <!--
+                                                         -->
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div id="effectivedate" class="trip-date" ng-show="Policies[0].PolicyType == 'A'||Policies[0].PolicyType == ''" aria-hidden="false">
+                                       <div class="form-horizontal  error-section col-xs-12 departing-on col-lg-4 col-md-4">
+                                          <div class="datepickers">
+                                             <div class="form-group  ">
+                                                <div class="col-xs-12 col-lg-12-col-md-12 control-label date-label no-padding">
+                                                   <label for="Policies_0__EffectiveDate">Starting On</label>
+                                                </div>
+                                                <div class="">
+                                                   <div class="form-date-picker no-padding  col-xs-12 col-sm-12 col-md-12 " ng-init="Policies[0].EffectiveDate">
+                                                      <div class="invalid-msg hide">
+                                                         <span class="field-validation-valid" data-valmsg-for="Policies[0].EffectiveDate" data-valmsg-replace="true"></span>
+                                                      </div>
+                                                      <input class="form-control datepicker new-date-picker ng-pristine ng-untouched ng-valid" data-datepicker-ed="+12m" data-datepicker-sd="-0m" data-format="dd/mm/yyyy" data-title="Select a date" data-ufe-br-name="Policies[0].PolicyType" data-ufe-br-toggleid="effectivedate" data-ufe-br-values="A|" data-val="true" data-val-date="The field Effective Date must be a date." data-val-required="Please select your start date" id="Policies_0__EffectiveDate" name="Policies[0].EffectiveDate" ng-model="Policies[0].EffectiveDate" placeholder="dd/mm/yyyy" readonly="" title="Start Date" type="text" value="" aria-invalid="false">
+                                                      <span class="form-date-picker-icon" aria-hidden="true">
+                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.8839 15.5088H1.97058C1.65911 15.5088 1.36455 15.3649 1.1825 15.1239C1.0019 14.8849 0.950717 14.5735 1.04971 14.2914L1.98941 11.6013C2.09178 11.3111 2.33709 11.0899 2.64324 11.0044L5.93702 10.1067C6.01042 10.0865 6.0872 10.0753 6.16543 10.072C5.41792 9.18876 4.99684 7.99844 4.99684 6.73665C4.99684 4.12519 6.80429 2 9.02461 2C11.2454 2 13.0524 4.12519 13.0524 6.73665C13.0524 7.99844 12.6303 9.18876 11.8823 10.072C11.9606 10.0753 12.0393 10.0865 12.1141 10.1077L15.4045 11.0044C15.7146 11.0899 15.9565 11.3111 16.0584 11.6013L17 14.2914" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                         </svg>
+                                                      </span>
+                                                      <!--
+                                                         -->
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="trip-date arrow-parent ng-hide" ng-show="Policies[0].PolicyType=='S' || Policies[0].PolicyType=='L'" aria-hidden="true">
+                                       <div id="arrow" class="arrow-container">
+                                          <svg width="50" height="18" viewBox="0 0 50 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M43 3L48.6842 8.85222L43 15" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                             <path d="M1.5 9H17" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </svg>
+                                       </div>
+                                    </div>
+                                    <div id="enddate" class="trip-date ng-hide" ng-show="Policies[0].PolicyType == 'S'||Policies[0].PolicyType == 'L'" aria-hidden="true">
+                                       <div class="form-horizontal  error-section col-xs-12 returning-on col-lg-4 col-md-4">
+                                          <div class="datepickers">
+                                             <div class="form-group  ">
+                                                <div class="col-xs-12 col-lg-12-col-md-12 control-label date-label no-padding">
+                                                   <label for="Policies_0__TripEndDate">Returning On</label>
+                                                </div>
+                                                <div class="">
+                                                   <div class="form-date-picker no-padding  col-xs-12 col-sm-12 col-md-12 " ng-init="Policies[0].TripEndDate">
+                                                      <div class="invalid-msg hide">
+                                                         <span class="field-validation-valid" data-valmsg-for="Policies[0].TripEndDate" data-valmsg-replace="true"></span>
+                                                      </div>
+                                                      <input class="form-control datepicker new-date-picker ng-pristine ng-untouched ng-valid" data-datepicker-ed="+12m" data-datepicker-sd="+1d" data-format="dd/mm/yyyy" data-title="Select a date" data-ufe-br-name="Policies[0].PolicyType" data-ufe-br-toggleid="enddate" data-ufe-br-values="S|L" data-val="true" data-val-date="The field Trip End Date must be a date." data-val-required="Please select your return date" id="Policies_0__TripEndDate" name="Policies[0].TripEndDate" ng-model="Policies[0].TripEndDate" placeholder="dd/mm/yyyy" readonly="" title="End Date" type="text" value="" aria-invalid="false">
+                                                      <span class="form-date-picker-icon" aria-hidden="true">
+                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12.8839 15.5088H1.97058C1.65911 15.5088 1.36455 15.3649 1.1825 15.1239C1.0019 14.8849 0.950717 14.5735 1.04971 14.2914L1.98941 11.6013C2.09178 11.3111 2.33709 11.0899 2.64324 11.0044L5.93702 10.1067C6.01042 10.0865 6.0872 10.0753 6.16543 10.072C5.41792 9.18876 4.99684 7.99844 4.99684 6.73665C4.99684 4.12519 6.80429 2 9.02461 2C11.2454 2 13.0524 4.12519 13.0524 6.73665C13.0524 7.99844 12.6303 9.18876 11.8823 10.072C11.9606 10.0753 12.0393 10.0865 12.1141 10.1077L15.4045 11.0044C15.7146 11.0899 15.9565 11.3111 16.0584 11.6013L17 14.2914" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                         </svg>
+                                                      </span>
+                                                      <!--
+                                                         -->
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <hr class="line-break" />
+                           <!-- ------------- -->
+                           <div class="row pd-bottom-25">
+                              <div class="col-xs-12">
+                                 <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                       <fieldset id="cover-type">
+                                          <legend class="row mg-right-0 mg-left-0">
+                                             <span id="section-title" class="col-xs-11 col-sm-11 pd-left-0">
+                                             Who do you want to cover?                </span>
+                                             <span class="icon-poms icon-md pull-right small-screen-svg" data-qtip="true" data-hasqtip="5">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333"></path>
+                                                   <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                             </span>
+                                             <div class="qtip-text">
+                                                <p class="policy-destination-p">Just me</p>
+                                                <p>Ideal if you’re travelling solo.</p>
+                                                <p class="policy-destination-p">My partner and me</p>
+                                                <p>It’s more convenient and it could save you money too, if you insure yourself and your partner as a couple. To qualify you must both live at the same address. If you don't live together, don’t worry, we can still offer you cover under My friends.</p>
+                                                <p class="policy-destination-p">My family</p>
+                                                <p>Insure yourself as a family and your children, grandchildren, adopted children or foster children are covered too.  To qualify children and grandchildren need to be under 18 and in full-time education or living with you.  If you are divorced or separated and your children don't live with you, they can still be included under a Family or Single parent policy. With Single Trip Insurance your kids need to travel with you or your partner to enjoy our cover. With Annual Multi-trip the adults can travel independently and on some of our policies the kids can too, so long as they are accompanied by a responsible adult (check policy for details).</p>
+                                                <p class="policy-destination-p">My friends</p>
+                                                <p>Are there between 2 and 8 of you travelling together?&nbsp;Then you can consider yourself as a group.&nbsp;If you have more than eight in your party, call our helpline to arrange insurance.&nbsp;(You’ll also need to insure yourselves as friends if you and your partner are living at separate addresses.)</p>
+                                                <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                      <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                          </legend>
+                                       </fieldset>
+                                    </div>
+                                 </div>
+                                 <script>
+                                    function closeTooltipsWindow(closingIcon) {
+                                        //aria - describedby
+                                        //$(closingIcon).closest('.qtip').attr("style", "display:none;");
+                                        const qtipId = $(closingIcon).closest('.qtip')[0].id;
+                                        $('#' + qtipId).attr("style", "display:none;");
+                                    }
+                                    
+                                 </script>
+                              </div>
+                              <div class="col-xs-12">
+                                 <div class="form-group radio-group">
+                                    <div class="">
+                                       <div class="invalid-msg hide">
+                                          <span class="field-validation-valid" data-valmsg-for="Policies[0].CoverType" data-valmsg-replace="true"></span>
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12" ng-init="Policies[0].CoverType">
+                                       <div id="Policies_0__CoverType" class=" who-to-cover-container  ">
+                                          <label for="Policies_0__CoverType-IND" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-ufe-br-hideid="" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleid="addtraveller,newTravellers" data-ufe-br-values="FAM|GRP" data-val="true" data-val-required="Please specify who you would like to cover" id="Policies_0__CoverType-IND" name="Policies[0].CoverType" ng-model="Policies[0].CoverType" title="" type="radio" value="IND" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                          <span>Just me</span>
+                                          </label>
+                                          <label for="Policies_0__CoverType-COU" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-ufe-br-hideid="" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleid="addtraveller,newTravellers" data-ufe-br-values="FAM|GRP" data-val-required="Please specify who you would like to cover" id="Policies_0__CoverType-COU" name="Policies[0].CoverType" ng-model="Policies[0].CoverType" title="" type="radio" value="COU" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                          <span>Me and my partner</span>
+                                          </label>
+                                          <label for="Policies_0__CoverType-FAM" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="" ng-show="Policies[0].PolicyType != 'L' " aria-hidden="false">
+                                          <input aria-hidden="true" data-ufe-br-hideid="" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleid="addtraveller,newTravellers" data-ufe-br-values="FAM|GRP" data-val-required="Please specify who you would like to cover" id="Policies_0__CoverType-FAM" name="Policies[0].CoverType" ng-model="Policies[0].CoverType" title="" type="radio" value="FAM" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                          <span>My family</span>
+                                          </label>
+                                          <label for="Policies_0__CoverType-GRP" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                          <input aria-hidden="true" data-ufe-br-hideid="" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleid="addtraveller,newTravellers" data-ufe-br-values="FAM|GRP" data-val-required="Please specify who you would like to cover" id="Policies_0__CoverType-GRP" name="Policies[0].CoverType" ng-model="Policies[0].CoverType" title="" type="radio" value="GRP" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                          <span>My friends</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="sameaddress" ng-show="Policies[0].CoverType == 'COU'" aria-hidden="true" class="ng-hide">
+                              <div class="well no-padding error-section">
+                                 <div class="row">
+                                    <div class="col-xs-12 dependant-container-style pd-bottom-10 pd-left-0" ng-init="Policies[0].SameAddress">
+                                       <div class="form-group radio-group">
+                                          <div class="col-xs-12">
+                                             <div class="invalid-msg hide">
+                                                <span class="field-validation-valid" data-valmsg-for="Policies[0].SameAddress" data-valmsg-replace="true"></span>
+                                             </div>
+                                          </div>
+                                          <div class="col-xs-12 col-lg-12 col-sm-12 col-md-9 pd-right-0">
+                                             <div class="alignment-row">
+                                                <label class="control-label">Are you and your partner living at the same address?</label>
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-xs-9 radio-row">
+                                                   <label for="Policies_0__SameAddress-True" class="radios col-md-3 col-xs-6 col-sm-6 mg-right-20 mg-left-10 label-style" title="">
+                                                   <input data-val="true" data-val-required="Please confirm if you and your partner are living at the same address" id="Policies_0__SameAddress-True" name="Policies[0].SameAddress" ng-model="Policies[0].SameAddress" title="" type="radio" value="True" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                                   <span>Yes</span>
+                                                   </label>
+                                                   <label for="Policies_0__SameAddress-False" class="radios col-md-3 col-xs-6 col-sm-6 mg-right-20 mg-left-10 label-style" title="">
+                                                   <input data-val-required="Please confirm if you and your partner are living at the same address" id="Policies_0__SameAddress-False" name="Policies[0].SameAddress" ng-model="Policies[0].SameAddress" title="" type="radio" value="False" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                                   <span>No</span>
+                                                   </label>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row hide" id="friends-message">
+                              <div class="pd-bottom-10">
+                                 <div class="col-xs-12">
+                                    <div class="form-horizontal partner-coverage-cont">
+                                       <div class="invalid-msg">
+                                          Partner cover only applies if you and your partner live at the same address. Don’t worry, we can still offer you cover as friends.
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="travellers" class="pd-bottom-30 h">
+                              <div id="mainTraveller">
+                                 <div class="col-xs-12 col-lg-12 col-sm-12 col-md-9">
+                                    <div class="row">
+                                       <label class="person-date-label" for="Policies_0__Risk_0__Traveller_DateOfBirth">Your date of birth</label>
+                                    </div>
+                                    <div class="row error-section" id="P0-103--DateOfBirthContainer-1">
+                                       <div class="col-lg-6 col-sm-6 col-xs-12 pd-left-0">
+                                          <div class="col-lg-3 col-xs-4 col-sm-3 date-input-padding">
+                                             <label class="block text-lg font-bold mb-2 sr-only" for="P0-103--DateOfBirth-DD-1"></label>
+                                             <input class="form-control" id="P0-103--DateOfBirth-DD-1" type="number" pattern="[0-9]*" name="Policies[0].Risk[0].Traveller.DateOfBirth.Day" value="" autocomplete="off" placeholder="DD" maxlength="2" oninput="this.value=this.value.slice(0,this.maxLength)" onchange="setDateLabel('P0-103--DateOfBirth-DD-1', 'P0-103--DateOfBirth-MM-1', 'P0-103--DateOfBirth-YYYY-1', 'day')">
+                                          </div>
+                                          <div class="col-lg-3 col-xs-4 col-sm-3 date-input-padding">
+                                             <label class="block text-lg font-bold mb-2 sr-only" for="P0-103--DateOfBirth-MM-1"></label>
+                                             <input class="form-control" id="P0-103--DateOfBirth-MM-1" type="number" pattern="[0-9]*" name="Policies[0].Risk[0].Traveller.DateOfBirth.Month" value="" autocomplete="off" placeholder="MM" maxlength="2" oninput="this.value=this.value.slice(0,this.maxLength)" onchange="setDateLabel('P0-103--DateOfBirth-DD-1', 'P0-103--DateOfBirth-MM-1', 'P0-103--DateOfBirth-YYYY-1', 'month')">
+                                          </div>
+                                          <div class="col-lg-4 col-xs-4 col-sm-4 date-input-padding">
+                                             <label class="block text-lg font-bold mb-2 sr-only" for="P0-103--DateOfBirth-YYYY-1"></label>
+                                             <input class="form-control nodatepickernew" id="P0-103--DateOfBirth-YYYY-1" type="number" pattern="[0-9]*" name="Policies[0].Risk[0].Traveller.DateOfBirth.Year" value="" autocomplete="off" placeholder="YYYY" minlength="4" maxlength="4" data-rule-maintravelleremptycheck="true" data-rule-maintraverllerminorcheck="true" data-rule-maintraverllermajorcheck="true" data-rule-mainextrapastdatecheck="true" oninput="this.value=this.value.slice(0,this.maxLength)" onchange="setDateLabel('P0-103--DateOfBirth-DD-1', 'P0-103--DateOfBirth-MM-1', 'P0-103--DateOfBirth-YYYY-1', 'year')">
+                                          </div>
+                                          <div id="dayOfBirthTraveller-1" class="col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10 birth-day-validation-error hidden"></div>
+                                          <div id="monthOfBirthTraveller-1" class="col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10 birth-day-validation-error hidden"></div>
+                                          <div id="yearOfBirthTraveller-1" class="col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10 birth-day-validation-error hidden"></div>
+                                          <div class="invalid-msg hide col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10">
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.DateOfBirth.Day" data-valmsg-replace="true"></span>
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.DateOfBirth.Month" data-valmsg-replace="true"></span>
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.DateOfBirth.Year" data-valmsg-replace="true"></span>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-5 col-sm-5 col-xs-12 value-of-birth">
+                                          <div class="relative">
+                                             <span class="the-converted-date hidden" id="P0-103--ConvertedDate-1"></span>
+                                          </div>
+                                       </div>
+                                       <div class="col-sm-12" id="DateOfBirthErrorPlaceholder-1"></div>
+                                    </div>
+                                    <label id="Policies_0__Risk_0__Traveller_DateOfBirth-label" class="datepickedvalue control-label"></label>
+                                 </div>
+                                 <div class="form-horizontal  error-section col-xs-12 col-sm-10 col-md-12 col-sm-offset-1 col-md-offset-0 hide-original-input">
+                                    <div class="datepickers">
+                                       <div class="form-group  ">
+                                          <div class="col-xs-12 col-lg-12-col-md-12 control-label control-label date-label no-padding">
+                                             <label for="Policies_0__Risk_0__Traveller_DateOfBirth">Your date of birth</label>
+                                          </div>
+                                          <div class="">
+                                             <div class="form-date-picker no-padding  " ng-init="Policies[0].Risk[0].Traveller.DateOfBirth">
+                                                <div class="invalid-msg hide">
+                                                   <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[0].Traveller.DateOfBirth" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <input class="form-control nodatepicker datepicker date-picker-border-color ng-pristine ng-untouched ng-valid" data-datepicker-ed="" data-datepicker-sd="" data-format="" data-title="Trip Details" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleid="extraTraveller" data-ufe-br-values="COU|FAM|GRP" data-val="true" data-val-date="The field Date Of Birth must be a date." data-val-required="Please complete the lead travellers date of birth" id="Policies_0__Risk_0__Traveller_DateOfBirth" name="Policies[0].Risk[0].Traveller.DateOfBirth" ng-model="Policies[0].Risk[0].Traveller.DateOfBirth" placeholder="dd/mm/yyyy" title="Traveller 1 Date of Birth" type="text" value="" aria-invalid="false">
+                                                <span class="form-date-picker-icon-mta" aria-hidden="true">
+                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M12.8839 15.5088H1.97058C1.65911 15.5088 1.36455 15.3649 1.1825 15.1239C1.0019 14.8849 0.950717 14.5735 1.04971 14.2914L1.98941 11.6013C2.09178 11.3111 2.33709 11.0899 2.64324 11.0044L5.93702 10.1067C6.01042 10.0865 6.0872 10.0753 6.16543 10.072C5.41792 9.18876 4.99684 7.99844 4.99684 6.73665C4.99684 4.12519 6.80429 2 9.02461 2C11.2454 2 13.0524 4.12519 13.0524 6.73665C13.0524 7.99844 12.6303 9.18876 11.8823 10.072C11.9606 10.0753 12.0393 10.0865 12.1141 10.1077L15.4045 11.0044C15.7146 11.0899 15.9565 11.3111 16.0584 11.6013L17 14.2914" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   </svg>
+                                                </span>
+                                                <!--
+                                                   -->
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div id="extraTraveller" ng-show="Policies[0].CoverType == 'COU'||Policies[0].CoverType == 'FAM'||Policies[0].CoverType == 'GRP'" aria-hidden="true" class="ng-hide">
+                                 <div class="col-xs-12 col-lg-12 col-sm-12 col-md-9">
+                                    <div class="row ng-hide" ng-show="Policies[0].CoverType == 'COU'" aria-hidden="true">
+                                       <label class="person-date-label" for="Policies_0__Risk_1__Traveller_DateOfBirth">Your partner's date of birth</label>
+                                    </div>
+                                    <div class="row ng-hide" ng-show="Policies[0].CoverType == 'FAM' || Policies[0].CoverType == 'GRP'" aria-hidden="true">
+                                       <label class="person-date-label" for="Policies_0__Risk_1__Traveller_DateOfBirth">Traveller 2</label>
+                                    </div>
+                                    <div class="row error-section" id="P0-103--DateOfBirthContainer-2">
+                                       <div class="col-lg-6 col-sm-6 col-xs-12 pd-left-0">
+                                          <div class="col-lg-3 col-xs-4 col-sm-2 date-input-padding">
+                                             <label class="block text-lg font-bold mb-2 sr-only" for="P0-103--DateOfBirth-DD-2">Date of Birth, Traveller 2 Day</label>
+                                             <input class="form-control" id="P0-103--DateOfBirth-DD-2" name="Policies[0].Risk[1].Traveller.DateOfBirth.Day" type="number" pattern="[0-9]*" value="" autocomplete="off" placeholder="DD" maxlength="2" oninput="this.value=this.value.slice(0,this.maxLength)" onchange="setDateLabel('P0-103--DateOfBirth-DD-2', 'P0-103--DateOfBirth-MM-2', 'P0-103--DateOfBirth-YYYY-2', 'day')">
+                                          </div>
+                                          <div class="col-lg-3 col-xs-4 col-sm-2 date-input-padding">
+                                             <label class="block text-lg font-bold mb-2 sr-only" for="P0-103--DateOfBirth-MM-2"> Date of Birth, Traveller 2 Month</label>
+                                             <input class="form-control" id="P0-103--DateOfBirth-MM-2" type="number" name="Policies[0].Risk[1].Traveller.DateOfBirth.Month" pattern="[0-9]*" value="" autocomplete="off" placeholder="MM" maxlength="2" oninput="this.value=this.value.slice(0,this.maxLength)" onchange="setDateLabel('P0-103--DateOfBirth-DD-2', 'P0-103--DateOfBirth-MM-2', 'P0-103--DateOfBirth-YYYY-2', 'month')">
+                                          </div>
+                                          <div class="col-lg-4 col-xs-4 col-sm-2 date-input-padding">
+                                             <label class="block text-lg font-bold mb-2 sr-only" for="P0-103--DateOfBirth-YYYY-2">
+                                             Date of Birth,
+                                             Traveller 2 Year
+                                             </label><input class="form-control nodatepickernew" id="P0-103--DateOfBirth-YYYY-2" type="number" pattern="[0-9]*" name="Policies[0].Risk[1].Traveller.DateOfBirth.Year" value="" autocomplete="off" placeholder="YYYY" minlength="4" maxlength="4" data-rule-extratravelleremptycheck="true" data-rule-extratraverllermajorcheck="true" data-rule-extratraverllerminorcheck="true" data-rule-mainextrapastdatecheck="true" oninput="this.value=this.value.slice(0,this.maxLength)" onchange="setDateLabel('P0-103--DateOfBirth-DD-2', 'P0-103--DateOfBirth-MM-2', 'P0-103--DateOfBirth-YYYY-2', 'year')">
+                                          </div>
+                                          <div id="dayOfBirthTraveller-2" class="col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10 birth-day-validation-error hidden"></div>
+                                          <div id="monthOfBirthTraveller-2" class="col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10 birth-day-validation-error hidden"></div>
+                                          <div id="yearOfBirthTraveller-2" class="col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10 birth-day-validation-error hidden"></div>
+                                          <div class="invalid-msg hide col-lg-12 col-sm-12 col-xs-12 pd-left-0 pd-top-10">
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[1].Traveller.DateOfBirth.Day" data-valmsg-replace="true"></span>
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[1].Traveller.DateOfBirth.Month" data-valmsg-replace="true"></span>
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[1].Traveller.DateOfBirth.Year" data-valmsg-replace="true"></span>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-5 col-sm-5 col-xs-12 value-of-birth">
+                                          <div class="relative">
+                                             <span class="the-converted-date hidden" id="P0-103--ConvertedDate-2"></span>
+                                          </div>
+                                       </div>
+                                       <div class="col-sm-12" id="DateOfBirthErrorPlaceholder-1"></div>
+                                    </div>
+                                    <label id="Policies_0__Risk_1__Traveller_DateOfBirth-label" class="datepickedvalue control-label"></label>
+                                 </div>
+                                 <div class="form-horizontal  error-section col-xs-12 col-sm-10 col-md-12 col-sm-offset-1 col-md-offset-0 hide-original-input">
+                                    <div class="datepickers">
+                                       <div class="form-group  ">
+                                          <div class="col-xs-12 col-lg-12-col-md-12 control-label control-label date-label no-padding">
+                                             <label for="Policies_0__Risk_1__Traveller_DateOfBirth">Traveller 2</label>
+                                          </div>
+                                          <div class="">
+                                             <div class="form-date-picker no-padding col-xs-4 col-md-4 col-lg-4 novalidate " ng-init="Policies[0].Risk[1].Traveller.DateOfBirth">
+                                                <div class="invalid-msg hide">
+                                                   <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[1].Traveller.DateOfBirth" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <input class="form-control nodatepicker datepicker date-picker-border-color ng-pristine ng-untouched ng-valid" data-datepicker-ed="" data-datepicker-sd="" data-format="" data-title="Trip Details" data-val="true" data-val-alernativerequired="Please complete your partner\'s date of birth" data-val-date="The field Date Of Birth must be a date." data-val-required="Please complete traveller 2\'s date of birth" id="Policies_0__Risk_1__Traveller_DateOfBirth" name="Policies[0].Risk[1].Traveller.DateOfBirth" ng-model="Policies[0].Risk[1].Traveller.DateOfBirth" placeholder="dd/mm/yyyy" title="Traveller 2 date of birth" type="text" value="" aria-invalid="false">
+                                                <span class="form-date-picker-icon-mta" aria-hidden="true">
+                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M12.8839 15.5088H1.97058C1.65911 15.5088 1.36455 15.3649 1.1825 15.1239C1.0019 14.8849 0.950717 14.5735 1.04971 14.2914L1.98941 11.6013C2.09178 11.3111 2.33709 11.0899 2.64324 11.0044L5.93702 10.1067C6.01042 10.0865 6.0872 10.0753 6.16543 10.072C5.41792 9.18876 4.99684 7.99844 4.99684 6.73665C4.99684 4.12519 6.80429 2 9.02461 2C11.2454 2 13.0524 4.12519 13.0524 6.73665C13.0524 7.99844 12.6303 9.18876 11.8823 10.072C11.9606 10.0753 12.0393 10.0865 12.1141 10.1077L15.4045 11.0044C15.7146 11.0899 15.9565 11.3111 16.0584 11.6013L17 14.2914" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                   </svg>
+                                                </span>
+                                                <!--
+                                                   -->
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div ng-show="ShowDependant('Policies_0__Risk_1__Traveller_DateOfBirth', '1')" aria-hidden="true" class="ng-hide">
+                                    <div class="well no-padding pd-bottom-10 error-section">
+                                       <div class="row">
+                                          <div class="col-xs-12 dependant-container-style pd-bottom-10 pd-left-0" ng-init="Policies[0].Risk[1].Traveller.NonDependant">
+                                             <div class="form-group radio-group">
+                                                <div class="col-xs-12">
+                                                   <div class="invalid-msg hide">
+                                                      <span class="field-validation-valid" data-valmsg-for="Policies[0].Risk[1].Traveller.NonDependant" data-valmsg-replace="true"></span>
+                                                   </div>
+                                                </div>
+                                                <div class="col-xs-12 col-lg-12 col-sm-12 col-md-9 pd-right-0">
+                                                   <div class="alignment-row">
+                                                      <label class="control-label">Is your child dependant on you?</label>
+                                                      <span class="icon-poms svg-tooltip-icon" data-qtip="true" data-hasqtip="6">
+                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333"></path>
+                                                            <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                         </svg>
+                                                      </span>
+                                                      <div class="qtip-text">
+                                                         <p class="policy-destination-p">Child dependency</p>
+                                                         <p>If you want to name a child on the policy, who is aged between 0 and 18 and living in your household, then you must select this option.</p>
+                                                         <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                               <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                               <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            </svg>
+                                                         </span>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-xs-9 radio-row">
+                                                         <label for="Policies_0__Risk_1__Traveller_NonDependant-True" class="radios col-md-3 col-xs-6 col-sm-6 mg-right-20 mg-left-10 label-style" title="Select no if child is dependent on you.">
+                                                         <input id="Policies_0__Risk_1__Traveller_NonDependant-True" name="Policies[0].Risk[1].Traveller.NonDependant" ng-model="Policies[0].Risk[1].Traveller.NonDependant" title="Select no if child is dependent on you." type="radio" value="True" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                                         <span>Yes</span>
+                                                         </label>
+                                                         <label for="Policies_0__Risk_1__Traveller_NonDependant-False" class="radios col-md-3 col-xs-6 col-sm-6 mg-right-20 mg-left-10 label-style" title="Select no if child is dependent on you.">
+                                                         <input id="Policies_0__Risk_1__Traveller_NonDependant-False" name="Policies[0].Risk[1].Traveller.NonDependant" ng-model="Policies[0].Risk[1].Traveller.NonDependant" title="Select no if child is dependent on you." type="radio" value="False" class="ng-pristine ng-untouched ng-valid" aria-checked="false" aria-invalid="false">
+                                                         <span>No</span>
+                                                         </label>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div id="newTravellers" ng-show="Policies[0].CoverType == 'FAM'||Policies[0].CoverType == 'GRP'" aria-hidden="true" class="ng-hide">
+                                 <div class="col-xs-12 mg-bottom-30 ng-hide" id="addtraveller" ng-show="Policies[0].CoverType == 'FAM'||Policies[0].CoverType == 'GRP'" aria-hidden="true">
+                                    <div class="col-md-10 col-md-10 col-xs-12 pd-left-0">
+                                       <button type="button" class="btn btb-primary another-traveller" onclick="addTraveller('add')">
+                                          Add another traveller
+                                          <svg class="svg-icon-style" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M1 7.82323L6.68878 14.0005L16.9286 2.26367" stroke="#D00F39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- ------------- -->
+                           <div class="row pd-bottom-15 mg-bottom-15 pd-top-15 mg-top-15">
+                              <div class="col-md-12 col-xs-12 ">
+                                 <hr class="line-break" />
+                                 <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                       <fieldset id="medical-conditions">
+                                          <legend class="row mg-right-0 mg-left-0">
+                                             <span id="section-title" class="col-xs-11 col-sm-11 pd-left-0">
+                                             Do any travellers on the policy have any medical conditions?                </span>
+                                             <span class="icon-poms icon-md pull-right small-screen-svg" data-qtip="true">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28226 6.60708L6.5459 5.85289C7.2209 5.23697 8.01863 4.91016 8.96363 4.91016C10.5714 4.91016 11.455 5.97859 11.455 7.21044C11.455 9.04563 9.55272 8.83194 9.55272 10.5917V11.3208H8.42363V10.5917C8.42363 8.34172 10.2768 8.37943 10.2768 7.22301C10.2768 6.64479 9.87181 5.94088 8.93908 5.94088C8.32544 5.94088 7.68726 6.21742 7.28226 6.60708ZM8.27635 13.1811C8.27635 12.7789 8.59544 12.4521 8.98817 12.4521C9.39317 12.4521 9.69999 12.7789 9.69999 13.1811C9.69999 13.5959 9.39317 13.9102 8.98817 13.9102C8.59544 13.9102 8.27635 13.5959 8.27635 13.1811Z" fill="#333333" />
+                                                   <path d="M2.22463 4.41471C-0.127618 7.8903 0.531361 12.582 3.75003 15.2752C6.9687 17.9683 11.7032 17.7893 14.7093 14.8609C17.7155 11.9325 18.0184 7.20437 15.4105 3.91628C12.8025 0.628197 8.12964 -0.153427 4.59363 2.10698" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                             </span>
+                                             <div class="qtip-text">
+                                                <p class="policy-destination-p">Medical Information </p>
+                                                <p>Please note this travel insurance policy will not cover you for any loss or any claim relating to pre-existing medical condition(s) unless declared, accepted by us and you have paid any additional premium and full cover has been confirmed by us in writing. Failure to make a full and accurate declaration means we may cancel the policy, refuse to deal with your claim or reduce the amount of any claim payment potentially leaving you with substantial costs to pay.</p>
+                                                <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                      <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                          </legend>
+                                       </fieldset>
+                                    </div>
+                                 </div>
+                                 <script>
+                                    function closeTooltipsWindow(closingIcon) {
+                                        //aria - describedby
+                                        //$(closingIcon).closest('.qtip').attr("style", "display:none;");
+                                        const qtipId = $(closingIcon).closest('.qtip')[0].id;
+                                        $('#' + qtipId).attr("style", "display:none;");
+                                    }
+                                    
+                                 </script>
+                                 <div class="medical-condition-container">
+                                    <h4>
+                                       <span class="medical-conditions-title">IF YOU ANSWER YES TO ANY OF THE QUESTIONS BELOW, PLEASE SELECT "YES":</span>            
+                                    </h4>
+                                    <ul class="medical-condition-list">
+                                       <br />
+                                       <li class="medical-condition-item">Have you been prescribed medication in the last 2 years whether you are taking it or not? This includes tablets (including Morphine based pain killers), inhalers or injections.</li>
+                                       <br />
+                                       <li class="medical-condition-item">Do you currently routinely visit a GP, hospital or clinic for check-ups/consultations or treatments? This includes annual reviews or reviews once every 2 years for a condition.</li>
+                                       <br />
+                                       <li class="medical-condition-item">Are you visited by a doctor or nurse, or carer for check-ups or treatment (including dressings being changed)?</li>
+                                       <br />
+                                       <li class="medical-condition-item">Have you been admitted into hospital or undergone surgery in the last 2 years?</li>
+                                       <br />
+                                       <li class="medical-condition-item">Have you received treatment for heart, stroke, or respiratory related illness in the last 2 years?</li>
+                                    </ul>
+                                    <div class="form-group radio-group">
+                                       <div class="">
+                                          <div class="invalid-msg hide">
+                                             <span class="field-validation-valid" data-valmsg-for="Policies[0].ExistingMedicalConditions" data-valmsg-replace="true"></span>
+                                          </div>
+                                       </div>
+                                       <div class="col-xs-12 col-md-12" ng-init="Policies[0].ExistingMedicalConditions">
+                                          <div id="Policies_0__ExistingMedicalConditions" class=" who-to-cover-container  ">
+                                             <label for="Policies_0__ExistingMedicalConditions-True" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                             <input aria-hidden="true" data-ufe-br-hideId="" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleID="sameaddress" data-ufe-br-values="COU" data-val="true" data-val-required="Please confirm if any travellers have a medical condition" id="Policies_0__ExistingMedicalConditions-True" name="Policies[0].ExistingMedicalConditions" ng-model="Policies[0].ExistingMedicalConditions" title="" type="radio" value="True" />
+                                             <span>Yes</span>
+                                             </label>
+                                             <label for="Policies_0__ExistingMedicalConditions-False" class="radios pd-top-10 pd-bottom-10 mg-right-5 col-lg-3 col-md-3 text-center who-to-cover-style" title="">
+                                             <input aria-hidden="true" data-ufe-br-hideId="" data-ufe-br-name="Policies[0].CoverType" data-ufe-br-toggleID="sameaddress" data-ufe-br-values="COU" data-val-required="Please confirm if any travellers have a medical condition" id="Policies_0__ExistingMedicalConditions-False" name="Policies[0].ExistingMedicalConditions" ng-model="Policies[0].ExistingMedicalConditions" title="" type="radio" value="False" />
+                                             <span>No</span>
+                                             </label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <script>
+                              const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                              const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                              
+                           </script>
+                           <hr class="line-break" />
+                           <div class="row">
+                              <div id="importantStatements" class="col-md-12 col-xs-12">
+                                 <div class="row col-xs-12 mg-bottom-10">
+                                    <h2 class="header-idd">Important Statement</h2>
+                                 </div>
+                                 <div class="row col-xs-12 col-md-12 mg-bottom-10 important-statements-container">
+                                    <p>
+                                       You agree that you and anyone to be covered by this policy:
+                                    </p>
+                                    <ul class="medical-condition-list">
+                                       <li class="medical-condition-item">
+                                          Are UK residents and registered with a GP (Doctor) in the UK
+                                          (a UK resident is a person whose main home is in the UK, Channel islands or Isle of Man.)
+                                       </li>
+                                       <li class="medical-condition-item mg-bottom-15">Have not already started a trip</li>
+                                       <li class="medical-condition-item">Are travelling from and returning to the UK</li>
+                                       <li class="medical-condition-item">Are not aware of any reason why you may need to claim</li>
+                                       <li class="medical-condition-item"> Have not been diagnosed with a terminal illness</li>
+                                       <li class="medical-condition-item">Do not have an undiagnosed medical condition, or a medical condition where you are awaiting the diagnosis.</li>
+                                       <li class="medical-condition-item">Are not currently waiting for any results of tests/investigations or awaiting any consultations or referral or on any waiting lists?</li>
+                                       <li class="medical-condition-item">Are not travelling intending to receive medical treatment</li>
+                                       <li class="medical-condition-item">Are not travelling against advice of a medical practitioner or would be travelling against advice if you asked for it</li>
+                                    </ul>
+                                    <div ng-init="Account.UkResident" class="">
+                                       <div class="form-group checkbox-group checkbox-group-account-ukresident col-xs-12 col-sm-12 col-md-12 col-lg-12 error-section">
+                                          <div class="invalid-msg hide">
+                                             <span class="field-validation-valid" data-valmsg-for="Account.UkResident" data-valmsg-replace="true"></span>
+                                          </div>
+                                          <div class="checkbox-section">
+                                             <div class="col-md-1 col-sm-1 col-xs-2 no-padding lebel">
+                                                <label for="Account_UkResident" class="checkbox">
+                                                <input aria-hidden="true" data-msg-required="Please read and agree to continue" id="Account_UkResident" name="Account.UkResident" required="required" type="checkbox" value="true" /><input name="Account.UkResident" type="hidden" value="false" />
+                                                <span></span>
+                                                </label>
+                                             </div>
+                                             <div class="col-xs-10 col-sm-11 col-md-11 mg-top-5" >
+                                                <p>Yes, I have read and agree to the above statements</p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--
+                                    <div class="row col-xs-12">
+                                    
+                                    
+                                    <div ng-init="Account.UkResident=&#39;&#39;" class="">
+                                    <div class="form-group checkbox-group col-xs-12 col-sm-12 col-md-12 col-lg-12 error-section">
+                                        <div class="invalid-msg hide">
+                                             <span class="field-validation-valid" data-valmsg-for="Account.UkResident" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="checkbox-section">
+                                            <div class="col-md-1 col-sm-1 col-xs-2 no-padding lebel">
+                                                <label for="Account_UkResident" class="checkbox">
+                                                        <input aria-hidden="true" data-msg-required="Please read and agree to continue" id="Account_UkResident" name="Account.UkResident" required="required" type="checkbox" value="true" /><input name="Account.UkResident" type="hidden" value="false" />
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-11 mg-top-5" >
+                                                <p>Yes, I have read and agree to the above statements</p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    </div>-->
+                              </div>
+                           </div>
+                           <!--
+                              <script>
+                                  (function () {
+                                      var currentURL = window.location.href;
+                                      if (currentURL.includes("mta")) {
+                                          var checkboxInputId = document.getElementById("Account_UkResident");
+                                          checkboxInputId.setAttribute("checked", true);
+                                      }
+                                  })();
+                              </script>-->
+                           <!-- <div class="well">-->
+                           <div class="row">
+                              <div class="col-xs-12">
+                                 <button ng-click="tripDetails()" class="custom-right btn btn-lg arrow-right xs-width-100 next-step-button" id="tripdeatails-next" name="nextstep" type="submit" value="next">Get a quote
+                                 <span><img src="img/down-arrow.png" style="width: 16px;transform: rotate(271deg);position: relative;left: 24px;"></span>
+                                 </button>
+                              </div>
+                           </div>
+                           <!-- </div>-->
+                           <div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--
+                     <div class="panel panel-primary blend">
+                         <div class="panel-body">
+                             <h5>Definitions</h5>
+                     <p>
+                     ^ The maximum cover limit depends on the level of cover chosen.  For Annual Multi-trip policies there is a maximum duration for each individual trip.  To help you choose the cover level that meets your needs, have a look at the summary of cover shown on the Travel Insurance Quotes page.
+                     </p>
+                         </div>
+                     </div>-->
+               </form>
+            </div>
+            <div class="no-container-padding col-md-4 welcome-to-section no-container-padding">
+               <div class="col-md-10 welcome-to-container">
+                  <div class="row mx-1 mg-bottom-10">
+                     <h3 class="h3-style">Welcome to Post Office Travel Insurance</h3>
+                     <p><b>Please answer all questions honestly and to the best of your knowledge as any incorrect information provided may invalidate a claim or your policy.</b></p>
+                  </div>
+                  <div class="row mx-1 side-bar">
+                     <div class="col-1 mg-right-10">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M10.8 9.55753L13.4761 12.1106C13.636 12.2631 13.6419 12.5163 13.4894 12.6761C13.3369 12.8359 13.0837 12.8419 12.9239 12.6894L10.1239 10.0182C10.0448 9.9427 10 9.83811 10 9.72876V4.4C10 4.17909 10.1791 4 10.4 4C10.6209 4 10.8 4.17909 10.8 4.4V9.55753Z" fill="#333333" />
+                           <path d="M19.1726 12.8375C19.1073 13.0485 18.8832 13.1666 18.6722 13.1012C18.4612 13.0359 18.3431 12.8118 18.4084 12.6008C18.6669 11.7662 18.7996 10.893 18.7996 9.9999C18.7996 5.14024 14.8596 1.20039 10.0001 1.20039C5.13974 1.20039 1.19961 5.1401 1.19961 9.9999C1.19961 14.8605 5.13959 18.8004 10.0001 18.8004C12.2231 18.8004 14.3162 17.965 15.933 16.4848C16.0959 16.3356 16.3489 16.3467 16.4981 16.5097C16.6473 16.6726 16.6361 16.9256 16.4732 17.0748C14.7108 18.6884 12.4257 19.6004 10.0001 19.6004C4.69777 19.6004 0.399609 15.3024 0.399609 9.9999C0.399609 4.69825 4.69793 0.400391 10.0001 0.400391C15.3014 0.400391 19.5996 4.69841 19.5996 9.9999C19.5996 10.9734 19.4548 11.9264 19.1726 12.8375Z" fill="#333333" />
+                        </svg>
+                     </div>
+                     <div class="col-9">
+                        <p>Average time needed to get covered: <br /><b>5 mins</b></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer class="footer-funnel " >
+            <div class="footer-funnel__top">
+               <div class="footer-funnel__container">
+                  <div class="footer-funnel__logo">
+                     <!-- <img src="img/Post-Office-Logo.svg" alt="Post Office logo" style="width: 80px;"/> -->
+                     <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+
+                  </div>
+                  <div class="footer-funnel__links">
+                     <a tabindex="0" target="_blank" href="#">Privacy Policy</a>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-funnel__bottom">
+               <div class="footer-funnel__container">
+                  <div class="footer-funnel__copyright">© Copyright 2022 The Post Office</div>
+               </div>
+            </div>
+         </footer>
+         <script src="js/trip/POMS/libs/Modernizr/modernizr-2.6.2.js"></script>
+         <script src="js/trip/POMS/libs/Modernizr/modernizr-2.8.3.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery-3.0.0.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery-1.10.2.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery.actual.min.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery.qtip.js"></script>
+         <script src="js/trip/POMS/libs/Validation/jquery.validate.js"></script>
+         <script src="js/trip/POMS/libs/Validation/jquery.validate.unobtrusive.js"></script>
+         <script src="js/trip/scripts/AdrumUtility.js"></script>
+         <script src="js/trip/rum-static.js" async></script>
+        
+         <script src="js/trip/scripts/adrum.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular.min.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular-aria.min.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular-smooth-scroll.js"></script>
+        
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap-datepicker.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap-session-timeout.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/respond.js"></script>
+         <script src="js/trip/POMS/scripts/Global/app.js"></script>
+         <script src="js/trip/POMS/scripts/Global/globalize.js"></script>
+         <script src="js/trip/POMS/scripts/Global/poms.js"></script>
+         <script src="js/trip/POMS/scripts/DatePicker/datepickers.js"></script>
+         <script src="js/trip/POMS/scripts/Radio/radio-toggle.js"></script>
+         <script src="js/trip/POMS/scripts/Moment/moment-with-locales.js"></script>
+         <script src="js/trip/POMS/scripts/Moment/moment.js"></script>
+         <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+         <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+         <script>
+            window.localStorage.setItem("currentpage", 'tripdetails');
+            $( document ).ready(function(){
+                $('#Policies_0__PromotionCodes').keydown(function(event){
+                    if(event.keyCode == 13) {
+                        if ($("#promo").valid()){
+                            applyPromoCode();
+                        }
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+                $("#Policies_0__PromotionCodes").focusout(function(){
+                    return false;
+                });
+            });
+            
+            $('input, select, button').each(function () {
+                $(this).bind('blur', function () {
+                 //   CheckTimeout();
+                });
+            });
+         </script>
+         <script>
+            //alert('Page');
+            function changeToPartner()
+            {
+                var $Input = $('#Policies_0__Risk_1__Traveller_DateOfBirth');
+                $('label[for="Policies_0__Risk_1__Traveller_DateOfBirth"]').html("Your partner\'s date of birth");
+                $Input.attr("title", "Your partner\'s date of birth");
+                $Input.attr("data-val-required", "Please complete your partner\'s date of birth");
+            }
+            function changeFromPartner()
+            {
+                var $Input = $('#Policies_0__Risk_1__Traveller_DateOfBirth');
+                $('label[for="Policies_0__Risk_1__Traveller_DateOfBirth"]').html("Traveller 2");
+                $Input.attr("title", "Traveller 2 date of birth");
+                $Input.attr("data-val-required", "Please complete traveller 2\'s date of birth");
+            }
+         </script>
+         <script src="js/trip/POMS/scripts/BaseTripDetails.js"></script>
+         <script src="js/trip/POMS/scripts/TripDetails.js?version=1"></script>
+   </body>
+</html>

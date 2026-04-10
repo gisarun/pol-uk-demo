@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta http-equiv="X-UA-Compatible" content="IE=8">
+        <meta name="robots" content="noindex">
+        <title>Pay</title>
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+        <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+        <script src="js/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                    var price;
+                    var covers=[];
+                    var policyType;
+                    var tripExtension;
+                    var standardCover= window.localStorage.getItem("priceSingleTrip");
+                    var gadgetCover=window.localStorage.getItem("Gadget_cover")??0;
+                    var excessWaiver=window.localStorage.getItem("Excess_waiver")??0;
+                    var sportsandActivities=window.localStorage.getItem("Sports_and_Activities")??0;
+                    var tripDisruptionCover=window.localStorage.getItem("Trip_Disruption_cover")??0;
+                    var covidCover = window.localStorage.getItem("Covid-19_Cover")??0;
+                    var travelExtensionCover = window.localStorage.getItem("Travel_Insurance_Extension_Cover")??0;
+
+                   var totalPrice=0;
+                    var coverTypes=JSON.parse(window.localStorage.getItem("covertypes"));
+                    if(coverTypes){
+                        coverTypes.forEach(async (item,index)=>{
+                            totalPrice+=Number(item.Amount);
+                        });
+                    }
+                    totalPrice=totalPrice+Number(standardCover);
+
+                    var Policies = [{}];
+                    if(window.localStorage.getItem("tripDetailsData") != " "){
+                        Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                    } 
+                    var policyType = Policies[0].PolicyType;
+
+                    if(policyType === 'S'){
+                        policyType = 'Single Trip'
+                        Policies[0].EffectiveDate = '';
+                       }else if (policyType === 'A'){
+                        policyType = 'Annual Multi Trip';
+                        Policies[0].TripStartDate = '';
+                       }else{
+                        policyType = 'Back Packers'
+                       }
+                       
+                    var annualMultiTripPrice = 39.29;
+                    var goingOnCruisePrice = 4.00;
+
+                     if(policyType === 'Annual Multi Trip'){
+                       // totalPrice=totalPrice+Number(annualMultiTripPrice);
+                     }
+
+                    if(window.localStorage.getItem("isGoingOnCruise")==='true'){
+                        totalPrice=totalPrice+Number(goingOnCruisePrice);
+                    }
+
+                     if(gadgetCover == null || gadgetCover== 0){
+                        gadgetCover_value.style.display="none"
+                     }
+                     if(excessWaiver == null || excessWaiver == 0){
+                        excessWaiver_value.style.display="none"
+                     }
+                     if(sportsandActivities == null ||sportsandActivities== 0){
+                        sportsandActivities_value.style.display="none"
+                     }
+                     if(tripDisruptionCover == null || tripDisruptionCover== 0){
+                        tripDisruptionCover_value.style.display="none"
+                     }
+                     if(covidCover == null || covidCover== 0){
+                        covidCover_value.style.display="none"
+                     }
+
+                     if(covidCover == null || covidCover== 0){
+                        covidCover_value.style.display="none"
+                     }
+
+                     if(travelExtensionCover == null || travelExtensionCover== 0){
+                        travelExtensionCover_value.style.display="none"
+                     }
+
+                      $("#payToPrice").html('');
+                      $("#payToPrice").html('£'+totalPrice.toFixed(2));
+                      $(".standardCover_value").html('');
+                      $(".standardCover_value").html('£'+Number(standardCover).toFixed(2));
+                      $(".gadgetCover_value").html('');
+                      $(".gadgetCover_value").html('£'+gadgetCover);
+                      $(".excessWaiver_value").html('');
+                      $(".excessWaiver_value").html('£'+excessWaiver);
+                      $(".sportsandActivities_value").html('');
+                      $(".sportsandActivities_value").html('£'+sportsandActivities);
+                      $(".tripDisruptionCover_value").html('');
+                      $(".tripDisruptionCover_value").html('£'+tripDisruptionCover);
+                      $(".covidCover_value").html('');
+                      $(".covidCover_value").html('£'+covidCover);
+                      $(".covidCover_value").html('');
+                      $(".covidCover_value").html('£'+covidCover);
+                      $(".travelExtensionCover_value").html('');
+                      $(".travelExtensionCover_value").html('£'+travelExtensionCover);
+                
+                $(".policyType_value").html('')
+                $(".policyType_value").html(policyType)
+                var address = Policies[0].UFEDestination; 
+                      if( address == 'W'){
+                        address = "Worldwide excluding USA, Canada, Bermuda, The Caribbean, Mexico and Greenland";
+                         }else if(address == 'EUR'){
+                         address = "Cape Verde, Cyprus, Spain, Balearic Islands, Canary Islands, Turkey";
+                         }else{
+                         address = "UK"
+                         }
+                         $(".address_value").html('')
+                      $(".address_value").html(address);
+                var departingOn = '';
+                if(Policies[0].TripStartDate)
+                    departingOn = Policies[0].TripStartDate;
+                else
+                    departingOn = Policies[0].EffectiveDate;
+                
+                $(".departingOn_value").html('')
+                $(".departingOn_value").html(departingOn)
+
+                var returningOn = Policies[0].TripEndDate;
+                $(".returningOn _value").html('')
+                $(".returningOn _value").html(returningOn)
+
+                var coverType = Policies[0].CoverType;
+                      if(coverType == 'IND'){
+                        coverType = 'Just me';
+                      }else if(coverType == 'COU'){
+                        coverType = 'Me and my partner';
+                      }else if(coverType == 'FAM'){
+                        coverType = 'My family';
+                      }else{
+                        coverType = 'My friends';
+                      }
+                      $(".coverType_value").html('')
+                       $(".coverType_value").html(coverType);
+
+            });
+        </script>
+    </head>
+ 
+        <body role="document" ng-app="PomsApp" ng-controller="SharedController">
+            <!--<![endif]-->
+            <header class="header-funnel">
+                <div class="header-funnel__container-top padding-left-30 mobile-left-padding10">
+                    <div class="header-funnel__logo">
+                        <a href="index.html">
+                        <!-- <img class="header-funnel__logo-image" src="img/Post-Office-Logo.png" alt="Logo"> -->
+                        <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                        </a>
+                    </div>
+                    <div class="header-funnel__help">
+                        <span class="header-funnel__help-action" data-qtip="true" data-hasqtip="0">Need Help?</span>
+                        <div class="qtip-text">
+                            <strong>0330 123 1387</strong><br>
+                            UK Call Line<br>
+                            Mon - Sat: 9am-5:30pm<br>
+                            Closed Sundays
+                            <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <span type="button" class="closing-icon" onclick="closeTooltipsWindowT('qtip-0')">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-funnel__container">
+                    <div class="header-funnel__top-title">Travel Insurance</div>
+                    <div class="stepper">
+                        <div class="stepper__item" data-active="true" data-current="false">
+                            <span class="stepper__num"><span><i>1</i></span></span>
+                            <span class="stepper__title" style="">Trip Details</span>
+                        </div>
+                        <div class="stepper__item" data-active="true" data-current="false">
+                            <span class="stepper__num"><span><i>2</i></span></span>
+                            <span class="stepper__title" style="">Quote</span>
+                        </div>
+                        <div class="stepper__item" data-active="true" data-current="false">
+                            <span class="stepper__num"><span><i>3</i></span></span>
+                            <span class="stepper__title" style="">Additional Cover</span>
+                        </div>
+                        <div class="stepper__item" data-active="true" data-current="false">
+                            <span class="stepper__num"><span><i>4</i></span></span>
+                            <span class="stepper__title" style="">Personal Details</span>
+                        </div>
+                        <div class="stepper__item" data-active="true" data-current="true">
+                            <span class="stepper__num"><span><i>5</i></span></span>
+                            <span class="stepper__title" style="">Pay</span>
+                        </div>
+                    </div>
+                    <h1 class="header-funnel__title">Pay</h1>
+                </div>
+            </header>
+            <script>
+                function closeTooltipsWindowT(closingIcon) {
+                    var closingIco = document.getElementById(closingIcon);
+                    $(closingIco).attr("style", "display:none; z-index:150000;");
+                }
+                
+            </script>
+            <div class="container main no-container-padding main-form-container " role="main">
+                <div class="col-md-8 col-main no-container-padding  " style="display: none">
+                    <form action="/web/travel/quote/payment?E=0" id="form" method="get" novalidate="" class="ng-pristine ng-valid" autocomplete="off">
+                        <div class="panel2 row" ng-init="Account.AutoRenew='True'">
+                            <div class="panel2__body pd-left-15 pd-right-15">
+                                <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                                    <div class="panel2 panel2--summary">
+                                        <div class="panel2__body panel2__body--no-padding">
+                                            <div class="summary summary--collapsed">
+                                                <h3 class="summary__title">Summary of cover<span class="summary__toggle" data-summary-toggle=""></span></h3>
+                                                <span class="hide">177805773_TC0152703792Q/00_177751024</span>
+                                                <div class="summary__data" id="tillrecipt">
+                                                    <div class="summary__item summary__item--caption ng-pristine ng-untouched ng-valid ng-scope" id="prices" ng-model="price" ng-init="price = additionalCoverPrice()" aria-invalid="false">
+                                                        <div class="summary__label">
+                                                            Price to pay
+                                                            <span class="qtip__icon" data-qtip="true" data-hasqtip="1"></span>
+                                                            <div class="qtip-text">
+                                                                Includes Insurance Premium Tax at the current rate (if applicable)            
+                                                            </div>
+                                                        </div>
+                                                        <div class="summary__value ng-binding"></div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Standard cover</div>
+                                                        <div class="summary__value">£46.43</div>
+                                                    </div>
+                                                    <div class="summary__item j">
+                                                        <div class="summary__label"><span class="pd-right-5">+</span>Winter Sports</div>
+                                                        <div class="summary__value">£6.80</div>
+                                                    </div>
+                                                    <!--
+                                                        <div class="summary__item" ng-init="initOptionalLabel('0', '0')" ng-show="showOptionalLabel">
+                                                        <div class="summary__label"><strong>j</strong></div>
+                                                        </div>
+                                                        -->
+                                                    <!--<script>
+                                                        function getAdditionalCovers() {
+                                                            return window.localStorage.getItem('selectedAdditionalCovers');
+                                                        }
+                                                        
+                                                        const sac = window.localStorage.getItem('selectedAdditionalCovers');
+                                                        var sacArray = sac.split('|');
+                                                        
+                                                        for (let j = 0; j < sacArray.length; j++) {
+                                                            var item = 'show_' + sacArray[j].replace(' ', '');
+                                                            if (item == 'show_GadgetCover') {
+                                                                show_GadgetCover = true;
+                                                            }
+                                                            //setAdditionalCoverShow(item);
+                                                            //alert(item);
+                                                            //  $scope[item] = true;
+                                                            //item = true;
+                                                            //alert($scope[item]);
+                                                            //alert(item);
+                                                        }-->
+                                                    <!--</script>-->
+                                                </div>
+                                                <div class="summary__data">
+                                                    <div class="summary__item">
+                                                        <div class="summary__caption">Trip Details</div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Policy type</div>
+                                                        <div class="summary__value">Annual Multi-Trip</div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Area of travel</div>
+                                                        <div class="summary__value">    Europe</div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Cover start date</div>
+                                                        <div class="summary__value">29 July 2022</div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Who's covered</div>
+                                                        <div class="summary__value">Just me</div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Cancellation limit</div>
+                                                        <div class="summary__value">£3,000</div>
+                                                    </div>
+                                                    <div class="summary__item">
+                                                        <div class="summary__label">Medical limit</div>
+                                                        <div class="summary__value">£7,500,000</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row visible-xs hidden-sm hidden-md hidden-lg price-to-pay__container">
+                                    <div class="col-xs-6 price-to-pay__label">
+                                        Price to pay;
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <span class="price-to-pay__price ng-pristine ng-untouched ng-valid ng-binding totalPrice_value" ng-model="price" ng-init="price = additionalCoverPrice()" aria-invalid="false">{{totalPrice | number:2}}</span>
+                                    </div>
+                                </div>
+                                <div class="payment__text-block mg-top-5">
+                                    Please click the “Your cover” link below and check all the details carefully to make sure they are correct and the cover chosen meets your needs.
+                                </div>
+                                <div class="payment__document-link">
+                                    <a class="btn2 btn2--outlined btn2--document" href="/web/documents/getdemandsandneedsdocs?E=0" id="doc-link" target="_blank"><span>Your Cover</span></a>
+                                </div>
+                                <div class="payment__title-block">
+                                    Payment details
+                                </div>
+                                <p><span class="no-margin"><strong>We’ll securely store your payment details so further payments on your policy can be handled easily.</strong></span></p>
+                                <div class="callout">
+                                    <div class="callout__message">
+                                        <strong>Please do not refresh or navigate away from this page while we process your payment. Please select 'Go back a step' below for any modification. If you opened any other tabs please close those tabs and make the desired changes on your original quote.</strong>
+                                    </div>
+                                </div>
+                                <div class="row" id="autorenew">
+                                    <div class="col-md-12 col-sm-12">
+                                        <!-- <iframe src="/web/payment/autorenewpayment?E=0" id="autorenewiframe"></iframe> -->
+                                        <div class="resp_inner_container_content">
+                                            <div class="resp_page_container">
+                                                <div id="realex_module">
+                                                    <noscript>
+                                                        <style>
+                                                            .rxp-placeholder {
+                                                            display: none;
+                                                            }
+                                                        </style>
+                                                        <h1 class="noscript">JavaScript is required on your browser to
+                                                            use this service. Please turn on JavaScript or upgrade your browser
+                                                            to have JavaScript capability.
+                                                        </h1>
+                                                    </noscript>
+                                                    <div class="container-fluid portfolio-realex en" id="rxp-hpp" style="background-color: #fff">
+                                                        <!-- HTML ALERT MESSAGES SECTIONS -->
+                                                        <div id="alert-container" tabindex="-1"></div>
+                                                        <!-- END HTML ALERT MESSAGES SECTIONS -->
+                                                        <div class="success" id="success-pane" style="display: none">
+                                                            <span id="result-message"></span>
+                                                        </div>
+                                                        <div class="rxp-container rxp-merchant-container">
+                                                            <div class="row" id="rxp-header">
+                                                                <!-- <div class="col-lg-12" id="rxp-header-title">
+                                                                    <h1 class="rxp-title"><span>Payment Details</span></h1>
+                                                                    </div> -->
+                                                            </div>
+                                                            <!-- HTML CONTAINER OF SECTIONS -->
+                                                            <div aria-multiselectable="true" class="panel-group" id="hpp-accordion">
+                                                                <!-- HTML FOR PAY WITH SAVED CARD SECTION -->
+                                                                <!-- END HTML FOR PAY WITH SAVED CARD SECTION -->
+                                                                <!-- HTML FOR PAY WITH ANOTHER CARD SECTION -->
+                                                                <div class="panel" id="another-card-section" style="background-color: #fff">
+                                                                    <div id="panelPayWithNewCard" role="region" aria-expanded="true" class="panel-collapse in">
+                                                                        <div class="panel-body">
+                                                                            <div id="rpx-another-card dnone" style="display: none">
+                                                                                <!-- FORM PAYMENT -->
+                    <form id="card-payment-form" method="POST" novalidate="novalidate" autocomplete="off">
+                    <input id="pas_cctype" name="pas_cctype" type="hidden">
+                    <input id="pas_pareq" name="pas_pareq" type="hidden" value="">
+                    <input id="pas_acsurl" name="pas_acsurl" type="hidden" value="">
+                    <input id="pas_termurlId" name="pas_termurl" type="hidden" value="">
+                    <input id="encryptMDID" name="encryptMD" type="hidden" value="">
+                    <input id="verifyMessageId" name="verifyMessage" type="hidden" value="">
+                    <input id="verifyResultId" name="verifyResult" type="hidden" value="">
+                    <input id="verifyEnrolledId" name="verifyEnrolled" type="hidden" value="">
+                    <input id="cardIdentified" type="hidden">
+                    <input class="rxp-field" id="hpp_display_cardholder_name" type="hidden" value="">
+                    <input class="rxp-field" id="hpp_display_cvn" type="hidden" value="">
+                    <div class="row" id="rpx-cardnum-section">
+                    <div class="form-group">
+                    <div class="col-lg-6 col-md-6 col-xs-6" id="rpx-cardnum-title">
+                    <label class="control-label" for="pas_ccnum">Card Number</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-6" id="rpx-cardnum-item">
+                    <span aria-live="polite" class="visually-hidden" id="rxp-selected-card"></span>
+                    <span class="pull-right rxp-allowed-cards">
+                    <img alt="Visa-Card" aria-disabled="false" class="rxp rxp-visa-small" id="visa-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAQCAYAAADj5tSrAAAAJUlEQVQ4T2NkoANgpIMdDKOWkBTKo8E1GlwkhQBJikdT1wgNLgA7+AARnF7vNQAAAABJRU5ErkJggg==">
+                    <img alt="Mastercard-Card" aria-disabled="false" class="rxp rxp-mc-small" id="mc-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAAJUlEQVQ4T2NkoDFgpLH5DKMWEAzh0SAaDSKCIUBQwWgqGgFBBAA5mAAR8NWIIgAAAABJRU5ErkJggg==">
+                    <img alt="Switch-Card" aria-disabled="false" class="rxp rxp-switch-small" id="switch-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAATCAYAAACDW21BAAAANElEQVRIS2NkoDNgpLN9DKMWUj3ER4N0NEhJDoHRRENykBHSMBqkhEKIZPnRICU5yAhpAABcQQAUOrV/ogAAAABJRU5ErkJggg==">
+                    <!-- <img class="rxp-hidden" id="card-loader" src="/resources/images/ajax-loader.gif"> -->
+                    </span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-xs-12" id="rpx-cardnum-box">
+                    <input autocomplete="cc-number" class="form-control digitsOnly" id="pas_ccnum" maxlength="23" name="pas_ccnum" required="required" type="tel" placeholder="Card Number" aria-required="true">
+                    <input id="cardIdentifyError" name="cardIdentifyError" type="hidden" value="">
+                    <span class="help-inline" id="card-errors" role="alert"></span>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row" id="rpx-date-cccvc-section">
+                    <div class="col-lg-12 col-md-12 col-xs-12 pad0" id="rpx-expiry-date">
+                    <div class="form-group">
+                    <div class="col-xs-12">
+                    <label class="control-label" for="pas_expiry">Expiry</label>
+                    </div>
+                    <div class="col-xs-12">
+                    <input autocomplete="cc-exp" class="form-control digitsOnly" id="pas_expiry" maxlength="5" name="pas_expiry" required="required" type="tel" placeholder="MM/YY" aria-required="true">
+                    <span class="help-inline" id="expiry-error-container" role="alert"></span>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-xs-12 pad0" id="rpx-security-code">
+                    <div class="form-group">
+                    <div class="col-xs-12">
+                    <label class="control-label" for="pas_cccvc">Security Code</label>
+                    </div>
+                    <div class="col-xs-12">
+                    <div class="input-group">
+                    <input autocomplete="cc-csc" class="form-control digitsOnly" id="pas_cccvc" maxlength="4" name="pas_cccvc" required="required" type="tel" placeholder="Security Code" aria-required="true">
+                    <div class="input-group-addon">
+                    <span class="hpp-info-circle rxp-popover" data-container="body" data-toggle="popover" role="button" tabindex="0" data-title="Security Code" data-content="The last 3 digits on the back of your card. For American Express, it is the last 4 digits on the front of your card." aria-label="Information about Security Code" data-original-title="" title=""></span>
+                    <img src="img/trip/help.png" style="width: 27px">
+                    </div>
+                    </div>
+                    <span class="help-inline" role="alert"></span>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row" id="rpx-issue-number-section" style="display: none">
+                    <div class="form-group">
+                    <div class="col-xs-12">
+                    <label class="control-label" for="pas_issuenumber">Issue Number (if applicable)</label>
+                    </div>
+                    <div class="col-xs-12">
+                    <input autocomplete="off" class="form-control digitsOnly" id="pas_issuenumber" maxlength="2" name="pas_issuenumber" type="tel" placeholder="Issue Number">
+                    <span aria-live="assertive" class="help-inline" id="issuenumber-errors" role="alert"></span>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row" id="rpx-cardholder-section">
+                    <div class="form-group">
+                    <div class="col-xs-12">
+                    <label class="control-label" for="pas_ccname">Cardholder Name</label>
+                    </div>
+                    <div class="col-xs-12">
+                    <input autocomplete="cc-name" class="form-control" id="pas_ccname" maxlength="100" name="pas_ccname" required="required" type="text" placeholder="Cardholder Name" aria-required="true">
+                    <span class="help-inline" id="ccname-errors" role="alert"></span>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="dcc-offer-container" id="realex-dcc-holder"></div>
+                    <input class="rxp-field" name="guid" type="hidden" value="563068f8-adf2-4c42-b3b5-6371e2c01967">
+                    <input id="dccchoice" name="dccchoice" type="hidden" value="NO">
+                    <input id="dccrate" name="dccrate" type="hidden" value="">
+                    </form>
+                    <!-- END FORM PAYMENT -->
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-xs-12" id="amount-surcharge-offer-section" style="display: none">
+                    <p class="amount-surcharge" id="amountSurcharge">An additional charge for the card type (<span id="merchantDataCardType"></span>) will be applied.<br> You will be charged <span id="merchantDataCurrency"></span><span id="merchantDataAmount"></span>.</p></div>
+                    </div>
+                    <!-- END HTML FOR PAY WITH ANOTHER CARD SECTION -->
+                    </div>
+                    <!-- END HTML CONTAINER OF SECTIONS -->
+                    <div class="row" id="info-box-footer">
+                    <div class="col-xs-12">
+                    <p class="rxp-btn-info rxp-merchant-btn-info rxp-center rxp-hidden dnone">For added security you will be transferred to your bank's card verification page</p>
+                    <!-- <p class="text-center rxp-hidden" id="loading-footer"><img src="/resources/images/ajax-loader.gif"></p> -->
+                    </div>
+                    </div>
+                    <div id="main-btn-box" >
+                    <input id="rxp-primary-btn-old-text" name="rxp-primary-btn-old-text" type="hidden">
+                    <button class="btn btn-hpp-a form-control" id="rxp-primary-btn" type="submit" value="Pay Now"><span class="hpp-pay"></span> Pay Now</button>
+                    </div>
+                    <!-- <div class="row" id="rxp-footer">
+                        <div class="col-xs-4" id="rxp-footer-logo-ssl-box">
+                            <div class="ssl-text-logo">
+                                <img alt="256-bit SSL encrypted logo" class="ssl-logo_ico" src="/resources/images/ssl_logo_ico.svg">
+                                <span class="ssl-msg">256-bit SSL<br>encrypted</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="col-xs-8 text-right" id="rxp-footer-logo-byrealex-box">
+                            <span class="security-msg">
+                                <div>Securely processed by</div>
+                                <div>
+                                    Global Payments
+                                </div>
+                            </span>
+                            <img alt="Secured by Global Payments" src="/resources/images/icons/realex-grey.png">
+                        </div>
+                        
+                        </div> -->
+                    </div>
+                    <div id="rxp-hpp-tab-loop" tabindex="0"></div>
+                    </div>
+                    <div class="container-fluid portfolio-realex en" id="3ds2-acs-challenge-container" style="text-align: center; padding: 0">
+                    </div>
+
+                    <script src="js/trip/POMS/libs/Modernizr/modernizr-2.6.2.js"></script>
+                    <script src="js/trip/POMS/libs/Modernizr/modernizr-2.8.3.js"></script>
+                    <script src="js/trip/POMS/libs/jquery/jquery-3.0.0.js"></script>
+                    <script src="js/trip/POMS/libs/jquery/jquery-1.10.2.js"></script>
+                    <script src="js/trip/POMS/libs/jquery/jquery.actual.min.js"></script>
+                    <script src="js/trip/POMS/libs/jquery/jquery.qtip.js"></script>
+                    <script src="js/trip/POMS/libs/Validation/jquery.validate.js"></script>
+                    <script src="js/trip/POMS/libs/Validation/jquery.validate.unobtrusive.js"></script>
+                    <script src="js/trip/scripts/AdrumUtility.js"></script>
+
+                    <script id="realex-script" type="text/javascript" data-proccessing="/resources/images/ajax-loader.gif">
+                        var hpp = {};
+
+                        function calculatePrice(prices,pCode){
+                            var priceValue = prices.filter(e=>e.ProductCode==pCode);
+                            if(priceValue){
+                                return priceValue[0];
+                            }
+                        }
+
+                        async function addToBasket() {
+                            document.getElementById("AddtoBasket").disabled = true;
+                            document.getElementById("AddtoBasket").style.textDecoration='none';
+                            setTimeout(function() {
+                                document.getElementById("AddtoBasket").disabled = false;
+                            }, 3000);
+
+                            var productObj = '';
+                            let payloadObj = '';
+                            let pCode = '';
+
+                            if(window.localStorage.getItem("isGoingOnCruise")){
+                                pCode = 'INSTR_EXT_CR';
+                                productObj = products.filter(e=>e.ProductCode==pCode);
+                                productObj = productObj[0];
+                            }
+
+                            var Policies = [{}];
+                            if(window.localStorage.getItem("tripDetailsData") != " "){
+                                Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                            } 
+                            var policyType = Policies[0].PolicyType;
+                            if(policyType === 'S'){
+                                policyType = 'Single Trip'
+                            }else if (policyType === 'A'){
+                                policyType = 'Annual Multi Trip'
+                            }else{
+                                policyType = 'Back Packers'
+                            }
+                            var msgType = "addToBasket";
+                            if(policyType === 'Single Trip'){
+                                pCode = 'INSTR_ST';
+                                productObj = products.filter(e=>e.ProductCode==pCode);
+                                productObj = productObj[0];
+                                payloadObj = productObj;
+                                msgType = "addToBasket";
+                            }
+                            if(policyType === 'Annual Multi Trip'){
+                                pCode = 'INSTR_MT';
+                                productObj = products.filter(e=>e.ProductCode==pCode);
+                                productObj = productObj[0];
+                                payloadObj = productObj;
+                                msgType = "addParentChildBundleToBasket";
+                            }
+
+                            var priceVal = calculatePrice(prices,pCode);
+                            let insurancePrice = 0;
+                            var coverNames = "";
+                            var coverTypes=[];
+                            coverTypes=JSON.parse(window.localStorage.getItem("covertypes"));
+                            if(coverTypes){
+                                var coverTypesCount=coverTypes.length;
+                                coverTypes.forEach(async (item,index)=>{
+                                    if(coverTypesCount-1==index){
+                                        coverNames+=item.Description;
+                                    }else{
+                                        coverNames+=item.Description+", ";
+                                    }
+                                });
+                            }
+
+                            payloadObj.sku = productObj.id;
+                            payloadObj.qty=1;
+                            payloadObj.name = productObj.Name;
+                            payloadObj.description = productObj.Desc;
+                            payloadObj.price = {
+                                "amount": priceVal.Amount ?? 0,
+                                "currencyId": priceVal.CurrencyId ?? '£'
+                            };
+
+                            var objMes = {
+                                "type": msgType,
+                            };
+                            let bundleDate = new Date();
+
+                            var year=bundleDate.getFullYear();
+                            var month=bundleDate.getMonth()+1;	
+                            var date=bundleDate.getDate();	
+                            var hour=bundleDate.getHours();	
+                            var min=bundleDate.getMinutes();	
+                            var sec=bundleDate.getSeconds();	
+                            var msec=bundleDate.getMilliseconds();
+                            var bundleId=year+""+month+""+date+""+hour+""+min+""+sec+""+msec;
+
+                            if(policyType === 'Annual Multi Trip'){
+                                payloadObj.bundleId = bundleId;
+                                payloadObj.cascadeVoid = true;
+                                payloadObj.baseQuantity = 1;
+                                payloadObj.isParent = true;
+                                objMes.message = {};
+                                objMes.message.parent = payloadObj;
+                                objMes.message.bundleId = bundleId;
+                            }else{
+                                payloadObj.isParent = false;
+                                objMes.message = [];
+                                objMes.message.push(payloadObj);
+                            }
+                            let children = [];
+                            var currentCoverName = "";
+                            if(coverTypes){
+                                coverTypes.forEach(async (item,index)=>{
+                                    var acProdObj = products.filter(e=>e.ProductCode==item.ProductCode);
+                                    acProdObj = acProdObj[0];
+                                    var acPriceVal = calculatePrice(prices,item.ProductCode);
+                                    currentCoverName=item.Description;
+                                    acProdObj.sku = acProdObj.id;
+                                    acProdObj.qty=1;
+                                    acProdObj.name = acProdObj.Name;
+                                    acProdObj.description = acProdObj.Desc;
+                                        acProdObj.price = {
+                                            "amount": acPriceVal.Amount ?? 0,
+                                            "currencyId": acPriceVal.CurrencyId ?? '£'
+                                        };
+                                    acProdObj.receiptInstructions.footerLines[0] = currentCoverName;
+
+                                    if(policyType !== 'Annual Multi Trip'){
+                                        objMes.message.push(acProdObj);
+                                    }else {
+                                        acProdObj.bundleId = bundleId;
+                                        acProdObj.cascadeVoid = true;
+                                        acProdObj.baseQuantity = 1;
+                                        acProdObj.isParent = false;
+                                        children.push(acProdObj);
+                                    }
+                                });
+                            }
+
+                            //if(policyType === 'Annual Multi Trip'){
+                                if(objMes && objMes.message && objMes.message.parent)
+                                    objMes.message.children=children;
+                            //}
+                            console.log('objMes = ' , JSON.stringify(objMes));
+                            window.parent.postMessage(objMes, "*");
+
+                            var title = window.localStorage.getItem("title")??"";
+                            var firstName = window.localStorage.getItem("firstName")??"";
+                            var lastName = window.localStorage.getItem("lastName")??"";
+                            var email = window.localStorage.getItem("email")??"";
+                            var primaryPhone = window.localStorage.getItem("primaryPhone")??"";
+
+                            var Policies = [{}];
+                            if(window.localStorage.getItem("tripDetailsData") != " "){
+                                Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                            } 
+                   
+                            var policyType = Policies[0].PolicyType;
+                            if(policyType === 'S'){
+                                policyType = 'Single Trip'
+                            }else if (policyType === 'A'){
+                                policyType = 'Annual Multi Trip'
+                            }else{
+                                policyType = 'Back Packers'
+                            }
+
+                            var address = Policies[0].UFEDestination; 
+                            if( address == 'W'){
+                                address = "Worldwide excluding USA, Canada, Bermuda, The Caribbean, Mexico and Greenland";
+                            }else if(address == 'EUR'){
+                                address = "Cape Verde, Cyprus, Spain, Balearic Islands, Canary Islands, Turkey";
+                            }else{
+                                address = "UK"
+                            }     
+                                    
+                            var addCustomerData = {
+                                type: "addCustomer",
+                                message: {
+                                    id: "1234",
+                                    displayId: title + ' ' + firstName + ', ' + lastName,
+                                    displayName: title + ' ' + firstName + ', ' + lastName,
+                                    firstName,
+                                    lastName,
+                                    email,
+                                    phone: primaryPhone,
+                                    address: "",
+                                    extraData: {},
+                                },
+                            }
+                            
+                            window.parent.postMessage(addCustomerData, "*");
+                            console.log('addCustomerData = ' , JSON.stringify(addCustomerData));
+
+                        }
+
+                        $(document).ready(function () {
+                            valueGet();
+
+                            var Policies = [{}];
+                            if(window.localStorage.getItem("tripDetailsData") != " "){
+                                Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                            } 
+                            var policyType = Policies[0].PolicyType;
+                            if(policyType === 'S'){
+                                policyType = 'Single Trip'
+                            }else if (policyType === 'A'){
+                                policyType = 'Annual Multi Trip'
+                            }else{
+                                policyType = 'Back Packers'
+                            }
+
+                            if(policyType != 'Annual Multi Trip'){
+                                if(document.getElementById("travelInsuranceAnnualMultiTrip_value")!=null){
+                                    document.getElementById("travelInsuranceAnnualMultiTrip_value").style.display = 'none';
+                                }
+                            }
+
+                            if(window.localStorage.getItem("isGoingOnCruise")==='false'){
+                                if(document.getElementById("travelInsuranceExtensionCruise_value")!=null){
+                                    document.getElementById("travelInsuranceExtensionCruise_value").style.display = 'none';
+                                }
+                            }
+
+                            $("html").attr("lang", 'en');
+                                    
+                            // hpp = Hpp.create({
+                            //     form_name: "card-payment-form",
+                            //     isBreadCrumbCaptureEnabled: false,
+                            //     capture_address_mode: 'PAYMENT'
+                            // });
+                
+                            //hpp.register_dcc_check_listener("#ccnumber");
+                            // hpp.allowableCards = ['MC','SWITCH','VISA'];
+                            // hpp.shouldOfferDCC = false;
+                            // var cardPaymentButton = null;
+                            // if (cardPaymentButton) {
+                            //     Hpp.i18n.messages.paynow = cardPaymentButton;
+                            // }
+                            // $("#rxp-primary-btn").append(Hpp.i18n.messages.paynow);
+                
+                            // hpp.challengeTimeoutMs = 900000;
+                            // hpp.hppMerchantId = 'potravelinsurance';
+                            // hpp.hppOrderId = '1ccce1b3-f355-4b81-8e16-7eb069ee5209';
+                            // hpp.hppTxnAmount = '5323';
+                            // hpp.hppTxnAmount = hpp.hppTxnAmount ? hpp.hppTxnAmount : 0;
+                            // hpp.transactionId = '563068f8-adf2-4c42-b3b5-6371e2c01967';
+                        });
+
+                        async function valueGet(){
+                            products = await $.get("insurance_products.json");
+                            prices = await $.get("insurance_prices.json?v=1");
+                        }
+        </script>
+                    <div id="rxp-dcc-offer-template" style="display: none" type="text/x-handlebars-template">
+                    <p class="rxp-title rxp-dcc-offer-title">Select Your Preferred Currency</p>
+                    <div class="toggle-group clearfix" id="rxp-dcc-offer-section">
+                    <div class="toggle-group__item dcc-offer__ammount" id="rxp-dcc-offer-no">
+                    {{dcc.merchantDisplayAmount}} {{dcc.merchantAmountCurrency}}
+                    </div>
+                    <div class="toggle-group__item">
+                    <div data-toggle="rxp-toggle" id="dcc-offer-toggle"></div>
+                    </div>
+                    <div class="toggle-group__item dcc-offer__ammount dcc-offer__active" id="rxp-dcc-offer-yes">
+                    {{dcc.cardHolderDisplayAmount}} {{dcc.cardHolderAmountCurrency}}
+                    </div>
+                    <div class="pull-right exchange-rate toggle-group__item">
+                    <span class="hpp-info-circle rxp-popover" data-toggle="tooltip" id="rxp-dcc-offer-legal-yes" role="button" tabindex="-1" title="" data-original-title="<p>{{#ifCond cardIdentity.cardtype 'MC'}}I accept the conversion rate and final amount and that the final selected transaction currency is the cardholder's chosen currency, {{dcc.cardHolderAmountCurrency}}.{{/ifCond}}{{#ifCond cardIdentity.cardtype 'VISA'}}I accept that I have been offered a choice of currencies for payment. I accept the conversion rate and final amount and that the final selected transaction currency is the cardholder's chosen currency, {{dcc.cardHolderAmountCurrency}} {{/ifCond}}</p><p>{{#if dcc.exchangeRateSourceName}}Reference Rate Provided by: {{#ifCond dcc.exchangeRateSourceName 'ECB'}}EUROPEAN CENTRAL BANK ({{dcc.exchangeRateSourceName}}) {{else}}{{#toUpper dcc.exchangeRateSourceName}}{{/toUpper}}{{/ifCond}} Rate, {{/if}} {{#if dcc.exchangeRateSourceTimestamp}}Exchange rate offered on: {{dateFormat dcc.exchangeRateSourceTimestamp format='YYYY/MM/DD HH:mm'}} {{/if}}</p>"></span>
+                    <span class="hpp-info-circle rxp-popover" data-toggle="tooltip" id="rxp-dcc-offer-legal-no" role="button" tabindex="-1" title="" data-original-title="<p>{{#ifCond cardIdentity.cardtype 'MC'}}I understand that Mastercard has a currency conversion process and that I have chosen not to use the Mastercard currency conversion process and I will have no recourse against Mastercard with respect to any matter related to the currency conversion or disclosure thereof.{{/ifCond}}</p><p>{{#if dcc.exchangeRateSourceName}}Reference Rate Provided by: {{#ifCond dcc.exchangeRateSourceName 'ECB'}}EUROPEAN CENTRAL BANK ({{dcc.exchangeRateSourceName}}) {{else}}{{#toUpper dcc.exchangeRateSourceName}}{{/toUpper}}{{/ifCond}} Rate, {{/if}} {{#if dcc.exchangeRateSourceTimestamp}}Exchange rate offered on: {{dateFormat dcc.exchangeRateSourceTimestamp format='YYYY/MM/DD HH:mm'}} {{/if}}</p>"></span>
+                    </div>
+                    <div class="pull-right dcc-offer__rate toggle-group__item" id="rxp-dcc-offer-rate">(Exchange rate used: 1 {{dcc.merchantAmountCurrency}} = {{dcc.cardHolderRate}} {{dcc.cardHolderAmountCurrency}})</div>
+                    </div>
+                    <p class="dcc-offer__exchange-rate" id="rxp-dcc-offer-legal">Exchange Rate Mark-Up: {{dcc.marginRatePercentage}}%{{#ifCond dcc.exchangeRateSourceName 'ECB'}} <b>above</b> {{dcc.exchangeRateSourceName}} Rate.{{else}},{{/ifCond}} Commission for Currency Conversion: {{dcc.commissionPercentage}}%</p>
+                    </div>
+                    <script id="rxp-toggle-template" type="text/x-handlebars-template">
+                        <div class="input-toggle">
+                            <div class="input-toggle__button"></div>
+                            <div class="input-toggle__track"></div>
+                        </div>
+                    </script>
+                    <form id="dcc_form" method="GET" action="/api/authDccRedirect">
+                    <input name="guid" type="hidden" value="563068f8-adf2-4c42-b3b5-6371e2c01967">
+                    </form>
+                    <!-- END DCC HANDEBARS TEMPLATE -->
+                    <form id="acsUrlForm" method="POST" name="acsUrlForm" autocomplete="off">
+                    <input id="PaReq" name="PaReq" type="hidden">
+                    <input id="MD" name="MD" type="hidden">
+                    <input id="TermUrl" name="TermUrl" type="hidden">
+                    </form>
+                    </div> 
+                    </div> 
+                    </div>
+                    </div>
+                    </div>
+                    <div class="actions">
+                    <div class="actions__item actions__item--forward">
+                    <button class="btn2 btn2--forward hidden" id="next-button" name="nextstep" type="submit" value="next"><span>Next</span></button>
+                    </div>
+                    <div class="actions__item actions__item--back text-xs-center">
+                    <!-- <button type="submit" class="btn2 btn2--back" id="payment-back" name="nextstep" value="back-yourdetails"><span>Go back a step</span></button> -->
+                    <a href="yourdetails.html" type="submit" class="btn2 btn2--back" id="payment-back" name="nextstep" value="back-yourdetails"><span>Go back a step</span></a>
+                    <!-- <a class="btn2 btn2--back hide" href="/web/travel/renewal/yourdetails?E=0" id="renewal-payment-back"><span>Go back a step</span></a> -->
+                    <a href="yourdetails.html" class="btn2 btn2--back hide" href="/web/travel/renewal/yourdetails?E=0" id="renewal-payment-back"><span>Go back a step</span></a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="modal fade" tabindex="-1" role="dialog" id="btnBackPopup">
+                    <div class="modal-dialog">
+                    <div id="global-modal1" class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title">Please note</h4>
+                    </div>
+                    <div class="modal-body">
+                    <div id="text">
+                    You may lose billing details data if you click back button. Click cancel to stay on this page else click Ok to go back to Your Details page.
+                    </div>
+                    </div>
+                    <div class="modal-footer col-md-12" id="div-cancel">
+                    <div class="col-xs-6">
+                    <button class="btn btn-secondary cancel" id="payment-back-modal" name="nextstep" type="submit" value="back-yourdetails">Ok</button>
+                    <a class="btn btn-secondary cancel hide" href="/web/travel/renewal/yourdetails?E=0" id="renewal-payment-back-modal"><span>Ok</span></a>
+                    </div>
+                    <div class="col-xs-6">
+                    <button class="btn btn-primary pull-left" id="cancel-btn" data-dismiss="modal">CANCEL</button>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="no-container-padding col-md-12 col-xs-12">
+                    <div class="panel2 panel2--summary hidden-xs">
+                        <div class="panel2__body panel2__body--no-padding">
+                            <div class="summary">
+                                <h3 class="summary__title">Summary of cover<span class="summary__toggle" data-summary-toggle=""></span></h3>
+                                <span class="hide">177805773_TC0152703792Q/00_177751024</span>
+                                <div class="summary__data" id="tillrecipt">
+                                    <div class="summary__item summary__item--caption ng-pristine ng-untouched ng-valid" id="prices" ng-model="price" ng-init="price = additionalCoverPrice()" aria-invalid="false">
+                                        <div class="summary__label">
+                                            Price to pay
+                                            <span class="qtip__icon" data-qtip="true" data-hasqtip="2"></span>
+                                            <div class="qtip-text">
+                                                Includes Insurance Premium Tax at the current rate (if applicable)            
+                                            </div>
+                                        </div>
+                                        <div class="summary__value ng-binding" id="payToPrice"></div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Standard cover</div>
+                                        <div class="summary__value standardCover_value">  {{standardCover | number:2}}</div>
+                                    </div>
+                                    <!-- <div class="summary__item j"> -->
+                                        <!-- <div class="summary__label"><span class="pd-right-5">+</span>Winter Sports</div>
+                                        <div class="summary__value">£6.80</div>
+                                    </div> -->
+                                    <div class="summary__item j" id="gadgetCover_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Gadget cover</div>
+                                        <div class="summary__value gadgetCover_value">{{gadgetCover}}</div>
+                                     </div>
+                                     <div class="summary__item j" id="excessWaiver_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Excess waiver</div>
+                                        <div class="summary__value excessWaiver_value">{{excessWaiver}}</div>
+                                     </div>
+                                     <div class="summary__item" id="sportsandActivities_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Sports and Activities (including Golf)</div>
+                                        <div class="summary__value sportsandActivities_value">{{sportsandActivities}}</div>
+                                     </div>
+                                     <div class="summary__item j" id="tripDisruptionCover_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Trip Disruption cover (Including Natural Catastrophe, Terrorism and Air Space disruption)</div>
+                                        <div class="summary__value tripDisruptionCover_value">{{tripDisruptionCover}}</div>
+                                     </div>
+                                     <div class="summary__item j" id="covidCover_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Covid-19 Cover</div>
+                                        <div class="summary__value covidCover_value">{{covidCover}}</div>
+                                     </div>
+                                     <div class="summary__item j" id="travelExtensionCover_value">
+                                        <div class="summary__label"><span class="pd-right-5 ">+</span> Travel Insurance Extension Annual Multi Trips</div>
+                                        <div class="summary__value travelExtensionCover_value">{{travelExtensionCover}}</div>
+                                     </div>
+                                     <div class="summary__item j" id="travelInsuranceExtensionCruise_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Extension Cruise</div>
+                                        <div class="summary__value travelInsuranceExtensionCruise_value">£4.00</div>
+                                     </div>
+                                     <!--<div class="summary__item j" id="travelInsuranceAnnualMultiTrip_value">
+                                        <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Annual Multi Trips</div>
+                                        <div class="summary__value travelInsuranceAnnualMultiTrip_value">£39.29</div>
+                                     </div>
+                                    
+                                        <div class="summary__item" ng-init="initOptionalLabel('0', '0')" ng-show="showOptionalLabel">
+                                        <div class="summary__label"><strong>j</strong></div>
+                                        </div>
+                                        -->
+                                    <!--<script>
+                                        function getAdditionalCovers() {
+                                            return window.localStorage.getItem('selectedAdditionalCovers');
+                                        }
+                                        
+                                        const sac = window.localStorage.getItem('selectedAdditionalCovers');
+                                        var sacArray = sac.split('|');
+                                        
+                                        for (let j = 0; j < sacArray.length; j++) {
+                                            var item = 'show_' + sacArray[j].replace(' ', '');
+                                            if (item == 'show_GadgetCover') {
+                                                show_GadgetCover = true;
+                                            }
+                                            //setAdditionalCoverShow(item);
+                                            //alert(item);
+                                            //  $scope[item] = true;
+                                            //item = true;
+                                            //alert($scope[item]);
+                                            //alert(item);
+                                        }-->
+                                    <!--</script>-->
+                                </div>
+                                <div class="summary__data">
+                                    <div class="summary__item">
+                                        <div class="summary__caption">Trip Details</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Policy type</div>
+                                        <div class="summary__value policyType_value">{{policyType}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Area of travel</div>
+                                        <div class="summary__value address_value">    {{address}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Cover start date</div>
+                                        <div class="summary__value departingOn_value">{{departingOn}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Who's covered</div>
+                                        <div class="summary__value coverType_value">{{coverType}}</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Cancellation limit</div>
+                                        <div class="summary__value">£3,000</div>
+                                    </div>
+                                    <div class="summary__item">
+                                        <div class="summary__label">Medical limit</div>
+                                        <div class="summary__value">£7,500,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="well no-margin no-padding">
+                        <div class="row buttons-next-back">
+                           <div class="col-xs-12 col-sm-4 col-md-4 pd-bottom-xs-10">
+                              <!-- <button class="btn2 btn2--back" id="additionalcovers-back" name="nextstep" type="submit" value="back-yourquote"><span>Go back a step</span></button> -->
+                              <a href="yourdetails.html" class="btn2 btn2--back" id="additionalcovers-back" name="nextstep" type="submit" value="back-yourquote"><span>Go back a step</span></a>
+                           </div>
+                           <div class="col-xs-12 col-sm-4 col-md-4 pd-bottom-xs-10 divSaveQuote">
+                           </div>
+                           <div class="col-xs-12 col-sm-4 col-md-4 ">
+                              <button id="AddtoBasket" class="custom-right btn arrow-right xs-width-100 add-cover-next-btn" onclick="addToBasket()" style="max-width: 243px;float: right;">Add to Basket <span><img src="img/down-arrow.png" style="width: 16px;transform: rotate(271deg);position: relative;left: 24px;"></span></button>
+                              <!-- <a href="yourdetails.html" class="custom-right btn arrow-right xs-width-100 add-cover-next-btn" id="additionalcovers-next" name="nextstep" type="submit" value="next">Next <span><img src="img/down-arrow.png" style="width: 16px;transform: rotate(271deg);position: relative;left: 24px;"></span></a> -->
+                           </div>
+                        </div>
+                     </div>
+                    <!-- <a href="#" class="btn2 btn2--forward" id="yourdetails-next" name="nextstep" type="submit" value="next" style="margin: 0 auto;display: block;text-align: center;display: flex;border-radius: 2px;max-width: 250px;"><span>Add to Basket</span></a> -->
+                </div>
+            </div>
+            <script>
+                function closeTooltipsWindowT(closingIcon) {
+                    var closingIco = document.getElementById(closingIcon);
+                    $(closingIco).attr("style", "display:none; z-index:150000;");
+                }
+                
+            </script>
+            <!---->
+            <div class="container main no-container-padding" role="main">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 top-100 no-container-padding">
+                       
+                    </div>
+                </div>
+            </div>
+            <footer class="footer-funnel " >
+                <div class="footer-funnel__top">
+                    <div class="footer-funnel__container">
+                        <div class="footer-funnel__logo">
+                            <!-- <img src="img/Post-Office-Logo.png" alt="Post Office logo" style="width: 80px;"/> -->
+                            <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                        </div>
+                        <div class="footer-funnel__links">
+                            <a tabindex="0" target="_blank" href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-funnel__bottom">
+                    <div class="footer-funnel__container">
+                        <div class="footer-funnel__copyright">© Copyright 2022 The Post Office</div>
+                    </div>
+                </div>
+            </footer>
+            <script src="js/trip/POMS/libs/Modernizr/modernizr-2.6.2.js"></script>
+            <script src="js/trip/POMS/libs/Modernizr/modernizr-2.8.3.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery-3.0.0.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery-1.10.2.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery.actual.min.js"></script>
+            <script src="js/trip/POMS/libs/jquery/jquery.qtip.js"></script>
+            <script src="js/trip/POMS/libs/Validation/jquery.validate.js"></script>
+            <script src="js/trip/POMS/libs/Validation/jquery.validate.unobtrusive.js"></script>
+            <script src="js/trip/scripts/AdrumUtility.js"></script>
+            <script src="//rum-static.pingdom.net/pa-5fa2dbe25eacee00150002f1.js" async></script>
+           
+            <script src="js/trip/scripts/adrum.js"></script>
+            <script src="js/trip/POMS/libs/angular/angular.min.js"></script>
+            <script src="js/trip/POMS/libs/angular/angular-aria.min.js"></script>
+            <script src="js/trip/POMS/libs/angular/angular-smooth-scroll.js"></script>
+            
+            <script src="js/trip/POMS/libs/bootstrap/bootstrap-datepicker.js"></script>
+            <script src="js/trip/POMS/libs/bootstrap/bootstrap-session-timeout.js"></script>
+            <script src="js/trip/POMS/libs/bootstrap/bootstrap.js"></script>
+            <script src="js/trip/POMS/libs/bootstrap/respond.js"></script>
+            <script src="js/trip/POMS/scripts/Global/app.js"></script>
+            <script src="js/trip/POMS/scripts/Global/globalize.js"></script>
+            <script src="js/trip/POMS/scripts/Global/poms.js"></script>
+            <script src="js/trip/POMS/scripts/DatePicker/datepickers.js"></script>
+            <script src="js/trip/POMS/scripts/Radio/radio-toggle.js"></script>
+            <script src="js/trip/POMS/scripts/Moment/moment-with-locales.js"></script>
+            <script src="js/trip/POMS/scripts/Moment/moment.js"></script>
+            <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+            <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+            <script>
+                $(document).ready(function(){
+
+                    
+                  $('#Policies_0__PromotionCodes').keydown(function(event){
+                        if(event.keyCode == 13) {
+                            if ($("#promo").valid()){
+                                applyPromoCode();
+                            }
+                            event.preventDefault();
+                            return false;
+                        }
+                    });
+                    $("#Policies_0__PromotionCodes").focusout(function(){
+                        return false;
+                    });
+                });
+                
+                $('input, select, button').each(function () {
+                    $(this).bind('blur', function () {
+                        //addToBasket(); 
+                    });
+                });
+                $("#payToPrice").html("£" + parseFloat(Number(window.localStorage.getItem("additionalCoverPrice"), 2)));
+             
+            </script>
+            <script src="js/trip/POMS/scripts/Pay.js"></script>
+            <script>
+                window.localStorage.setItem("currentpage", 'yourdetails');
+                $(document).ready(function () {
+                    $("#lnkMyaccount").hide();
+                    $("#lnkLogout").hide();
+                });
+            </script>
+    </body>
+</html>

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=8">
+      <meta name="robots" content="noindex">
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+      <title>Additional Cover</title>
+      <link rel="icon" href="img/favicon.png" type="image/png">
+      <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+      <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+   </head>
+  
+      <body role="document" class="" ng-app='PomsApp' ng-controller="SharedController">
+         <!--<![endif]-->
+         <header class="header-funnel">
+            <div class="header-funnel__container-top padding-left-30 mobile-left-padding10">
+               <div class="header-funnel__logo">
+                  <a href="index.html">
+                  <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
+                  </a>
+               </div>
+               <div class="header-funnel__help">
+                  <span class="header-funnel__help-action" data-qtip="true">Need Help?</span>
+                  <div class="qtip-text">
+                     <strong>0330 123 1387</strong><br />
+                     UK Call Line<br />
+                     Mon - Sat: 9am-5:30pm<br />
+                     Closed Sundays
+                     <span type="button" class="closing-icon" onclick="closeTooltipsWindow(this)">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                     <span type="button" class="closing-icon" onclick="closeTooltipsWindowT('qtip-0')">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.7998 1.80078L16.1998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M16.1998 1.80078L1.7998 16.2008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="header-funnel__container">
+               <div class="header-funnel__top-title">Travel Insurance</div>
+               <div class="stepper">
+                  <div class="stepper__item" data-active=true data-current=false>
+                     <span class="stepper__num"><span><i>1</i></span></span>
+                     <span class="stepper__title" style="">Trip Details</span>
+                  </div>
+                  <div class="stepper__item" data-active=true data-current=false>
+                     <span class="stepper__num"><span><i>2</i></span></span>
+                     <span class="stepper__title" style="">Quote</span>
+                  </div>
+                  <div class="stepper__item" data-active=true data-current=true>
+                     <span class="stepper__num"><span><i>3</i></span></span>
+                     <span class="stepper__title" style="">Additional Cover</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>4</i></span></span>
+                     <span class="stepper__title" style="">Personal Details</span>
+                  </div>
+                  <div class="stepper__item" data-active=false data-current=false>
+                     <span class="stepper__num"><span><i>5</i></span></span>
+                     <span class="stepper__title" style="">Pay</span>
+                  </div>
+               </div>
+               <h1 class="header-funnel__title">Additional Cover</h1>
+            </div>
+         </header>
+         <script>
+            function closeTooltipsWindowT(closingIcon) {
+                var closingIco = document.getElementById(closingIcon);
+                $(closingIco).attr("style", "display:none; z-index:150000;");
+            }
+            
+         </script>
+         <div class="container main no-container-padding main-form-container  " role="main" >
+            <div class="col-md-8 col-main no-container-padding">
+               <form action="yourdetails.html?E=01" id="form" method="get" novalidate="" autocomplete="off">
+                  <input type="hidden" id="hdn_on_load_IsOneUnderwriter" value="True" />
+                  <input type="hidden" id="hdn_on_load_IsAggregator" value="False" />
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <!-- 
+                           -->
+                        <div class="panel-group accordion hidden-md hidden-lg hidden-xs hidden-sm">
+                           <div class="accordion-item panel no-bg-clr">
+                              <input id="accordion-toggle-1" type="checkbox" name="toggle" aria-hidden="true">
+                              <label for="accordion-toggle-1" class="panel-heading no-bg-clr">
+                              <span class="panel-title">
+                              <span class="accordion-heading clr-primary pd-right-0">Summary of cover</span>
+                              <span class="accordion-icon pull-right"><i class="icon-poms icon-arrowdown icon-sm"></i></span>
+                              </span>
+                              </label>
+                              <section id="content1" class="no-padding">
+                                 <div class="panel-body">
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Policy type</h5>
+                                       </div>
+                                       <div class="col-md-7">
+                                          <h5 class="font-family-bold pull-right policyType_value">{{policyType}}</h5>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Area of travel</h5>
+                                       </div>
+                                       <fieldset id="Policies_0__address">
+                                       <div class="col-md-7" ng-init="Policies[0].address">
+                                          <h5 class="font-family-bold pull-right">    Worldwide
+                                             excluding USA, Canada, Bermuda, The Caribbean, Mexico and Greenland
+                                          </h5>
+                                       </div>
+                                       </fieldset>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Departing On</h5>
+                                       </div>
+                                       <div class="col-md-7">
+                                          <h5 class="font-family-bold pull-right departingOn_value"> {{departingOn}} </h5>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Returning On</h5>
+                                       </div>
+                                       <div class="col-md-7">
+                                          <h5 class="font-family-bold pull-right returningOn_value"> {{returningOn}} </h5>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Who's covered</h5>
+                                       </div>
+                                       <div class="col-md-7">
+                                          <h5 class="font-family-bold pull-right coverType_value">{{coverType}}</h5>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Cancellation limit</h5>
+                                       </div>
+                                       <div class="col-md-7">
+                                          <h5 class="font-family-bold pull-right">&#163;3,000</h5>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-5">
+                                          <h5 class="font-family-regular pull-left">Medical limit</h5>
+                                       </div>
+                                       <div class="col-md-7">
+                                          <h5 class="font-family-bold pull-right">&#163;7,500,000</h5>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div id="mobtillrecipt">
+                                    <div class="summary__item summary__item--caption" id="prices" ng-model="price" ng-init="price = priceSingleTrip()">
+                                       <div class="summary__label">
+                                          Price to pay
+                                          <span class="qtip__icon" data-qtip="true"></span>
+                                          <div class="qtip-text">
+                                             Includes Insurance Premium Tax at the current rate (if applicable)            
+                                          </div>
+                                       </div>
+                                       <div class="summary__value">£53.77</div>
+                                    </div>
+                                    <div class="summary__item">
+                                       <div class="summary__label">Standard cover</div>
+                                       <div class="summary__value">£{{standardCover}}</div>
+                                    </div>
+                                    <div class="summary__item j">
+                                       <div class="summary__label"><span class="pd-right-5">+</span>Cruise Cover</div>
+                                       <div class="summary__value">£17.54</div>
+                                    </div>
+                                    <!--
+                                       <div class="summary__item" ng-init="initOptionalLabel('0', '0')" ng-show="showOptionalLabel">
+                                           <div class="summary__label"><strong>j</strong></div>
+                                       </div>
+                                       -->
+                                    <div class="summary__item" ng-show="gadgetCover != 0">
+                                       <div class="summary__label"><span class="pd-right-5">+</span> Gadget cover</div>
+                                       <div class="summary__value">£6.26</div>
+                                    </div>
+                                    <div class="summary__item" ng-class="{'hidden': tripExtension  != 31}">
+                                       <div class="summary__label">Trip Extensions 31 days</div>
+                                       <div class="summary__value">£0.00</div>
+                                    </div>
+                                    <div class="summary__item" ng-class="{'hidden': tripExtension  != 45}">
+                                       <div class="summary__label">Trip Extensions 45 days</div>
+                                       <div class="summary__value">£0.00</div>
+                                    </div>
+                                    <div class="summary__item" ng-class="{'hidden': tripExtension  != 60}">
+                                       <div class="summary__label">Trip Extensions 60 days</div>
+                                       <div class="summary__value">£0.00</div>
+                                    </div>
+                                    <div class="summary__item" ng-show="excessWaiver != 0">
+                                       <div class="summary__label"><span class="pd-right-5">+</span> Excess waiver</div>
+                                       <div class="summary__value">£1.98</div>
+                                    </div>
+                                    <div class="summary__item" ng-show="Policies[0].Packages[1].Coverages[5].IsSelected == true">
+                                       <div class="summary__label"><span class="pd-right-5">+</span> Winter Sports cover</div>
+                                       <div class="summary__value">£29.70</div>
+                                    </div>
+                                    <div class="summary__item" ng-show="sportsandActivities != 0">
+                                       <div class="summary__label"><span class="pd-right-5">+</span> Sports and Activities (including Golf)</div>
+                                       <div class="summary__value">£6.74</div>
+                                    </div>
+                                    <div class="summary__item" ng-show="tripDisruptionCover != 0">
+                                       <div class="summary__label"><span class="pd-right-5">+</span> Trip Disruption cover (Including Natural Catastrophe, Terrorism and Air Space disruption)</div>
+                                       <div class="summary__value">£6.74</div>
+                                    </div>
+                                    <div class="summary__item" ng-show="covidCover != 0">
+                                       <div class="summary__label"><span class="pd-right-5">+</span> Covid-19 Cover</div>
+                                       <div class="summary__value">£13.76</div>
+                                    </div>
+                                 
+                                    <!--<script>
+                                       function getAdditionalCovers() {
+                                           return window.localStorage.getItem('selectedAdditionalCovers');
+                                       }
+                                       
+                                       const sac = window.localStorage.getItem('selectedAdditionalCovers');
+                                       var sacArray = sac.split('|');
+                                       
+                                       for (let j = 0; j < sacArray.length; j++) {
+                                           var item = 'show_' + sacArray[j].replace(' ', '');
+                                           if (item == 'show_GadgetCover') {
+                                               show_GadgetCover = true;
+                                           }
+                                           //setAdditionalCoverShow(item);
+                                           //alert(item);
+                                           //  $scope[item] = true;
+                                           //item = true;
+                                           //alert($scope[item]);
+                                           //alert(item);
+                                       }-->
+                                    <!--</script>-->
+                                 </div>
+                              </section>
+                           </div>
+                        </div>
+                        <!--
+                           <h2>Your additional cover options</h2>
+                           <p>
+                               The following additional options can be added to your policy.
+                           </p>-->
+                        <div id="addcoverslist">
+                           <div class="accordion-item panel additional-coverage-included-container" ng-init="showPanelfor6 = false">
+                              <label class="panel-heading coverage-accordion-title col-lg-12" for="accordion-help-toggle-6">
+                                 <span class="panel-title coverage-accordion-title">
+                                    <span class="row block">
+                                       <span class="col-xs-12 col-sm-7 col-md-9 col-lg-12 block">
+                                          <span class="col-xs-8 col-sm-8 col-md-8 col-lg-8 no-padding accordion-heading">
+                                             <div class="row  col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20 pd-left-sm-15">Cruise Cover</div>
+                                             <span class="row block pd-top-xs-10">
+                                                <span class="Cruisecover col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                   <div class="row accordion-item-container" id="Cruisecover">
+                                                      <div class="col-xs-1 col-sm-1 hidden-xs">
+                                                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M43.284 35.832C43.7811 35.832 44.184 36.235 44.184 36.732C44.184 37.2291 43.7811 37.632 43.284 37.632C40.9216 37.632 38.7284 39.2292 37.7086 41.7376C37.7048 41.7469 37.6981 41.7699 37.681 41.8367C37.6515 41.9525 37.6365 42.0066 37.6098 42.0843C37.3338 42.8864 36.2031 42.8964 35.913 42.0993C35.8818 42.0135 35.865 41.9543 35.834 41.8342C35.8161 41.7648 35.8097 41.7429 35.8063 41.7345C34.7907 39.2312 32.5947 37.632 30.2332 37.632C27.8694 37.632 25.6732 39.2312 24.6552 41.7376C24.6515 41.7468 24.6448 41.7699 24.6265 41.8422C24.5988 41.9518 24.5824 42.0107 24.5575 42.084C24.2828 42.8928 23.1414 42.8998 22.8568 42.0944C22.8294 42.017 22.8113 41.9536 22.7857 41.8551C22.7624 41.7648 22.7554 41.741 22.7529 41.7345C21.7372 39.2309 19.541 37.632 17.1772 37.632C14.8157 37.632 12.6202 39.2316 11.6048 41.736C11.6009 41.7455 11.5942 41.7681 11.5763 41.8376C11.5732 41.8494 11.5732 41.8494 11.5699 41.8621C11.5454 41.9566 11.5267 42.021 11.4995 42.0972C11.2146 42.895 10.0857 42.8932 9.80339 42.0944C9.77588 42.0166 9.7577 41.953 9.73223 41.8543C9.70904 41.7642 9.70216 41.7406 9.69978 41.7345C8.6842 39.2312 6.48816 37.632 4.12667 37.632C3.67342 37.632 3.19815 37.7082 2.61325 37.8782C2.13593 38.0168 1.63657 37.7423 1.49789 37.265C1.35921 36.7877 1.63373 36.2883 2.11105 36.1496C2.85034 35.9349 3.49165 35.832 4.12667 35.832C6.7564 35.832 9.18428 37.2982 10.6522 39.653C12.1184 37.2994 14.5465 35.832 17.1772 35.832C19.8085 35.832 22.2366 37.2976 23.7047 39.652C25.1725 37.2987 27.6011 35.832 30.2332 35.832C32.8639 35.832 35.2927 37.2993 36.7587 39.6513C38.2268 37.2972 40.653 35.832 43.284 35.832Z" fill="#333333" />
+                                                            <path d="M24.7775 18.4562V35.4195C24.7775 35.9166 24.3746 36.3195 23.8775 36.3195C23.3805 36.3195 22.9775 35.9166 22.9775 35.4195V17.3262C22.9775 16.7478 23.5152 16.3196 24.0789 16.449L40.6119 20.245L42.6419 20.7123C43.1654 20.8328 43.4674 21.3819 43.2889 21.8885L36.9111 39.9847C36.7459 40.4535 36.2319 40.6996 35.7631 40.5344C35.2943 40.3692 35.0482 39.8552 35.2135 39.3864L41.2563 22.2404L40.2086 21.9992L24.7775 18.4562Z" fill="#333333" />
+                                                            <path d="M35.69 13.5852C35.193 13.5852 34.79 13.1822 34.79 12.6852C34.79 12.1881 35.193 11.7852 35.69 11.7852H39.0885C39.5323 11.7852 39.9099 12.1087 39.9779 12.5473L41.22 20.563C41.2962 21.0541 40.9597 21.514 40.4685 21.5902C39.9773 21.6663 39.5174 21.3298 39.4413 20.8386L38.3172 13.5852H35.69Z" fill="#333333" />
+                                                            <path d="M35.2119 9.78828H23.8775C23.3805 9.78828 22.9775 9.38534 22.9775 8.88828C22.9775 8.39122 23.3805 7.98828 23.8775 7.98828H36.1119C36.609 7.98828 37.0119 8.39122 37.0119 8.88828V12.6852C37.0119 13.1822 36.609 13.5852 36.1119 13.5852H23.8775C23.3805 13.5852 22.9775 13.1822 22.9775 12.6852C22.9775 12.1881 23.3805 11.7852 23.8775 11.7852H35.2119V9.78828Z" fill="#333333" />
+                                                            <path d="M6.51532 22.2232L12.698 38.9116C12.8707 39.3777 12.6328 39.8956 12.1667 40.0682C11.7006 40.2409 11.1828 40.0031 11.0101 39.537L4.47149 21.8877C4.2828 21.3784 4.58482 20.8193 5.1142 20.6979L7.14496 20.232L23.6772 16.4488C24.2407 16.3199 24.7779 16.7481 24.7779 17.3262V42.2168C24.7779 42.7138 24.375 43.1168 23.8779 43.1168C23.3809 43.1168 22.9779 42.7138 22.9779 42.2168V18.4554L7.54696 21.9865L6.51532 22.2232Z" fill="#333333" />
+                                                            <path d="M7.89205 20.8386C7.81593 21.3298 7.35603 21.6663 6.86484 21.5902C6.37365 21.514 6.03716 21.0541 6.11328 20.563L7.35547 12.5473C7.42344 12.1087 7.80102 11.7852 8.24485 11.7852H11.6433C12.1403 11.7852 12.5433 12.1881 12.5433 12.6852C12.5433 13.1822 12.1403 13.5852 11.6433 13.5852H9.01612L7.89205 20.8386Z" fill="#333333" />
+                                                            <path d="M23.8775 11.7852C24.3746 11.7852 24.7775 12.1881 24.7775 12.6852C24.7775 13.1822 24.3746 13.5852 23.8775 13.5852H11.6432C11.1461 13.5852 10.7432 13.1822 10.7432 12.6852V8.88828C10.7432 8.39122 11.1461 7.98828 11.6432 7.98828H23.8775C24.3746 7.98828 24.7775 8.39122 24.7775 8.88828C24.7775 9.38534 24.3746 9.78828 23.8775 9.78828H12.5432V11.7852H23.8775Z" fill="#333333" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.1525 5.32881C28.1525 3.53005 26.6651 2.08203 24.8416 2.08203H22.3067C20.5856 2.08203 19.1807 3.44956 19.1807 5.14886V8.88828C19.1807 9.38534 19.5836 9.78828 20.0807 9.78828H27.2525C27.7496 9.78828 28.1525 9.38534 28.1525 8.88828V5.32881ZM24.8416 3.88203C25.6816 3.88203 26.3525 4.53515 26.3525 5.32881V7.98828H20.9807V5.14886C20.9807 4.45469 21.569 3.88203 22.3067 3.88203H24.8416Z" fill="#333333" />
+                                                         </svg>
+                                                      </div>
+                                                      <div class="col-xs-12 col-sm-11 col-lg-offset-1 col-sm-offset-1 additionanal-info-container">
+                                                         <span class="add-cover-p-style">If your trip isn’t plain sailing, our cruise cover could come in handy</span>
+                                                         <span class="">
+                                                         <span class="view-more-style">View more</span>
+                                                         <i data-target="#Cruisecover" style="color:red" class="pd-left-5 icon-poms icon-arrowdown icon-sm accordion-icon"></i>
+                                                         </span>
+                                                      </div>
+                                                   </div>
+                                                </span>
+                                             </span>
+                                          </span>
+                                          <span class="col-xs-4 col-lg-4 xs-block no-padding pull-right included-icon">
+                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="10" cy="10" r="9" fill="white" stroke="#D00F39" />
+                                                <path d="M6 6L14 14" stroke="#D00F39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M14 6L6 14" stroke="#D00F39" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                             <span class="included-title">Included</span>
+                                          </span>
+                                       </span>
+                                    </span>
+                                 </span>
+                              </label>
+                              <input id="accordion-help-toggle-6" type="checkbox" name="toggle" aria-hidden="true" ng-click="showPanelfor6 = !showPanelfor6" style="visibility:hidden">
+                              <section class="panel-bod" ng-show="showPanelfor6">
+                                 As well as protecting you if you’re ill or require emergency treatment on board or ashore, you will be covered to re-join the ship if a temporary illness or lost passport interrupts your trip.  There’s also cover if you miss the start of the cruise because of a vehicle breakdown, public transport being cancelled due to adverse weather or a major accident causes traffic problems.  You can also hire a replacement, if your evening dress is lost stolen or damaged.<br />
+                                 (See the <a data-pol="true" id="cruise-cover" href="#"  target="_blank">Policy Wording</a> for the full policy terms.)
+                              </section>
+                           </div>
+                           <div class="panel-group accordion accordion-help">
+                              <div class="accordion-item panel freeCover" ng-init="showTitlefor1 = true">
+                                 <input id="accordion-help-toggle-1" type="checkbox" name="toggle" aria-hidden="true" ng-click="showTitlefor1 = !showTitlefor1">
+                                 <label for="accordion-help-toggle-1" class="panel-heading">
+                                    <span class="panel-title">
+                                       <span class="row block">
+                                          <span class="col-xs-12 col-sm-7 col-md-9 col-lg-9 block">
+                                             <span class="col-xs-8 col-sm-8 col-md-8 col-lg-12 no-padding accordion-heading">
+                                                <div class="row col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20  pd-left-sm-15 coverage-accordion-title">Gadget cover</div>
+                                                <span class="row block pd-top-xs-10" ng-show="showTitlefor1">
+                                                   <span class="col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                      <div class="row accordion-item-container">
+                                                         <div class="col-xs-1 col-sm-1 hidden-xs">
+                                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                               <path d="M35.6653 1C36.2176 1 36.6653 1.44772 36.6653 2C36.6653 2.55228 36.2176 3 35.6653 3H11.9719C11.0456 3 10.334 3.72618 10.334 4.61746V42.1801C10.334 45.627 15.9213 46.9983 24.6484 47C33.3857 47.0083 39.0007 45.6356 39.0007 42.1801V4.61746C39.0007 4.06518 39.4484 3.61746 40.0007 3.61746C40.5529 3.61746 41.0007 4.06518 41.0007 4.61746V42.1801C41.0007 45.2212 38.5754 47.0984 34.5122 48.0918C31.7435 48.7687 28.5219 49.0037 24.6472 49C20.7719 48.9992 17.5636 48.7623 14.8034 48.0849C10.7518 47.0905 8.33398 45.2153 8.33398 42.1801V4.61746C8.33398 2.63057 9.9319 1 11.9719 1H35.6653Z" fill="#333333" />
+                                                               <path d="M31.7209 37.7996C32.2732 37.7996 32.7209 38.2473 32.7209 38.7996C32.7209 39.3519 32.2732 39.7996 31.7209 39.7996H14.2402C13.6879 39.7996 13.2402 39.3519 13.2402 38.7996V6.90625C13.2402 6.35397 13.6879 5.90625 14.2402 5.90625H36.3202C36.8725 5.90625 37.3202 6.35397 37.3202 6.90625V38.7996C37.3202 39.3519 36.8725 39.7996 36.3202 39.7996C35.768 39.7996 35.3202 39.3519 35.3202 38.7996V7.90625H15.2402V37.7996H31.7209Z" fill="#333333" />
+                                                               <path d="M22.2129 44.0938C21.6606 44.0938 21.2129 43.646 21.2129 43.0938C21.2129 42.5415 21.6606 42.0938 22.2129 42.0938H27.1196C27.6718 42.0938 28.1196 42.5415 28.1196 43.0938C28.1196 43.646 27.6718 44.0938 27.1196 44.0938H22.2129Z" fill="#333333" />
+                                                            </svg>
+                                                         </div>
+                                                         <div class="col-xs-11 col-lg-offset-1 col-sm-offset-1 additionanal-info-container pd-left-20">
+                                                            <span class="add-cover-p-style">Cover for your mobile/smart phone, laptop, tablet etc</span>
+                                                            <span class="">
+                                                            <span class="view-more-style">View more</span>
+                                                            <img src="img/trip/icon-arrow-down.png" style="width: 23px;margin-left: 8px;">
+                                                            </span>
+                                                         </div>
+                                                      </div>
+                                                      &nbsp;
+                                                   </span>
+                                                </span>
+                                             </span>
+                                             <span class="col-xs-3 xs-block no-padding pull-right hidden-md hidden-sm hidden-lg">£15.07</span>
+                                          </span>
+                                          <span class="col-sm-5 col-xs-12 col-md-3 col-lg-3 text-center">
+                                          <span class="hidden-xs mg-right-5">£15.07</span>
+                                          <span class="checkbox-group" ng-init="Policies[0].Packages[1].Coverages[0].IsSelected = gadgetCoverValue()">
+                                 <label for="Policies_0__Packages_1__Coverages_0__IsSelected" class="checkbox checkbox-btn">
+                                 <input aria-hidden="true" class="extension-added-checkbox" cost="15.07" data-val="true" data-val-required="The Is Selected field is required." id="Policies_0__Packages_1__Coverages_0__IsSelected" name="Policies[0].Packages[1].Coverages[0].IsSelected" ng-click="addCovers($event,'Gadget_cover','INSTR_COV_GADGET',15.07,'Travel Insurance Cover Extesion - Gadget');Policies[0].Packages[1].Coverages[0].IsSelected = !Policies[0].Packages[1].Coverages[0].IsSelected;" ng-false-value="-6.26" ng-true-value="6.26" type="checkbox" value="true" /><input name="Policies[0].Packages[1].Coverages[0].IsSelected" type="hidden" value="false" />
+                                 <span class="btn checkbox-add add-cover-button mg-top-10" id="Policies_0__Packages_1__Coverages_0__IsSelected-add-cover-button">
+                                 Add
+                                 </span>
+                                 </label>
+                                 <button type="button" id="Gadget_cover-remove-button" title="Remove Additoinal Cover" class="hidden" ng-click="removeAdditionalCover($event,'Gadget_cover',15.07);Policies[0].Packages[1].Coverages[0].IsSelected = false;")>Remove</button>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </label>
+                                 <section class="panel-body" style="border-radius:15px;border-color:white;">
+                                    Gadget cover provides protection of up to £1000 per policy for loss, theft or damage to mobile/smart phones, tablets, laptops, computers, smart watches, games consoles (including handheld consoles), wearable activity trackers, including any accessory items, and drones taken on a trip.
+                                    <br />
+                                    Note: This cover is per policy and not per person. A policy Excess will apply and there may also be a deduction for wear and tear. Cameras are excluded from this cover.
+                                    <br />
+                                    (See the <a data-pol="true" id="gadget-cover" href="#" target="_blank">Policy Wording</a> for full terms)        
+                                 </section>
+                              </div>
+                              <div class="accordion-item panel freeCover" ng-init="showTitlefor5 = true">
+                                 <input id="accordion-help-toggle-5" type="checkbox" name="toggle" aria-hidden="true" ng-click="showTitlefor5 = !showTitlefor5">
+                                 <label for="accordion-help-toggle-5" class="panel-heading">
+                                    <span class="panel-title">
+                                       <span class="row block">
+                                          <span class="col-xs-12 col-sm-7 col-md-9 col-lg-9 block">
+                                             <span class="col-xs-8 col-sm-8 col-md-8 col-lg-12 no-padding accordion-heading">
+                                                <div class="row col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20  pd-left-sm-15 coverage-accordion-title">Excess waiver</div>
+                                                <span class="row block pd-top-xs-10" ng-show="showTitlefor5">
+                                                   <span class="col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                      <div class="row accordion-item-container">
+                                                         <div class="col-xs-1 hidden-xs">
+                                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                               <path d="M6.91036 25.392C9.96336 35.546 16.0154 42.92 25.2294 47.488C30.3844 45.021 33.2004 42.859 36.2494 38.965C36.4129 38.7561 36.6526 38.6208 36.9159 38.5887C37.1792 38.5567 37.4445 38.6305 37.6534 38.794C37.8622 38.9575 37.9976 39.1973 38.0296 39.4606C38.0617 39.7239 37.9879 39.9891 37.8244 40.198C34.5774 44.346 31.5214 46.691 26.1324 49.332C25.6004 49.593 24.8724 49.542 24.3424 49.281C14.6224 44.461 8.20436 36.643 4.99536 25.968C3.81036 22.024 3.16036 17.88 3.00136 13.49C2.97436 12.707 3.34836 12.135 4.12536 11.916C11.3674 9.882 18.0074 6.147 24.3754 0.731C24.5234 0.612 24.6584 0.512 24.6844 0.492L25.3264 0L25.9414 0.526C32.5114 6.136 39.3484 9.971 46.8874 12.057L47.6774 12.276L47.6194 13.088C47.5934 13.441 47.5754 13.717 47.5344 14.352C47.4464 15.725 47.4014 16.342 47.3204 17.115C46.7124 22.967 45.2144 28.293 42.7164 33.155C42.5922 33.3855 42.3827 33.558 42.1327 33.6357C41.8827 33.7134 41.6123 33.69 41.3794 33.5704C41.1465 33.4509 40.9698 33.2449 40.8871 32.9965C40.8045 32.7481 40.8225 32.4772 40.9374 32.242C43.3174 27.61 44.7474 22.523 45.3314 16.908C45.4084 16.171 45.4524 15.571 45.5384 14.224L45.5684 13.761C38.2854 11.619 31.6414 7.895 25.2804 2.584C18.9194 7.918 12.2624 11.649 5.01236 13.744C5.18536 17.845 5.80536 21.714 6.91036 25.392Z" fill="black" />
+                                                               <path d="M35.4668 16.5834C35.653 16.3944 35.9066 16.2872 36.1719 16.2852C36.4372 16.2832 36.6923 16.3867 36.8813 16.5729C37.0703 16.7591 37.1775 17.0127 37.1795 17.278C37.1815 17.5432 37.078 17.7984 36.8918 17.9874L22.3318 32.7624C22.2388 32.8567 22.1279 32.9316 22.0057 32.9827C21.8835 33.0339 21.7523 33.0602 21.6198 33.0602C21.4873 33.0602 21.3562 33.0339 21.2339 32.9827C21.1117 32.9316 21.0008 32.8567 20.9078 32.7624L13.2878 25.0254C13.1112 24.8347 13.0158 24.5828 13.0217 24.323C13.0277 24.0632 13.1345 23.8159 13.3196 23.6335C13.5048 23.4512 13.7536 23.348 14.0135 23.3459C14.2733 23.3438 14.5238 23.443 14.7118 23.6224L21.6198 30.6354L35.4668 16.5834Z" fill="black" />
+                                                            </svg>
+                                                         </div>
+                                                         <div class="col-xs-11 col-lg-offset-1 col-sm-offset-1  additionanal-info-container pd-left-20">
+                                                            <span class="add-cover-p-style">Waive your excess goodbye</span>
+                                                            <span>
+                                                            <span class="view-more-style">View more</span>
+                                                            <img src="img/trip/icon-arrow-down.png" style="width: 23px;margin-left: 8px;">
+                                                            </span>
+                                                         </div>
+                                                      </div>
+                                                      &nbsp;
+                                                   </span>
+                                                </span>
+                                             </span>
+                                             <span class="col-xs-3 xs-block no-padding pull-right hidden-md hidden-sm hidden-lg">£1.98</span>
+                                          </span>
+                                          <span class="col-sm-5 col-xs-12 col-md-3 col-lg-3 text-center">
+                                          <span class="hidden-xs mg-right-5">£1.98</span>
+                                          <span class="checkbox-group" ng-init="Policies[0].Packages[1].Coverages[4].IsSelected = ExcesswaiverValue()">
+                                 <label for="Policies_0__Packages_1__Coverages_4__IsSelected" class="checkbox checkbox-btn">
+                                 <input aria-hidden="true" class="extension-added-checkbox" cost="1.98" data-val="true" data-val-required="The Is Selected field is required." id="Policies_0__Packages_1__Coverages_4__IsSelected" name="Policies[0].Packages[1].Coverages[4].IsSelected" ng-click="addCovers($event,'Excess_waiver','INSTR_COV_EXCESS',1.98,'Travel Insurance Cover Extesion - Excess Waiver');Policies[0].Packages[1].Coverages[4].IsSelected = !Policies[0].Packages[1].Coverages[4].IsSelected;" ng-false-value="-1.98" ng-true-value="1.98" type="checkbox" value="true" /><input name="Policies[0].Packages[1].Coverages[4].IsSelected" type="hidden" value="false" />
+                                 <span class="btn checkbox-add add-cover-button mg-top-10" id="Policies_0__Packages_1__Coverages_4__IsSelected-add-cover-button">
+                                 Add
+                                 </span>
+                                 </label>
+                                 <button type="button" id="Excess_waiver-remove-button" title="Remove Additoinal Cover" class="hidden" ng-click="removeAdditionalCover($event,'Excess_waiver',1.98);Policies[0].Packages[1].Coverages[4].IsSelected = false;")>Remove</button>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </label>
+                                 <section class="panel-body" style="border-radius:15px;border-color:white;">
+                                    The excess is the amount deducted from a claim payment. With this cover we’ll reduce this amount to nil, or in other words, you will be able to enjoy full payment in the result of a successful claim. Please be aware that voluntary manual work will result in an excess of £250 that your waiver option cannot delete.
+                                    <br />        
+                                 </section>
+                              </div>
+                              <div class="accordion-item panel freeCover" ng-init="showTitlefor8 = true">
+                                 <input id="accordion-help-toggle-8" type="checkbox" name="toggle" aria-hidden="true" ng-click="showTitlefor8 = !showTitlefor8">
+                                 <label for="accordion-help-toggle-8" class="panel-heading">
+                                    <span class="panel-title">
+                                       <span class="row block">
+                                          <span class="col-xs-12 col-sm-7 col-md-9 col-lg-9 block">
+                                             <span class="col-xs-8 col-sm-8 col-md-8 col-lg-12 no-padding accordion-heading">
+                                                <div class="row col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20  pd-left-sm-15 coverage-accordion-title">Sports and Activities (including Golf)</div>
+                                                <span class="row block pd-top-xs-10" ng-show="showTitlefor8">
+                                                   <span class="col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                      <div class="row accordion-item-container">
+                                                         <div class="col-xs-1 hidden-xs">
+                                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                               <path d="M38.0053 8.23443C31.777 8.22251 25.6907 10.0952 20.5463 13.6064C19.1648 14.5492 17.8615 15.602 16.6493 16.7544C16.4571 16.9372 16.2001 17.036 15.9349 17.0293C15.6697 17.0225 15.4181 16.9107 15.2353 16.7184C15.0526 16.5261 14.9537 16.2691 14.9605 16.004C14.9672 15.7388 15.0791 15.4872 15.2713 15.3044C16.5616 14.078 17.9488 12.9577 19.4193 11.9544C24.8958 8.2165 31.3748 6.22252 38.0053 6.23443H42.7653C43.0306 6.23443 43.2849 6.33978 43.4724 6.52732C43.66 6.71486 43.7653 6.96921 43.7653 7.23443V9.96743C43.7653 17.1724 41.4153 24.0254 37.1433 29.6574C36.9829 29.8688 36.745 30.0078 36.4821 30.0438C36.2192 30.0798 35.9527 30.0099 35.7413 29.8494C35.53 29.689 35.391 29.4511 35.355 29.1882C35.319 28.9253 35.3889 28.6588 35.5493 28.4474C39.5904 23.135 41.7743 16.6421 41.7653 9.96743V8.23443H38.0053ZM6.36334 41.1434H10.1233C16.8833 41.1434 23.3093 38.9584 28.6053 34.9784C29.6103 34.2234 30.5688 33.4082 31.4753 32.5374C31.57 32.4464 31.6817 32.375 31.804 32.3271C31.9263 32.2793 32.0568 32.256 32.1881 32.2586C32.3194 32.2612 32.4489 32.2896 32.5693 32.3423C32.6896 32.3949 32.7983 32.4707 32.8893 32.5654C32.9803 32.6601 33.0518 32.7718 33.0997 32.8941C33.1475 33.0164 33.1708 33.1469 33.1682 33.2782C33.1656 33.4095 33.1371 33.539 33.0845 33.6593C33.0319 33.7797 32.956 33.8884 32.8613 33.9794C31.9013 34.9014 30.8813 35.7684 29.8073 36.5764C24.135 40.8482 17.2243 43.1537 10.1233 43.1434H5.36334C5.09812 43.1434 4.84377 43.0381 4.65623 42.8505C4.46869 42.663 4.36334 42.4086 4.36334 42.1434V39.3824C4.34945 31.7523 6.98081 24.3534 11.8093 18.4454C11.9771 18.2399 12.2196 18.1094 12.4836 18.0827C12.7475 18.056 13.0113 18.1352 13.2168 18.3029C13.4224 18.4707 13.5529 18.7132 13.5796 18.9772C13.6063 19.2411 13.5271 19.5049 13.3593 19.7104C8.82217 25.2612 6.34978 32.2133 6.36334 39.3824V41.1424V41.1434Z" fill="black" />
+                                                               <path d="M15.418 33.3355C12.837 30.7545 15.082 24.8895 19.986 19.9855C24.891 15.0815 30.755 12.8355 33.336 15.4175C35.916 17.9975 33.672 23.8625 28.767 28.7675C23.863 33.6715 17.998 35.9155 15.417 33.3355H15.418ZM31.922 16.8315C30.434 15.3435 25.611 17.1895 21.4 21.3995C17.19 25.6095 15.344 30.4325 16.832 31.9205C18.32 33.4085 23.142 31.5625 27.353 27.3525C31.563 23.1425 33.409 18.3195 31.922 16.8315ZM2.03395 6.24446L4.36595 8.57646C4.86567 9.07219 5.54105 9.35036 6.24495 9.35036C6.94885 9.35036 7.62423 9.07219 8.12395 8.57646L8.57695 8.12346C9.07269 7.62374 9.35086 6.94836 9.35086 6.24446C9.35086 5.54056 9.07269 4.86518 8.57695 4.36546L6.24495 2.03346L2.03495 6.24446H2.03395ZM9.99095 2.95146C10.8616 3.82624 11.3504 5.01023 11.3504 6.24446C11.3504 7.47868 10.8616 8.66268 9.99095 9.53746L9.53795 9.99046C8.66317 10.8611 7.47918 11.3499 6.24495 11.3499C5.01073 11.3499 3.82673 10.8611 2.95195 9.99046L0.559954 7.59846C0.201378 7.23907 0 6.75213 0 6.24446C0 5.73678 0.201378 5.24984 0.559954 4.89046L4.89195 0.559456C5.2513 0.201185 5.73803 0 6.24545 0C6.75288 0 7.23961 0.201185 7.59895 0.559456L9.99095 2.95146ZM48.817 45.1085L44.485 49.4405C44.1255 49.7985 43.6388 49.9995 43.1315 49.9995C42.6241 49.9995 42.1374 49.7985 41.778 49.4405L39.385 47.0475C38.5142 46.1725 38.0254 44.9883 38.0254 43.754C38.0254 42.5196 38.5142 41.3354 39.385 40.4605L39.838 40.0085C40.7128 39.1375 41.897 38.6485 43.1315 38.6485C44.3659 38.6485 45.5501 39.1375 46.425 40.0085L48.817 42.4005C49.1755 42.7598 49.3769 43.2468 49.3769 43.7545C49.3769 44.2621 49.1755 44.7491 48.817 45.1085ZM45.01 41.4225C44.5102 40.9267 43.8349 40.6485 43.131 40.6485C42.4271 40.6485 41.7517 40.9267 41.252 41.4225L40.8 41.8755C40.3045 42.3753 40.0265 43.0506 40.0265 43.7545C40.0265 44.4583 40.3045 45.1336 40.8 45.6335L43.131 47.9655L47.342 43.7545L45.01 41.4225Z" fill="black" />
+                                                               <path d="M8.39653 9.81037C8.21437 9.62177 8.11358 9.36917 8.11586 9.10697C8.11814 8.84477 8.2233 8.59396 8.40871 8.40855C8.59412 8.22314 8.84493 8.11798 9.10713 8.1157C9.36933 8.11342 9.62193 8.21421 9.81053 8.39637L40.9795 39.5654C41.1617 39.754 41.2625 40.0066 41.2602 40.2688C41.2579 40.531 41.1528 40.7818 40.9674 40.9672C40.7819 41.1526 40.5311 41.2578 40.2689 41.26C40.0067 41.2623 39.7541 41.1615 39.5655 40.9794L8.39553 9.80937L8.39653 9.81037ZM6.69353 42.2264C6.50589 42.4139 6.25145 42.5192 5.98618 42.5191C5.72091 42.519 5.46654 42.4135 5.27903 42.2259C5.09152 42.0382 4.98623 41.7838 4.98633 41.5185C4.98642 41.2532 5.09189 40.9989 5.27953 40.8114L9.64353 36.4484C9.73578 36.3529 9.84612 36.2767 9.96813 36.2243C10.0901 36.1719 10.2214 36.1443 10.3541 36.1431C10.4869 36.142 10.6186 36.1673 10.7415 36.2175C10.8644 36.2678 10.976 36.3421 11.0699 36.436C11.1638 36.5299 11.2381 36.6415 11.2884 36.7644C11.3386 36.8873 11.3639 37.019 11.3628 37.1518C11.3616 37.2846 11.334 37.4158 11.2816 37.5378C11.2292 37.6598 11.153 37.7701 11.0575 37.8624L6.69353 42.2264ZM42.8495 14.6294C42.9424 14.7222 43.0162 14.8325 43.0665 14.9538C43.1168 15.0751 43.1427 15.2052 43.1427 15.3365C43.1428 15.4679 43.117 15.5979 43.0667 15.7193C43.0165 15.8407 42.9429 15.951 42.85 16.0439C42.7572 16.1368 42.647 16.2105 42.5256 16.2608C42.4043 16.3111 42.2742 16.337 42.1429 16.3371C42.0115 16.3371 41.8815 16.3113 41.7601 16.2611C41.6387 16.2109 41.5284 16.1372 41.4355 16.0444L33.9555 8.56437C33.7732 8.3759 33.6723 8.12337 33.6744 7.86117C33.6764 7.59896 33.7814 7.34807 33.9667 7.16253C34.152 6.97699 34.4027 6.87165 34.6649 6.86918C34.9271 6.86672 35.1798 6.96734 35.3685 7.14937L42.8495 14.6294Z" fill="black" />
+                                                            </svg>
+                                                         </div>
+                                                         <div class="col-xs-11 col-lg-offset-1 col-sm-offset-1 additionanal-info-container pd-left-20">
+                                                            <span class="add-cover-p-style">Cover for activities including golf, dry slope skiing, bungee jumping and more</span>
+                                                            <span class="">
+                                                            <span class="view-more-style">View more</span>
+                                                            <img src="img/trip/icon-arrow-down.png" style="width: 23px;margin-left: 8px;">
+                                                            </span>
+                                                         </div>
+                                                      </div>
+                                                      &nbsp;
+                                                   </span>
+                                                </span>
+                                             </span>
+                                             <span class="col-xs-3 xs-block no-padding pull-right hidden-md hidden-sm hidden-lg">£7.43</span>
+                                          </span>
+                                          <span class="col-sm-5 col-xs-12 col-md-3 col-lg-3 text-center">
+                                          <span class="hidden-xs mg-right-5">£7.43</span>
+                                          <span class="checkbox-group" ng-init="Policies[0].Packages[1].Coverages[7].IsSelected = SportsandActivitiesValue()">
+                                 <label for="Policies_0__Packages_1__Coverages_7__IsSelected" class="checkbox checkbox-btn">
+                                 <input aria-hidden="true" class="extension-added-checkbox" cost="7.43" data-val="true" data-val-required="The Is Selected field is required." id="Policies_0__Packages_1__Coverages_7__IsSelected" name="Policies[0].Packages[1].Coverages[7].IsSelected" ng-click="addCovers($event,'Sports_and_Activities','INSTR_COV_SPORTS',7.43,'Travel Insurance Cover Extesion - Sports & Activities');Policies[0].Packages[1].Coverages[7].IsSelected = !Policies[0].Packages[1].Coverages[7].IsSelected;" ng-false-value="-6.74" ng-true-value="6.74" type="checkbox" value="true" /><input name="Policies[0].Packages[1].Coverages[7].IsSelected" type="hidden" value="false" />
+                                 <span class="btn checkbox-add add-cover-button mg-top-10" id="Policies_0__Packages_1__Coverages_7__IsSelected-add-cover-button">
+                                 Add
+                                 </span>
+                                 </label>
+                                 <button type="button" id="Sports_and_Activities-remove-button" title="Remove Additoinal Cover" class="hidden" ng-click="removeAdditionalCover($event,'Sports_and_Activities',7.43);Policies[0].Packages[1].Coverages[7].IsSelected = false;")>Remove</button>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </label>
+                                 <section class="panel-body" style="border-radius:15px;border-color:white;">
+                                    On top of the Activities you are covered for as standard, you can also insure yourself for additional activities including golf. For instance, bungee jumping (one jump only), dry slope skiing, mountain biking (with a helmet) or white water rafting, canoeing, kayaking (grades 4 and 5 only). Please be aware however, that there is no cover for quad biking, any sort of racing or riding off road. Please note that some activities won’t be covered for Personal Accident or Personal Liability claims.
+                                    <br />
+                                    (See the <a data-pol="true" id="additional-activities" href="#" target="_blank">Policy Wording</a> for full terms)
+                                    <br />
+                                    <br />
+                                    Click <a data-pol="true" id="already-covered-additional-activities1" href="#" target="_blank">here</a> to see the list of sports and activities that are covered already and included in this optional cover.
+                                 </section>
+                              </div>
+                              <div class="accordion-item panel freeCover" ng-init="showTitlefor22 = true">
+                                 <input id="accordion-help-toggle-22" type="checkbox" name="toggle" aria-hidden="true" ng-click="showTitlefor22 = !showTitlefor22">
+                                 <label for="accordion-help-toggle-22" class="panel-heading">
+                                    <span class="panel-title">
+                                       <span class="row block">
+                                          <span class="col-xs-12 col-sm-7 col-md-9 col-lg-9 block">
+                                             <span class="col-xs-8 col-sm-8 col-md-8 col-lg-12 no-padding accordion-heading">
+                                                <div class="row col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20  pd-left-sm-15 coverage-accordion-title">Trip Disruption cover (Including Natural Catastrophe, Terrorism and Air Space disruption)</div>
+                                                <span class="row block pd-top-xs-10" ng-show="showTitlefor22">
+                                                   <span class="col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                      <div class="row accordion-item-container">
+                                                         <div class="col-xs-1 hidden-xs">
+                                                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                               <path d="M37.5 48.9922C30.596 48.9922 25 43.3962 25 36.4922C25 29.5882 30.596 23.9922 37.5 23.9922C44.404 23.9922 50 29.5882 50 36.4922C50 43.3962 44.404 48.9922 37.5 48.9922ZM37.5 46.9922C43.299 46.9922 48 42.2912 48 36.4922C48 30.6932 43.299 25.9922 37.5 25.9922C31.701 25.9922 27 30.6932 27 36.4922C27 42.2912 31.701 46.9922 37.5 46.9922Z" fill="black" />
+                                                               <path d="M13.2062 27.7685L14.3172 33.9115C14.3622 34.1715 14.3025 34.4387 14.1513 34.655C14.0001 34.8712 13.7695 35.0189 13.5098 35.0659C13.2502 35.1128 12.9825 35.0553 12.7651 34.9057C12.5477 34.7562 12.3982 34.5267 12.3492 34.2675L11.1302 27.5325C11.0976 27.3527 11.1148 27.1674 11.18 26.9968C11.2453 26.8261 11.356 26.6766 11.5002 26.5645C12.9052 25.4745 14.2422 24.3165 15.1952 23.3625L19.6672 18.8915C19.7648 18.7939 19.8816 18.7177 20.0101 18.6674C20.1387 18.6172 20.2762 18.5942 20.4141 18.5997C20.552 18.6053 20.6872 18.6393 20.8113 18.6996C20.9354 18.76 21.0457 18.8454 21.1352 18.9505C23.5172 21.7505 25.4572 24.8535 27.7882 29.3145C27.8511 29.431 27.8903 29.5588 27.9034 29.6906C27.9165 29.8224 27.9033 29.9555 27.8645 30.0821C27.8258 30.2087 27.7623 30.3264 27.6777 30.4283C27.5931 30.5302 27.4891 30.6143 27.3718 30.6756C27.2545 30.737 27.1261 30.7745 26.9942 30.7859C26.8622 30.7972 26.7294 30.7823 26.6032 30.7419C26.4771 30.7015 26.3603 30.6365 26.2595 30.5506C26.1587 30.4647 26.076 30.3596 26.0162 30.2415C23.9822 26.3495 22.2692 23.5425 20.3032 21.0835L16.6102 24.7765C15.7032 25.6835 14.4952 26.7425 13.2062 27.7685ZM28.1682 13.2185L30.9512 26.4715C31.0056 26.7311 30.9546 27.0017 30.8094 27.2238C30.6643 27.4458 30.4368 27.6011 30.1772 27.6555C29.9175 27.7098 29.6469 27.6588 29.4249 27.5137C29.2029 27.3685 29.0476 27.1411 28.9932 26.8815L26.1002 13.0995C26.0659 12.9367 26.0727 12.768 26.12 12.6086C26.1673 12.4492 26.2537 12.3041 26.3712 12.1865L30.8432 7.71446C31.6552 6.90246 32.3342 5.89346 32.7152 4.97646C32.8752 4.59046 32.9692 4.24946 32.9942 3.99746C32.7412 4.02146 32.4002 4.11646 32.0142 4.27746C31.0982 4.65745 30.0892 5.33746 29.2772 6.14946L24.8052 10.6205C24.6876 10.7382 24.5426 10.8247 24.3832 10.8722C24.2237 10.9197 24.055 10.9266 23.8922 10.8925L4.7162 6.86546L4.1722 7.40946L4.3682 7.50946L4.4662 7.55945C11.5412 11.1455 14.6092 12.9365 18.0412 15.8565C18.1465 15.9459 18.2321 16.0561 18.2926 16.1803C18.3532 16.3044 18.3873 16.4398 18.393 16.5778C18.3986 16.7158 18.3756 16.8535 18.3254 16.9822C18.2752 17.1109 18.1988 17.2277 18.1012 17.3255L13.6292 21.7955C12.6712 22.7545 11.5102 24.0935 10.4262 25.4895C10.3142 25.6338 10.1647 25.7448 9.99402 25.8102C9.82336 25.8756 9.63804 25.893 9.4582 25.8605L3.2382 24.7355L2.6802 25.2945L7.5582 27.7855C7.75962 27.8882 7.9203 28.0561 8.01401 28.2619C8.10773 28.4676 8.12894 28.6991 8.0742 28.9185C8.29331 28.8639 8.52445 28.8851 8.72999 28.9786C8.93553 29.0721 9.10337 29.2324 9.2062 29.4335L12.3232 35.5365C12.4439 35.7726 12.4658 36.0471 12.3841 36.2994C12.3024 36.5517 12.1239 36.7613 11.8877 36.882C11.6515 37.0026 11.3771 37.0245 11.1248 36.9429C10.8724 36.8612 10.6629 36.6826 10.5422 36.4465L7.8152 31.1065C7.2072 31.2215 6.6452 31.1275 6.2482 30.7335C5.8622 30.3425 5.7702 29.7825 5.8842 29.1765L0.545195 26.4505C0.404688 26.3787 0.283151 26.2747 0.190518 26.147C0.0978844 26.0193 0.0367832 25.8715 0.0122071 25.7156C-0.012369 25.5598 0.00027762 25.4003 0.0491134 25.2503C0.0979491 25.1003 0.181588 24.964 0.293195 24.8525L2.1952 22.9515C2.30938 22.8373 2.44953 22.7524 2.60365 22.7042C2.75777 22.6559 2.92128 22.6457 3.0802 22.6745L9.2222 23.7845C10.2432 22.5015 11.3052 21.2915 12.2152 20.3825L15.9102 16.6875C12.9352 14.2855 9.9042 12.5575 3.5612 9.34245L3.4642 9.29245C2.7912 8.95245 2.4382 8.77246 2.0362 8.56746C1.89569 8.4957 1.77415 8.39172 1.68152 8.26401C1.58888 8.1363 1.52778 7.98848 1.50321 7.83264C1.47863 7.67679 1.49128 7.51735 1.54011 7.36732C1.58895 7.2173 1.67259 7.08097 1.7842 6.96946L3.6842 5.06846C3.80175 4.95076 3.9468 4.86424 4.10622 4.81675C4.26565 4.76925 4.4344 4.76228 4.5972 4.79646L23.7742 8.82345L27.8632 4.73546C30.0592 2.53746 33.2162 1.22546 34.4922 2.50046C35.7662 3.77446 34.4542 6.93246 32.2572 9.12846L28.1682 13.2185ZM42.5112 39.1315C42.7393 39.267 42.9042 39.4876 42.9696 39.7447C43.0351 40.0018 42.9957 40.2744 42.8602 40.5025C42.7247 40.7305 42.5041 40.8955 42.247 40.9609C41.9899 41.0263 41.7173 40.987 41.4892 40.8515L36.4892 37.8775C36.3401 37.7888 36.2166 37.6629 36.1309 37.5122C36.0452 37.3614 36.0001 37.1909 36.0002 37.0175V29.9915C36.0002 29.7262 36.1055 29.4719 36.2931 29.2843C36.4806 29.0968 36.735 28.9915 37.0002 28.9915C37.2654 28.9915 37.5198 29.0968 37.7073 29.2843C37.8948 29.4719 38.0002 29.7262 38.0002 29.9915V36.4495L42.5112 39.1315Z" fill="black" />
+                                                            </svg>
+                                                         </div>
+                                                         <div class="col-xs-11 col-lg-offset-1 col-sm-offset-1 additionanal-info-container pd-left-20">
+                                                            <span class="add-cover-p-style">Protect the costs of your trip should you be affected by a declared natural catastrophe, terrorist act and or Air Space Disruption</span>
+                                                            <span>
+                                                            <span class="view-more-style">View more</span>
+                                                            <img src="img/trip/icon-arrow-down.png" style="width: 23px;margin-left: 8px;">
+                                                            </span>
+                                                         </div>
+                                                      </div>
+                                                      &nbsp;
+                                                   </span>
+                                                </span>
+                                             </span>
+                                             <span class="col-xs-3 xs-block no-padding pull-right hidden-md hidden-sm hidden-lg">£7.43</span>
+                                          </span>
+                                          <span class="col-sm-5 col-xs-12 col-md-3 col-lg-3 text-center">
+                                          <span class="hidden-xs mg-right-5">£7.43</span>
+                                          <span class="checkbox-group" ng-init="Policies[0].Packages[1].Coverages[21].IsSelected = TripDisruptioncoverValue()">
+                                 <label for="Policies_0__Packages_1__Coverages_21__IsSelected" class="checkbox checkbox-btn">
+                                 <input aria-hidden="true" class="extension-added-checkbox" cost="7.43" data-val="true" data-val-required="The Is Selected field is required." id="Policies_0__Packages_1__Coverages_21__IsSelected" name="Policies[0].Packages[1].Coverages[21].IsSelected" ng-click="addCovers($event,'Trip_Disruption_cover','INSTR_COV_DISRUPTION',7.43,'Travel Insurance Cover Extesion - Travel Dissruption');Policies[0].Packages[1].Coverages[21].IsSelected = !Policies[0].Packages[1].Coverages[21].IsSelected;" ng-false-value="-6.74" ng-true-value="6.74" type="checkbox" value="true" /><input name="Policies[0].Packages[1].Coverages[21].IsSelected" type="hidden" value="false" />
+                                 <span class="btn checkbox-add add-cover-button mg-top-10" id="Policies_0__Packages_1__Coverages_21__IsSelected-add-cover-button">
+                                 Add
+                                 </span>
+                                 </label>
+                                 <button type="button" id="Trip_Disruption_cover-remove-button" title="Remove Additoinal Cover" class="hidden" ng-click="removeAdditionalCover($event,'Trip_Disruption_cover',7.43);Policies[0].Packages[1].Coverages[21].IsSelected = false;")>Remove</button>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </label>
+                                 <section class="panel-body" style="border-radius:15px;border-color:white;">
+                                    Protect the costs of your trip should you be affected by a Natural Catastrophe like volcanic eruptions (including volcanic ash clouds being carried by the wind) earthquakes or tsunamis occurring within 14 days or your trip and within 20 square kilometres of your destination. Or should a Terrorism event (as declared by the UK government or by the government of the country where the event happened) occurs within 20km of your arrival point and 14 days of your proposed trip date, you can protect the costs of your trip should you decide you no longer want to travel. If Airspace closure delays your departure from the UK or when you are returning to the UK, this additional cover can assist you with any daily costs you may incur as a result of waiting for the Airspace to be re-opened.
+                                    <br />
+                                    (See the <a data-pol="true" id="enhancedtrip-cover" href="#" target="_blank">Policy Wording</a> for full terms)        
+                                 </section>
+                              </div>
+                              <div class="accordion-item panel freeCover" ng-init="showTitlefor23 = true">
+                                 <input id="accordion-help-toggle-23" type="checkbox" name="toggle" aria-hidden="true" ng-click="showTitlefor23 = !showTitlefor23">
+                                 <label for="accordion-help-toggle-23" class="panel-heading">
+                                    <span class="panel-title">
+                                       <span class="row block">
+                                          <span class="col-xs-12 col-sm-7 col-md-9 col-lg-9 block">
+                                             <span class="col-xs-8 col-sm-8 col-md-8 col-lg-12 no-padding accordion-heading">
+                                                <div class="row col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20  pd-left-sm-15 coverage-accordion-title">Covid-19 Cover</div>
+                                                <span class="row block pd-top-xs-10" ng-show="showTitlefor23">
+                                                   <span class="col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                      <div class="row accordion-item-container">
+                                                         <div class="col-xs-1 hidden-xs">
+                                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                                                               <style type="text/css">
+                                                                  .st0 {
+                                                                  fill: #252A36;
+                                                                  }
+                                                                  .st1 {
+                                                                  fill: none;
+                                                                  stroke: #252A36;
+                                                                  stroke-width: 2.4685;
+                                                                  }
+                                                                  .st2 {
+                                                                  fill: none;
+                                                                  stroke: #252A36;
+                                                                  stroke-width: 2.4685;
+                                                                  stroke-linejoin: round;
+                                                                  }
+                                                               </style>
+                                                               <g>
+                                                                  <g>
+                                                                     <path class="st0" d="M23.3,16.4c-1.2-0.6-2.7-0.2-3.3,1c-0.6,1.2-0.2,2.7,1,3.3c1.2,0.6,2.7,0.2,3.3-1C25,18.5,24.5,17,23.3,16.4" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <path class="st0" d="M21.1,26.5c-0.9-0.4-2.1,0-2.5,0.9c-0.4,0.9,0,2.1,0.9,2.5c0.9,0.4,2.1,0,2.5-0.9C22.4,28,22,26.9,21.1,26.5" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <path class="st0" d="M30.3,22.7c-2-0.9-4.4,0-5.3,2c-0.9,2,0,4.4,2,5.3s4.4,0,5.3-2C33.2,26,32.3,23.6,30.3,22.7" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <circle class="st1" cx="25" cy="24" r="11.1" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__8_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M28.9,44.2c-0.1,2.2-1.9,3.8-4,3.8c-2.2-0.1-3.8-1.9-3.8-4c0.1-2.2,1.9-3.8,4-3.8
+                                                                                 C27.3,40.2,29,42,28.9,44.2z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="25.2" y1="40.1" x2="25.2" y2="35.3" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__7_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M11.7,39.7c-1.7,1.3-4.2,0.9-5.5-0.8c-1.3-1.7-0.9-4.2,0.8-5.5c1.7-1.3,4.2-0.9,5.5,0.8
+                                                                                 C13.8,35.9,13.4,38.4,11.7,39.7z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="12.5" y1="34.2" x2="16.3" y2="31.2" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__6_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M4.5,23.3c-2.1-0.6-3.3-2.7-2.8-4.8c0.6-2.1,2.7-3.3,4.8-2.8c2.1,0.6,3.3,2.7,2.8,4.8S6.6,23.9,4.5,23.3z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="9.2" y1="20.6" x2="13.9" y2="21.6" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__5_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M12.7,7.5c-0.9-2,0-4.3,2-5.1c2-0.9,4.3,0,5.1,2c0.9,2,0,4.3-2,5.1C15.9,10.4,13.6,9.5,12.7,7.5z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="17.9" y1="9.5" x2="20" y2="13.9" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__4_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M30.2,4.1c1-1.9,3.4-2.6,5.3-1.6c1.9,1,2.6,3.4,1.6,5.3c-1,1.9-3.4,2.6-5.3,1.6C30,8.4,29.2,6,30.2,4.1z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="31.9" y1="9.4" x2="29.8" y2="13.8" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__3_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M43.8,15.7c2.1-0.4,4.2,1,4.6,3.1c0.4,2.1-1,4.2-3.1,4.6c-2.1,0.4-4.2-1-4.6-3.1
+                                                                                 C40.3,18.2,41.7,16.1,43.8,15.7z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="40.7" y1="20.3" x2="36" y2="21.3" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__2_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M43.2,33.5c1.6,1.4,1.8,3.9,0.4,5.5c-1.4,1.6-3.9,1.8-5.5,0.4c-1.6-1.4-1.8-3.9-0.4-5.5
+                                                                                 C39.1,32.3,41.6,32.1,43.2,33.5z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="37.7" y1="33.9" x2="33.9" y2="30.9" />
+                                                                        </g>
+                                                                     </g>
+                                                                  </g>
+                                                               </g>
+                                                            </svg>
+                                                         </div>
+                                                         <div class="col-xs-11 col-lg-offset-1 col-sm-offset-1 additionanal-info-container pd-left-20">
+                                                            <span class="add-cover-p-style">Additional protection for your trip should it be disrupted by Covid-19 related reasons</span>
+                                                            <span>
+                                                            <span class="view-more-style">View more</span>
+                                                            <img src="img/trip/icon-arrow-down.png" style="width: 23px;margin-left: 8px;">
+                                                            </span>
+                                                         </div>
+                                                      </div>
+                                                      &nbsp;
+                                                   </span>
+                                                </span>
+                                             </span>
+                                             <span class="col-xs-3 xs-block no-padding pull-right hidden-md hidden-sm hidden-lg">£15.14</span>
+                                          </span>
+                                          <span class="col-sm-5 col-xs-12 col-md-3 col-lg-3 text-center">
+                                          <span class="hidden-xs mg-right-5">£15.14</span>
+                                          <span class="checkbox-group" ng-init="Policies[0].Packages[1].Coverages[22].IsSelected = CovidCoverValue()">
+                                 <label for="Policies_0__Packages_1__Coverages_22__IsSelected" class="checkbox checkbox-btn">
+                                 <input aria-hidden="true" class="extension-added-checkbox" cost="15.14" data-val="true" data-val-required="The Is Selected field is required." id="Policies_0__Packages_1__Coverages_22__IsSelected" name="Policies[0].Packages[1].Coverages[22].IsSelected" ng-click="addCovers($event,'Covid-19_Cover','INSTR_COV_COVID',15.14,'Travel Insurance Cover Extesion - Covid');Policies[0].Packages[1].Coverages[22].IsSelected = !Policies[0].Packages[1].Coverages[22].IsSelected;" ng-false-value="-13.76" ng-true-value="13.76" type="checkbox" value="true" /><input name="Policies[0].Packages[1].Coverages[22].IsSelected" type="hidden" value="false" />
+                                 <span class="btn checkbox-add add-cover-button mg-top-10" id="Policies_0__Packages_1__Coverages_22__IsSelected-add-cover-button">
+                                 Add
+                                 </span>
+                                 </label>
+                                 <button type="button" id="Covid-19_Cover-remove-button" title="Remove Additoinal Cover" class="hidden" ng-click="removeAdditionalCover($event,'Covid-19_Cover',15.14);Policies[0].Packages[1].Coverages[22].IsSelected = false;")>Remove</button>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </label>
+                                 <section class="panel-body" style="border-radius:15px;border-color:white;">
+                                    Provides additional cover to protect you against certain unforeseen costs should Covid-19 impact you before you travel or whilst you are away. Even if the quarantine requirements change while you are on holiday, this can provide cover for the cost of the accommodation and Covid-19 tests that you were not liable for at the time you booked your trip or purchased your policy (whichever you did last). This cover is not applicable to trips taken solely in the UK.<br/>
+                                    Cover is available on the ‘Missed Departure from the UK’, ‘Cutting short Your Trip’, ‘Missed Departure and connections on your Return to the UK’ (including an additional daily benefit) and ‘Change in Covid Testing and/or Quarantine Requirements During the Trip’ sections of the policy.(See the <a data-pol="true" id="Covid19Cover" href="#" target="_blank">Policy Wording</a> for full terms)
+                                 </section>
+                              </div>
+                              <div class="accordion-item panel freeCover" id="travelInsuranceExtensionMultiTripCover" ng-init="showTitlefor24 = true">
+                                 <input id="accordion-help-toggle-24" type="checkbox" name="toggle" aria-hidden="true" ng-click="showTitlefor24 = !showTitlefor24">
+                                 <label for="accordion-help-toggle-24" class="panel-heading">
+                                    <span class="panel-title">
+                                       <span class="row block">
+                                          <span class="col-xs-12 col-sm-7 col-md-9 col-lg-9 block">
+                                             <span class="col-xs-8 col-sm-8 col-md-8 col-lg-12 no-padding accordion-heading">
+                                                <div class="row col-lg-offset-2 col-sm-offset-2 pd-left-10 pd-left-xs-20  pd-left-sm-15 coverage-accordion-title">Travel Insurance Extension Annual Multi Trips</div>
+                                                <span class="row block pd-top-xs-10" ng-show="showTitlefor23">
+                                                   <span class="col-sm-12 col-md-12 col-lg-12 block font-family-regular">
+                                                      <div class="row accordion-item-container">
+                                                         <!-- <div class="col-xs-1 hidden-xs">
+                                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                                                               <style type="text/css">
+                                                                  .st0 {
+                                                                  fill: #252A36;
+                                                                  }
+                                                                  .st1 {
+                                                                  fill: none;
+                                                                  stroke: #252A36;
+                                                                  stroke-width: 2.4685;
+                                                                  }
+                                                                  .st2 {
+                                                                  fill: none;
+                                                                  stroke: #252A36;
+                                                                  stroke-width: 2.4685;
+                                                                  stroke-linejoin: round;
+                                                                  }
+                                                               </style>
+                                                               <g>
+                                                                  <g>
+                                                                     <path class="st0" d="M23.3,16.4c-1.2-0.6-2.7-0.2-3.3,1c-0.6,1.2-0.2,2.7,1,3.3c1.2,0.6,2.7,0.2,3.3-1C25,18.5,24.5,17,23.3,16.4" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <path class="st0" d="M21.1,26.5c-0.9-0.4-2.1,0-2.5,0.9c-0.4,0.9,0,2.1,0.9,2.5c0.9,0.4,2.1,0,2.5-0.9C22.4,28,22,26.9,21.1,26.5" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <path class="st0" d="M30.3,22.7c-2-0.9-4.4,0-5.3,2c-0.9,2,0,4.4,2,5.3s4.4,0,5.3-2C33.2,26,32.3,23.6,30.3,22.7" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <circle class="st1" cx="25" cy="24" r="11.1" />
+                                                                  </g>
+                                                                  <g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__8_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M28.9,44.2c-0.1,2.2-1.9,3.8-4,3.8c-2.2-0.1-3.8-1.9-3.8-4c0.1-2.2,1.9-3.8,4-3.8
+                                                                                 C27.3,40.2,29,42,28.9,44.2z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="25.2" y1="40.1" x2="25.2" y2="35.3" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__7_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M11.7,39.7c-1.7,1.3-4.2,0.9-5.5-0.8c-1.3-1.7-0.9-4.2,0.8-5.5c1.7-1.3,4.2-0.9,5.5,0.8
+                                                                                 C13.8,35.9,13.4,38.4,11.7,39.7z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="12.5" y1="34.2" x2="16.3" y2="31.2" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__6_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M4.5,23.3c-2.1-0.6-3.3-2.7-2.8-4.8c0.6-2.1,2.7-3.3,4.8-2.8c2.1,0.6,3.3,2.7,2.8,4.8S6.6,23.9,4.5,23.3z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="9.2" y1="20.6" x2="13.9" y2="21.6" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__5_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M12.7,7.5c-0.9-2,0-4.3,2-5.1c2-0.9,4.3,0,5.1,2c0.9,2,0,4.3-2,5.1C15.9,10.4,13.6,9.5,12.7,7.5z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="17.9" y1="9.5" x2="20" y2="13.9" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__4_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M30.2,4.1c1-1.9,3.4-2.6,5.3-1.6c1.9,1,2.6,3.4,1.6,5.3c-1,1.9-3.4,2.6-5.3,1.6C30,8.4,29.2,6,30.2,4.1z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="31.9" y1="9.4" x2="29.8" y2="13.8" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__3_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M43.8,15.7c2.1-0.4,4.2,1,4.6,3.1c0.4,2.1-1,4.2-3.1,4.6c-2.1,0.4-4.2-1-4.6-3.1
+                                                                                 C40.3,18.2,41.7,16.1,43.8,15.7z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="40.7" y1="20.3" x2="36" y2="21.3" />
+                                                                        </g>
+                                                                     </g>
+                                                                     <g id="_x3C_Radial_Repeat_x3E__2_">
+                                                                        <g>
+                                                                           <g>
+                                                                              <path class="st2" d="M43.2,33.5c1.6,1.4,1.8,3.9,0.4,5.5c-1.4,1.6-3.9,1.8-5.5,0.4c-1.6-1.4-1.8-3.9-0.4-5.5
+                                                                                 C39.1,32.3,41.6,32.1,43.2,33.5z" />
+                                                                           </g>
+                                                                           <line class="st2" x1="37.7" y1="33.9" x2="33.9" y2="30.9" />
+                                                                        </g>
+                                                                     </g>
+                                                                  </g>
+                                                               </g>
+                                                            </svg>
+                                                         </div> -->
+                                                         <!-- <div class="col-xs-11 col-lg-offset-1 col-sm-offset-1 additionanal-info-container pd-left-20">
+                                                            <span>
+                                                            <span class="view-more-style">View more</span>
+                                                            <img src="img/trip/icon-arrow-down.png" style="width: 23px;margin-left: 8px;">
+                                                            </span>
+                                                         </div> -->
+                                                      </div>
+                                                      &nbsp;
+                                                   </span>
+                                                </span>
+                                             </span>
+                                             <span class="col-xs-3 xs-block no-padding pull-right hidden-md hidden-sm hidden-lg">£18.05</span>
+                                          </span>
+                                          <span class="col-sm-5 col-xs-12 col-md-3 col-lg-3 text-center">
+                                          <span class="hidden-xs mg-right-5">£18.05</span>
+                                          <span class="checkbox-group" ng-init="Policies[0].Packages[1].Coverages[24].IsSelected = TravelInsuranceExtensionCoverValue()">
+                                 <label for="Policies_0__Packages_1__Coverages_24__IsSelected" class="checkbox checkbox-btn">
+                                 <input aria-hidden="true" class="extension-added-checkbox" cost="18.05" data-val="true" data-val-required="The Is Selected field is required." id="Policies_0__Packages_1__Coverages_24__IsSelected" name="Policies[0].Packages[1].Coverages[24].IsSelected" ng-click="addCovers($event,'Travel_Insurance_Extension_Cover','INSTR_EXT_MT',18.05,'Travel Insurance Extension Annual Multi Trips');Policies[0].Packages[1].Coverages[24].IsSelected = !Policies[0].Packages[1].Coverages[24].IsSelected;" ng-false-value="-13.76" ng-true-value="13.76" type="checkbox" value="true" /><input name="Policies[0].Packages[1].Coverages[24].IsSelected" type="hidden" value="false" />
+                                 <span class="btn checkbox-add add-cover-button mg-top-10" id="Policies_0__Packages_1__Coverages_24__IsSelected-add-cover-button">
+                                 Add
+                                 </span>
+                                 </label>
+                                 <button type="button" id="Travel-Insurance-Extension-remove-button" title="Remove Additoinal Cover" class="hidden" ng-click="removeAdditionalCover($event,'Travel_Insurance_Extension_Cover',18.05);Policies[0].Packages[1].Coverages[24].IsSelected = false;")>Remove</button>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </span>
+                                 </label>
+                                 <section class="panel-body" style="border-radius:15px;border-color:white;"></section>
+                              </div>
+                              <div id="addcovers-prices" ng-model="price" ng-init="price = priceSingleTrip()">
+                                 <div class="row pd-top-15">
+                                    <!-- FOR LARGE / MEDIUM SCREEN -->
+                                    <div class="col-xs-5 col-sm-8 col-md-9 hidden-xs">
+                                       <h5 class="font-family-regular pull-right price-to-pay">Price to pay</h5>
+                                    </div>
+                                    <div class="col-xs-7 col-sm-4 col-md-3 hidden-xs">
+                                       <h1 class="mg-top-0 font-family-bold pull-right">£{{totalPrice | number:2}}</h1>
+                                    </div>
+                                    <!-- FOR SMALL SCREEN -->
+                                    <div class="row hidden-lg hidden-md price-to-pay-cont">
+                                       <div class="col-xs-6 hidden-lg hidden-md hidden-sm">
+                                          <h5 class="font-family-regular price-to-pay text-right pull-right">Price to pay</h5>
+                                       </div>
+                                       <div class="col-xs-6 hidden-lg hidden-md hidden-sm">
+                                          <h1 class="mg-top-0 font-family-bold text-left pull-left">£{{totalPrice | number:2}}</h1>
+                                       </div>
+                                    </div>
+                                    <div class="premium-tax-style">
+                                       <p class="text-right price-to-pay-static-text">Includes Insurance Premium Tax at the current rate (if applicable)</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="well no-margin no-padding">
+                           <div class="row buttons-next-back">
+                              <div class="col-xs-12 col-sm-4 col-md-4 pd-bottom-xs-10">
+                                 <!-- <button class="btn2 btn2--back" id="additionalcovers-back" name="nextstep" type="submit" value="back-yourquote"><span>Go back a step</span></button> -->
+                                 <a href="yourquote.html" class="btn2 btn2--back" id="additionalcovers-back" name="nextstep" type="submit" value="back-yourquote"><span>Go back a step</span></a>
+                              </div>
+                              <div class="col-xs-12 col-sm-4 col-md-4 pd-bottom-xs-10 divSaveQuote">
+                                 <button class="btn2 btnSaveQuote" type="button" data-toggle="modal" data-target="#divSaveQuotePopup" style="font-weight:600; font-size:18px; color: #d00f39; background-color: transparent; border: none">
+                                 <span>Save Quote</span>
+                                 </button>
+                              </div>
+                              <div class="col-xs-12 col-sm-4 col-md-4 ">
+                                 <button class="custom-right btn arrow-right xs-width-100 add-cover-next-btn" ng-click="additionalCover()" id="additionalcovers-next" name="nextstep" type="submit" value="next">Next <span><img src="img/down-arrow.png" style="width: 16px;transform: rotate(271deg);position: relative;left: 24px;"></span></button>
+                                 <!-- <a href="yourdetails.html" class="custom-right btn arrow-right xs-width-100 add-cover-next-btn" id="additionalcovers-next" name="nextstep" type="submit" value="next">Next <span><img src="img/down-arrow.png" style="width: 16px;transform: rotate(271deg);position: relative;left: 24px;"></span></a> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" tabindex="-1" role="dialog" id="divSaveQuotePopup">
+                     <div class="modal-dialog">
+                        <div id="global-modal1" class="modal-content">
+                           <div class="close-modal-window pull-right">
+                              <svg class="" data-dismiss="modal" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M3 3L27 27" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                 <path d="M27 3L3 27" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div class="modal-header">
+                              <div>
+                                 <h4 class="modal-title pd-top-30">Enter your email address to save your quote</h4>
+                              </div>
+                           </div>
+                           <div class="modal-body">
+                              <div class="row">
+                                 <div class="col-xs-12">
+                                    <div class="form-horizontal">
+                                       <div class="email-addres-input-label">Email address</div>
+                                       <div class="">
+                                          <div id="errorsection" class="form-horizontal">
+                                             <div class="error-section">
+                                                <div id="emailError" class="invalid-msg hide">
+                                                   Please enter a valid email address.
+                                                </div>
+                                                <input type="email" id="txtEmail" class="form-control" data-val="" placeholder="Email address" />
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-xs-12 pd-top-20 pd-bottom-30">
+                                    <span>The email address entered here will only be used to send you a link to your saved quote. It will not be used for any other purpose.</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="modal-footer col-md-12 pd-left-0 pd-right-0" id="divSaveQuoteButtons">
+                              <div class="col-xs-6">
+                                 <button class="btn btnSaveQuoteCancel cancel-quote-button pull-left" data-dismiss="modal">Cancel</button>
+                              </div>
+                              <div class="col-xs-6">
+                                 <button class="btn btnSaveQuoteOk save-quote-button" data-dismiss="modal">Save quote</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+               <input id="selectedPackage" name="selectedPackage" type="hidden" value="Standard" />
+            </div>
+            <div class="no-container-padding col-md-4  col-xs-12">
+               <div class="panel2 panel2--summary ">
+                  <div class="panel2__body panel2__body--no-padding">
+                     <div class="summary">
+                        <h3 class="summary__title">Summary of cover<span class="summary__toggle" data-summary-toggle></span></h3>
+                        <span class="hide">177800176_TC0152699338Q/00_177745415</span>
+                        <div class="summary__data" id="tillrecipt">
+                           <div class="summary__item summary__item--caption" id="prices" ng-model="price" ng-init="price = priceSingleTrip()">
+                              <div class="summary__label">
+                                 Price to pay
+                                 <span class="qtip__icon" data-qtip="true"></span>
+                                 <div class="qtip-text">
+                                    Includes Insurance Premium Tax at the current rate (if applicable)            
+                                 </div>
+                              </div>
+                              <!-- <div class="summary__value">£{{price | number:2}} £53.77</div> -->
+                              <div class="summary__value">£{{totalPrice | number:2}}</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Standard cover</div>
+                              <div class="summary__value">£{{standardCover | number:2}}</div>
+                           </div>
+                           <!-- <div class="summary__item j">
+                              <div class="summary__label"><span class="pd-right-5">+</span>Cruise Cover</div>
+                              <div class="summary__value">£17.54</div>
+                           </div> -->
+                           <!--
+                              <div class="summary__item" ng-init="initOptionalLabel('0', '0')" ng-show="showOptionalLabel">
+                                  <div class="summary__label"><strong>j</strong></div>
+                              </div>
+                              -->
+                           <div class="summary__item" ng-show="gadgetCover != 0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Gadget cover</div>
+                              <div class="summary__value">£15.07</div>
+                           </div>
+                           <div class="summary__item" ng-class="{'hidden': tripExtension  != 31}">
+                              <div class="summary__label">Trip Extensions 31 days</div>
+                              <div class="summary__value">£0.00</div>
+                           </div>
+                           <div class="summary__item" ng-class="{'hidden': tripExtension  != 45}">
+                              <div class="summary__label">Trip Extensions 45 days</div>
+                              <div class="summary__value">£0.00</div>
+                           </div>
+                           <div class="summary__item" ng-class="{'hidden': tripExtension  != 60}">
+                              <div class="summary__label">Trip Extensions 60 days</div>
+                              <div class="summary__value">£0.00</div>
+                           </div>
+                           <div class="summary__item"  ng-show="excessWaiver != 0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Excess waiver</div>
+                              <div class="summary__value">£1.98</div>
+                           </div>
+                           <div class="summary__item" ng-show="Policies[0].Packages[1].Coverages[5].IsSelected == true">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Winter Sports cover</div>
+                              <div class="summary__value">£29.70</div>
+                           </div>
+                           <div class="summary__item" ng-show="sportsandActivities != 0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Sports and Activities (including Golf)</div>
+                              <div class="summary__value">£7.43</div>
+                           </div>
+                           <div class="summary__item" ng-show="tripDisruptionCover != 0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Trip Disruption cover (Including Natural Catastrophe, Terrorism and Air Space disruption)</div>
+                              <div class="summary__value">£7.43</div>
+                           </div>
+                           <div class="summary__item" ng-show="covidCover != 0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Covid-19 Cover</div>
+                              <div class="summary__value">£15.14</div>
+                           </div>
+                           <div class="summary__item j" ng-show="travelExtensionCover != 0">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Extension Annual Multi Trips</div>
+                              <div class="summary__value">£18.05</div>
+                           </div>
+                           <div class="summary__item j" id="travelInsuranceExtensionCruise_value">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Extension Cruise</div>
+                              <div class="summary__value travelInsuranceExtensionCruise_value">£4.00</div>
+                           </div>
+                           <!--<div class="summary__item j" id="travelInsuranceAnnualMultiTrip_value">
+                              <div class="summary__label"><span class="pd-right-5">+</span> Travel Insurance Annual Multi Trips</div>
+                              <div class="summary__value travelInsuranceAnnualMultiTrip_value">£39.29</div>
+                           </div>
+                           <script>
+                              function getAdditionalCovers() {
+                                  return window.localStorage.getItem('selectedAdditionalCovers');
+                              }
+                              
+                              const sac = window.localStorage.getItem('selectedAdditionalCovers');
+                              var sacArray = sac.split('|');
+                              
+                              for (let j = 0; j < sacArray.length; j++) {
+                                  var item = 'show_' + sacArray[j].replace(' ', '');
+                                  if (item == 'show_GadgetCover') {
+                                      show_GadgetCover = true;
+                                  }
+                                  //setAdditionalCoverShow(item);
+                                  //alert(item);
+                                  //  $scope[item] = true;
+                                  //item = true;
+                                  //alert($scope[item]);
+                                  //alert(item);
+                              }-->
+                           <!--</script>-->
+                        </div>
+                        <div class="summary__data">
+                           <div class="summary__item">
+                              <div class="summary__caption">Trip Details</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Policy type</div>
+                              <div class="summary__value policyType_value">{{policyType}}</div>
+                           </div>
+                           <fieldset id="Policies_0__address">
+                           <div class="summary__item">
+                              <div class="summary__label">Area of travel</div>
+                              <div class="summary__value address_value">{{address}}
+                              </div>
+                           </div>
+                        </fieldset>
+                           <div class="summary__item">
+                              <div class="summary__label">Departing On</div>
+                              <div class="summary__value departingOn_value"> {{departingOn}} </div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Returning On</div>
+                              <div class="summary__value returningOn_value"> {{returningOn}} </div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Who's covered</div>
+                              <div class="summary__value coverType_value"> {{coverType}} </div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Cancellation limit</div>
+                              <div class="summary__value">&#163;3,000</div>
+                           </div>
+                           <div class="summary__item">
+                              <div class="summary__label">Medical limit</div>
+                              <div class="summary__value">&#163;7,500,000</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <form action="/web/travel/quote/additionalcovers?E=0" id="promo" method="get" novalidate="" autocomplete="off">
+                  <div style="display:block">
+                     <div class="promo-codes" ng-init="showPromoCodeApplied=false">
+                        <!-- <div class="promo-codes__cta">
+                           <span data-promo-code>I have a promotional code</span>
+                        </div> -->
+                        <div class="promo-codes__body hide">
+                           <fieldset>
+                              <h3 class="promo-codes__title">Enter your Promo Code</h3>
+                              <div class="promo-codes__form form-group" id="promocodeinput" ng-class="showPromoCodeApplied ? 'hide':''" style="display:flex;flex-direction:column">
+                                 <div class="promo-code__text">
+                                    <div class="promo-code__input">
+                                       <div class="invalid-msg hide">
+                                          <i class="icon-poms icon-information icon-lg hidden"></i><span class="field-validation-valid" data-valmsg-for="Policies[0].PromotionCodes" data-valmsg-replace="true"></span>
+                                       </div>
+                                       <input class="form-control capital" data-val="true" data-val-custom="This is not a valid promo code" data-val-regex="" data-val-regex-pattern="^[a-zA-Z0-9]{1,11}$" data-val-unknown-error="An error occurred while applying promo code" id="Policies_0__PromotionCodes" name="Policies[0].PromotionCodes" ng-model="Policies[0].PromotionCodes" placeholder="Enter code here" title="" type="text" value="" />
+                                    </div>
+                                 </div>
+                                 <div class="promo-codes__action" style="margin-top:15px;">
+                                    <button type="button" class="btn2" id="apply-promocode" onclick="applyPromoCode()">Apply promotion</button>
+                                 </div>
+                              </div>
+                              <div class="promo-codes__success" id="prmocodeapplied" ng-class="showPromoCodeApplied ? '':'hide'">
+                                 Promotion code <span data-promo-code-val></span> applied!
+                              </div>
+                              <div class="promo-codes__error hide" id="prmocodeerror">
+                                 Invalid code
+                              </div>
+                           </fieldset>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <footer class="footer-funnel " >
+            <div class="footer-funnel__top">
+               <div class="footer-funnel__container">
+                  <div class="footer-funnel__logo">
+                     <img src="img/po-logo.svg" alt="Post Office logo" class="logo" style="width: 80px;"/>
+                  </div>
+                  <div class="footer-funnel__links">
+                     <a tabindex="0" target="_blank" href="#">Privacy Policy</a>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-funnel__bottom">
+               <div class="footer-funnel__container">
+                  <div class="footer-funnel__copyright">© Copyright 2022 The Post Office</div>
+               </div>
+            </div>
+         </footer>
+         <script src="js/trip/POMS/libs/Modernizr/modernizr-2.6.2.js"></script>
+         <script src="js/trip/POMS/libs/Modernizr/modernizr-2.8.3.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery-3.0.0.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery-1.10.2.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery.actual.min.js"></script>
+         <script src="js/trip/POMS/libs/jquery/jquery.qtip.js"></script>
+         <script src="js/trip/POMS/libs/Validation/jquery.validate.js"></script>
+         <script src="js/trip/POMS/libs/Validation/jquery.validate.unobtrusive.js"></script>
+         <script src="js/trip/scripts/AdrumUtility.js"></script>
+         <script src="//rum-static.pingdom.net/pa-5fa2dbe25eacee00150002f1.js" async></script>
+        
+         <script src="js/trip/scripts/adrum.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular.min.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular-aria.min.js"></script>
+         <script src="js/trip/POMS/libs/angular/angular-smooth-scroll.js"></script>
+       
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap-datepicker.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap-session-timeout.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/bootstrap.js"></script>
+         <script src="js/trip/POMS/libs/bootstrap/respond.js"></script>
+         <script src="js/trip/POMS/scripts/Global/app.js"></script>
+         <script src="js/trip/POMS/scripts/Global/globalize.js"></script>
+         <script src="js/trip/POMS/scripts/Global/poms.js"></script>
+         <script src="js/trip/POMS/scripts/DatePicker/datepickers.js"></script>
+         <script src="js/trip/POMS/scripts/Radio/radio-toggle.js"></script>
+         <script src="js/trip/POMS/scripts/Moment/moment-with-locales.js"></script>
+         <script src="js/trip/POMS/scripts/Moment/moment.js"></script>
+         <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+         <script src="js/trip/POMS/scripts/Utilities/validation-helper.js"></script>
+         <script>
+            $( document ).ready(function(){
+              
+               var priceData = window.localStorage.getItem("tripDetailsData");
+               var Policies = [{}];
+               if(window.localStorage.getItem("tripDetailsData") != " "){
+                 Policies = JSON.parse(window.localStorage.getItem("tripDetailsData"));
+                 }
+                 policyType = Policies[0].PolicyType;
+                 var departingOn = '';
+                 var returningOn = '';
+                       if(policyType  === 'S'){
+                        policyType = 'Single Trip';
+                        Policies[0].EffectiveDate = '';  
+                        departingOn = Policies[0].TripStartDate;
+                        returningOn = Policies[0].TripEndDate;
+                       }else if (policyType === 'A'){
+                        policyType  = 'Annual Multi Trip';
+                        Policies[0].TripStartDate = '';
+                        Policies[0].TripEndDate='';
+                        departingOn = Policies[0].EffectiveDate;
+                       }else{
+                         policyType  = 'Back Packers';
+                         departingOn = Policies[0].TripStartDate;
+                         returningOn = Policies[0].TripEndDate;
+                       }
+                       $(".policyType_value").html('')
+                       $(".policyType_value").html(policyType)
+                      var coverName = parseFloat(Number(window.localStorage.getItem("addCover")));
+                      $(".departingOn_value").html('')
+                      $(".departingOn_value").html(departingOn)
+                      $(".returningOn_value").html('')
+                      $(".returningOn_value").html(returningOn)
+                     //  var coverType = Policies[0].CoverType;
+                     //  $(".coverType_value").html('')
+                     //   $(".coverType_value").html(coverType)
+                     var coverType = Policies[0].CoverType;
+                      if(coverType == 'IND'){
+                        coverType = 'Just me';
+                      }else if(coverType == 'COU'){
+                        coverType = 'Me and my partner';
+                      }else if(coverType == 'FAM'){
+                        coverType = 'My family';
+                      }else{
+                        coverType = 'My friends';
+                      }
+                      console.log("coverType",coverType)
+                      $(".coverType_value").html('')
+                       $(".coverType_value").html(coverType);
+                      var address = Policies[0].UFEDestination; 
+                      if( address == 'W'){
+                        address = "Worldwide excluding USA, Canada, Bermuda, The Caribbean, Mexico and Greenland";
+                         }else if(address == 'EUR'){
+                         address = "Cape Verde, Cyprus, Spain, Balearic Islands, Canary Islands, Turkey";
+                         }else{
+                         address = "UK"
+                         }
+                         $(".address_value").html('')
+                      $(".address_value").html(address)
+                $('#Policies_0__PromotionCodes').keydown(function(event){
+                    if(event.keyCode == 13) {
+                        if ($("#promo").valid()){
+                            applyPromoCode();
+                        }
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+                $("#Policies_0__PromotionCodes").focusout(function(){
+                    return false;
+                });
+            });
+            
+            $('input, select, button').each(function () {
+                $(this).bind('blur', function () {
+                   //  CheckTimeout();
+                });
+            });
+           
+         </script>
+         <script src="js/trip/POMS/scripts/AdditionalCovers.js"></script>
+        
+   </body>
+</html>

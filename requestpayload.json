@@ -1,0 +1,229 @@
+{
+	"type": "addToBasket",
+	"message": [
+        {
+		"_id": "POL-INSTR_ST",
+		"_rev": "1-23ebcc3b408722101a73e2f1591cf6de",
+		"id": "INSTR_ST",
+		"RetailerId": "POL",
+		"ProductCode": "INSTR_ST",
+		"Name": "Travel Insurance Single Trip",
+		"Desc": "Travel Insurance Single Trip",
+		"Style": "",
+		"ProductType": "Merchandise",
+		"MainImageId": "",
+		"receiptInstructions": {
+			"lineItemAdditionalLines": [],
+			"footerLines": []
+		},
+		"MerchandiseGroups": {
+			"MerchandiseGroup": ["services"]
+		},
+		"ProductSkus": {
+			"Sku": [{
+				"id": "INSTR_ST",
+				"Name": "Travel Insurance Single Trip",
+				"Desc": "Travel Insurance Single Trip",
+				"IsDeleted": 0,
+				"ImageUrl": "",
+				"Barcodes": {
+					"type": [{
+						"id": "SKU",
+						"value": "INSTR_ST"
+					}, {
+						"id": "EAN",
+						"value": "008080050076"
+					}]
+				}
+			}]
+		},
+		"propertiesJson": {
+			"product": {
+				"maxPrice": "9999.99",
+				"minPrice": "0",
+				"allowZeroQtyOnVR": 0,
+				"isQuotable": 0,
+				"productMinQty": "1",
+				"productMaxQty": "1",
+				"rollupEnabled": 1,
+				"isPriceOverridable": 1,
+				"isVoidable": 1,
+				"isRefundAllowed": 1,
+				"isDiscountable": 0,
+				"ispromotionalble": 0,
+				"isQuantityEditable": 1,
+				"maxNoOfDiscounts": "0",
+				"customerAgeRestriction": {},
+				"timeRestriction": [{}]
+			}
+		},
+		"IsLayawayable": 0,
+		"IsTaxExemptible": 0,
+		"Properties": {
+			"property": []
+		},
+		"AllowDiscounts": 0,
+		"locationId": "POL-LOCATIONS",
+		"sku": "INSTR_MT",
+		"qty": 1,
+		"name": "Travel Insurance Annual Multi Trips",
+		"description": "Travel Insurance Annual Multi Trips",
+		"price": {
+			"amount": "39.29",
+			"currencyId": "GBP"
+		},
+		"bundleID": "2022-08-23T12:55:14.486Z",
+		"CascadeVoid": true,
+		"cascadeQuantity": true,
+		"isParent": true,
+		"Children": [{
+			"_id": "POL-LOCATIONS-INSTR_COV_EXCESS",
+			"_rev": "1-1ac0ebc56077b5e141fc259afc496b56",
+			"id": "INSTR_COV_EXCESS",
+			"RetailerId": "POL-LOCATIONS",
+			"ProductCode": "INSTR_COV_EXCESS",
+			"Name": "Travel Insurance Cover Extesion - Excess Waiver",
+			"Desc": "Travel Insurance Cover Extesion - Excess Waiver",
+			"Style": "",
+			"ProductType": "Merchandise",
+			"MainImageId": "",
+			"receiptInstructions": {
+				"lineItemAdditionalLines": [],
+				"footerLines": ["Travel Insurance Cover Extesion - Excess Waiver"]
+			},
+			"MerchandiseGroups": {
+				"MerchandiseGroup": ["services"]
+			},
+			"ProductSkus": {
+				"Sku": [{
+					"id": "INSTR_COV_EXCESS",
+					"Name": "Travel Insurance Cover Extesion - Excess Waiver",
+					"Desc": "Travel Insurance Cover Extesion - Excess Waiver",
+					"IsDeleted": 0,
+					"ImageUrl": "",
+					"Barcodes": {
+						"type": [{
+							"id": "SKU",
+							"value": "INSTR_COV_EXCESS"
+						}, {
+							"id": "EAN",
+							"value": ""
+						}]
+					}
+				}]
+			},
+			"propertiesJson": {
+				"product": {
+					"maxPrice": "9999.99",
+					"minPrice": "0",
+					"allowZeroQtyOnVR": "0",
+					"isQuotable": "0",
+					"productMinQty": "1",
+					"productMaxQty": "1",
+					"rollupEnabled": "1",
+					"isPriceOverridable": "1",
+					"isVoidable": "1",
+					"isRefundAllowed": "1",
+					"isDiscountable": "0",
+					"ispromotionalble": "0",
+					"isQuantityEditable": "1",
+					"maxNoOfDiscounts": "0",
+					"customerAgeRestriction": {},
+					"timeRestriction": [{}]
+				}
+			},
+			"IsLayawayable": 0,
+			"IsTaxExemptible": 0,
+			"Properties": {
+				"property": []
+			},
+			"AllowDiscounts": 0,
+			"locationId": "POL-LOCATIONS",
+			"sku": "INSTR_COV_EXCESS",
+			"qty": 1,
+			"name": "Travel Insurance Cover Extesion - Excess Waiver",
+			"description": "Travel Insurance Cover Extesion - Excess Waiver",
+			"price": {
+				"amount": "1.98",
+				"currencyId": "GBP"
+			},
+			"bundleId": "2022-08-23T12:55:14.486Z",
+			"CascadeVoid": true,
+			"cascadeQuantity": true
+		}, {
+			"_id": "POL-LOCATIONS-INSTR_COV_SPORTS",
+			"_rev": "1-fafcf3a72a5974b987e8dfa31fe6f3b3",
+			"id": "INSTR_COV_SPORTS",
+			"RetailerId": "POL-LOCATIONS",
+			"ProductCode": "INSTR_COV_SPORTS",
+			"Name": "Travel Insurance Cover Extesion - Sports & Activities",
+			"Desc": "Travel Insurance Cover Extesion - Sports & Activities",
+			"Style": "",
+			"ProductType": "Merchandise",
+			"MainImageId": "",
+			"receiptInstructions": {
+				"lineItemAdditionalLines": [],
+				"footerLines": ["Travel Insurance Cover Extesion - Sports & Activities"]
+			},
+			"MerchandiseGroups": {
+				"MerchandiseGroup": ["services"]
+			},
+			"ProductSkus": {
+				"Sku": [{
+					"id": "INSTR_COV_SPORTS",
+					"Name": "Travel Insurance Cover Extesion - Sports & Activities",
+					"Desc": "Travel Insurance Cover Extesion - Sports & Activities",
+					"IsDeleted": 0,
+					"ImageUrl": "",
+					"Barcodes": {
+						"type": [{
+							"id": "SKU",
+							"value": "INSTR_COV_SPORTS"
+						}, {
+							"id": "EAN",
+							"value": ""
+						}]
+					}
+				}]
+			},
+			"propertiesJson": {
+				"product": {
+					"maxPrice": "9999.99",
+					"minPrice": "0",
+					"allowZeroQtyOnVR": "0",
+					"isQuotable": "0",
+					"productMinQty": "1",
+					"productMaxQty": "1",
+					"rollupEnabled": "1",
+					"isPriceOverridable": "1",
+					"isVoidable": "1",
+					"isRefundAllowed": "1",
+					"isDiscountable": "0",
+					"ispromotionalble": "0",
+					"isQuantityEditable": "1",
+					"maxNoOfDiscounts": "0",
+					"customerAgeRestriction": {},
+					"timeRestriction": [{}]
+				}
+			},
+			"IsLayawayable": 0,
+			"IsTaxExemptible": 0,
+			"Properties": {
+				"property": []
+			},
+			"AllowDiscounts": 0,
+			"locationId": "POL-LOCATIONS",
+			"sku": "INSTR_COV_SPORTS",
+			"qty": 1,
+			"name": "Travel Insurance Cover Extesion - Sports & Activities",
+			"description": "Travel Insurance Cover Extesion - Sports & Activities",
+			"price": {
+				"amount": "7.43",
+				"currencyId": "GBP"
+			},
+			"bundleId": "2022-08-23T12:55:14.486Z",
+			"CascadeVoid": true,
+			"cascadeQuantity": true
+		}]
+	}]
+}

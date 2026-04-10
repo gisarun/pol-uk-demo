@@ -1,0 +1,145 @@
+[{
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "UB400",
+        "SKU": "UB400",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "7.92"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "SpecialDelivery_1",
+        "SKU": "SpecialDelivery_1",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "11.15"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL1STCL1KG",
+        "SKU": "PARCEL1STCL1KG",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "6.4"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL1STCL2KG",
+        "SKU": "PARCEL1STCL2KG",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "7.70"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL2SDCL1KG",
+        "SKU": "PARCEL2SDCL1KG",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "3.20"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCEL2SDCL2KG",
+        "SKU": "PARCEL2SDCL2KG",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "6.40"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCELSIGNED1STCL1KG",
+        "SKU": "PARCELSIGNED1STCL1KG",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "4.85"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "PARCELSIGNED2SDCL1KG",
+        "SKU": "PARCELSIGNED2SDCL1KG",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "4.20"
+    },
+    {
+        "Type": "1",
+        "RetailerId": "defaultRetailer",
+        "ProductCode": "CASH_WITHDRAWAL",
+        "SKU": "CASH_WITHDRAWAL",
+        "StartDate": {
+            "f": 1,
+            "value": "20180411"
+        },
+        "EndDate": {
+            "f": 1,
+            "value": "21180411"
+        },
+        "CurrencyId": "GBP",
+        "Amount": "-50.00"
+    }
+]
