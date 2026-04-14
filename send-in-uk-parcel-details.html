@@ -4,7 +4,7 @@
     <head>
        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Everday banking</title>
+        <title>Page Title</title>
 
         <!-- End Google Tag Manager -->
         <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,48 +17,23 @@
         <link rel="stylesheet" type="text/css" href="css/navigation.css">
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css" />
-
-        <script> var contextPath = "";</script>
-
-
         <script type="text/javascript">
             var editMode = false;
 
         </script>
-        <!-- Global variables used to add mask code -->
-        <script>
-            var active_mask_code_value;
+         <script type='text/javascript' src='js/jquery.js'></script>
+         <script src="js/jquery.menu-aim.js"></script>
+         <script src="js/navigation.js"></script>
+         <script src="js/jqueryui.js"></script>
 
-        </script>
-
-        <script type="text/javascript">
-            var cncopyText = '';
-
-            var cnlinkText = '';
-
-            var cnopenInNewWindow = '';
-
-            var cnlinkValue = '';
-
-        </script>
-    
-        <script type='text/javascript' src='js/scripts.js'></script>
-        <script type='text/javascript' src="js/main-min.js"></script>
-        <script type='text/javascript' src="js/init-min.js"></script>
-        <script type='text/javascript' src='js/jquery.js'></script>
-        <script src="js/jquery.menu-aim.js"></script>
-        <script src="js/navigation.js"></script>
-        <script src="js/jqueryui.js"></script>
-        <!-- <script src="js/bootstrap.js"></script> -->
     </head>
 
     <body>
-
         <div class="container" id="top">
             <a href="#maincontent" class="no-vis-skip-main" id="skip-to-main">Skip to main content</a>
             <header class="header brace site" role="banner">
+                
                
-              
                 <style>
                     .est-nav-header .est-row .est-mobile-overlay.active .est-find-branch::before,
                     .est-nav-header .est-row .est-header-element.est-find-branch::before {
@@ -87,7 +62,7 @@
                         <div class="est-row header-height">
                             <a href="index.html" tabindex="1" class="po-logo inline">
                                 <!-- <img src="img/Post-Office-Logo.svg" alt="Post Office logo" /> -->
-                                <img class="logo" src="img/po-logo.svg" alt="Post Office logo" />
+                                <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
                             </a>
                             <div id="est-search-btn" class="est-header-element est-search" tabindex="5" role="button">
                                 Search</div>
@@ -1025,8 +1000,8 @@
                                                                             aria-hidden="true">
                                                                             <div class="l3-left-area">
                                                                                 <h3>Our products and services</h3>
-                                                                                <!-- <ul>
-                                                                                    <li>
+                                                                                <ul>
+                                                                                    <!-- <li>
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
                                                                                             tabindex="6" href="#">
@@ -1587,18 +1562,18 @@
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
                                                                                             tabindex="6" href="tripdetails.html">
-                                                                                            <div>Single Trip Travel
+                                                                                            <div>Travel
                                                                                                 Insurance</div>
                                                                                         </a>
                                                                                     </li>
-                                                                                    <li>
+                                                                                    <!-- <li>
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
                                                                                             tabindex="6" href="#">
                                                                                             <div>Annual Multi-Trip
                                                                                                 Travel Insurance</div>
                                                                                         </a>
-                                                                                    </li>
+                                                                                    </li> -->
                                                                                     <li>
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
@@ -2548,7 +2523,7 @@
                             <div class="est-row">
                                 <div class="po-logo">
                                     <a href="#" tabindex="1">
-                                        <img src="img/Post-Office-Logo.svg" alt="Post Office logo" />
+                                        <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
                                     </a>
                                 </div>
                                 <div class="search-top">
@@ -2610,7 +2585,7 @@
                             <div class="account-row">
                                 <div class="column-12 w-col-2 po-logo">
                                     <a href="#" tabindex="1">
-                                        <img src="img/Post-Office-Logo.svg" alt="Post Office logo" />
+                                        <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
                                     </a>
                                 </div>
                                 <div class="w-col w-col-9">
@@ -2697,109 +2672,999 @@
                 </div>
             </header>
             <!-- End header -->
-            <main class="main white" id="maincontent" role="main" tabindex="-1">
-                <div id="pom" data-js-modal>
-                    <div class="o-container o-container--large">
-                        <div class="o-row u-grid-space--2">
-                            <div class="o-col-xs-12 o-col-sm-4 o-col-md-4 o-col-lg-3">
-                                <div class="sidebar">
-                                    <div id="category-tabs">
-                                        <ul class="nav nav-tabs">
-                                            <li><a>
-                                                    <img src="img/Everyday banking.png" class="ico pad20">
-                                                    <p>Everyday Banking</p>
-                                                    <img src="img/d2.png" class="arrw">
-                                                </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="o-col-xs-12 o-col-sm-8 o-col-md-8 o-col-lg-9">
+	            <main class="main white" id="maincontent" role="main" tabindex="-1">
+	              <!-- PAGE-SPECIFIC CONTENT START -->
+	              <style>
+	                /* Page-scoped styles for send-in-uk-parcel-details.html */
+			                .sipd-wrap {
+			                  max-width: 1100px;
+			                  margin: 0 auto;
+			                  padding: 44px 20px 84px;
+			                }
 
-                                <!-- search form -->
-                                <div id="search-from" class="pad90">
-                                    <p class="txt-form">Prompt the customer to put in card and enter pin into the
-                                        terminal</p>
-                                    <form autocomplete="off">
-                                        <div class="form-group brow acenter">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Account
-                                                number</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="accNumber" placeholder=""">
-                                  </div>
-                                </div>
-                                <div class=" col-md-9 tr">
-                                                <!-- <input class="favorite styled btnn" type="button" value="Search" > -->
-                                                <button type="button" class=" btnn mb-2 mrm8 clickshow">Search</button>
-                                            </div>
-                                    </form>
-                                </div>
-                                <!-- End search form -->
+			                .sipd-grid {
+			                  display: grid;
+			                  grid-template-columns: minmax(0, 1fr) 300px;
+			                  gap: 32px;
+			                  align-items: start;
+			                }
 
-                                <!-- Detail form -->
-                                <div id="detail-from" class="pad90 disnone">
-                                    <p class="txt-form mb0">Pin Verfied</p>
-                                    <p class="txt-form">Please check ID</p>
-                                    <form autocomplete="off">
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Account
-                                                number</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="accNum1" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Profile</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="Martin James A">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Address</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="16 High Street">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label"></label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="Oxford, OX1 4AG">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Date of
-                                                Birth</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="25 May 1980">
-                                            </div>
-                                        </div>
+	                @media (max-width: 980px) {
+	                  .sipd-grid {
+	                    grid-template-columns: 1fr;
+	                  }
+	                }
 
-                                        <div class="col-md-9 tr mt35">
-                                            <!-- <input class="favorite styled btnn" type="button" value="Select" > -->
+			                .sipd-card {
+			                  background: #fff;
+			                  border: 1px solid #ececec;
+			                  border-radius: 12px;
+			                  padding: 32px 32px;
+			                  margin-bottom: 26px;
+			                  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+			                }
 
-                                            <a href="dashboard.html" class=" btnn mb-2 mrm8">Select</a>
+			                .sipd-card h1 {
+			                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 40px;
+			                  line-height: 1.1;
+			                  margin: 2px 0 10px;
+			                  color: #2c1b4d;
+			                }
 
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- End Detail form -->
+			                .sipd-card h1::after {
+		                  content: "";
+		                  display: block;
+			                  height: 1px;
+			                  background: #ededed;
+			                  margin-top: 14px;
+			                }
 
+			                .sipd-step {
+			                  font-size: 14px;
+			                  color: #6e6e6e;
+			                  margin: 0 0 8px;
+			                }
 
-                            </div>
-                        </div>
+			                .sipd-h2 {
+			                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 20px;
+			                  margin: 18px 0 10px;
+			                  color: #2c1b4d;
+			                }
 
-                    </div>
+			                .sipd-p {
+			                  font-size: 15px;
+			                  line-height: 1.5;
+			                  color: #6b6b6b;
+			                  margin: 0 0 12px;
+			                }
 
-                </div>
-            </main>
+	                .sipd-muted {
+	                  color: #666;
+	                }
+
+	                .sipd-link {
+	                  color: #0e6690;
+	                  text-decoration: underline;
+	                }
+
+			                .sipd-formRow {
+		                  display: grid;
+		                  grid-template-columns: 1fr;
+			                  gap: 18px;
+			                  margin-top: 16px;
+			                  max-width: 520px;
+			                }
+
+		                .sipd-formRow > div:empty {
+		                  display: none;
+		                }
+
+	                @media (max-width: 720px) {
+	                  .sipd-formRow {
+	                    grid-template-columns: 1fr;
+	                  }
+	                }
+
+	                .sipd-field {
+	                  display: block;
+	                }
+
+			                .sipd-label {
+		                  display: block;
+		                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 14px;
+			                  color: #555;
+			                  margin: 0 0 6px;
+			                }
+
+			                .sipd-input,
+			                .sipd-select {
+			                  width: 100%;
+			                  height: 46px;
+			                  border-radius: 6px;
+			                  border: 1px solid #cfcfcf;
+			                  padding: 0 14px;
+			                  font-size: 15px;
+			                  color: #333;
+			                  background: #fff;
+			                }
+
+		                .sipd-input:focus,
+		                .sipd-select:focus {
+		                  outline: none;
+		                  border-color: #2c1b4d;
+		                  box-shadow: none;
+		                }
+
+	                .sipd-inputWrap {
+	                  position: relative;
+	                }
+
+			                .sipd-prefix {
+		                  position: absolute;
+		                  left: 1px;
+		                  top: 1px;
+		                  bottom: 1px;
+		                  display: flex;
+		                  align-items: center;
+			                  padding: 0 12px;
+		                  color: #333;
+		                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 15px;
+		                  background: #f3f3f3;
+		                  border-right: 1px solid #cfcfcf;
+			                  border-top-left-radius: 6px;
+			                  border-bottom-left-radius: 6px;
+			                }
+
+			                .sipd-suffix {
+		                  position: absolute;
+		                  right: 1px;
+		                  top: 1px;
+		                  bottom: 1px;
+		                  display: flex;
+		                  align-items: center;
+			                  padding: 0 12px;
+		                  color: #666;
+			                  font-size: 14px;
+		                  background: #f3f3f3;
+		                  border-left: 1px solid #cfcfcf;
+			                  border-top-right-radius: 6px;
+			                  border-bottom-right-radius: 6px;
+			                }
+
+			                .sipd-input--withPrefix {
+			                  padding-left: 48px;
+			                }
+
+			                .sipd-input--withSuffix {
+			                  padding-right: 64px;
+			                }
+
+	                .sipd-checkRow {
+	                  display: flex;
+	                  flex-wrap: wrap;
+	                  gap: 16px 18px;
+	                  margin: 10px 0 8px;
+	                }
+
+		                .sipd-checkRow label {
+	                  display: inline-flex;
+	                  align-items: center;
+	                  gap: 8px;
+		                  font-size: 15px;
+		                  color: #333;
+		                  margin: 0;
+		                }
+
+		                .sipd-small {
+		                  font-size: 14px;
+		                  color: #666;
+		                  line-height: 1.45;
+		                  margin: 10px 0 0;
+		                }
+
+			                .sipd-actions {
+	                  display: flex;
+			                  gap: 18px;
+			                  margin-top: 16px;
+			                  align-items: center;
+			                }
+
+			                .sipd-actionLink {
+		                  color: #0e6690;
+		                  text-decoration: underline;
+			                  font-size: 14px;
+			                }
+
+			                .sipd-accent {
+			                  border-left: 4px solid #2bb7c1;
+			                  padding-left: 22px;
+			                }
+
+		                .sipd-accent--danger {
+		                  border-left-color: #d00f39;
+		                }
+
+			                .sipd-accentIcon {
+			                  width: 40px;
+			                  height: 40px;
+			                  border-radius: 8px;
+			                  border: 1px solid #dedede;
+		                  display: inline-flex;
+		                  align-items: center;
+		                  justify-content: center;
+			                  margin-bottom: 14px;
+			                  background: #fff;
+			                }
+
+		                .sipd-radioGroup {
+		                  margin-top: 16px;
+		                  display: grid;
+		                  gap: 14px;
+		                }
+
+		                .sipd-radioOpt {
+	                  border: 1px solid #d7d7d7;
+		                  border-radius: 12px;
+		                  padding: 16px 16px;
+		                  display: flex;
+		                  align-items: flex-start;
+		                  gap: 12px;
+		                }
+
+	                .sipd-radioOpt input {
+	                  margin-top: 4px;
+	                }
+
+			                .sipd-nextRow {
+		                  display: flex;
+		                  align-items: center;
+		                  justify-content: flex-start;
+			                  gap: 18px;
+			                  margin-top: 18px;
+			                  flex-wrap: wrap;
+			                }
+
+		                .sipd-nextRow .sipd-small {
+		                  display: none;
+		                }
+
+			                .sipd-primary {
+			                  background: #d00f39;
+			                  color: #fff;
+			                  border: 0;
+			                  border-radius: 6px;
+			                  padding: 14px 20px;
+			                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 14px;
+			                  cursor: pointer;
+			                  min-width: 0;
+			                  text-align: center;
+			                }
+
+		                .sipd-primary::after {
+		                  content: " \2192";
+		                }
+
+	                .sipd-primary:hover,
+	                .sipd-primary:focus {
+	                  background: #ba112d;
+	                }
+
+	                .sipd-sidebar {
+	                  position: sticky;
+	                  top: 16px;
+	                }
+
+	                @media (max-width: 980px) {
+	                  .sipd-sidebar {
+	                    position: static;
+	                  }
+	                }
+
+			                .sipd-summaryTitle {
+		                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 18px;
+			                  color: #2c1b4d;
+			                  margin: 0 0 10px;
+			                }
+
+			                .sipd-summaryText {
+			                  font-size: 13px;
+			                  color: #6b6b6b;
+			                  line-height: 1.45;
+			                  margin: 0 0 16px;
+			                }
+
+		                .sipd-summaryRows {
+		                  border-top: 1px solid #e6e6e6;
+		                  margin-top: 18px;
+		                  padding-top: 16px;
+		                }
+
+			                .sipd-row {
+		                  display: flex;
+		                  justify-content: space-between;
+		                  gap: 10px;
+			                  font-size: 13px;
+			                  color: #3b3b3b;
+			                  margin: 12px 0;
+			                }
+
+	                .sipd-row strong {
+	                  font-family: ProbaPro-Bold, Arial, sans-serif;
+	                }
+
+			                .sipd-divider {
+	                  height: 1px;
+	                  background: #e6e6e6;
+			                  margin: 16px 0;
+			                }
+
+			                .sipd-total {
+			                  font-size: 14px;
+			                }
+
+			                .sipd-chat {
+			                  background: #2c1b4d;
+			                  color: #fff;
+			                  border-radius: 12px;
+			                  padding: 22px 22px;
+			                  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+			                }
+
+			                .sipd-chat h3 {
+		                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 18px;
+			                  margin: 0 0 10px;
+		                  color: #fff;
+		                  display: flex;
+		                  align-items: center;
+		                  gap: 8px;
+		                }
+
+			                .sipd-chat h3::before {
+		                  content: "";
+			                  width: 20px;
+			                  height: 20px;
+			                  border-radius: 3px;
+		                  background: rgba(255, 255, 255, 0.14);
+		                  display: inline-block;
+		                }
+
+			                .sipd-chat p {
+			                  font-size: 13px;
+			                  line-height: 1.45;
+			                  margin: 0 0 16px;
+			                  color: #e9e7f3;
+			                }
+
+			                .sipd-chatBtn {
+		                  display: inline-block;
+		                  background: #fff;
+		                  color: #2c1b4d;
+		                  border: 0;
+			                  border-radius: 6px;
+			                  padding: 14px 18px;
+			                  font-family: ProbaPro-Bold, Arial, sans-serif;
+			                  font-size: 14px;
+			                  cursor: pointer;
+			                }
+
+	                .sipd-error {
+	                  color: #b00020;
+	                  font-size: 12px;
+	                  margin-top: 6px;
+	                  display: none;
+	                }
+
+	                .sipd-field.is-invalid .sipd-input,
+	                .sipd-field.is-invalid .sipd-select {
+	                  border-color: #b00020;
+	                }
+
+	                .sipd-field.is-invalid .sipd-error {
+	                  display: block;
+	                }
+	              </style>
+
+	              <section class="sipd-wrap" aria-label="Send in the UK parcel details">
+	                <div class="sipd-grid">
+	                  <div>
+	                    <form id="sipd-form" action="#" method="get" novalidate>
+	                      <div class="sipd-card">
+	                        <div class="sipd-step">Step 1 of 4</div>
+	                        <h1>Parcel details</h1>
+
+	                        <div class="sipd-h2">My details</div>
+	                        <p class="sipd-p sipd-muted">As a safety measure, we would like to take your address in the unlikely event that there is a problem with the delivery of your item.</p>
+	                        <p class="sipd-p sipd-muted">For faster parcel booking, <a class="sipd-link" href="#">Register</a> or <a class="sipd-link" href="#">Log in</a> to your account.</p>
+
+	                        <div class="sipd-formRow">
+	                          <div class="sipd-field" data-field="title">
+	                            <label class="sipd-label" for="sipd-title">Title</label>
+	                            <select id="sipd-title" class="sipd-select" required>
+	                              <option value="Mr." selected>Mr.</option>
+	                              <option value="Mrs.">Mrs.</option>
+	                              <option value="Ms.">Ms.</option>
+	                              <option value="Dr.">Dr.</option>
+	                            </select>
+	                            <div class="sipd-error">Please select a title.</div>
+	                          </div>
+	                          <div></div>
+
+	                          <div class="sipd-field" data-field="firstName">
+	                            <label class="sipd-label" for="sipd-first">First name</label>
+	                            <input id="sipd-first" class="sipd-input" type="text" value="" required>
+	                            <div class="sipd-error">Please enter your first name.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="lastName">
+	                            <label class="sipd-label" for="sipd-last">Last name</label>
+	                            <input id="sipd-last" class="sipd-input" type="text" value="" required>
+	                            <div class="sipd-error">Please enter your last name.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="email" style="grid-column: 1 / -1;">
+	                            <label class="sipd-label" for="sipd-email">Email address</label>
+	                            <input id="sipd-email" class="sipd-input" type="email" value="" required>
+	                            <div class="sipd-error">Please enter a valid email address.</div>
+	                          </div>
+	                        </div>
+
+	                        <p class="sipd-p sipd-muted" style="margin-top: 16px;">We would like to keep you updated with offers, information, and updates about products and services from Post Office Ltd and selected partners.</p>
+
+	                        <div class="sipd-checkRow" role="group" aria-label="Marketing preferences">
+	                          <label><input type="checkbox" checked> Email</label>
+	                          <label><input type="checkbox"> Post</label>
+	                          <label><input type="checkbox"> Telephone</label>
+	                          <label><input type="checkbox"> Text</label>
+	                        </div>
+
+	                        <p class="sipd-small">You can change your preferences at any time. We will always treat your personal data with care.</p>
+	                        <p class="sipd-small">To view our privacy policy <a class="sipd-link" href="#">Click here</a>.</p>
+	                      </div>
+
+	                      <div class="sipd-card">
+	                        <div class="sipd-h2" style="margin-top: 0;">My parcel details</div>
+	                        <p class="sipd-p sipd-muted">To avoid additional charges, please ensure your parcel details are correct and that the weight stated is accurate.</p>
+
+	                        <div class="sipd-formRow">
+	                          <div class="sipd-field" data-field="contents" style="grid-column: 1 / -1;">
+	                            <label class="sipd-label" for="sipd-contents">Parcel contents</label>
+	                            <input id="sipd-contents" class="sipd-input" type="text" value="" required>
+	                            <div class="sipd-error">Please enter parcel contents.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="value">
+	                            <label class="sipd-label" for="sipd-value">Parcel value</label>
+	                            <div class="sipd-inputWrap">
+	                              <span class="sipd-prefix">£</span>
+	                              <input id="sipd-value" class="sipd-input sipd-input--withPrefix" type="number" step="0.01" min="0" value="" required>
+	                            </div>
+	                            <div class="sipd-error">Please enter a positive value.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="weight">
+	                            <label class="sipd-label" for="sipd-weight">Weight</label>
+	                            <div class="sipd-inputWrap">
+	                              <input id="sipd-weight" class="sipd-input sipd-input--withSuffix" type="number" step="0.01" min="0" value="" required>
+	                              <span class="sipd-suffix">kg</span>
+	                            </div>
+	                            <div class="sipd-error">Please enter a positive weight.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="length">
+	                            <label class="sipd-label" for="sipd-length">Length</label>
+	                            <div class="sipd-inputWrap">
+	                              <input id="sipd-length" class="sipd-input sipd-input--withSuffix" type="number" step="1" min="0" value="" required>
+	                              <span class="sipd-suffix">cm</span>
+	                            </div>
+	                            <div class="sipd-error">Please enter a positive length.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="width">
+	                            <label class="sipd-label" for="sipd-width">Width</label>
+	                            <div class="sipd-inputWrap">
+	                              <input id="sipd-width" class="sipd-input sipd-input--withSuffix" type="number" step="1" min="0" value="" required>
+	                              <span class="sipd-suffix">cm</span>
+	                            </div>
+	                            <div class="sipd-error">Please enter a positive width.</div>
+	                          </div>
+
+	                          <div class="sipd-field" data-field="height">
+	                            <label class="sipd-label" for="sipd-height">Height</label>
+	                            <div class="sipd-inputWrap">
+	                              <input id="sipd-height" class="sipd-input sipd-input--withSuffix" type="number" step="1" min="0" value="" required>
+	                              <span class="sipd-suffix">cm</span>
+	                            </div>
+	                            <div class="sipd-error">Please enter a positive height.</div>
+	                          </div>
+	                        </div>
+
+	                        <div class="sipd-actions">
+	                          <a class="sipd-actionLink" href="#">Add another parcel</a>
+	                          <a class="sipd-actionLink" href="#">Duplicate</a>
+	                        </div>
+
+	                        <p class="sipd-small" style="margin-top: 12px;">If your item is on our non-compensation list we will not compensate you in the event of parcel loss or damage.</p>
+	                      </div>
+
+			                      <div class="sipd-card sipd-accent">
+		                        <div class="sipd-accentIcon" aria-hidden="true">
+		                          <img src="img/Help-support.png" alt="" style="width: 18px; height: auto;">
+		                        </div>
+		                        <div class="sipd-h2" style="margin-top: 0;">Protect this item</div>
+		                        <p id="sipd-protect-message" class="sipd-p sipd-muted" style="display:none;"></p>
+
+		                        <div id="sipd-protect-offer" style="display:none;">
+		                          <p id="sipd-protect-line1" class="sipd-p sipd-muted">You have free protection on your items for up to £75.00.</p>
+		                          <p id="sipd-protect-line2" class="sipd-p sipd-muted"></p>
+
+		                          <div id="sipd-protect-options" class="sipd-radioGroup" role="radiogroup" aria-label="Protection options">
+		                            <label class="sipd-radioOpt">
+		                              <input id="sipd-protect-yes" type="radio" name="sipd-protection" value="yes">
+		                              <span>Yes, increase my protection to the full value</span>
+		                            </label>
+		                            <label class="sipd-radioOpt">
+		                              <input id="sipd-protect-no" type="radio" name="sipd-protection" value="no">
+		                              <span>No, I don't want additional protection against loss or damage.</span>
+		                            </label>
+		                          </div>
+		                        </div>
+		                      </div>
+
+		                      <div class="sipd-card sipd-accent sipd-accent--danger">
+	                        <div class="sipd-h2" style="margin-top: 0;">Next: address details</div>
+
+	                        <div class="sipd-checkRow" style="margin-top: 10px;">
+	                          <label>
+	                            <input id="sipd-prohibited" type="checkbox" checked required>
+	                            I have read and agree to the prohibited &amp; restricted items list
+	                          </label>
+	                        </div>
+
+	                        <div class="sipd-nextRow">
+	                          <div class="sipd-small" style="margin: 0;">&nbsp;</div>
+	                          <button id="sipd-continue" class="sipd-primary" type="submit">Continue</button>
+	                        </div>
+	                      </div>
+	                    </form>
+	                  </div>
+
+	                  <div class="sipd-sidebar" aria-label="Sidebar">
+	                    <div class="sipd-card">
+	                      <div class="sipd-summaryTitle">Payment Summary</div>
+	                      <p id="sipd-summary-note" class="sipd-summaryText">Please take your Royal Mail parcel to your designated Post Office before 12 noon to have a greater chance of next working day delivery.</p>
+
+		                      <div class="sipd-summaryRows" aria-label="Payment rows">
+		                        <div class="sipd-row"><span>Base Price:</span> <strong id="sipd-base">£0.00</strong></div>
+		                        <div class="sipd-row"><span>Cover:</span> <strong id="sipd-cover">£0.00</strong></div>
+		                        <div class="sipd-row"><span>VAT:</span> <strong id="sipd-vat">£0.00</strong></div>
+		                        <div class="sipd-divider"></div>
+		                        <div class="sipd-row sipd-total"><span>Total:</span> <strong id="sipd-total">£0.00</strong></div>
+		                      </div>
+	                    </div>
+
+		                  </div>
+		                </div>
+		              </section>
+
+	              <script type="text/javascript">
+	                (function () {
+	                  function getParam(name) {
+	                    try {
+	                      var params = new URLSearchParams(window.location.search);
+	                      return params.get(name);
+	                    } catch (e) {
+	                      return null;
+	                    }
+	                  }
+
+	                  function toNum(value) {
+	                    var n = parseFloat(value);
+	                    return isNaN(n) ? 0 : n;
+	                  }
+
+	                  function toMoney(value) {
+	                    return '£' + (Math.round(value * 100) / 100).toFixed(2);
+	                  }
+
+	                  function inferCarrier(serviceName) {
+	                    if (!serviceName) return 'Royal Mail';
+	                    if (serviceName.indexOf('Royal Mail') === 0) return 'Royal Mail';
+	                    if (serviceName.indexOf('Evri') === 0) return 'Evri';
+	                    if (serviceName.indexOf('DPD') === 0) return 'DPD';
+	                    return 'Royal Mail';
+	                  }
+
+		                  function getParcelValue() {
+		                    var el = document.getElementById('sipd-value');
+		                    if (!el) return null;
+		                    var raw = (el.value || '').trim();
+		                    if (!raw) return null;
+		                    var n = parseFloat(raw);
+		                    return isNaN(n) ? null : n;
+		                  }
+
+		                  function coverFromValue(parcelValue) {
+		                    var cover = parcelValue * 0.045;
+		                    return Math.round(cover * 100) / 100;
+		                  }
+
+		                  function setText(id, text) {
+		                    var el = document.getElementById(id);
+		                    if (el) el.textContent = text;
+		                  }
+
+		                  function show(id, on) {
+		                    var el = document.getElementById(id);
+		                    if (el) el.style.display = on ? '' : 'none';
+		                  }
+
+		                  function protectionCase(parcelValue) {
+		                    if (parcelValue === null) return 'empty';
+		                    if (parcelValue < 75) return 'below';
+		                    return 'above';
+		                  }
+
+		                  function isProtectionYesSelected() {
+		                    var yes = document.getElementById('sipd-protect-yes');
+		                    return !!(yes && yes.checked);
+		                  }
+
+		                  function updateProtectionUI() {
+		                    var parcelValue = getParcelValue();
+		                    var state = protectionCase(parcelValue);
+
+		                    if (state === 'empty') {
+		                      show('sipd-protect-message', true);
+		                      show('sipd-protect-offer', false);
+		                      setText(
+		                        'sipd-protect-message',
+		                        "Your parcel is already protected up to the value of £75.00. You can take additional protection for your parcel up to the value of £750.00 - Fill in the value above to get a quote."
+		                      );
+		                      return;
+		                    }
+
+		                    if (state === 'below') {
+		                      show('sipd-protect-message', true);
+		                      show('sipd-protect-offer', false);
+		                      setText('sipd-protect-message', 'Your item is automatically fully protected up to its full value.');
+		                      return;
+		                    }
+
+		                    var cover = coverFromValue(parcelValue);
+		                    show('sipd-protect-message', false);
+		                    show('sipd-protect-offer', true);
+		                    setText(
+		                      'sipd-protect-line2',
+		                      'Would you like to protect your items for the full value of ' + toMoney(parcelValue) + ' for only ' + toMoney(cover) + ' exc VAT?'
+		                    );
+		                  }
+
+		                  function updatePaymentSummary(basePrice) {
+		                    var coverEl = document.getElementById('sipd-cover');
+		                    var vatEl = document.getElementById('sipd-vat');
+		                    var totalEl = document.getElementById('sipd-total');
+
+		                    var parcelValue = getParcelValue();
+		                    var state = protectionCase(parcelValue);
+
+		                    var cover = 0;
+		                    if (state === 'above' && isProtectionYesSelected()) {
+		                      cover = coverFromValue(parcelValue);
+		                    }
+
+		                    var vatRate = 0.2;
+		                    var vat = (basePrice + cover) * vatRate;
+		                    var total = basePrice + cover + vat;
+
+		                    if (coverEl) coverEl.textContent = toMoney(cover);
+		                    if (vatEl) vatEl.textContent = toMoney(vat);
+		                    if (totalEl) totalEl.textContent = toMoney(total);
+		                  }
+
+		                  function initSummary() {
+		                    var service = getParam('service') || '';
+		                    var base = toNum(getParam('price'));
+
+		                    var baseEl = document.getElementById('sipd-base');
+		                    var noteEl = document.getElementById('sipd-summary-note');
+
+		                    if (baseEl) baseEl.textContent = toMoney(base);
+
+		                    var carrier = inferCarrier(service);
+		                    if (noteEl) {
+		                      noteEl.textContent = 'Please take your ' + carrier + ' parcel to your designated Post Office before 12 noon to have a greater chance of next working day delivery.';
+		                    }
+
+		                    updateProtectionUI();
+		                    updatePaymentSummary(base);
+
+		                    var valueInput = document.getElementById('sipd-value');
+		                    if (valueInput) {
+		                      valueInput.addEventListener('input', function () {
+		                        updateProtectionUI();
+		                        updatePaymentSummary(base);
+		                      });
+		                      valueInput.addEventListener('change', function () {
+		                        updateProtectionUI();
+		                        updatePaymentSummary(base);
+		                      });
+		                    }
+
+		                    var yes = document.getElementById('sipd-protect-yes');
+		                    var no = document.getElementById('sipd-protect-no');
+		                    if (yes) yes.addEventListener('change', function () { updatePaymentSummary(base); });
+		                    if (no) no.addEventListener('change', function () { updatePaymentSummary(base); });
+		                  }
+
+	                  function isEmail(value) {
+                        console.log('Validating email:', value);
+                        let valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+                        console.log('Is valid email:', valid);
+	                    return valid;
+	                  }
+
+	                  function markInvalid(fieldEl, invalid) {
+	                    if (!fieldEl) return;
+	                    if (invalid) fieldEl.classList.add('is-invalid');
+	                    else fieldEl.classList.remove('is-invalid');
+	                  }
+
+	                  function validateForm(form) {
+	                    var ok = true;
+
+	                    var title = document.getElementById('sipd-title');
+	                    var first = document.getElementById('sipd-first');
+	                    var last = document.getElementById('sipd-last');
+	                    var email = document.getElementById('sipd-email');
+	                    var contents = document.getElementById('sipd-contents');
+	                    var value = document.getElementById('sipd-value');
+	                    var weight = document.getElementById('sipd-weight');
+	                    var length = document.getElementById('sipd-length');
+	                    var width = document.getElementById('sipd-width');
+	                    var height = document.getElementById('sipd-height');
+
+	                    var fields = [
+	                      { id: 'title', el: title, valid: function () { return !!(title && title.value); } },
+	                      { id: 'firstName', el: first, valid: function () { return !!(first && first.value && first.value.trim()); } },
+	                      { id: 'lastName', el: last, valid: function () { return !!(last && last.value && last.value.trim()); } },
+	                      { id: 'email', el: email, valid: function () { return !!(email && isEmail(email.value || '')); } },
+	                      { id: 'contents', el: contents, valid: function () { return !!(contents && contents.value && contents.value.trim()); } },
+	                      { id: 'value', el: value, valid: function () { return toNum(value && value.value) > 0; } },
+	                      { id: 'weight', el: weight, valid: function () { return toNum(weight && weight.value) > 0; } },
+	                      { id: 'length', el: length, valid: function () { return toNum(length && length.value) > 0; } },
+	                      { id: 'width', el: width, valid: function () { return toNum(width && width.value) > 0; } },
+	                      { id: 'height', el: height, valid: function () { return toNum(height && height.value) > 0; } }
+	                    ];
+
+	                    fields.forEach(function (f) {
+	                      var wrap = form.querySelector('[data-field=\"' + f.id + '\"]');
+	                      var valid = f.valid();
+	                      if (!valid) ok = false;
+	                      markInvalid(wrap, !valid);
+	                    });
+
+	                    return ok;
+	                  }
+
+	                  document.addEventListener('DOMContentLoaded', function () {
+	                    initSummary();
+
+	                    var form = document.getElementById('sipd-form');
+	                    if (!form) return;
+
+		                    form.addEventListener('submit', function (e) {
+		                      var ok = validateForm(form);
+		                      if (!ok) {
+		                        e.preventDefault();
+		                        var firstInvalid = form.querySelector('.sipd-field.is-invalid .sipd-input, .sipd-field.is-invalid .sipd-select');
+		                        if (firstInvalid && firstInvalid.focus) firstInvalid.focus();
+		                        return;
+		                      }
+
+		                      e.preventDefault();
+		                      var service = getParam('service') || '';
+		                      var base = toNum(getParam('price'));
+		                      var parcelValue = getParcelValue();
+		                      var state = protectionCase(parcelValue);
+
+		                      var cover = 0;
+		                      if (state === 'above' && isProtectionYesSelected()) {
+		                        cover = coverFromValue(parcelValue);
+		                      }
+
+		                      var vatRate = 0.2;
+		                      var vat = (base + cover) * vatRate;
+		                      var total = base + cover + vat;
+
+		                      function fixed2(n) {
+		                        return (Math.round(n * 100) / 100).toFixed(2);
+		                      }
+
+		                      var url = 'send-in-uk-parcel-address.html'
+		                        + '?service=' + encodeURIComponent(service)
+		                        + '&price=' + encodeURIComponent(fixed2(base))
+		                        + '&cover=' + encodeURIComponent(fixed2(cover))
+		                        + '&vat=' + encodeURIComponent(fixed2(vat))
+		                        + '&total=' + encodeURIComponent(fixed2(total));
+		                      window.location.href = url;
+		                    });
+
+	                    form.addEventListener('input', function () {
+	                      validateForm(form);
+	                    });
+		                  });
+		                })();
+		              </script>
+
+		              <script type="text/javascript">
+		                (function () {
+		                  var STORAGE_KEY = 'sendInUkFlow';
+
+		                  function safeParse(raw) {
+		                    try { return JSON.parse(raw || '{}'); } catch (e) { return {}; }
+		                  }
+
+		                  function readStore() {
+		                    return safeParse(sessionStorage.getItem(STORAGE_KEY));
+		                  }
+
+		                  function writeStore(store) {
+		                    try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(store || {})); } catch (e) {}
+		                  }
+
+		                  function getPageKey() {
+		                    var path = (window.location.pathname || '');
+		                    var file = path.split('/').pop();
+		                    return file || 'send-in-uk-parcel-details.html';
+		                  }
+
+		                  function ensurePage(store, pageKey) {
+		                    if (!store.pages) store.pages = {};
+		                    if (!store.pages[pageKey]) store.pages[pageKey] = { fields: {}, extra: {} };
+		                    if (!store.pages[pageKey].fields) store.pages[pageKey].fields = {};
+		                    if (!store.pages[pageKey].extra) store.pages[pageKey].extra = {};
+		                    return store.pages[pageKey];
+		                  }
+
+		                  function isSupportedControl(el) {
+		                    if (!el || !el.tagName) return false;
+		                    var tag = el.tagName.toLowerCase();
+		                    if (tag === 'textarea' || tag === 'select') return true;
+		                    if (tag !== 'input') return false;
+		                    var type = (el.getAttribute('type') || 'text').toLowerCase();
+		                    if (type === 'password' || type === 'file') return false;
+		                    return true;
+		                  }
+
+		                  function controlKey(el) {
+		                    if (el.id) return 'id:' + el.id;
+		                    if (el.name) return 'name:' + el.name;
+		                    return null;
+		                  }
+
+		                  function getControlValue(el) {
+		                    var tag = el.tagName.toLowerCase();
+		                    if (tag === 'select' || tag === 'textarea') return String(el.value || '');
+		                    var type = (el.getAttribute('type') || 'text').toLowerCase();
+		                    if (type === 'checkbox') return !!el.checked;
+		                    if (type === 'radio') return el.checked ? String(el.value || '') : null;
+		                    return String(el.value || '');
+		                  }
+
+		                  function setControlValue(el, stored) {
+		                    var tag = el.tagName.toLowerCase();
+		                    if (tag === 'select' || tag === 'textarea') {
+		                      el.value = String(stored || '');
+		                      el.dispatchEvent(new Event('change', { bubbles: true }));
+		                      return;
+		                    }
+		                    var type = (el.getAttribute('type') || 'text').toLowerCase();
+		                    if (type === 'checkbox') {
+		                      el.checked = !!stored;
+		                      el.dispatchEvent(new Event('change', { bubbles: true }));
+		                      return;
+		                    }
+		                    if (type === 'radio') {
+		                      if (stored === null || stored === undefined) return;
+		                      el.checked = String(el.value || '') === String(stored);
+		                      if (el.checked) el.dispatchEvent(new Event('change', { bubbles: true }));
+		                      return;
+		                    }
+		                    el.value = String(stored || '');
+		                    el.dispatchEvent(new Event('input', { bubbles: true }));
+		                  }
+
+		                  function saveControl(pageKey, el) {
+		                    var key = controlKey(el);
+		                    if (!key) return;
+		                    var store = readStore();
+		                    var page = ensurePage(store, pageKey);
+		                    var type = (el.getAttribute('type') || '').toLowerCase();
+		                    if (type === 'radio') {
+		                      var val = getControlValue(el);
+		                      if (val === null) return;
+		                      page.fields[key] = val;
+		                    } else {
+		                      page.fields[key] = getControlValue(el);
+		                    }
+		                    writeStore(store);
+		                  }
+
+		                  function restoreControls(pageKey, root) {
+		                    var store = readStore();
+		                    var page = ensurePage(store, pageKey);
+		                    var fields = page.fields || {};
+		                    var controls = root.querySelectorAll('input, select, textarea');
+		                    for (var i = 0; i < controls.length; i++) {
+		                      var el = controls[i];
+		                      if (!isSupportedControl(el)) continue;
+		                      var key = controlKey(el);
+		                      if (!key) continue;
+		                      if (!(key in fields)) continue;
+		                      setControlValue(el, fields[key]);
+		                    }
+		                  }
+
+		                  function bindPersistence(pageKey, root) {
+		                    root.addEventListener('input', function (e) {
+		                      var el = e.target;
+		                      if (!isSupportedControl(el)) return;
+		                      saveControl(pageKey, el);
+		                    }, true);
+		                    root.addEventListener('change', function (e) {
+		                      var el = e.target;
+		                      if (!isSupportedControl(el)) return;
+		                      saveControl(pageKey, el);
+		                    }, true);
+		                  }
+
+		                  function setPageExtra(extra, pageKey) {
+		                    var store = readStore();
+		                    var page = ensurePage(store, pageKey || getPageKey());
+		                    page.extra = Object.assign({}, page.extra || {}, extra || {});
+		                    writeStore(store);
+		                  }
+
+		                  function getPageExtra(pageKey) {
+		                    var store = readStore();
+		                    var page = ensurePage(store, pageKey || getPageKey());
+		                    return page.extra || {};
+		                  }
+
+		                  function clearFlow() {
+		                    try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) {}
+		                  }
+
+		                  if (!window.__sendInUkFlow) window.__sendInUkFlow = {};
+		                  window.__sendInUkFlow.key = STORAGE_KEY;
+		                  window.__sendInUkFlow.getPageKey = getPageKey;
+		                  window.__sendInUkFlow.readStore = readStore;
+		                  window.__sendInUkFlow.writeStore = writeStore;
+		                  window.__sendInUkFlow.setPageExtra = setPageExtra;
+		                  window.__sendInUkFlow.getPageExtra = getPageExtra;
+		                  window.__sendInUkFlow.clear = clearFlow;
+
+		                  document.addEventListener('DOMContentLoaded', function () {
+		                    var main = document.getElementById('maincontent');
+		                    if (!main) return;
+		                    var pageKey = getPageKey();
+		                    restoreControls(pageKey, main);
+		                    bindPersistence(pageKey, main);
+		                  });
+		                })();
+		              </script>
+		              <!-- PAGE-SPECIFIC CONTENT END -->
+		            </main>
 
             <!-- End main layout -->
 
-            <!-- Footer start -->
             <!-- Footer start -->
             <footer class="footer brace site" role="contentinfo">
                 <div class="row-eighteen">
@@ -2993,7 +3858,8 @@
                             </nav>
                             <div class="logo span-3">
                                 <a href="/">
-                                    <img src="img/PO_Header_Desktop_Logo2016_79x59.svg" alt="Post Office logo">
+                                    <!-- <img src="img/po-logo.svg" alt="Post Office logo"> -->
+                                    <img src="img/po-logo.svg" alt="Post Office logo">
                                 </a>
                             </div>
                         </div>
@@ -3021,20 +3887,9 @@
                 </div>
             </footer>
         </div>
-
-        <script>
-            $(document).ready(function () {
-
-                $(".clickshow").on('click', function () {
-                    var accNo = $("#accNumber").val();
-                    $("#accNum1").val(accNo);
-                    $(this).parent().parent().parent().addClass("disnone");
-                    $(this).parents().next().show();
-                });
-            });
-        </script>
-
+        <script src="js/bootstrap.min.js"></script>
         </div>
+
 
     </body>
 

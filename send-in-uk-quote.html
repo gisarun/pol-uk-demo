@@ -4,7 +4,7 @@
     <head>
        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Everday banking</title>
+        <title>Page Title</title>
 
         <!-- End Google Tag Manager -->
         <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,48 +17,23 @@
         <link rel="stylesheet" type="text/css" href="css/navigation.css">
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css" />
-
-        <script> var contextPath = "";</script>
-
-
         <script type="text/javascript">
             var editMode = false;
 
         </script>
-        <!-- Global variables used to add mask code -->
-        <script>
-            var active_mask_code_value;
+         <script type='text/javascript' src='js/jquery.js'></script>
+         <script src="js/jquery.menu-aim.js"></script>
+         <script src="js/navigation.js"></script>
+         <script src="js/jqueryui.js"></script>
 
-        </script>
-
-        <script type="text/javascript">
-            var cncopyText = '';
-
-            var cnlinkText = '';
-
-            var cnopenInNewWindow = '';
-
-            var cnlinkValue = '';
-
-        </script>
-    
-        <script type='text/javascript' src='js/scripts.js'></script>
-        <script type='text/javascript' src="js/main-min.js"></script>
-        <script type='text/javascript' src="js/init-min.js"></script>
-        <script type='text/javascript' src='js/jquery.js'></script>
-        <script src="js/jquery.menu-aim.js"></script>
-        <script src="js/navigation.js"></script>
-        <script src="js/jqueryui.js"></script>
-        <!-- <script src="js/bootstrap.js"></script> -->
     </head>
 
     <body>
-
         <div class="container" id="top">
             <a href="#maincontent" class="no-vis-skip-main" id="skip-to-main">Skip to main content</a>
             <header class="header brace site" role="banner">
+                
                
-              
                 <style>
                     .est-nav-header .est-row .est-mobile-overlay.active .est-find-branch::before,
                     .est-nav-header .est-row .est-header-element.est-find-branch::before {
@@ -87,7 +62,7 @@
                         <div class="est-row header-height">
                             <a href="index.html" tabindex="1" class="po-logo inline">
                                 <!-- <img src="img/Post-Office-Logo.svg" alt="Post Office logo" /> -->
-                                <img class="logo" src="img/po-logo.svg" alt="Post Office logo" />
+                                <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
                             </a>
                             <div id="est-search-btn" class="est-header-element est-search" tabindex="5" role="button">
                                 Search</div>
@@ -1025,8 +1000,8 @@
                                                                             aria-hidden="true">
                                                                             <div class="l3-left-area">
                                                                                 <h3>Our products and services</h3>
-                                                                                <!-- <ul>
-                                                                                    <li>
+                                                                                <ul>
+                                                                                    <!-- <li>
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
                                                                                             tabindex="6" href="#">
@@ -1587,18 +1562,18 @@
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
                                                                                             tabindex="6" href="tripdetails.html">
-                                                                                            <div>Single Trip Travel
+                                                                                            <div>Travel
                                                                                                 Insurance</div>
                                                                                         </a>
                                                                                     </li>
-                                                                                    <li>
+                                                                                    <!-- <li>
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
                                                                                             tabindex="6" href="#">
                                                                                             <div>Annual Multi-Trip
                                                                                                 Travel Insurance</div>
                                                                                         </a>
-                                                                                    </li>
+                                                                                    </li> -->
                                                                                     <li>
                                                                                         <a role="button"
                                                                                             aria-hidden="true"
@@ -2548,7 +2523,7 @@
                             <div class="est-row">
                                 <div class="po-logo">
                                     <a href="#" tabindex="1">
-                                        <img src="img/Post-Office-Logo.svg" alt="Post Office logo" />
+                                        <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
                                     </a>
                                 </div>
                                 <div class="search-top">
@@ -2610,7 +2585,7 @@
                             <div class="account-row">
                                 <div class="column-12 w-col-2 po-logo">
                                     <a href="#" tabindex="1">
-                                        <img src="img/Post-Office-Logo.svg" alt="Post Office logo" />
+                                        <img class="header-funnel__logo-image logo" src="img/po-logo.svg" alt="Logo" />
                                     </a>
                                 </div>
                                 <div class="w-col w-col-9">
@@ -2698,108 +2673,661 @@
             </header>
             <!-- End header -->
             <main class="main white" id="maincontent" role="main" tabindex="-1">
-                <div id="pom" data-js-modal>
-                    <div class="o-container o-container--large">
-                        <div class="o-row u-grid-space--2">
-                            <div class="o-col-xs-12 o-col-sm-4 o-col-md-4 o-col-lg-3">
-                                <div class="sidebar">
-                                    <div id="category-tabs">
-                                        <ul class="nav nav-tabs">
-                                            <li><a>
-                                                    <img src="img/Everyday banking.png" class="ico pad20">
-                                                    <p>Everyday Banking</p>
-                                                    <img src="img/d2.png" class="arrw">
-                                                </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="o-col-xs-12 o-col-sm-8 o-col-md-8 o-col-lg-9">
+              <!-- PAGE-SPECIFIC CONTENT START -->
+              <style>
+                /* Page-scoped styles for send-in-uk-quote.html */
+                .siuq-wrap {
+                  max-width: 980px;
+                  margin: 0 auto;
+                  padding: 44px 16px 72px;
+                }
 
-                                <!-- search form -->
-                                <div id="search-from" class="pad90">
-                                    <p class="txt-form">Prompt the customer to put in card and enter pin into the
-                                        terminal</p>
-                                    <form autocomplete="off">
-                                        <div class="form-group brow acenter">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Account
-                                                number</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="accNumber" placeholder=""">
-                                  </div>
-                                </div>
-                                <div class=" col-md-9 tr">
-                                                <!-- <input class="favorite styled btnn" type="button" value="Search" > -->
-                                                <button type="button" class=" btnn mb-2 mrm8 clickshow">Search</button>
-                                            </div>
-                                    </form>
-                                </div>
-                                <!-- End search form -->
+                .siuq-hero {
+                  text-align: center;
+                  margin-bottom: 18px;
+                }
 
-                                <!-- Detail form -->
-                                <div id="detail-from" class="pad90 disnone">
-                                    <p class="txt-form mb0">Pin Verfied</p>
-                                    <p class="txt-form">Please check ID</p>
-                                    <form autocomplete="off">
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Account
-                                                number</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="accNum1" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Profile</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="Martin James A">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Address</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="16 High Street">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label"></label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="Oxford, OX1 4AG">
-                                            </div>
-                                        </div>
-                                        <div class="form-group brow acenter mb35">
-                                            <label for="staticEmail" class="col-md-3 col-form-label">Date of
-                                                Birth</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="inputPassword"
-                                                    placeholder="" value="25 May 1980">
-                                            </div>
-                                        </div>
+                .siuq-hero h1 {
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                  font-size: 44px;
+                  line-height: 1.1;
+                  color: #333;
+                  margin: 0 0 8px;
+                }
 
-                                        <div class="col-md-9 tr mt35">
-                                            <!-- <input class="favorite styled btnn" type="button" value="Select" > -->
+                .siuq-hero p {
+                  font-size: 18px;
+                  line-height: 1.5;
+                  color: #666;
+                  margin: 0;
+                }
 
-                                            <a href="dashboard.html" class=" btnn mb-2 mrm8">Select</a>
+                .siuq-meta {
+                  font-size: 15px;
+                  color: #333;
+                  margin: 14px 0 16px;
+                }
 
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- End Detail form -->
+                .siuq-meta a {
+                  color: #0e6690;
+                  text-decoration: underline;
+                  margin-left: 10px;
+                  white-space: nowrap;
+                }
 
+                .siuq-filter {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 12px;
+                  margin: 0 0 16px;
+                }
 
-                            </div>
-                        </div>
+                .siuq-filter label {
+                  margin: 0;
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                  font-size: 16px;
+                  color: #333;
+                }
 
-                    </div>
+                .siuq-filter select {
+                  width: 300px;
+                  max-width: 100%;
+                  height: 44px;
+                  border-radius: 8px;
+                  font-size: 15px;
+                }
 
+                .siuq-list {
+                  margin-top: 6px;
+                }
+
+                .siuq-item {
+                  margin-bottom: 12px;
+                }
+
+                .siuq-badge {
+                  display: inline-block;
+                  margin: 0 0 8px 140px;
+                  font-size: 12px;
+                  line-height: 1;
+                  color: #0e6690;
+                  background-color: #e8f4fb;
+                  border: 1px solid #b9dff1;
+                  border-radius: 999px;
+                  padding: 6px 10px;
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                }
+
+                .siuq-card {
+                  background: #fff;
+                  border: 1px solid #d7d7d7;
+                  border-radius: 10px;
+                  overflow: hidden;
+                }
+
+                .siuq-row {
+                  display: grid;
+                  grid-template-columns: 120px 1.2fr 220px 150px 140px;
+                  align-items: stretch;
+                }
+
+                @media (max-width: 860px) {
+                  .siuq-row {
+                    grid-template-columns: 120px 1fr;
+                  }
+                }
+
+                .siuq-cell {
+                  padding: 16px 16px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+
+                .siuq-cell + .siuq-cell {
+                  border-left: 1px solid #e6e6e6;
+                }
+
+                @media (max-width: 860px) {
+                  .siuq-cell + .siuq-cell {
+                    border-left: 0;
+                    border-top: 1px solid #e6e6e6;
+                  }
+                }
+
+                .siuq-logoBox {
+                  height: 56px;
+                  border: 1px solid #d7d7d7;
+                  border-radius: 8px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: #fff;
+                  margin-bottom: 8px;
+                }
+
+                .siuq-logoText {
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                  font-size: 16px;
+                  color: #333;
+                  letter-spacing: 0.4px;
+                }
+
+                .siuq-moreInfo {
+                  font-size: 13px;
+                  color: #0e6690;
+                  text-decoration: underline;
+                }
+
+                .siuq-title {
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                  font-size: 18px;
+                  color: #333;
+                  margin: 0 0 6px;
+                }
+
+                .siuq-sub {
+                  font-size: 14px;
+                  color: #666;
+                  margin: 0;
+                }
+
+                .siuq-protect {
+                  font-size: 14px;
+                  color: #333;
+                  margin: 0;
+                }
+
+                .siuq-price {
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                  font-size: 24px;
+                  color: #333;
+                  margin: 0;
+                  line-height: 1.1;
+                }
+
+                .siuq-vat {
+                  font-size: 12px;
+                  color: #666;
+                  margin-top: 4px;
+                }
+
+                .siuq-buyWrap {
+                  align-items: flex-end;
+                }
+
+                .siuq-buy {
+                  display: inline-block;
+                  border: 0;
+                  border-radius: 6px;
+                  padding: 10px 18px;
+                  background: #d00f39;
+                  color: #fff;
+                  font-family: ProbaPro-Bold, Arial, sans-serif;
+                  font-size: 16px;
+                  cursor: pointer;
+                  width: 100%;
+                  max-width: 120px;
+                  text-align: center;
+                }
+
+                .siuq-buy:focus,
+                .siuq-buy:hover {
+                  background: #ba112d;
+                }
+              </style>
+
+              <section class="siuq-wrap" aria-label="Send in the UK quote results">
+                <div class="siuq-hero">
+                  <h1>Choose a delivery service</h1>
+                  <p>All services offer a FREE Post Office, print-in-branch label service</p>
                 </div>
+
+                <div class="siuq-meta">
+                  <strong>Results:</strong> 1 kg | Under a metre | Qty: 1
+                  <a href="">Modify Search</a>
+                </div>
+
+                <div class="siuq-filter">
+                  <label for="siuq-sort">View services by</label>
+                  <select id="siuq-sort" class="form-control">
+                    <option value="price-asc" selected>Price low to high</option>
+                    <option value="price-desc">Price high to low</option>
+                    <option value="distance">Drop-off distance</option>
+                    <option value="popular">Most popular</option>
+                  </select>
+                </div>
+
+                <div id="siuq-list" class="siuq-list" aria-live="polite">
+                  <div class="siuq-item" data-price="2.91" data-distance="3" data-popularity="1">
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/evri.svg" alt="Evri" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Evri Postable Standard</p>
+                          <p class="siuq-sub">Est. Delivery 2-3 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£20 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£2.91</div>
+                          <div class="siuq-vat">£3.49 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="2.99" data-distance="4" data-popularity="2">
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/evri.svg" alt="Evri" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Evri Postable Next Day</p>
+                          <p class="siuq-sub">Est. Delivery 1-2 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£20 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£2.99</div>
+                          <div class="siuq-vat">£3.59 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="3.07" data-distance="5" data-popularity="4">
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/evri.svg" alt="Evri" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Evri Standard</p>
+                          <p class="siuq-sub">Est. Delivery 2-3 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£20 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£3.07</div>
+                          <div class="siuq-vat">£3.68 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="3.17" data-distance="2" data-popularity="3">
+                    <div class="siuq-badge"style="
+                        margin: 0;
+                    ">New Lower Price</div>
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/royal-mail.svg" alt="Royal Mail" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Royal Mail Tracked 48 Small</p>
+                          <p class="siuq-sub">Est. Delivery 2-3 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£75 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£3.17</div>
+                          <div class="siuq-vat">£3.80 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="3.71" data-distance="6" data-popularity="5">
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/evri.svg" alt="Evri" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Evri Next Day</p>
+                          <p class="siuq-sub">Est. Delivery 1-2 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£20 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£3.71</div>
+                          <div class="siuq-vat">£4.45 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="4.03" data-distance="1" data-popularity="6">
+                    <div class="siuq-badge"style="
+                        margin: 0;
+                    ">New Lower Price</div>
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/royal-mail.svg" alt="Royal Mail" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Royal Mail Tracked 24 Small</p>
+                          <p class="siuq-sub">Est. Delivery 1-2 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£75 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£4.03</div>
+                          <div class="siuq-vat">£4.84 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="4.82" data-distance="7" data-popularity="7">
+                    <div class="siuq-badge"style="
+                        margin: 0;
+                    ">New Lower Price</div>
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/royal-mail.svg" alt="Royal Mail" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">Royal Mail Tracked 48 Medium</p>
+                          <p class="siuq-sub">Est. Delivery 2-3 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£75 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£4.82</div>
+                          <div class="siuq-vat">£5.78 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="siuq-item" data-price="5.47" data-distance="8" data-popularity="8">
+                    <div class="siuq-card">
+                      <div class="siuq-row">
+                        <div class="siuq-cell">
+                          <div class="siuq-logoBox" style="border: 0;"><img src="img/dpd.svg" alt="DPD" style="max-height: 34px; max-width: 100%; width: auto; height: auto; display: block;"></div>
+                          <a class="siuq-moreInfo" href="#">More info</a>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-title">DPD 2 Day</p>
+                          <p class="siuq-sub">Est. Delivery 2-3 Days</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <p class="siuq-protect">£20 protection included</p>
+                        </div>
+                        <div class="siuq-cell">
+                          <div class="siuq-price">£5.47</div>
+                          <div class="siuq-vat">£6.56 inc VAT</div>
+                        </div>
+                        <div class="siuq-cell siuq-buyWrap">
+                          <button type="button" class="siuq-buy">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+                  <script type="text/javascript">
+                    (function () {
+                  function toNum(value) {
+                    var n = parseFloat(value);
+                    return isNaN(n) ? 0 : n;
+                  }
+
+                  function sortItems() {
+                    var select = document.getElementById('siuq-sort');
+                    var list = document.getElementById('siuq-list');
+                    if (!select || !list) return;
+
+                    var mode = select.value;
+                    var items = Array.prototype.slice.call(list.querySelectorAll('.siuq-item'));
+
+                    items.sort(function (a, b) {
+                      if (mode === 'price-asc') return toNum(a.dataset.price) - toNum(b.dataset.price);
+                      if (mode === 'price-desc') return toNum(b.dataset.price) - toNum(a.dataset.price);
+                      if (mode === 'distance') return toNum(a.dataset.distance) - toNum(b.dataset.distance);
+                      if (mode === 'popular') return toNum(a.dataset.popularity) - toNum(b.dataset.popularity);
+                      return 0;
+                    });
+
+                    items.forEach(function (item) {
+                      list.appendChild(item);
+                    });
+                  }
+
+                  document.addEventListener('DOMContentLoaded', function () {
+                    var select = document.getElementById('siuq-sort');
+                    if (select) select.addEventListener('change', sortItems);
+                    sortItems();
+
+                    var list = document.getElementById('siuq-list');
+                    if (list) {
+                      list.addEventListener('click', function (e) {
+                        var target = e.target;
+                        if (!target) return;
+                        if (target.classList && target.classList.contains('siuq-buy')) {
+                          var item = target.closest ? target.closest('.siuq-item') : null;
+                          if (!item) return;
+
+                          var titleEl = item.querySelector('.siuq-title');
+                          var service = titleEl ? (titleEl.textContent || '').trim() : '';
+                          var price = item.dataset ? item.dataset.price : '';
+
+                          var url = 'send-in-uk-parcel-details.html?service=' + encodeURIComponent(service) + '&price=' + encodeURIComponent(price);
+                          window.location.href = url;
+                        }
+                      });
+                    }
+                  });
+                    })();
+                  </script>
+
+                  <script type="text/javascript">
+                    (function () {
+                      var STORAGE_KEY = 'sendInUkFlow';
+
+                      function safeParse(raw) {
+                        try { return JSON.parse(raw || '{}'); } catch (e) { return {}; }
+                      }
+
+                      function readStore() {
+                        return safeParse(sessionStorage.getItem(STORAGE_KEY));
+                      }
+
+                      function writeStore(store) {
+                        try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(store || {})); } catch (e) {}
+                      }
+
+                      function getPageKey() {
+                        var path = (window.location.pathname || '');
+                        var file = path.split('/').pop();
+                        return file || 'send-in-uk-quote.html';
+                      }
+
+                      function ensurePage(store, pageKey) {
+                        if (!store.pages) store.pages = {};
+                        if (!store.pages[pageKey]) store.pages[pageKey] = { fields: {}, extra: {} };
+                        if (!store.pages[pageKey].fields) store.pages[pageKey].fields = {};
+                        if (!store.pages[pageKey].extra) store.pages[pageKey].extra = {};
+                        return store.pages[pageKey];
+                      }
+
+                      function isSupportedControl(el) {
+                        if (!el || !el.tagName) return false;
+                        var tag = el.tagName.toLowerCase();
+                        if (tag === 'textarea' || tag === 'select') return true;
+                        if (tag !== 'input') return false;
+                        var type = (el.getAttribute('type') || 'text').toLowerCase();
+                        if (type === 'password' || type === 'file') return false;
+                        return true;
+                      }
+
+                      function controlKey(el) {
+                        if (el.id) return 'id:' + el.id;
+                        if (el.name) return 'name:' + el.name;
+                        return null;
+                      }
+
+                      function getControlValue(el) {
+                        var tag = el.tagName.toLowerCase();
+                        if (tag === 'select' || tag === 'textarea') return String(el.value || '');
+                        var type = (el.getAttribute('type') || 'text').toLowerCase();
+                        if (type === 'checkbox') return !!el.checked;
+                        if (type === 'radio') return el.checked ? String(el.value || '') : null;
+                        return String(el.value || '');
+                      }
+
+                      function setControlValue(el, stored) {
+                        var tag = el.tagName.toLowerCase();
+                        if (tag === 'select' || tag === 'textarea') {
+                          el.value = String(stored || '');
+                          el.dispatchEvent(new Event('change', { bubbles: true }));
+                          return;
+                        }
+                        var type = (el.getAttribute('type') || 'text').toLowerCase();
+                        if (type === 'checkbox') {
+                          el.checked = !!stored;
+                          el.dispatchEvent(new Event('change', { bubbles: true }));
+                          return;
+                        }
+                        if (type === 'radio') {
+                          if (stored === null || stored === undefined) return;
+                          el.checked = String(el.value || '') === String(stored);
+                          if (el.checked) el.dispatchEvent(new Event('change', { bubbles: true }));
+                          return;
+                        }
+                        el.value = String(stored || '');
+                        el.dispatchEvent(new Event('input', { bubbles: true }));
+                      }
+
+                      function saveControl(pageKey, el) {
+                        var key = controlKey(el);
+                        if (!key) return;
+                        var store = readStore();
+                        var page = ensurePage(store, pageKey);
+                        var type = (el.getAttribute('type') || '').toLowerCase();
+                        if (type === 'radio') {
+                          var val = getControlValue(el);
+                          if (val === null) return;
+                          page.fields[key] = val;
+                        } else {
+                          page.fields[key] = getControlValue(el);
+                        }
+                        writeStore(store);
+                      }
+
+                      function restoreControls(pageKey, root) {
+                        var store = readStore();
+                        var page = ensurePage(store, pageKey);
+                        var fields = page.fields || {};
+                        var controls = root.querySelectorAll('input, select, textarea');
+                        for (var i = 0; i < controls.length; i++) {
+                          var el = controls[i];
+                          if (!isSupportedControl(el)) continue;
+                          var key = controlKey(el);
+                          if (!key) continue;
+                          if (!(key in fields)) continue;
+                          setControlValue(el, fields[key]);
+                        }
+                      }
+
+                      function bindPersistence(pageKey, root) {
+                        root.addEventListener('input', function (e) {
+                          var el = e.target;
+                          if (!isSupportedControl(el)) return;
+                          saveControl(pageKey, el);
+                        }, true);
+                        root.addEventListener('change', function (e) {
+                          var el = e.target;
+                          if (!isSupportedControl(el)) return;
+                          saveControl(pageKey, el);
+                        }, true);
+                      }
+
+                      function setPageExtra(extra, pageKey) {
+                        var store = readStore();
+                        var page = ensurePage(store, pageKey || getPageKey());
+                        page.extra = Object.assign({}, page.extra || {}, extra || {});
+                        writeStore(store);
+                      }
+
+                      function getPageExtra(pageKey) {
+                        var store = readStore();
+                        var page = ensurePage(store, pageKey || getPageKey());
+                        return page.extra || {};
+                      }
+
+                      function clearFlow() {
+                        try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) {}
+                      }
+
+                      if (!window.__sendInUkFlow) window.__sendInUkFlow = {};
+                      window.__sendInUkFlow.key = STORAGE_KEY;
+                      window.__sendInUkFlow.getPageKey = getPageKey;
+                      window.__sendInUkFlow.readStore = readStore;
+                      window.__sendInUkFlow.writeStore = writeStore;
+                      window.__sendInUkFlow.setPageExtra = setPageExtra;
+                      window.__sendInUkFlow.getPageExtra = getPageExtra;
+                      window.__sendInUkFlow.clear = clearFlow;
+
+                      document.addEventListener('DOMContentLoaded', function () {
+                        var main = document.getElementById('maincontent');
+                        if (!main) return;
+                        var pageKey = getPageKey();
+                        restoreControls(pageKey, main);
+                        bindPersistence(pageKey, main);
+                      });
+                    })();
+                  </script>
+              <!-- PAGE-SPECIFIC CONTENT END -->
             </main>
 
             <!-- End main layout -->
 
-            <!-- Footer start -->
             <!-- Footer start -->
             <footer class="footer brace site" role="contentinfo">
                 <div class="row-eighteen">
@@ -2993,7 +3521,8 @@
                             </nav>
                             <div class="logo span-3">
                                 <a href="/">
-                                    <img src="img/PO_Header_Desktop_Logo2016_79x59.svg" alt="Post Office logo">
+                                    <!-- <img src="img/po-logo.svg" alt="Post Office logo"> -->
+                                    <img src="img/po-logo.svg" alt="Post Office logo">
                                 </a>
                             </div>
                         </div>
@@ -3021,20 +3550,9 @@
                 </div>
             </footer>
         </div>
-
-        <script>
-            $(document).ready(function () {
-
-                $(".clickshow").on('click', function () {
-                    var accNo = $("#accNumber").val();
-                    $("#accNum1").val(accNo);
-                    $(this).parent().parent().parent().addClass("disnone");
-                    $(this).parents().next().show();
-                });
-            });
-        </script>
-
+        <script src="js/bootstrap.min.js"></script>
         </div>
+
 
     </body>
 
