@@ -3210,7 +3210,7 @@
 
                   <div class="sios-card sios-finalCard" aria-label="Accept terms and continue">
                     <div class="sios-terms">View our <span>Terms and Conditions</span></div>
-                    <button type="button" class="sios-finalBtn">Accept Terms and Add To Basket</button>
+                    <button id="add-to-basket-btn" type="button" class="sios-finalBtn">Accept Terms and Add To Basket</button>
                   </div>
                 </div>
               </section>
@@ -3494,13 +3494,88 @@
 	                      bindPersistence(pageKey, main);
 	                    }
 
-	                    var addToBasketBtn = document.querySelector('.sios-finalBtn');
-	                    if (addToBasketBtn) {
-	                      addToBasketBtn.addEventListener('click', function () {
-	                        clearFlow();
-	                        window.location.href = 'send-in-uk.html';
-	                      });
-	                    }
+		                    var addToBasketBtn = document.getElementById('add-to-basket-btn') || document.querySelector('.sios-finalBtn');
+		                    if (addToBasketBtn) {
+		                      addToBasketBtn.addEventListener('click', function () {
+		                        function safeParse(raw) {
+		                          try { return JSON.parse(raw || '{}'); } catch (e) { return {}; }
+		                        }
+
+		                        function getParam(name) {
+		                          try {
+		                            return new URLSearchParams(window.location.search).get(name);
+		                          } catch (e) {
+		                            return null;
+		                          }
+		                        }
+
+		                        function txt(id) {
+		                          var el = document.getElementById(id);
+		                          return el ? String(el.textContent || '').trim() : '';
+		                        }
+
+		                        var flow = safeParse(sessionStorage.getItem(STORAGE_KEY));
+                                
+                                var formData = {
+		                            parcelServiceName: getParam('service') || '',
+		                            returnDetails: {
+		                              name: getParam('returnName') || txt('sios-return-name') || '',
+		                              addressLine: getParam('returnLine') || txt('sios-return-line') || '',
+		                              postcode: getParam('returnPost') || txt('sios-return-post') || ''
+		                            },
+		                            deliveryDetails: {
+		                              name: getParam('deliveryName') || txt('sios-delivery-name') || '',
+		                              addressLine: getParam('deliveryLine') || txt('sios-delivery-line') || '',
+		                              postcode: getParam('deliveryPost') || txt('sios-delivery-post') || ''
+		                            },
+		                            deliveryOptions: {
+		                              fullyProtected: String(getParam('fullyProtected') || '') === '1',
+		                              signature: String(getParam('signature') || '') === '1'
+		                            },
+		                            dropOffBranch: {
+		                              name: getParam('branchName') || txt('sios-branch-name') || '',
+		                              address: getParam('branchAddr') || ''
+		                            },
+		                            paymentSummary: {
+		                              basePrice: txt('sios-base') || '',
+		                              cover: txt('sios-protection') || '',
+		                              signature: txt('sios-signature-amount') || '£0.00',
+		                              vat: txt('sios-vat') || '',
+		                              total: txt('sios-total') || ''
+		                            },
+		                            flow: flow || {}
+		                          }
+
+		                        var payload = {
+		                          type: 'addToBasket',
+		                          message: [{
+                                    productType: "Merchandise",
+                                    name: "Inland Mail",
+                                    description: "Inland Mail",
+                                    qty: 1,
+                                    productURL:
+                                        "https://sales-endlessaisle.s3.us-east-1.amazonaws.com/ukpolnew/img/passportcheck.png",
+                                    allowDiscounts: true,
+                                    allowPromotions: true,
+                                    allowPriceOverride: true,
+                                    allowRefund: true,
+                                    allowVoid: true,
+                                    rollupEnabled: true,
+                                    sku: "INLAND_MAIL",
+                                    properties: [],
+                                    price: { amount: "21.50", currencyId: "GBP" },
+                                    allowQtyChange: true,
+                                }]
+		                        };
+                                console.log('Add to Basket Payload----------:', JSON.stringify(payload, null, 2));
+
+		                        if (typeof sendMessageToParent === 'function') {
+		                          try { sendMessageToParent(payload); } catch (e) {}
+		                        }
+
+		                        // clearFlow();
+		                      });
+		                    }
 	                  });
 	                })();
 	              </script>
