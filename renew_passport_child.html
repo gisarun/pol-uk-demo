@@ -1,0 +1,830 @@
+<!doctype html>
+<html class="reb" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Renew a child passport</title>
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style-mortage.css" />
+    <link rel="stylesheet" type="text/css" href="css/overridden-style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/style-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+    <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+    <script>
+      var contextPath = "";
+    </script>
+    <script type="text/javascript">
+      var editMode = false;
+    </script>
+    <script type="text/javascript">
+      var active_mask_code_value;
+    </script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/common-util.js"></script>
+    <script type="text/javascript" src="js/main-min.js"></script>
+    <script type="text/javascript" src="js/init-min.js"></script>
+  </head>
+  <body>
+    <div class="container" id="top">
+      <a href="#maincontent" class="no-vis-skip-main" id="skip-to-main"
+        >Skip to main content</a
+      >
+      <header class="est-nav-header" role="banner">
+        <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/jquery.menu-aim.js"></script>
+        <script src="js/navigation.js"></script>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="css/jquery-ui-1.10.3.custom.min.css"
+        />
+        <script src="js/jqueryui.js"></script>
+      </header>
+
+      <main class="main white" id="maincontent" role="main" tabindex="-1">
+        <div id="pom" data-js-modal>
+          <style>
+            .dl-shell {
+              max-width: 1085px;
+              margin: 0 auto;
+              padding: 40px 15px 90px;
+            }
+            .dl-hero {
+              background: linear-gradient(180deg, #f3f3f3 0%, #ffffff 100%);
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              padding: 32px 32px 26px;
+              margin-bottom: 24px;
+            }
+            .dl-eyebrow {
+              font-size: 14px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              color: #d71440;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+              margin-bottom: 10px;
+            }
+            .dl-title {
+              font-family: "Proba Probold", ProbaPro-Bold, Arial, sans-serif;
+              font-size: 42px;
+              line-height: 1.1;
+              margin: 0 0 10px;
+            }
+            .dl-lead {
+              max-width: 760px;
+              color: #555;
+              font-size: 18px;
+              line-height: 1.5;
+              margin: 0;
+            }
+            .dl-grid {
+              display: grid;
+              grid-template-columns: 300px 1fr;
+              gap: 24px;
+              align-items: start;
+            }
+            .dl-sidebar-card,
+            .dl-card {
+              background: #fff;
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            }
+            .dl-sidebar-card {
+              padding: 22px;
+              position: sticky;
+              top: 20px;
+            }
+            .dl-card {
+              padding: 28px;
+            }
+            .dl-h2 {
+              font-family: "Proba Probold", ProbaPro-Bold, Arial, sans-serif;
+              font-size: 32px;
+              line-height: 1.2;
+              margin: 0 0 10px;
+            }
+            .dl-copy {
+              font-size: 18px;
+              color: #555;
+              margin: 0 0 18px;
+            }
+            .dl-list {
+              padding-left: 18px;
+              margin: 12px 0 0;
+            }
+            .dl-list li {
+              margin-bottom: 8px;
+            }
+            .dl-label {
+              display: block;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 16px;
+              margin-bottom: 6px;
+              color: #333;
+            }
+            .dl-small {
+              font-size: 14px;
+              color: #666;
+            }
+            .dl-input,
+            .dl-textarea,
+            .dl-select {
+              width: 100%;
+              border: 1px solid #c8c8c8;
+              border-radius: 8px;
+              background: #fff;
+              padding: 12px 14px;
+              font-size: 16px;
+              color: #333;
+            }
+            .dl-input:focus,
+            .dl-textarea:focus,
+            .dl-select:focus {
+              border-color: #d71440;
+              outline: 3px solid #f7d6de;
+            }
+            .dl-field {
+              margin-bottom: 18px;
+            }
+            .dl-two-col {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 14px;
+            }
+            .dl-address-grid {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px;
+            }
+            .dl-address-grid .full {
+              grid-column: span 2;
+            }
+            .dl-summary-card {
+              background: #fafafa;
+              border: 1px solid #e4e4e4;
+              border-radius: 10px;
+              padding: 22px;
+            }
+            .dl-kv {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 10px;
+              margin: 12px 0 0;
+            }
+            .dl-kv div {
+              display: flex;
+              justify-content: space-between;
+              gap: 12px;
+              align-items: baseline;
+              font-size: 16px;
+            }
+            .dl-kv dt {
+              font-weight: 600;
+            }
+            .dl-kv dd {
+              margin: 0;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+            }
+            .dl-total {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              gap: 12px;
+              padding-top: 14px;
+              margin-top: 14px;
+              border-top: 1px solid #ddd;
+            }
+            .dl-total .amount {
+              font-family: "Proba Probold", ProbaPro-Bold, Arial, sans-serif;
+              font-size: 40px;
+              color: #d71440;
+              line-height: 1;
+            }
+            .dl-btn-primary,
+            .dl-btn-secondary {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 180px;
+              padding: 0 26px;
+              height: 50px;
+              border-radius: 30px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 18px;
+              cursor: pointer;
+              border: 1px solid #d71440;
+              text-decoration: none !important;
+            }
+            .dl-btn-primary {
+              background: #d71440;
+              color: #fff;
+            }
+            .dl-btn-primary:hover {
+              background: #ba112d;
+              color: #fff;
+            }
+            .dl-btn-secondary {
+              background: #fff;
+              color: #d71440;
+            }
+            .dl-btn-secondary:hover {
+              background: #fff5f7;
+              color: #d71440;
+            }
+            .dl-note {
+              background: #fff5f7;
+              border: 1px solid #f1c6d2;
+              border-radius: 8px;
+              padding: 12px 14px;
+              font-size: 15px;
+              color: #333;
+              margin-top: 8px;
+            }
+            .dl-basket-mini {
+              margin-top: 18px;
+              background: #f7f7f7;
+              border-radius: 8px;
+              padding: 16px;
+            }
+            .dl-upload {
+              border: 2px dashed #c8c8c8;
+              border-radius: 10px;
+              padding: 24px;
+              text-align: center;
+              background: #fafafa;
+              cursor: pointer;
+            }
+            .dl-upload strong {
+              display: block;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 20px;
+              margin-bottom: 14px;
+            }
+            .dl-upload .done {
+              display: none;
+              color: #2f7d32;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              margin-top: 12px;
+            }
+            .dl-upload.ready .done {
+              display: block;
+            }
+            .dl-upload .fake-btn {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 160px;
+              height: 46px;
+              border-radius: 24px;
+              border: 1px solid #333;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              background: #fff;
+            }
+            .dl-upload input[type="file"] {
+              display: none;
+            }
+            .dl-upload-file {
+              display: none;
+              margin-top: 14px;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              flex-wrap: wrap;
+            }
+            .dl-upload.ready .dl-upload-file {
+              display: flex;
+            }
+            .dl-file-pill {
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              padding: 8px 12px;
+              border: 1px solid #d4d6d8;
+              border-radius: 999px;
+              background: #fff;
+              color: #333;
+              font-size: 14px;
+              line-height: 1.2;
+            }
+            .dl-file-pill.success {
+              background: #e6f4ea;
+              border-color: #9ac99d;
+              color: #1f7a1f;
+            }
+            .dl-file-pill:before {
+              content: "";
+              width: 16px;
+              height: 16px;
+              border-radius: 3px;
+              background: #d71440;
+              display: inline-block;
+            }
+            .dl-file-pill.success:before {
+              background: #1f7a1f;
+            }
+            .dl-choice-stack {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+            }
+            .dl-row-choice {
+              display: block;
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              padding: 14px 16px;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              position: relative;
+              background: #fff;
+            }
+            .dl-row-choice:hover {
+              border-color: #d71440;
+              box-shadow: 0 8px 20px rgba(215, 20, 64, 0.08);
+            }
+            .dl-row-choice input {
+              position: absolute;
+              opacity: 0;
+              pointer-events: none;
+            }
+            .dl-row-choice.active {
+              border-color: #d71440;
+              background: #fff5f7;
+            }
+            .dl-row-title {
+              display: flex;
+              justify-content: space-between;
+              gap: 12px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 18px;
+              color: #333;
+            }
+            .dl-row-desc {
+              display: block;
+              font-size: 15px;
+              color: #666;
+              margin-top: 4px;
+            }
+            @media (max-width: 991px) {
+              .dl-grid {
+                grid-template-columns: 1fr;
+              }
+              .dl-sidebar-card {
+                position: static;
+              }
+              .dl-title {
+                font-size: 34px;
+              }
+              .dl-address-grid {
+                grid-template-columns: 1fr;
+              }
+              .dl-two-col {
+                grid-template-columns: 1fr;
+              }
+            }
+            @media (max-width: 767px) {
+              .dl-shell {
+                padding-top: 20px;
+              }
+              .dl-hero {
+                padding: 24px 20px;
+              }
+              .dl-card,
+              .dl-sidebar-card {
+                padding: 20px;
+              }
+              .dl-h2 {
+                font-size: 26px;
+              }
+              .dl-title {
+                font-size: 30px;
+              }
+              .dl-btn-primary,
+              .dl-btn-secondary {
+                width: 100%;
+              }
+              .dl-total .amount {
+                font-size: 34px;
+              }
+            }
+          </style>
+
+          <div class="dl-shell">
+            <div class="dl-hero">
+              <div class="dl-eyebrow">Passports</div>
+              <h1 class="dl-title">Renew a child passport</h1>
+              <p class="dl-lead">
+                Tell us about the existing passport, provide the required
+                details and a new photo. We'll prepare the renewal and add it to
+                your basket with Check and Send.
+              </p>
+            </div>
+
+            <div class="dl-btns" style="margin-bottom: 16px">
+              <a class="dl-btn-secondary" href="index.html"
+                >Return to dashboard</a
+              >
+            </div>
+
+            <div class="dl-grid">
+              <aside class="dl-sidebar-card">
+                <h2 class="dl-h2" style="font-size: 26px; margin-bottom: 12px">
+                  Checklist
+                </h2>
+                <ul class="dl-list">
+                  <li>Current child passport (if available)</li>
+                  <li>Parent passport ID (if old passport missing)</li>
+                  <li>Photo taken at the booth</li>
+                  <li>Identity confirmer if required</li>
+                  <li>UK delivery address</li>
+                </ul>
+
+                <div class="dl-basket-mini" aria-live="polite">
+                  <div class="dl-small">Amount due</div>
+                  <div
+                    class="dl-total"
+                    style="border-top: 0; padding-top: 6px; margin-top: 6px"
+                  >
+                    <div>
+                      <div class="dl-small">Child passport fee</div>
+                      <div class="dl-label" id="feePassportSide">£61.50</div>
+                    </div>
+                    <div style="text-align: right">
+                      <div class="dl-small">Check and Send</div>
+                      <div class="dl-label" id="feeCheckSide">£16.00</div>
+                    </div>
+                  </div>
+                  <div class="dl-total" style="margin-top: 6px">
+                    <div>
+                      <div class="dl-small">Total</div>
+                      <div class="amount" id="feeTotalSide">£77.50</div>
+                    </div>
+                  </div>
+                  <div class="dl-small" id="sidebarCartNote">
+                    Not yet added to cart.
+                  </div>
+                </div>
+              </aside>
+
+              <section class="dl-card">
+                <h2 class="dl-h2">Renewal details</h2>
+                <p class="dl-copy">
+                  Answer the questions and confirm the delivery address. Upload
+                  areas are for demo only and do not store real files.
+                </p>
+
+                <div class="dl-field">
+                  <label class="dl-label"
+                    >Is the existing passport available?</label
+                  >
+                  <div class="dl-choice-stack" id="oldPassportChoices">
+                    <label class="dl-row-choice active" data-choice="yes">
+                      <input
+                        type="radio"
+                        name="oldPassport"
+                        value="yes"
+                        id="oldYes"
+                        checked
+                      />
+                      <span class="dl-row-title">Yes</span>
+                      <span class="dl-row-desc"
+                        >I have the current child passport.</span
+                      >
+                    </label>
+                    <label class="dl-row-choice" data-choice="no">
+                      <input
+                        type="radio"
+                        name="oldPassport"
+                        value="no"
+                        id="oldNo"
+                      />
+                      <span class="dl-row-title">No</span>
+                      <span class="dl-row-desc"
+                        >Passport is lost / unavailable; extra details
+                        required.</span
+                      >
+                    </label>
+                  </div>
+                </div>
+
+                <div
+                  class="dl-field"
+                  id="parentPassportWrap"
+                  style="display: none"
+                >
+                  <label class="dl-label" for="parentPassport"
+                    >Parent passport ID</label
+                  >
+                  <input
+                    class="dl-input"
+                    id="parentPassport"
+                    type="text"
+                    placeholder="e.g. 123456789"
+                  />
+                </div>
+
+                <div class="dl-field">
+                  <label class="dl-label">Is the child younger than 12?</label>
+                  <div class="dl-choice-stack" id="under12Choices">
+                    <label class="dl-row-choice" data-choice="yes">
+                      <input
+                        type="radio"
+                        name="under12"
+                        value="yes"
+                        id="under12Yes"
+                      />
+                      <span class="dl-row-title">Yes</span>
+                      <span class="dl-row-desc"
+                        >Child is under 12 years old.</span
+                      >
+                    </label>
+                    <label class="dl-row-choice active" data-choice="no">
+                      <input
+                        type="radio"
+                        name="under12"
+                        value="no"
+                        id="under12No"
+                        checked
+                      />
+                      <span class="dl-row-title">No</span>
+                      <span class="dl-row-desc">Child is 12 or older.</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div
+                  class="dl-field"
+                  id="identitySection"
+                  style="display: none"
+                >
+                  <div class="dl-summary-card" style="margin-bottom: 0">
+                    <div
+                      class="dl-label"
+                      style="font-size: 18px; margin-bottom: 6px"
+                    >
+                      Person who can confirm identity
+                    </div>
+                    <div class="dl-note" style="margin-top: 0">
+                      They must hold a British or Irish passport, be over 18,
+                      and know the child for more than 2 years.
+                    </div>
+                    <div class="dl-two-col" style="margin-top: 14px">
+                      <div class="dl-field" style="margin-bottom: 0">
+                        <label class="dl-label" for="confirmerName"
+                          >Full name</label
+                        >
+                        <input
+                          class="dl-input"
+                          id="confirmerName"
+                          type="text"
+                          placeholder="Full name"
+                        />
+                      </div>
+                      <div class="dl-field" style="margin-bottom: 0">
+                        <label class="dl-label" for="confirmerEmail"
+                          >Email address</label
+                        >
+                        <input
+                          class="dl-input"
+                          id="confirmerEmail"
+                          type="email"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dl-field">
+                  <label class="dl-label" for="photoUploadInput"
+                    >Upload child's photo (taken at the booth)</label
+                  >
+                  <label class="dl-upload" id="photoUpload">
+                    <input
+                      id="photoUploadInput"
+                      type="file"
+                      accept="image/*"
+                      disabled
+                    />
+                    <strong>Child passport photo</strong>
+                    <span class="fake-btn">Take Photo</span>
+                    <span class="dl-upload-file">
+                      <span class="dl-file-pill" data-file-name
+                        >File attached</span
+                      >
+                    </span>
+                    <div class="done">Uploaded</div>
+                  </label>
+                </div>
+
+                <div class="dl-field">
+                  <label class="dl-label" for="address1"
+                    >Address to send the passport</label
+                  >
+                  <div class="dl-address-grid">
+                    <input
+                      class="dl-input full"
+                      id="address1"
+                      type="text"
+                      placeholder="Address line 1"
+                    />
+                    <input
+                      class="dl-input full"
+                      id="address2"
+                      type="text"
+                      placeholder="Address line 2 (optional)"
+                    />
+                    <input
+                      class="dl-input"
+                      id="city"
+                      type="text"
+                      placeholder="Town or city"
+                    />
+                    <input
+                      class="dl-input"
+                      id="postcode"
+                      type="text"
+                      placeholder="Postcode"
+                    />
+                  </div>
+                </div>
+
+                <div class="dl-summary-card" style="margin-top: 22px">
+                  <div class="dl-label" style="margin-bottom: 6px">Fees</div>
+                  <dl class="dl-kv" aria-live="polite">
+                    <div>
+                      <dt>Child passport fee</dt>
+                      <dd id="feePassportMain">£61.50</dd>
+                    </div>
+                    <div>
+                      <dt>Check and Send fee</dt>
+                      <dd id="feeCheckMain">£16.00</dd>
+                    </div>
+                  </dl>
+                  <div class="dl-total">
+                    <div>
+                      <div class="dl-small">Total to pay</div>
+                      <div class="amount" id="feeTotalMain">£77.50</div>
+                    </div>
+                    <button class="dl-btn-primary" id="addToCartBtn">
+                      Add product to cart
+                    </button>
+                  </div>
+                  <div class="dl-small" id="cartStatus" aria-live="polite">
+                    Cart not updated yet.
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      (function () {
+        var passportFee = 61.5;
+        var checkFee = 16.0;
+        var total = passportFee + checkFee;
+
+        function money(v) {
+          return "£" + v.toFixed(2);
+        }
+        function setText(id, value) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = value;
+        }
+
+        [
+          ["feePassportSide", passportFee],
+          ["feeCheckSide", checkFee],
+          ["feeTotalSide", total],
+          ["feePassportMain", passportFee],
+          ["feeCheckMain", checkFee],
+          ["feeTotalMain", total],
+        ].forEach(function (pair) {
+          setText(pair[0], money(pair[1]));
+        });
+
+        var choiceWrapOld = document.getElementById("oldPassportChoices");
+        var choiceWrapUnder = document.getElementById("under12Choices");
+        var oldChoice = "yes";
+        var under12Choice = "no";
+
+        function setChoice(wrap, value) {
+          if (!wrap) return;
+          Array.from(wrap.querySelectorAll(".dl-row-choice")).forEach(
+            function (row) {
+              row.classList.toggle(
+                "active",
+                row.getAttribute("data-choice") === value,
+              );
+              var input = row.querySelector("input[type='radio']");
+              if (input) input.checked = row.classList.contains("active");
+            },
+          );
+        }
+
+        function updateSections() {
+          var parentWrap = document.getElementById("parentPassportWrap");
+          var identity = document.getElementById("identitySection");
+          var showParent = oldChoice === "no";
+          var showIdentity = oldChoice === "no" || under12Choice === "yes";
+          if (parentWrap)
+            parentWrap.style.display = showParent ? "block" : "none";
+          if (identity)
+            identity.style.display = showIdentity ? "block" : "none";
+        }
+
+        if (choiceWrapOld) {
+          choiceWrapOld.addEventListener("click", function (e) {
+            var row = e.target.closest(".dl-row-choice");
+            if (!row) return;
+            oldChoice = row.getAttribute("data-choice");
+            setChoice(choiceWrapOld, oldChoice);
+            updateSections();
+          });
+        }
+        if (choiceWrapUnder) {
+          choiceWrapUnder.addEventListener("click", function (e) {
+            var row = e.target.closest(".dl-row-choice");
+            if (!row) return;
+            under12Choice = row.getAttribute("data-choice");
+            setChoice(choiceWrapUnder, under12Choice);
+            updateSections();
+          });
+        }
+
+        // initial state
+        setChoice(choiceWrapOld, oldChoice);
+        setChoice(choiceWrapUnder, under12Choice);
+        updateSections();
+
+        function mockAttach(id, filename) {
+          var box = document.getElementById(id);
+          if (!box) return;
+          var pill = box.querySelector("[data-file-name]");
+          if (pill) {
+            pill.textContent = filename;
+            pill.classList.add("success");
+          }
+          box.classList.add("ready");
+        }
+
+        function bindMockClick(id, filename) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.addEventListener("click", function (e) {
+            e.preventDefault();
+            mockAttach(id, filename);
+          });
+        }
+
+        bindMockClick("photoUpload", "booth_child_photo.jpg");
+
+        var addBtn = document.getElementById("addToCartBtn");
+        if (addBtn) {
+          addBtn.addEventListener("click", function () {
+            if (typeof sendMessageToParent === "function") {
+              var productObj = {
+                productType: "Merchandise",
+                name: "Renew child passport",
+                description: "Renew child passport with Check and Send",
+                qty: 1,
+                productURL:
+                  "https://sales-endlessaisle.s3.us-east-1.amazonaws.com/ukpolnew/img/passportcheck.png",
+                allowDiscounts: true,
+                allowPromotions: true,
+                allowPriceOverride: true,
+                allowRefund: true,
+                allowVoid: true,
+                rollupEnabled: true,
+                sku: "PP_RENEW_CHILD",
+                properties: [],
+                price: { amount: total.toFixed(2), currencyId: "GBP" },
+                allowQtyChange: true,
+              };
+              var objMes = { type: "addToBasket", message: [productObj] };
+              console.log("Sending line items to parent:", objMes);
+              sendMessageToParent(objMes);
+            }
+
+            setText("cartStatus", "Added to cart with Check and Send.");
+            setText("sidebarCartNote", "Added to cart.");
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

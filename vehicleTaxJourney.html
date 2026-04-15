@@ -1,0 +1,2496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <meta name="robots" content="noindex" />
+    <title>Vehicle Tax Renewal</title>
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+    <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+    <style>
+      body {
+        background: #fff;
+      }
+
+      .header-funnel__top-title {
+        text-transform: none;
+      }
+
+      .vtx-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 700px) 360px;
+        gap: 24px;
+        max-width: 1084px;
+        margin: 0 auto;
+        padding: 32px 0 56px;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .vtx-panel,
+      .vtx-sidebar-card {
+        background: #fff;
+        border-radius: 8px;
+      }
+
+      .vtx-panel {
+        padding: 32px;
+        box-shadow:
+          0 -4px 14px rgba(45, 34, 55, 0.08),
+          0 12px 28px rgba(45, 34, 55, 0.08);
+      }
+
+      .vtx-step {
+        display: none;
+      }
+
+      .vtx-step.is-active {
+        display: block;
+      }
+
+      .vtx-kicker {
+        color: #7b7086;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .vtx-title {
+        margin: 0 0 12px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 34px;
+        line-height: 42px;
+        font-weight: normal;
+      }
+
+      .vtx-helper {
+        margin: 0 0 26px;
+        color: #555;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .vtx-field-label,
+      .vtx-section-title {
+        display: block;
+        margin-bottom: 10px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: normal;
+      }
+
+      .vtx-input {
+        width: 100%;
+        min-height: 58px;
+        border: 1px solid #cfc6d6;
+        border-radius: 6px;
+        padding: 14px 16px;
+        color: #333;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .vtx-button-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
+
+      .vtx-button,
+      .vtx-button-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 24px;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+      }
+
+      .vtx-action-pair {
+        gap: 10px;
+      }
+
+      .vtx-continue-row .vtx-button {
+        margin-left: auto;
+      }
+
+      .vtx-action-pair .vtx-button,
+      .vtx-action-pair .vtx-button-secondary {
+        min-width: 180px;
+      }
+
+      .vtx-button {
+        background: #d81845;
+        color: #fff;
+        min-width: 210px;
+        padding: 0 20px;
+      }
+
+      .vtx-button:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .vtx-button-secondary {
+        background: transparent;
+        border: 1px solid #cfc6d6;
+        color: #2d2237;
+      }
+
+      .vtx-button-row .vtx-button,
+      .vtx-button-row .vtx-button-secondary:last-child {
+        margin-left: auto;
+      }
+
+      .vtx-action-pair .vtx-button,
+      .vtx-action-pair .vtx-button-secondary {
+        margin-left: 0;
+      }
+
+      .vtx-action-pair .vtx-back-link {
+        margin-right: auto;
+      }
+
+      .vtx-action-pair .vtx-button {
+        margin-left: auto;
+      }
+
+      .vtx-final-actions .vtx-button-secondary {
+        margin-left: 0;
+        justify-self: center;
+      }
+
+      .vtx-row-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .vtx-select-row {
+        display: block;
+        border: 1px solid #e2dbe6;
+        border-radius: 8px;
+        padding: 18px 18px 18px 58px;
+        position: relative;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      .vtx-select-row input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .vtx-select-row::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 22px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #887c93;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+
+      .vtx-select-row.is-multi::before {
+        border-radius: 4px;
+      }
+
+      .vtx-select-row.is-selected {
+        border-color: #d81845;
+        box-shadow: 0 0 0 1px #d81845 inset;
+        background: #fff8fb;
+      }
+
+      .vtx-select-row.is-selected::after {
+        content: "";
+        position: absolute;
+        left: 26px;
+        top: 28px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #d81845;
+      }
+
+      .vtx-select-row.is-multi.is-selected::after {
+        left: 24px;
+        top: 25px;
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+      }
+
+      .vtx-option-title,
+      .vtx-service-title {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: normal;
+      }
+
+      .vtx-option-copy,
+      .vtx-service-copy,
+      .vtx-copy {
+        margin-top: 4px;
+        color: #555;
+        font-size: 17px;
+        line-height: 27px;
+      }
+
+      .vtx-price {
+        margin-top: 6px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      .vtx-vehicle-card,
+      .vtx-summary-block {
+        border: 1px solid #ece6ef;
+        border-radius: 8px;
+        background: #faf8fb;
+        padding: 22px 24px;
+      }
+
+      .vtx-vehicle-name {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: normal;
+        margin: 0 0 14px;
+      }
+
+      .vtx-details-grid {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 8px 12px;
+      }
+
+      .vtx-details-grid dt,
+      .vtx-summary-line dt {
+        color: #5f516a;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: normal;
+      }
+
+      .vtx-details-grid dd,
+      .vtx-summary-line dd {
+        margin: 0;
+        color: #2d2237;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .vtx-summary-stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .vtx-final-step {
+        padding-top: 4px;
+      }
+
+      .vtx-final-step .vtx-kicker {
+        margin-bottom: 6px;
+        text-align: center;
+      }
+
+      .vtx-final-title {
+        margin: 0 0 26px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 34px;
+        line-height: 42px;
+        font-weight: normal;
+        text-align: center;
+      }
+
+      .vtx-final-callout {
+        border: 1px solid #9c96a0;
+        border-radius: 10px;
+        background: #fff;
+        padding: 18px 24px;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .vtx-final-callout h3 {
+        margin: 0 0 6px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: normal;
+      }
+
+      .vtx-final-callout p {
+        margin: 0;
+        color: #555;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .vtx-final-section {
+        padding: 0 0 26px;
+      }
+
+      .vtx-final-section + .vtx-final-section {
+        margin-top: 26px;
+        border-top: 1px solid #dcd8df;
+        padding-top: 28px;
+      }
+
+      .vtx-final-section-title {
+        margin: 0 0 16px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: normal;
+      }
+
+      .vtx-final-card {
+        border: 1px solid #b8b2bc;
+        border-radius: 10px;
+        background: #fff;
+        padding: 16px 18px;
+      }
+
+      .vtx-final-card + .vtx-final-card {
+        margin-top: 16px;
+      }
+
+      .vtx-final-card-title {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: normal;
+      }
+
+      .vtx-final-card-copy {
+        margin-top: 6px;
+        color: #555;
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .vtx-final-card-copy strong {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-weight: normal;
+      }
+
+      .vtx-final-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 22px;
+      }
+
+      .vtx-final-grid .vtx-summary-line {
+        padding: 0;
+      }
+
+      .vtx-final-checklist {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .vtx-final-chip {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 52px;
+        border: 1px solid #ddd4e3;
+        border-radius: 999px;
+        background: #faf8fb;
+        padding: 12px 16px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .vtx-final-chip::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #d81845;
+        box-shadow: inset 0 0 0 4px #fff;
+        flex: 0 0 auto;
+      }
+
+      .vtx-reminder-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .vtx-reminder-grid .vtx-summary-line {
+        grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+        align-items: start;
+        padding: 0;
+      }
+
+      .vtx-reminder-grid .vtx-summary-line dd {
+        word-break: break-word;
+      }
+
+      .vtx-final-actions {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .vtx-final-actions .vtx-back-link {
+        justify-self: start;
+      }
+
+      .vtx-final-actions .vtx-button {
+        justify-self: end;
+        margin-left: 0;
+      }
+
+      .vtx-summary-block h3 {
+        margin: 0 0 14px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 21px;
+        line-height: 28px;
+        font-weight: normal;
+      }
+
+      .vtx-summary-line {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+        padding: 8px 0;
+      }
+
+      .vtx-summary-list {
+        margin: 0;
+        padding: 0 0 0 18px;
+      }
+
+      .vtx-summary-list li {
+        color: #555;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 6px;
+      }
+
+      .vtx-found-copy {
+        margin: 0 0 18px;
+        color: #555;
+        font-size: 16px;
+        line-height: 25px;
+      }
+
+      .vtx-no-doc-layout {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        align-items: start;
+      }
+
+      .vtx-vehicle-card.vtx-no-doc-flow {
+        background: transparent;
+        border: 0;
+        padding: 0;
+      }
+
+      .vtx-shell.vtx-shell-no-doc {
+        grid-template-columns: minmax(0, 780px) 320px;
+        max-width: 1124px;
+      }
+
+      .vtx-shell.vtx-shell-no-doc-pending {
+        grid-template-columns: minmax(0, 980px);
+        max-width: 980px;
+      }
+
+      .vtx-shell.vtx-shell-no-doc-pending .vtx-no-doc-layout {
+        gap: 24px;
+      }
+
+      .vtx-shell.vtx-shell-no-doc-pending .vtx-sidebar-card {
+        display: none;
+      }
+
+      .vtx-panel.vtx-panel-no-doc {
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .vtx-step.vtx-no-doc-step {
+        padding-top: 8px;
+      }
+
+      .vtx-step.vtx-no-doc-step .vtx-helper {
+        max-width: 760px;
+        margin-bottom: 18px;
+      }
+
+      .vtx-no-doc-panel {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e2dbe6;
+        border-radius: 10px;
+        background: #fff;
+        padding: 16px 18px;
+        box-shadow: 0 10px 24px rgba(45, 34, 55, 0.06);
+        min-height: 194px;
+      }
+
+      .vtx-no-doc-panel-title {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 10px;
+      }
+
+      .vtx-no-doc-panel-copy,
+      .vtx-no-doc-panel li {
+        color: #555;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .vtx-no-doc-panel ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+
+      .vtx-no-doc-panel-copy + .vtx-no-doc-panel-copy {
+        margin-top: 10px;
+      }
+
+      .vtx-no-doc-panel-copy.is-compact {
+        margin-bottom: 4px;
+      }
+
+      .vtx-no-doc-accordion {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        border: 1px solid #e2dbe6;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .vtx-no-doc-accordion-toggle {
+        width: 100%;
+        border: 0;
+        background: #faf8fb;
+        color: #2d2237;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 64px;
+        padding: 16px 18px;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 24px;
+        text-align: left;
+      }
+
+      .vtx-no-doc-accordion-toggle::after {
+        content: "\2304";
+        font-size: 18px;
+        line-height: 1;
+        transition: transform 0.2s ease;
+      }
+
+      .vtx-no-doc-accordion.is-open .vtx-no-doc-accordion-toggle::after {
+        transform: rotate(180deg);
+      }
+
+      .vtx-no-doc-accordion-panel {
+        display: none;
+        flex: 1 1 auto;
+        padding: 14px 18px 18px;
+        background: #fff;
+      }
+
+      .vtx-no-doc-accordion.is-open .vtx-no-doc-accordion-panel {
+        display: block;
+      }
+
+      .vtx-no-doc-online-form {
+        margin-top: 16px;
+      }
+
+      .vtx-no-doc-online-form .vtx-field-label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .vtx-no-doc-online-form .vtx-input {
+        margin-bottom: 12px;
+      }
+
+      .vtx-no-doc-inline-note {
+        color: #555;
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      .vtx-no-doc-inline-actions {
+        margin-top: 16px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .vtx-no-doc-accordion-panel .vtx-no-doc-inline-actions {
+        margin-top: auto;
+        padding-top: 16px;
+      }
+
+      .vtx-no-doc-online-step {
+        margin-top: 18px;
+        border: 1px solid #e2dbe6;
+        border-radius: 10px;
+        background: #fff;
+        padding: 20px 22px;
+        box-shadow: 0 10px 24px rgba(45, 34, 55, 0.06);
+      }
+
+      .vtx-no-doc-online-step-title {
+        margin: 0 0 8px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: normal;
+      }
+
+      .vtx-no-doc-online-step-copy {
+        margin: 0 0 18px;
+        color: #555;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .vtx-no-doc-online-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 18px;
+        margin-bottom: 18px;
+      }
+
+      .vtx-no-doc-online-item {
+        border: 1px solid #ece6ef;
+        border-radius: 8px;
+        background: #faf8fb;
+        padding: 14px 16px;
+      }
+
+      .vtx-no-doc-online-label {
+        display: block;
+        margin-bottom: 8px;
+        color: #5f516a;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .vtx-no-doc-online-value {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      .vtx-no-doc-online-item .vtx-field-label {
+        margin-bottom: 8px;
+        font-size: 17px;
+        line-height: 24px;
+      }
+
+      .vtx-no-doc-online-item .vtx-input {
+        min-height: 52px;
+      }
+
+      .vtx-no-doc-online-checks {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .vtx-no-doc-online-chip {
+        border: 1px solid #e2dbe6;
+        border-radius: 999px;
+        background: #faf8fb;
+        padding: 10px 14px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .vtx-no-doc-online-confirmation {
+        margin-top: 16px;
+        border-radius: 8px;
+        background: #edf7ef;
+        padding: 14px 16px;
+        color: #2d2237;
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      .vtx-shell.vtx-shell-no-doc .vtx-sidebar-card {
+        margin-top: 164px;
+      }
+
+      .vtx-shell.vtx-shell-no-doc #v11-renewal-instructions {
+        margin-top: 14px;
+        color: #555;
+        font-size: 15px;
+        line-height: 23px;
+        max-width: 760px;
+      }
+
+      .vtx-sidebar-card {
+        padding: 0;
+        position: sticky;
+        top: 24px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 12px 28px rgba(45, 34, 55, 0.08);
+        align-self: start;
+        height: fit-content;
+      }
+
+      .vtx-back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: #111;
+        font-family: ProbaPro-Regular, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .vtx-back-link::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-left: 2px solid #d81845;
+        border-bottom: 2px solid #d81845;
+        transform: rotate(45deg);
+        flex: 0 0 auto;
+      }
+
+      .vtx-sidebar-header {
+        margin: 0;
+        padding: 20px 24px 18px;
+        background: #535154;
+        color: #fff;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: normal;
+      }
+
+      .vtx-sidebar-body {
+        padding: 18px 24px 22px;
+        background: #fff;
+      }
+
+      .vtx-sidebar-group + .vtx-sidebar-group {
+        margin-top: 0;
+        padding-top: 16px;
+        border-top: 1px solid #dcd8df;
+      }
+
+      .vtx-sidebar-label {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      .vtx-sidebar-item,
+      .vtx-sidebar-total {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        color: #2d2237;
+        font-size: 17px;
+        line-height: 26px;
+      }
+
+      .vtx-sidebar-total {
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 21px;
+        line-height: 30px;
+      }
+
+      .vtx-sidebar-copy {
+        color: #555;
+        font-size: 17px;
+        line-height: 26px;
+      }
+
+      .vtx-sidebar-group--price {
+        padding-top: 6px;
+      }
+
+      .vtx-sidebar-group--price .vtx-sidebar-label,
+      .vtx-sidebar-group--total .vtx-sidebar-label {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 0;
+      }
+
+      .vtx-sidebar-group--price .vtx-sidebar-item,
+      .vtx-sidebar-group--total .vtx-sidebar-total {
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 19px;
+        line-height: 28px;
+      }
+
+      .vtx-sidebar-group--price .vtx-sidebar-item {
+        padding-bottom: 2px;
+      }
+
+      .vtx-sidebar-service-list .vtx-sidebar-item + .vtx-sidebar-item {
+        margin-top: 8px;
+      }
+
+      .vtx-checkout-status {
+        margin-top: 18px;
+        padding: 14px 16px;
+        border-radius: 8px;
+        background: #f4f8f4;
+        color: #215a22;
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .vtx-hidden {
+        display: none !important;
+      }
+
+      @media screen and (max-width: 1023px) {
+        .vtx-shell {
+          grid-template-columns: 1fr;
+          max-width: 700px;
+        }
+
+        .vtx-sidebar-card {
+          position: static;
+        }
+
+        .vtx-shell.vtx-shell-no-doc .vtx-sidebar-card {
+          margin-top: 0;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .vtx-panel,
+        .vtx-sidebar-card {
+          padding: 22px 20px;
+        }
+
+        .vtx-title {
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        .vtx-helper {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .vtx-field-label,
+        .vtx-section-title {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        .vtx-input {
+          min-height: 52px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .vtx-details-grid {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+
+        .vtx-final-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .vtx-final-checklist {
+          grid-template-columns: 1fr;
+        }
+
+        .vtx-no-doc-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .vtx-no-doc-online-grid,
+        .vtx-no-doc-online-checks {
+          grid-template-columns: 1fr;
+        }
+
+        .vtx-reminder-grid .vtx-summary-line {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
+        .vtx-final-actions {
+          grid-template-columns: 1fr;
+        }
+
+        .vtx-final-actions .vtx-back-link,
+        .vtx-final-actions .vtx-button-secondary,
+        .vtx-final-actions .vtx-button {
+          justify-self: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-funnel">
+      <div
+        class="header-funnel__container-top padding-left-30 mobile-left-padding10"
+      >
+        <div class="header-funnel__logo">
+          <a href="vehicleTax.html">
+            <img
+              class="header-funnel__logo-image logo"
+              src="img/po-logo.svg"
+              alt="Logo"
+            />
+          </a>
+        </div>
+        <div class="header-funnel__help">
+          <span class="header-funnel__help-action">Need Help?</span>
+        </div>
+      </div>
+      <div class="header-funnel__container">
+        <div class="header-funnel__top-title">Vehicle Tax Renewal</div>
+        <div class="stepper" id="journey-stepper">
+          <div
+            class="stepper__item"
+            data-stepper="0"
+            data-active="true"
+            data-current="true"
+          >
+            <span class="stepper__num"
+              ><span><i>1</i></span></span
+            >
+            <span class="stepper__title">Vehicle</span>
+          </div>
+          <div
+            class="stepper__item"
+            data-stepper="1"
+            data-active="false"
+            data-current="false"
+          >
+            <span class="stepper__num"
+              ><span><i>2</i></span></span
+            >
+            <span class="stepper__title">Documents</span>
+          </div>
+          <div
+            class="stepper__item"
+            data-stepper="2"
+            data-active="false"
+            data-current="false"
+          >
+            <span class="stepper__num"
+              ><span><i>3</i></span></span
+            >
+            <span class="stepper__title">Reference</span>
+          </div>
+          <div
+            class="stepper__item"
+            data-stepper="3"
+            data-active="false"
+            data-current="false"
+          >
+            <span class="stepper__num"
+              ><span><i>4</i></span></span
+            >
+            <span class="stepper__title">Summary</span>
+          </div>
+        </div>
+        <h1 class="header-funnel__title">Vehicle Tax Renewal</h1>
+      </div>
+    </header>
+
+    <div
+      class="container main no-container-padding main-form-container"
+      role="main"
+    >
+      <div class="vtx-shell" id="vtx-shell">
+        <div class="vtx-panel" id="vtx-panel">
+          <section class="vtx-step is-active" data-step="0">
+            <div class="vtx-kicker">Step 1</div>
+            <h2 class="vtx-title">Enter registration number</h2>
+            <p class="vtx-helper">
+              Enter a vehicle registration number to retrieve a representative
+              example vehicle record for this demo.
+            </p>
+            <label class="vtx-field-label" for="registration-number"
+              >Enter registration number</label
+            >
+            <input
+              class="vtx-input"
+              id="registration-number"
+              type="text"
+              value=""
+              autocomplete="off"
+            />
+            <div
+              class="vtx-button-row vtx-continue-row"
+              id="registration-entry-actions"
+            >
+              <a class="vtx-back-link" href="vehicleTax.html">Go back a step</a>
+              <button class="vtx-button" id="lookup-registration" type="button">
+                Continue
+              </button>
+            </div>
+
+            <div class="vtx-vehicle-card vtx-hidden" id="vehicle-details-card">
+              <h3 class="vtx-vehicle-name" id="vehicle-display-name">
+                Ford Fiesta (AB12 CDE)
+              </h3>
+              <dl class="vtx-details-grid">
+                <dt>Year</dt>
+                <dd>2018</dd>
+                <dt>Colour</dt>
+                <dd>Blue</dd>
+                <dt>Tax status</dt>
+                <dd>Expired</dd>
+                <dt>MOT status</dt>
+                <dd>Valid</dd>
+              </dl>
+            </div>
+
+            <div
+              class="vtx-button-row vtx-action-pair vtx-hidden"
+              id="vehicle-details-actions"
+            >
+              <a class="vtx-back-link" href="vehicleTax.html">Go back a step</a>
+
+              <button
+                class="vtx-button-secondary"
+                id="edit-registration"
+                type="button"
+              >
+                Edit registration
+              </button>
+              <button class="vtx-button" id="step-to-documents" type="button">
+                Continue
+              </button>
+            </div>
+          </section>
+
+          <section class="vtx-step" data-step="1">
+            <div class="vtx-kicker">Step 2</div>
+            <h2 class="vtx-title">
+              To complete this, you'll need one of the following
+            </h2>
+            <div class="vtx-row-list" id="document-options">
+              <label class="vtx-select-row" data-value="V5C logbook">
+                <input
+                  name="document-option"
+                  type="radio"
+                  value="V5C logbook"
+                />
+                <div class="vtx-option-title">V5C logbook</div>
+                <div class="vtx-option-copy">
+                  Vehicle registration document (logbook)
+                </div>
+              </label>
+              <label class="vtx-select-row" data-value="V11 reminder">
+                <input
+                  name="document-option"
+                  type="radio"
+                  value="V11 reminder"
+                />
+                <div class="vtx-option-title">V11 reminder</div>
+                <div class="vtx-option-copy">
+                  Tax reminder letter from the DVLA
+                </div>
+              </label>
+              <label class="vtx-select-row" data-value="New keeper slip">
+                <input
+                  name="document-option"
+                  type="radio"
+                  value="New keeper slip"
+                />
+                <div class="vtx-option-title">New keeper slip</div>
+                <div class="vtx-option-copy">
+                  Section from the logbook if you've just bought the vehicle
+                </div>
+              </label>
+              <label class="vtx-select-row" data-value="No document available">
+                <input
+                  name="document-option"
+                  type="radio"
+                  value="No document available"
+                />
+                <div class="vtx-option-title">No document available</div>
+              </label>
+            </div>
+            <div class="vtx-button-row vtx-continue-row">
+              <button class="vtx-back-link" data-back-step="0" type="button">
+                Go back a step
+              </button>
+              <button class="vtx-button" id="step-to-reference" type="button">
+                Continue
+              </button>
+            </div>
+          </section>
+
+          <section class="vtx-step" data-step="2" id="reference-step">
+            <div class="vtx-kicker">Step 3</div>
+            <h2 class="vtx-title" id="reference-step-title">
+              Enter V5C reference number
+            </h2>
+            <p class="vtx-helper" id="reference-step-helper">
+              Found on the front page of the logbook
+            </p>
+            <label class="vtx-field-label" for="v5c-reference" id="reference-label"
+              >V5C reference number</label
+            >
+            <input
+              class="vtx-input"
+              id="v5c-reference"
+              type="text"
+              autocomplete="off"
+            />
+            <div class="vtx-vehicle-card vtx-hidden" id="v11-found-details">
+              <h3 class="vtx-vehicle-name" id="lookup-found-title">
+                Reminder linked vehicle record found
+              </h3>
+              <p class="vtx-found-copy">
+                <span id="lookup-found-copy">
+                We’ve matched the reminder reference directly to a representative
+                DVLA vehicle record for this demo.
+                </span>
+              </p>
+              <div class="vtx-no-doc-layout vtx-hidden" id="no-doc-layout">
+                <section class="vtx-no-doc-panel">
+                  <div class="vtx-no-doc-panel-title">
+                    Use V62 at a Post Office
+                  </div>
+                  <div class="vtx-no-doc-panel-copy is-compact">
+                    This is the manual route when you do not have a V11, V5C,
+                    or V5C/2 available.
+                  </div>
+                  <div class="vtx-no-doc-accordion" id="no-doc-postoffice-accordion">
+                    <button
+                      class="vtx-no-doc-accordion-toggle"
+                      id="no-doc-postoffice-toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="no-doc-postoffice-panel"
+                    >
+                      Open Post Office requirements
+                    </button>
+                    <div
+                      class="vtx-no-doc-accordion-panel"
+                      id="no-doc-postoffice-panel"
+                    >
+                      <div class="vtx-no-doc-panel-copy">
+                        Use this if you need branch support to submit the V62,
+                        pay the replacement fee, and complete vehicle tax together.
+                      </div>
+                      <ul>
+                        <li id="no-doc-postoffice-point-1">
+                          Bring form V62 and the replacement fee.
+                        </li>
+                        <li id="no-doc-postoffice-point-2">
+                          Bring proof the vehicle meets MOT and insurance
+                          requirements.
+                        </li>
+                        <li id="no-doc-postoffice-point-3">
+                          A participating branch may be able to submit the V62 and
+                          tax the vehicle immediately if all checks pass.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="vtx-no-doc-panel">
+                  <div class="vtx-no-doc-panel-title">
+                    Apply for replacement V5C online
+                  </div>
+                  <div class="vtx-no-doc-panel-copy is-compact">
+                    Use the online route if your keeper details match DVLA
+                    records.
+                  </div>
+                  <div class="vtx-no-doc-accordion" id="no-doc-accordion">
+                    <button
+                      class="vtx-no-doc-accordion-toggle"
+                      id="no-doc-accordion-toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="no-doc-accordion-panel"
+                    >
+                      Open online replacement steps
+                    </button>
+                    <div
+                      class="vtx-no-doc-accordion-panel"
+                      id="no-doc-accordion-panel"
+                    >
+                      <div
+                        class="vtx-no-doc-step-copy"
+                        id="no-doc-online-copy"
+                      >
+                        Start the replacement V5C route using the vehicle
+                        registration number shown in this journey.
+                      </div>
+                      <div class="vtx-no-doc-online-form">
+                        <label
+                          class="vtx-field-label"
+                          for="no-doc-registration-number"
+                        >
+                          Vehicle registration number
+                        </label>
+                        <input
+                          class="vtx-input"
+                          id="no-doc-registration-number"
+                          type="text"
+                          autocomplete="off"
+                        />
+                        <div class="vtx-no-doc-inline-note">
+                          Enter the registration here to continue straight into
+                          the online replacement route.
+                        </div>
+                      </div>
+                      <div class="vtx-no-doc-inline-actions">
+                        <button
+                          class="vtx-button"
+                          id="no-doc-continue"
+                          type="button"
+                        >
+                          Continue
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="vtx-no-doc-online-step vtx-hidden" id="no-doc-online-step">
+                <h3 class="vtx-no-doc-online-step-title">
+                  Complete the online replacement V5C step
+                </h3>
+                <p class="vtx-no-doc-online-step-copy">
+                  DVLA provides a fully online replacement service for current
+                  registered keepers. No V62 or Post Office visit is needed for
+                  this route.
+                </p>
+                <div class="vtx-no-doc-online-grid">
+                  <div class="vtx-no-doc-online-item">
+                    <span class="vtx-no-doc-online-label">
+                      Vehicle registration number
+                    </span>
+                    <div
+                      class="vtx-no-doc-online-value"
+                      id="no-doc-online-registration"
+                    >
+                      AB12 CDE
+                    </div>
+                  </div>
+                  <div class="vtx-no-doc-online-item">
+                    <label class="vtx-field-label" for="no-doc-postcode">
+                      Registered keeper postcode
+                    </label>
+                    <input
+                      class="vtx-input"
+                      id="no-doc-postcode"
+                      type="text"
+                      autocomplete="postal-code"
+                    />
+                  </div>
+                </div>
+                <div class="vtx-no-doc-online-checks">
+                  <div class="vtx-no-doc-online-chip">
+                    DVLA identity verified
+                  </div>
+                  <div class="vtx-no-doc-online-chip">Replacement fee £25</div>
+                  <div class="vtx-no-doc-online-chip">New V5C posted to you</div>
+                </div>
+                <div class="vtx-no-doc-inline-actions">
+                  <button class="vtx-button" id="no-doc-complete" type="button">
+                    Confirm online replacement
+                  </button>
+                </div>
+                <div
+                  class="vtx-no-doc-online-confirmation vtx-hidden"
+                  id="no-doc-online-confirmation"
+                >
+                  Online replacement V5C step completed. DVLA has verified the
+                  keeper details and the new V5C will be posted to the entered
+                  address.
+                </div>
+              </div>
+              <dl class="vtx-details-grid" id="lookup-default-grid">
+                <dt>Vehicle registration number</dt>
+                <dd id="v11-registration">AB12 CDE</dd>
+                <dt id="lookup-reference-label">Reminder reference number</dt>
+                <dd id="v11-reference">V11 4837 9201 5542</dd>
+                <dt id="lookup-date-label">Tax due date / expiry date</dt>
+                <dd id="v11-due-date">31 May 2026</dd>
+                <dt id="lookup-status-label">MOT status</dt>
+                <dd id="v11-mot-status">Valid until 14 February 2027</dd>
+              </dl>
+              <div
+                class="vtx-final-card-copy"
+                id="v11-renewal-instructions"
+              >
+                Use the reminder reference above to renew now. Make sure your
+                insurance remains valid before completing payment.
+              </div>
+            </div>
+            <div class="vtx-button-row vtx-continue-row">
+              <button class="vtx-back-link" data-back-step="1" type="button">
+                Go back a step
+              </button>
+              <button
+                class="vtx-button vtx-hidden"
+                id="check-reminder-records"
+                type="button"
+              >
+                Check records
+              </button>
+              <button class="vtx-button" id="step-to-summary" type="button">
+                Continue
+              </button>
+            </div>
+          </section>
+
+          <section class="vtx-step vtx-final-step" data-step="3">
+            <div class="vtx-kicker">Step 4</div>
+            <h2 class="vtx-final-title" id="summary-page-title">
+              Renewal summary
+            </h2>
+
+            <div class="vtx-final-callout">
+              <h3 id="summary-callout-title">Almost there!</h3>
+              <p id="summary-callout-copy">
+                We’ve prepared your representative vehicle tax renewal. Review
+                the details below before continuing to pay.
+              </p>
+            </div>
+
+            <div class="vtx-final-section">
+              <h3 class="vtx-final-section-title" id="summary-service-section-title">
+                Vehicle Tax Renewal
+              </h3>
+              <div class="vtx-final-card">
+                <div class="vtx-final-card-title" id="summary-service-title">
+                  Ford Fiesta (AB12 CDE)
+                </div>
+                <div class="vtx-final-card-copy" id="summary-service-copy-1">
+                  <strong>Vehicle details:</strong> 2018 model, Blue
+                </div>
+                <div class="vtx-final-card-copy" id="summary-service-copy-2">
+                  <strong>Renewal status:</strong> Eligibility confirmed and
+                  renewal prepared for checkout
+                </div>
+              </div>
+            </div>
+
+            <div class="vtx-final-section">
+              <h3 class="vtx-final-section-title" id="summary-checks-title">
+                Renewal checks complete
+              </h3>
+              <div class="vtx-final-card">
+                <div class="vtx-final-checklist">
+                  <div class="vtx-final-chip" id="summary-check-chip-1">
+                    Vehicle identified
+                  </div>
+                  <div class="vtx-final-chip" id="summary-check-chip-2">
+                    Eligibility checks completed
+                  </div>
+                  <div class="vtx-final-chip" id="summary-check-chip-3">
+                    Renewal prepared
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="vtx-final-section vtx-hidden"
+              id="summary-reminder-details"
+            >
+              <h3 class="vtx-final-section-title" id="summary-lookup-title">
+                Document details found
+              </h3>
+              <div class="vtx-final-card">
+                <div class="vtx-reminder-grid">
+                  <dl class="vtx-summary-line">
+                    <dt>Vehicle registration number</dt>
+                    <dd id="summary-reminder-registration">AB12 CDE</dd>
+                  </dl>
+                  <dl class="vtx-summary-line">
+                    <dt id="summary-lookup-reference-label">
+                      Reminder reference number
+                    </dt>
+                    <dd id="summary-reminder-reference">V11 4837 9201 5542</dd>
+                  </dl>
+                  <dl class="vtx-summary-line">
+                    <dt id="summary-lookup-date-label">
+                      Tax due date / expiry date
+                    </dt>
+                    <dd id="summary-reminder-due-date">31 May 2026</dd>
+                  </dl>
+                  <dl class="vtx-summary-line">
+                    <dt id="summary-lookup-instructions-label">
+                      Renewal instructions
+                    </dt>
+                    <dd id="summary-reminder-instructions">
+                      Use the reminder reference above to renew now.
+                    </dd>
+                  </dl>
+                  <dl class="vtx-summary-line">
+                    <dt id="summary-lookup-status-label">MOT and insurance</dt>
+                    <dd id="summary-reminder-status">
+                      MOT valid. Ensure insurance is valid before renewal.
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="vtx-final-section">
+              <h3 class="vtx-final-section-title">Charges</h3>
+              <div class="vtx-final-card">
+                <dl class="vtx-summary-line">
+                  <dt id="summary-base-charge-label">Vehicle Tax renewal</dt>
+                  <dd id="summary-base-charge-amount">£180.00</dd>
+                </dl>
+                <div id="summary-charge-services"></div>
+              </div>
+            </div>
+
+            <div class="vtx-final-section">
+              <h3 class="vtx-final-section-title">Amount due</h3>
+              <div class="vtx-final-card">
+                <dl class="vtx-summary-line">
+                  <dt>Total</dt>
+                  <dd id="amount-due-total">£180.00</dd>
+                </dl>
+                <div class="vtx-button-row vtx-final-actions">
+                  <button
+                    class="vtx-back-link"
+                    id="summary-back-button"
+                    data-back-step="2"
+                    type="button"
+                  >
+                    Go back a step
+                  </button>
+                  <a class="vtx-button-secondary" href="vehicleTax.html"
+                    >Cancel</a
+                  >
+                  <button class="vtx-button" id="add-to-basket" type="button">
+                    Add to basket
+                  </button>
+                </div>
+                <div
+                  class="vtx-checkout-status vtx-hidden"
+                  id="journey-checkout-status"
+                >
+                  Vehicle tax sale sent to the parent basket.
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="vtx-sidebar-card" id="vtx-sidebar-card">
+          <h2 class="vtx-sidebar-header" id="sidebar-summary-title">
+            Renewal summary
+          </h2>
+          <div class="vtx-sidebar-body">
+            <div class="vtx-sidebar-group vtx-sidebar-group--price">
+              <div class="vtx-sidebar-item">
+                <span class="vtx-sidebar-label">Price to pay</span>
+                <span id="sidebar-price-to-pay">£180.00</span>
+              </div>
+            </div>
+            <div class="vtx-sidebar-group">
+              <div class="vtx-sidebar-label">Vehicle</div>
+              <div class="vtx-sidebar-copy" id="sidebar-vehicle">
+                Representative example vehicle record
+              </div>
+            </div>
+            <div class="vtx-sidebar-group">
+              <div class="vtx-sidebar-label">Selected document</div>
+              <div class="vtx-sidebar-copy" id="sidebar-document">
+                None selected
+              </div>
+            </div>
+            <div class="vtx-sidebar-group">
+              <div class="vtx-sidebar-label">Charges</div>
+              <div class="vtx-sidebar-service-list">
+                <div class="vtx-sidebar-item">
+                  <span id="sidebar-base-charge-label">Vehicle Tax renewal</span>
+                  <span id="sidebar-base-charge-amount">£180.00</span>
+                </div>
+                <div id="sidebar-service-charges"></div>
+              </div>
+            </div>
+            <div class="vtx-sidebar-group vtx-sidebar-group--total">
+              <div class="vtx-sidebar-total">
+                <span class="vtx-sidebar-label">Amount due</span>
+                <span id="sidebar-total">£180.00</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/common-util.js"></script>
+    <script>
+      (function () {
+        var exampleVehicle = {
+          name: "Ford Fiesta (AB12 CDE)",
+          year: "2018",
+          colour: "Blue",
+          taxStatus: "Expired",
+          motStatus: "Valid",
+          status: "Ready to renew",
+          price: 180,
+        };
+
+        var reminderLookup = {
+          registration: "AB12 CDE",
+          reference: "V11 4837 9201 5542",
+          dueDate: "31 May 2026",
+          instructions:
+            "Use this reminder reference to renew now. You do not need to re-enter vehicle details.",
+          motInsurance:
+            "MOT valid until 14 February 2027. Ensure insurance is valid before renewing.",
+        };
+
+        var newKeeperLookup = {
+          registration: "LM22 XYZ",
+          reference: "1294 5587 3412",
+          dueDate: "Tax the vehicle before driving",
+          instructions:
+            "Use the 12-digit V5C/2 reference to tax the vehicle immediately after purchase. The previous keeper's tax does not transfer.",
+          motInsurance:
+            "Ownership transfer in progress. Valid MOT and insurance are required before driving.",
+          afterTax:
+            "DVLA will issue a new V5C in your name by post after the keeper change is processed.",
+        };
+
+        var noDocumentFlow = {
+          registration: "AB12 CDE",
+          reference: "Use vehicle registration number and form V62",
+          dueDate: "Apply for a replacement V5C first",
+          instructions:
+            "If you are the current registered keeper but have lost the V5C, apply for a replacement log book online if your details match DVLA records, or by post using form V62.",
+          motInsurance:
+            "Bring V62, the replacement fee (usually around £25), and make sure MOT and insurance requirements are met.",
+          afterTax:
+            "At a participating Post Office you may be able to submit V62, pay the fee, and tax the vehicle immediately if all checks pass.",
+        };
+
+        var state = {
+          currentStep: 0,
+          registrationInput: "",
+          vehicleRetrieved: false,
+          selectedDocument: "",
+          v5cReference: "",
+          noDocPostcode: "",
+          noDocOnlineStarted: false,
+          noDocOnlineComplete: false,
+          reminderDetails: null,
+          reminderLookupComplete: false,
+        };
+
+        var stepEls = Array.prototype.slice.call(
+          document.querySelectorAll(".vtx-step"),
+        );
+        var stepperEls = Array.prototype.slice.call(
+          document.querySelectorAll(".stepper__item"),
+        );
+        var registrationInputEl = document.getElementById(
+          "registration-number",
+        );
+        var shellEl = document.getElementById("vtx-shell");
+        var panelEl = document.getElementById("vtx-panel");
+        var sidebarCardEl = document.getElementById("vtx-sidebar-card");
+        var vehicleDetailsCard = document.getElementById(
+          "vehicle-details-card",
+        );
+        var registrationEntryActions = document.getElementById(
+          "registration-entry-actions",
+        );
+        var vehicleDetailsActions = document.getElementById(
+          "vehicle-details-actions",
+        );
+        var v5cReferenceEl = document.getElementById("v5c-reference");
+        var sidebarDocumentEl = document.getElementById("sidebar-document");
+        var sidebarVehicleEl = document.getElementById("sidebar-vehicle");
+        var sidebarServiceChargesEl = document.getElementById(
+          "sidebar-service-charges",
+        );
+        var sidebarTotalEl = document.getElementById("sidebar-total");
+        var sidebarPriceToPayEl = document.getElementById(
+          "sidebar-price-to-pay",
+        );
+        var sidebarSummaryTitleEl = document.getElementById(
+          "sidebar-summary-title",
+        );
+        var sidebarBaseChargeLabelEl = document.getElementById(
+          "sidebar-base-charge-label",
+        );
+        var sidebarBaseChargeAmountEl = document.getElementById(
+          "sidebar-base-charge-amount",
+        );
+        var summaryChargeServices = document.getElementById(
+          "summary-charge-services",
+        );
+        var amountDueTotal = document.getElementById("amount-due-total");
+        var summaryPageTitleEl = document.getElementById("summary-page-title");
+        var summaryCalloutTitleEl = document.getElementById(
+          "summary-callout-title",
+        );
+        var summaryCalloutCopyEl = document.getElementById(
+          "summary-callout-copy",
+        );
+        var summaryServiceSectionTitleEl = document.getElementById(
+          "summary-service-section-title",
+        );
+        var summaryServiceTitleEl = document.getElementById(
+          "summary-service-title",
+        );
+        var summaryServiceCopy1El = document.getElementById(
+          "summary-service-copy-1",
+        );
+        var summaryServiceCopy2El = document.getElementById(
+          "summary-service-copy-2",
+        );
+        var summaryChecksTitleEl = document.getElementById(
+          "summary-checks-title",
+        );
+        var summaryCheckChip1El = document.getElementById("summary-check-chip-1");
+        var summaryCheckChip2El = document.getElementById("summary-check-chip-2");
+        var summaryCheckChip3El = document.getElementById("summary-check-chip-3");
+        var summaryBaseChargeLabelEl = document.getElementById(
+          "summary-base-charge-label",
+        );
+        var summaryBaseChargeAmountEl = document.getElementById(
+          "summary-base-charge-amount",
+        );
+        var summaryBackButtonEl = document.getElementById("summary-back-button");
+        var referenceStepTitleEl =
+          document.getElementById("reference-step-title");
+        var referenceStepHelperEl = document.getElementById(
+          "reference-step-helper",
+        );
+        var referenceLabelEl = document.getElementById("reference-label");
+        var v11FoundDetailsEl = document.getElementById("v11-found-details");
+        var summaryReminderDetailsEl = document.getElementById(
+          "summary-reminder-details",
+        );
+        var summaryReminderRegistrationEl = document.getElementById(
+          "summary-reminder-registration",
+        );
+        var summaryReminderReferenceEl = document.getElementById(
+          "summary-reminder-reference",
+        );
+        var summaryReminderDueDateEl = document.getElementById(
+          "summary-reminder-due-date",
+        );
+        var summaryReminderInstructionsEl = document.getElementById(
+          "summary-reminder-instructions",
+        );
+        var summaryReminderStatusEl = document.getElementById(
+          "summary-reminder-status",
+        );
+        var lookupFoundTitleEl = document.getElementById("lookup-found-title");
+        var lookupFoundCopyEl = document.getElementById("lookup-found-copy");
+        var lookupReferenceLabelEl =
+          document.getElementById("lookup-reference-label");
+        var lookupDateLabelEl = document.getElementById("lookup-date-label");
+        var lookupStatusLabelEl =
+          document.getElementById("lookup-status-label");
+        var summaryLookupTitleEl = document.getElementById("summary-lookup-title");
+        var summaryLookupReferenceLabelEl = document.getElementById(
+          "summary-lookup-reference-label",
+        );
+        var summaryLookupDateLabelEl = document.getElementById(
+          "summary-lookup-date-label",
+        );
+        var summaryLookupInstructionsLabelEl = document.getElementById(
+          "summary-lookup-instructions-label",
+        );
+        var summaryLookupStatusLabelEl = document.getElementById(
+          "summary-lookup-status-label",
+        );
+        var noDocLayoutEl = document.getElementById("no-doc-layout");
+        var lookupDefaultGridEl = document.getElementById("lookup-default-grid");
+        var noDocPostOfficeAccordionEl = document.getElementById(
+          "no-doc-postoffice-accordion",
+        );
+        var noDocPostOfficeToggleEl = document.getElementById(
+          "no-doc-postoffice-toggle",
+        );
+        var noDocAccordionEl = document.getElementById("no-doc-accordion");
+        var noDocAccordionToggleEl = document.getElementById(
+          "no-doc-accordion-toggle",
+        );
+        var noDocContinueEl = document.getElementById("no-doc-continue");
+        var noDocOnlineCopyEl = document.getElementById("no-doc-online-copy");
+        var noDocRegistrationInputEl = document.getElementById(
+          "no-doc-registration-number",
+        );
+        var noDocOnlineStepEl = document.getElementById("no-doc-online-step");
+        var noDocOnlineRegistrationEl = document.getElementById(
+          "no-doc-online-registration",
+        );
+        var noDocPostcodeEl = document.getElementById("no-doc-postcode");
+        var noDocCompleteEl = document.getElementById("no-doc-complete");
+        var noDocOnlineConfirmationEl = document.getElementById(
+          "no-doc-online-confirmation",
+        );
+        var noDocPostOfficePoint1El = document.getElementById(
+          "no-doc-postoffice-point-1",
+        );
+        var noDocPostOfficePoint2El = document.getElementById(
+          "no-doc-postoffice-point-2",
+        );
+        var noDocPostOfficePoint3El = document.getElementById(
+          "no-doc-postoffice-point-3",
+        );
+        var v11RegistrationEl = document.getElementById("v11-registration");
+        var v11ReferenceEl = document.getElementById("v11-reference");
+        var v11DueDateEl = document.getElementById("v11-due-date");
+        var v11MotStatusEl = document.getElementById("v11-mot-status");
+        var v11InstructionsEl = document.getElementById(
+          "v11-renewal-instructions",
+        );
+        var checkReminderRecordsEl = document.getElementById(
+          "check-reminder-records",
+        );
+        var stepToSummaryEl = document.getElementById("step-to-summary");
+        var referenceStepEl = document.getElementById("reference-step");
+        var checkoutStatusEl = document.getElementById("journey-checkout-status");
+
+        function formatPrice(value) {
+          return "£" + value.toFixed(2);
+        }
+
+        function isNoDocReplacementCheckout() {
+          return (
+            state.selectedDocument === "No document available" &&
+            state.noDocOnlineComplete
+          );
+        }
+
+        function checkoutService() {
+          if (isNoDocReplacementCheckout()) {
+            return {
+              name: "Replacement V5C - " + (state.registrationInput || "AB12 CDE"),
+              price: 25,
+              chargeLabel: "Replacement V5C fee",
+              summaryTitle: "Replacement V5C summary",
+            };
+          }
+
+          return {
+            name: "Vehicle Tax Renewal - Ford Fiesta (AB12 CDE)",
+            price: exampleVehicle.price,
+            chargeLabel: "Vehicle Tax renewal",
+            summaryTitle: "Renewal summary",
+          };
+        }
+
+        function updateNoDocPageMode() {
+          var isActiveNoDocStep =
+            state.currentStep === 2 &&
+            state.selectedDocument === "No document available";
+          var hideSidebarForPendingNoDoc =
+            isActiveNoDocStep && !state.noDocOnlineComplete;
+          shellEl.classList.toggle("vtx-shell-no-doc", isActiveNoDocStep);
+          shellEl.classList.toggle(
+            "vtx-shell-no-doc-pending",
+            hideSidebarForPendingNoDoc,
+          );
+          panelEl.classList.toggle("vtx-panel-no-doc", isActiveNoDocStep);
+          referenceStepEl.classList.toggle("vtx-no-doc-step", isActiveNoDocStep);
+          sidebarCardEl.classList.toggle("vtx-hidden", hideSidebarForPendingNoDoc);
+          lookupFoundTitleEl.classList.toggle("vtx-hidden", isActiveNoDocStep);
+          lookupFoundCopyEl.parentElement.classList.toggle(
+            "vtx-hidden",
+            isActiveNoDocStep,
+          );
+        }
+
+        function totalAmount() {
+          return checkoutService().price;
+        }
+
+        function buildBasketLineItems() {
+          var service = checkoutService();
+          var lineItems = [
+            {
+              productType: "Merchandise",
+              name: service.name,
+              description: service.name,
+              qty: 1,
+              productURL:
+                "https://sales-endlessaisle.s3.us-east-1.amazonaws.com/ukpolnew/img/passportcheck.png",
+              allowDiscounts: true,
+              allowPromotions: true,
+              allowPriceOverride: true,
+              allowRefund: true,
+              allowVoid: true,
+              rollupEnabled: true,
+              sku: isNoDocReplacementCheckout()
+                ? "VT_REPLACEMENT_V5C"
+                : "VT_RENEWAL",
+              properties: [
+                {
+                  name: "registration",
+                  value: state.registrationInput || exampleVehicle.name,
+                },
+                { name: "document", value: state.selectedDocument },
+                {
+                  name: "v5cReference",
+                  value:
+                    state.v5cReference ||
+                    (state.reminderDetails ? state.reminderDetails.reference : ""),
+                },
+                {
+                  name: "taxDueDate",
+                  value: state.reminderDetails
+                    ? state.reminderDetails.dueDate
+                    : "",
+                },
+              ],
+              price: {
+                amount: service.price.toFixed(2),
+                currencyId: "GBP",
+              },
+              allowQtyChange: true,
+            },
+          ];
+
+          return lineItems;
+        }
+
+        function getLookupConfig() {
+          if (state.selectedDocument === "V11 reminder") {
+            return {
+              title: "Reminder linked vehicle record found",
+              helper:
+                "The V11 reminder reference links directly to your vehicle record.",
+              fieldLabel: "Reminder reference number",
+              foundCopy:
+                "We’ve matched the reminder reference directly to a representative DVLA vehicle record for this demo.",
+              dateLabel: "Tax due date / expiry date",
+              statusLabel: "MOT status",
+              summaryTitle: "Reminder details found",
+              summaryInstructionsLabel: "Renewal instructions",
+              summaryStatusLabel: "MOT and insurance",
+              data: reminderLookup,
+            };
+          }
+
+          if (state.selectedDocument === "New keeper slip") {
+            return {
+              title: "Enter new keeper slip reference number",
+              helper:
+                "Use the 12-digit reference from the V5C/2. The old keeper's tax does not transfer, so you must tax before driving.",
+              fieldLabel: "New keeper slip reference number",
+              foundTitle: "New keeper slip linked vehicle record found",
+              foundCopy:
+                "We’ve matched the 12-digit V5C/2 reference to a representative DVLA vehicle record so you can tax it immediately after purchase.",
+              dateLabel: "How this can be used",
+              statusLabel: "Requirements",
+              summaryTitle: "New keeper slip details found",
+              summaryInstructionsLabel: "How to tax now",
+              summaryStatusLabel: "After taxing",
+              data: newKeeperLookup,
+            };
+          }
+
+          if (state.selectedDocument === "No document available") {
+            return {
+              title: "No documents available",
+              helper:
+                "If you are the current registered keeper and have lost your V5C, the next step is to apply for a replacement log book first.",
+              fieldLabel: "Service used",
+              foundTitle: "Replacement V5C path",
+              foundCopy:
+                "You can still tax the vehicle, but this becomes a more manual process using your registration details and a V62 application.",
+              dateLabel: "Digital replacement step",
+              statusLabel: "Replacement outcome",
+              summaryTitle: "Replacement V5C progress",
+              summaryInstructionsLabel: "What was completed online",
+              summaryStatusLabel: "What happens next",
+              data: noDocumentFlow,
+              noInput: true,
+              autoReveal: true,
+            };
+          }
+
+          return null;
+        }
+
+        function updateReferenceStep() {
+          var lookupConfig = getLookupConfig();
+          var isLookupDocument = !!lookupConfig;
+
+          referenceStepTitleEl.textContent =
+            lookupConfig && lookupConfig.title
+              ? lookupConfig.title
+              : "Enter V5C reference number";
+          referenceStepHelperEl.textContent =
+            lookupConfig && lookupConfig.helper
+              ? lookupConfig.helper
+              : "Found on the front page of the logbook";
+          referenceLabelEl.textContent =
+            lookupConfig && lookupConfig.fieldLabel
+              ? lookupConfig.fieldLabel
+              : "V5C reference number";
+          referenceLabelEl.classList.toggle(
+            "vtx-hidden",
+            !!(lookupConfig && lookupConfig.noInput),
+          );
+          v5cReferenceEl.classList.toggle(
+            "vtx-hidden",
+            !!(lookupConfig && lookupConfig.noInput),
+          );
+          v5cReferenceEl.placeholder = "";
+          checkReminderRecordsEl.classList.toggle(
+            "vtx-hidden",
+            !isLookupDocument ||
+              !!(lookupConfig && lookupConfig.noInput) ||
+              state.reminderLookupComplete,
+          );
+          stepToSummaryEl.classList.toggle(
+            "vtx-hidden",
+            (state.selectedDocument === "No document available" &&
+              !state.noDocOnlineComplete) ||
+              (isLookupDocument &&
+                !(
+                  (lookupConfig && lookupConfig.autoReveal) ||
+                  state.reminderLookupComplete
+                )),
+          );
+          stepToSummaryEl.textContent = isNoDocReplacementCheckout()
+            ? "Continue to checkout"
+            : "Continue";
+          v11FoundDetailsEl.classList.toggle(
+            "vtx-hidden",
+            !isLookupDocument ||
+              !(
+                (lookupConfig && lookupConfig.autoReveal) ||
+                state.reminderLookupComplete
+              ) ||
+              (!state.v5cReference &&
+                !(lookupConfig && lookupConfig.noInput)),
+          );
+
+          if (isLookupDocument) {
+            var isNoDocFlow = state.selectedDocument === "No document available";
+            var lookupRegistration =
+              isNoDocFlow && state.registrationInput
+                ? state.registrationInput
+                : lookupConfig.data.registration;
+            v11FoundDetailsEl.classList.toggle("vtx-no-doc-flow", isNoDocFlow);
+            lookupFoundTitleEl.textContent =
+              lookupConfig.foundTitle || "Document linked vehicle record found";
+            lookupFoundCopyEl.textContent = lookupConfig.foundCopy;
+            lookupReferenceLabelEl.textContent = lookupConfig.fieldLabel;
+            lookupDateLabelEl.textContent = lookupConfig.dateLabel;
+            lookupStatusLabelEl.textContent = lookupConfig.statusLabel;
+            summaryLookupTitleEl.textContent = lookupConfig.summaryTitle;
+            summaryLookupReferenceLabelEl.textContent = lookupConfig.fieldLabel;
+            summaryLookupDateLabelEl.textContent = lookupConfig.dateLabel;
+            summaryLookupInstructionsLabelEl.textContent =
+              lookupConfig.summaryInstructionsLabel;
+            summaryLookupStatusLabelEl.textContent =
+              lookupConfig.summaryStatusLabel;
+            noDocLayoutEl.classList.toggle("vtx-hidden", !isNoDocFlow);
+            lookupDefaultGridEl.classList.toggle("vtx-hidden", isNoDocFlow);
+            noDocOnlineCopyEl.innerHTML =
+              "<strong>First online step:</strong> apply for a replacement V5C using the vehicle registration number " +
+              lookupRegistration +
+              ". Continue once you are following the online replacement route.";
+            noDocRegistrationInputEl.value = lookupRegistration;
+            noDocOnlineRegistrationEl.textContent = lookupRegistration;
+            noDocPostcodeEl.value = state.noDocPostcode;
+            noDocOnlineStepEl.classList.toggle(
+              "vtx-hidden",
+              !isNoDocFlow || !state.noDocOnlineStarted,
+            );
+            noDocOnlineConfirmationEl.classList.toggle(
+              "vtx-hidden",
+              !state.noDocOnlineComplete,
+            );
+            noDocCompleteEl.classList.toggle(
+              "vtx-hidden",
+              state.noDocOnlineComplete,
+            );
+            noDocPostOfficeAccordionEl.classList.remove("is-open");
+            noDocPostOfficeToggleEl.setAttribute("aria-expanded", "false");
+            noDocAccordionEl.classList.remove("is-open");
+            noDocAccordionToggleEl.setAttribute("aria-expanded", "false");
+            noDocPostOfficePoint1El.textContent =
+              "Bring form V62 and the replacement fee (usually around £25).";
+            noDocPostOfficePoint2El.textContent =
+              "Bring proof the vehicle meets MOT and insurance requirements.";
+            noDocPostOfficePoint3El.textContent =
+              "A participating branch may be able to submit the V62 and tax the vehicle immediately if all checks pass.";
+
+            state.reminderDetails = isNoDocFlow
+              ? {
+                  registration: lookupRegistration,
+                  reference: state.noDocOnlineComplete
+                    ? "Online replacement V5C"
+                    : "Replacement V5C / V62 path",
+                  dueDate: state.noDocOnlineComplete
+                    ? "Registration and postcode submitted to DVLA"
+                    : "Choose online replacement or V62 route",
+                  instructions: state.noDocOnlineComplete
+                    ? "Vehicle registration and postcode entered. DVLA identity verification completed and the £25 replacement fee prepared online. No V62 or Post Office visit is needed."
+                    : lookupConfig.data.instructions,
+                  motInsurance: state.noDocOnlineComplete
+                    ? "New V5C will be posted to you. You can continue the vehicle tax journey digitally."
+                    : lookupConfig.data.afterTax,
+                  requirements: lookupConfig.data.motInsurance,
+                }
+              : {
+                  registration: lookupRegistration,
+                  reference:
+                    state.v5cReference || lookupConfig.data.reference || "",
+                  dueDate: lookupConfig.data.dueDate,
+                  instructions: lookupConfig.data.instructions,
+                  motInsurance:
+                    state.selectedDocument === "New keeper slip"
+                      ? lookupConfig.data.afterTax
+                      : lookupConfig.data.motInsurance,
+                  requirements: lookupConfig.data.motInsurance,
+                };
+            v11RegistrationEl.textContent = lookupRegistration;
+            v11ReferenceEl.textContent = state.reminderDetails.reference;
+            v11DueDateEl.textContent = state.reminderDetails.dueDate;
+            v11MotStatusEl.textContent =
+              state.selectedDocument === "New keeper slip" ||
+              state.selectedDocument === "No document available"
+                ? isNoDocFlow && state.noDocOnlineComplete
+                  ? "New V5C will be posted to you after the digital replacement is processed."
+                  : lookupConfig.data.motInsurance
+                : "Valid until 14 February 2027";
+            v11InstructionsEl.textContent =
+              state.selectedDocument === "New keeper slip"
+                ? lookupConfig.data.instructions +
+                  " DVLA will send your new V5C after the keeper change is processed."
+                : state.selectedDocument === "No document available"
+                  ? state.noDocOnlineComplete
+                    ? "Online replacement V5C step completed. Future renewals will use the new V5C or a V11 reminder once DVLA updates the keeper record."
+                    : lookupConfig.data.instructions +
+                      " Future renewals will use the new V5C or a V11 reminder once DVLA updates the keeper record."
+                  : lookupConfig.data.instructions +
+                  " Ensure your insurance is valid before completing payment.";
+
+            if (lookupConfig.autoReveal) {
+              state.reminderLookupComplete = true;
+            }
+          } else {
+            state.reminderDetails = null;
+            state.reminderLookupComplete = false;
+            v11FoundDetailsEl.classList.remove("vtx-no-doc-flow");
+            noDocLayoutEl.classList.add("vtx-hidden");
+            lookupDefaultGridEl.classList.remove("vtx-hidden");
+            noDocOnlineStepEl.classList.add("vtx-hidden");
+            noDocOnlineConfirmationEl.classList.add("vtx-hidden");
+            noDocCompleteEl.classList.remove("vtx-hidden");
+            noDocPostOfficeAccordionEl.classList.remove("is-open");
+            noDocPostOfficeToggleEl.setAttribute("aria-expanded", "false");
+            noDocAccordionEl.classList.remove("is-open");
+            noDocAccordionToggleEl.setAttribute("aria-expanded", "false");
+          }
+
+          updateNoDocPageMode();
+        }
+
+        function updateStepper() {
+          stepEls.forEach(function (stepEl, index) {
+            stepEl.classList.toggle("is-active", index === state.currentStep);
+          });
+
+          stepperEls.forEach(function (item, index) {
+            item.setAttribute(
+              "data-active",
+              index <= state.currentStep ? "true" : "false",
+            );
+            item.setAttribute(
+              "data-current",
+              index === state.currentStep ? "true" : "false",
+            );
+          });
+        }
+
+        function updateSummary() {
+          var replacementCheckout = isNoDocReplacementCheckout();
+          var service = checkoutService();
+          sidebarDocumentEl.textContent =
+            state.selectedDocument || "None selected";
+          sidebarVehicleEl.textContent = replacementCheckout
+            ? "Replacement V5C request for " +
+              (state.registrationInput || noDocumentFlow.registration)
+            : "Representative example vehicle record";
+
+          sidebarSummaryTitleEl.textContent = service.summaryTitle;
+          sidebarBaseChargeLabelEl.textContent = service.chargeLabel;
+          sidebarBaseChargeAmountEl.textContent = formatPrice(service.price);
+          summaryPageTitleEl.textContent = service.summaryTitle;
+          summaryBaseChargeLabelEl.textContent = service.chargeLabel;
+          summaryBaseChargeAmountEl.textContent = formatPrice(service.price);
+          summaryBackButtonEl.setAttribute(
+            "data-back-step",
+            "2",
+          );
+
+          if (replacementCheckout) {
+            summaryCalloutTitleEl.textContent = "Replacement ready";
+            summaryCalloutCopyEl.textContent =
+              "We’ve prepared the digital replacement V5C checkout. Review the replacement fee before continuing to pay.";
+            summaryServiceSectionTitleEl.textContent = "Replacement V5C request";
+            summaryServiceTitleEl.textContent =
+              "Replacement V5C for " +
+              (state.registrationInput || noDocumentFlow.registration);
+            summaryServiceCopy1El.innerHTML =
+              "<strong>Keeper details:</strong> postcode " +
+              (state.noDocPostcode || "-") +
+              " verified through the online replacement service";
+            summaryServiceCopy2El.innerHTML =
+              "<strong>Checkout status:</strong> replacement document ready for payment";
+            summaryChecksTitleEl.textContent = "Digital checks complete";
+            summaryCheckChip1El.textContent = "Registration submitted";
+            summaryCheckChip2El.textContent = "Identity verified";
+            summaryCheckChip3El.textContent = "New V5C will be posted";
+          } else {
+            summaryCalloutTitleEl.textContent = "Almost there!";
+            summaryCalloutCopyEl.textContent =
+              "We’ve prepared your representative vehicle tax renewal. Review the details below before continuing to pay.";
+            summaryServiceSectionTitleEl.textContent = "Vehicle Tax Renewal";
+            summaryServiceTitleEl.textContent = "Ford Fiesta (AB12 CDE)";
+            summaryServiceCopy1El.innerHTML =
+              "<strong>Vehicle details:</strong> 2018 model, Blue";
+            summaryServiceCopy2El.innerHTML =
+              "<strong>Renewal status:</strong> Eligibility confirmed and renewal prepared for checkout";
+            summaryChecksTitleEl.textContent = "Renewal checks complete";
+            summaryCheckChip1El.textContent = "Vehicle identified";
+            summaryCheckChip2El.textContent = "Eligibility checks completed";
+            summaryCheckChip3El.textContent = "Renewal prepared";
+          }
+
+          sidebarServiceChargesEl.innerHTML = "";
+          summaryChargeServices.innerHTML = "";
+
+          if (
+            (state.selectedDocument === "V11 reminder" ||
+              state.selectedDocument === "New keeper slip" ||
+              state.selectedDocument === "No document available") &&
+            state.reminderDetails
+          ) {
+            summaryReminderDetailsEl.classList.remove("vtx-hidden");
+            summaryReminderRegistrationEl.textContent =
+              state.reminderDetails.registration;
+            summaryReminderReferenceEl.textContent =
+              state.v5cReference || state.reminderDetails.reference;
+            summaryReminderDueDateEl.textContent = state.reminderDetails.dueDate;
+            summaryReminderInstructionsEl.textContent =
+              state.reminderDetails.instructions;
+            summaryReminderStatusEl.textContent =
+              state.selectedDocument === "New keeper slip" ||
+              state.selectedDocument === "No document available"
+                ? state.reminderDetails.motInsurance
+                : state.reminderDetails.requirements ||
+                  state.reminderDetails.motInsurance;
+          } else {
+            summaryReminderDetailsEl.classList.add("vtx-hidden");
+          }
+
+          var total = formatPrice(totalAmount());
+          sidebarPriceToPayEl.textContent = total;
+          sidebarTotalEl.textContent = total;
+          amountDueTotal.textContent = total;
+        }
+
+        function goToStep(index) {
+          state.currentStep = index;
+          updateStepper();
+          updateSummary();
+          updateNoDocPageMode();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function selectSingleRow(containerId, callback) {
+          var rows = Array.prototype.slice.call(
+            document.querySelectorAll(containerId + " .vtx-select-row"),
+          );
+          rows.forEach(function (row) {
+            row.addEventListener("click", function (event) {
+              event.preventDefault();
+              rows.forEach(function (innerRow) {
+                innerRow.classList.remove("is-selected");
+                var input = innerRow.querySelector("input");
+                if (input) input.checked = false;
+              });
+              row.classList.add("is-selected");
+              var checkedInput = row.querySelector("input");
+              if (checkedInput) checkedInput.checked = true;
+              callback(row.getAttribute("data-value"));
+            });
+          });
+        }
+
+        function selectMultiRows(containerId, callback) {
+          var rows = Array.prototype.slice.call(
+            document.querySelectorAll(containerId + " .vtx-select-row"),
+          );
+          rows.forEach(function (row) {
+            row.addEventListener("click", function (event) {
+              event.preventDefault();
+              var input = row.querySelector("input");
+              input.checked = !input.checked;
+              row.classList.toggle("is-selected", input.checked);
+              callback(
+                rows
+                  .filter(function (candidate) {
+                    return candidate.querySelector("input").checked;
+                  })
+                  .map(function (candidate) {
+                    return candidate.getAttribute("data-value");
+                  }),
+              );
+            });
+          });
+        }
+
+        document
+          .getElementById("lookup-registration")
+          .addEventListener("click", function () {
+            state.registrationInput = registrationInputEl.value.trim();
+            state.vehicleRetrieved = true;
+            vehicleDetailsCard.classList.remove("vtx-hidden");
+            vehicleDetailsActions.classList.remove("vtx-hidden");
+            registrationEntryActions.classList.add("vtx-hidden");
+            document.getElementById("vehicle-display-name").textContent =
+              exampleVehicle.name;
+          });
+
+        document
+          .getElementById("edit-registration")
+          .addEventListener("click", function () {
+            state.vehicleRetrieved = false;
+            vehicleDetailsCard.classList.add("vtx-hidden");
+            vehicleDetailsActions.classList.add("vtx-hidden");
+            registrationEntryActions.classList.remove("vtx-hidden");
+            registrationInputEl.focus();
+          });
+
+        document
+          .getElementById("step-to-documents")
+          .addEventListener("click", function () {
+            goToStep(1);
+          });
+
+        document
+          .getElementById("step-to-reference")
+          .addEventListener("click", function () {
+            state.reminderLookupComplete = false;
+            updateReferenceStep();
+            goToStep(2);
+          });
+
+        checkReminderRecordsEl.addEventListener("click", function () {
+          state.v5cReference = v5cReferenceEl.value.trim();
+          if (!state.v5cReference) {
+            return;
+          }
+
+          state.reminderLookupComplete = true;
+          updateReferenceStep();
+          updateSummary();
+        });
+
+        noDocPostOfficeToggleEl.addEventListener("click", function () {
+          var isOpen = noDocPostOfficeAccordionEl.classList.toggle("is-open");
+          noDocPostOfficeToggleEl.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false",
+          );
+        });
+
+        noDocAccordionToggleEl.addEventListener("click", function () {
+          var isOpen = noDocAccordionEl.classList.toggle("is-open");
+          noDocAccordionToggleEl.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false",
+          );
+        });
+
+        noDocContinueEl.addEventListener("click", function () {
+          state.registrationInput = noDocRegistrationInputEl.value.trim();
+          if (!state.registrationInput) {
+            noDocRegistrationInputEl.focus();
+            return;
+          }
+          state.noDocOnlineStarted = true;
+          state.noDocOnlineComplete = false;
+          updateReferenceStep();
+          updateSummary();
+          noDocPostcodeEl.focus();
+        });
+
+        noDocCompleteEl.addEventListener("click", function () {
+          state.noDocPostcode = noDocPostcodeEl.value.trim();
+          if (!state.noDocPostcode) {
+            noDocPostcodeEl.focus();
+            return;
+          }
+          state.noDocOnlineComplete = true;
+          updateReferenceStep();
+          updateSummary();
+        });
+
+        stepToSummaryEl.addEventListener("click", function () {
+          state.v5cReference = v5cReferenceEl.value.trim();
+          if (
+            state.selectedDocument === "V11 reminder" ||
+            state.selectedDocument === "New keeper slip" ||
+            state.selectedDocument === "No document available"
+          ) {
+            if (!state.reminderLookupComplete) {
+              return;
+            }
+            updateReferenceStep();
+          }
+          goToStep(3);
+        });
+
+        Array.prototype.slice
+          .call(document.querySelectorAll("[data-back-step]"))
+          .forEach(function (button) {
+            button.addEventListener("click", function () {
+              goToStep(Number(button.getAttribute("data-back-step")));
+            });
+          });
+
+        document
+          .getElementById("add-to-basket")
+          .addEventListener("click", function () {
+            var addToBasketButton = document.getElementById("add-to-basket");
+            var service = checkoutService();
+            var basket = {
+              service: {
+                name: service.name,
+                price: service.price,
+                year: exampleVehicle.year,
+                colour: exampleVehicle.colour,
+                status: exampleVehicle.status,
+              },
+              total: totalAmount(),
+              document: state.selectedDocument,
+              v5cReference:
+                state.v5cReference ||
+                (state.reminderDetails ? state.reminderDetails.reference : ""),
+              noDocPostcode: state.noDocPostcode,
+              noDocOnlineComplete: state.noDocOnlineComplete,
+              registration: state.reminderDetails
+                ? state.reminderDetails.registration
+                : exampleVehicle.name,
+              reminderDetails: state.reminderDetails,
+            };
+
+            window.localStorage.setItem(
+              "vehicleTaxJourneyBasket",
+              JSON.stringify(basket),
+            );
+            addToBasketButton.disabled = true;
+
+            if (typeof sendMessageToParent === "function") {
+              var objMes = { type: "addToBasket", message: buildBasketLineItems() };
+              sendMessageToParent(objMes);
+            }
+
+            checkoutStatusEl.classList.remove("vtx-hidden");
+
+            window.setTimeout(function () {
+              addToBasketButton.disabled = false;
+            }, 3000);
+          });
+
+        selectSingleRow("#document-options", function (value) {
+          state.selectedDocument = value;
+          state.v5cReference = "";
+          state.noDocPostcode = "";
+          state.noDocOnlineStarted = false;
+          state.noDocOnlineComplete = false;
+          v5cReferenceEl.value = "";
+          state.reminderLookupComplete = false;
+          updateReferenceStep();
+          updateSummary();
+        });
+
+        updateStepper();
+        updateSummary();
+      })();
+    </script>
+  </body>
+</html>

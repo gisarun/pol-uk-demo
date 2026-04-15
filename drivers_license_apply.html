@@ -1,0 +1,1220 @@
+<!doctype html>
+<html class="reb" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Provisional driving licence application</title>
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style-mortage.css" />
+    <link rel="stylesheet" type="text/css" href="css/overridden-style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/style-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/trip/icon-poms.css" />
+    <link type="text/css" rel="stylesheet" href="css/trip/style.css" />
+    <script>
+      var contextPath = "";
+    </script>
+    <script type="text/javascript">
+      var editMode = false;
+    </script>
+    <script type="text/javascript">
+      var active_mask_code_value;
+    </script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/common-util.js"></script>
+    <script type="text/javascript" src="js/main-min.js"></script>
+    <script type="text/javascript" src="js/init-min.js"></script>
+  </head>
+  <body>
+    <div class="container" id="top">
+      <a href="#maincontent" class="no-vis-skip-main" id="skip-to-main"
+        >Skip to main content</a
+      >
+      <header class="est-nav-header" role="banner">
+        <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/jquery.menu-aim.js"></script>
+        <script src="js/navigation.js"></script>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="css/jquery-ui-1.10.3.custom.min.css"
+        />
+        <script src="js/jqueryui.js"></script>
+      </header>
+
+      <main class="main white" id="maincontent" role="main" tabindex="-1">
+        <div id="pom" data-js-modal>
+          <style>
+            .dl-shell {
+              max-width: 1085px;
+              margin: 0 auto;
+              padding: 40px 15px 90px;
+            }
+            .dl-hero {
+              background: linear-gradient(180deg, #f3f3f3 0%, #ffffff 100%);
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              padding: 32px 32px 26px;
+              margin-bottom: 24px;
+            }
+            .dl-eyebrow {
+              font-size: 14px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              color: #d71440;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+              margin-bottom: 10px;
+            }
+            .dl-title {
+              font-family: "Proba Probold", ProbaPro-Bold, Arial, sans-serif;
+              font-size: 42px;
+              line-height: 1.1;
+              margin: 0 0 10px;
+            }
+            .dl-lead {
+              max-width: 760px;
+              color: #555;
+              font-size: 18px;
+              line-height: 1.5;
+              margin: 0;
+            }
+            .dl-grid {
+              display: grid;
+              grid-template-columns: 290px 1fr;
+              gap: 24px;
+              align-items: start;
+            }
+            .dl-sidebar-card,
+            .dl-card {
+              background: #fff;
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            }
+            .dl-sidebar-card {
+              padding: 22px;
+              position: sticky;
+              top: 20px;
+            }
+            .dl-card {
+              padding: 28px;
+            }
+            .dl-stepper {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            .dl-stepper li {
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+              padding: 0 0 18px;
+              position: relative;
+              color: #666;
+            }
+            .dl-stepper li:last-child {
+              padding-bottom: 0;
+            }
+            .dl-stepper li:not(:last-child):after {
+              content: "";
+              position: absolute;
+              left: 16px;
+              top: 36px;
+              width: 2px;
+              height: calc(100% - 16px);
+              background: #d4d6d8;
+            }
+            .dl-stepper .num {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              background: #d4d6d8;
+              color: #333;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              flex: none;
+            }
+            .dl-stepper .label {
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              display: block;
+              color: #333;
+              font-size: 16px;
+            }
+            .dl-stepper .sub {
+              display: block;
+              font-size: 14px;
+              color: #666;
+              margin-top: 2px;
+            }
+            .dl-stepper li.active .num,
+            .dl-stepper li.done .num {
+              background: #d71440;
+              color: #fff;
+            }
+            .dl-stepper li.active .label,
+            .dl-stepper li.done .label {
+              color: #000;
+            }
+            .dl-pane {
+              display: none;
+            }
+            .dl-pane.active {
+              display: block;
+            }
+            .dl-h2 {
+              font-family: "Proba Probold", ProbaPro-Bold, Arial, sans-serif;
+              font-size: 32px;
+              line-height: 1.2;
+              margin: 0 0 10px;
+            }
+            .dl-copy {
+              font-size: 18px;
+              color: #555;
+              margin: 0 0 24px;
+            }
+            .dl-btns {
+              display: flex;
+              gap: 12px;
+              flex-wrap: wrap;
+              margin-top: 28px;
+            }
+            .dl-btn-primary,
+            .dl-btn-secondary {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 180px;
+              padding: 0 26px;
+              height: 50px;
+              border-radius: 30px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 18px;
+              cursor: pointer;
+              border: 1px solid #d71440;
+              text-decoration: none !important;
+            }
+            .dl-btn-primary {
+              background: #d71440;
+              color: #fff;
+            }
+            .dl-btn-primary:hover {
+              background: #ba112d;
+              color: #fff;
+            }
+            .dl-btn-secondary {
+              background: #fff;
+              color: #d71440;
+            }
+            .dl-btn-secondary:hover {
+              background: #fff5f7;
+              color: #d71440;
+            }
+            .dl-row-choice {
+              display: block;
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              padding: 18px 20px;
+              margin-bottom: 14px;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              position: relative;
+            }
+            .dl-row-choice:hover {
+              border-color: #d71440;
+              box-shadow: 0 8px 20px rgba(215, 20, 64, 0.08);
+            }
+            .dl-row-choice input[type="radio"],
+            .dl-row-choice input[type="checkbox"] {
+              position: absolute;
+              opacity: 0;
+              pointer-events: none;
+            }
+            .dl-row-choice.active {
+              border-color: #d71440;
+              background: #fff5f7;
+            }
+            .dl-row-title {
+              display: flex;
+              justify-content: space-between;
+              gap: 12px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 20px;
+              color: #333;
+            }
+            .dl-row-desc {
+              display: block;
+              font-size: 15px;
+              color: #666;
+              margin-top: 6px;
+            }
+            .dl-price {
+              color: #d71440;
+              white-space: nowrap;
+            }
+            .dl-list {
+              padding-left: 18px;
+              margin: 12px 0 0;
+            }
+            .dl-list li {
+              margin-bottom: 8px;
+            }
+            .dl-summary-card {
+              background: #fafafa;
+              border: 1px solid #e4e4e4;
+              border-radius: 10px;
+              padding: 22px;
+            }
+            .dl-total {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              gap: 12px;
+              padding-top: 18px;
+              margin-top: 18px;
+              border-top: 1px solid #ddd;
+            }
+            .dl-total .amount {
+              font-family: "Proba Probold", ProbaPro-Bold, Arial, sans-serif;
+              font-size: 40px;
+              color: #d71440;
+              line-height: 1;
+            }
+            .dl-cart-item {
+              padding: 18px 0;
+              border-bottom: 1px solid #e4e4e4;
+            }
+            .dl-cart-item:last-child {
+              border-bottom: 0;
+            }
+            .dl-cart-name {
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 21px;
+              margin-bottom: 4px;
+            }
+            .dl-small {
+              font-size: 14px;
+              color: #666;
+            }
+            .dl-badge {
+              display: inline-block;
+              background: #eaf6ea;
+              color: #2f7d32;
+              border-radius: 999px;
+              padding: 8px 14px;
+              font-family: ProbaPro-Bold, Arial, sans-serif;
+              font-size: 14px;
+            }
+            .dl-radio-list {
+              display: flex;
+              flex-direction: column;
+              gap: 0;
+              border: 1px solid #d4d6d8;
+              border-radius: 10px;
+              overflow: hidden;
+              margin-bottom: 24px;
+            }
+            .dl-radio-list .dl-row-choice {
+              border-radius: 0;
+              border: none;
+              border-bottom: 1px solid #d4d6d8;
+              margin-bottom: 0;
+            }
+            .dl-radio-list .dl-row-choice:last-of-type {
+              border-bottom: none;
+            }
+            .dl-radio-list .dl-row-choice:first-child {
+              border-radius: 10px 10px 0 0;
+            }
+            @media (max-width: 991px) {
+              .dl-grid {
+                grid-template-columns: 1fr;
+              }
+              .dl-sidebar-card {
+                position: static;
+              }
+              .dl-title {
+                font-size: 34px;
+              }
+            }
+            @media (max-width: 767px) {
+              .dl-shell {
+                padding-top: 20px;
+              }
+              .dl-hero {
+                padding: 24px 20px;
+              }
+              .dl-card,
+              .dl-sidebar-card {
+                padding: 20px;
+              }
+              .dl-h2 {
+                font-size: 26px;
+              }
+              .dl-title {
+                font-size: 30px;
+              }
+              .dl-btn-primary,
+              .dl-btn-secondary {
+                width: 100%;
+              }
+              .dl-row-title {
+                font-size: 18px;
+              }
+              .dl-total .amount {
+                font-size: 34px;
+              }
+            }
+          </style>
+
+          <div class="dl-shell">
+            <div class="dl-btns" style="margin-bottom: 16px">
+              <a class="dl-btn-secondary" href="index.html">Return to dashboard</a>
+            </div>
+
+            <div class="dl-grid">
+              <aside class="dl-sidebar-card">
+                <h2 class="dl-h2" style="font-size: 26px; margin-bottom: 18px">
+                  Your application journey
+                </h2>
+                <div class="dl-copy" style="margin-bottom: 0">
+                  Follow the steps to prepare a provisional driving licence
+                  application.
+                </div>
+                <div
+                  class="dl-basket-mini"
+                  id="miniBasket"
+                  style="
+                    margin-top: 18px;
+                    background: #f7f7f7;
+                    border-radius: 8px;
+                    padding: 16px;
+                  "
+                >
+                  <div class="dl-small">Amount due</div>
+                  <div
+                    class="amount"
+                    id="miniBasketAmount"
+                    style="
+                      font-family:
+                        &quot;Proba Probold&quot;, ProbaPro-Bold, Arial,
+                        sans-serif;
+                      font-size: 30px;
+                      color: #d71440;
+                    "
+                  >
+                    £25.00
+                  </div>
+                  <div class="dl-small" id="miniBasketText">
+                    No additional services selected.
+                  </div>
+                </div>
+              </aside>
+
+              <section class="dl-card">
+                <div
+                  class="header-funnel__container"
+                  style="margin-bottom: 22px"
+                >
+                  <div class="stepper">
+                    <div
+                      class="stepper__item"
+                      data-active="true"
+                      data-current="true"
+                      data-step="1"
+                    >
+                      <span class="stepper__num"
+                        ><span><i>1</i></span></span
+                      ><span class="stepper__title">Confirm details</span>
+                    </div>
+                    <div
+                      class="stepper__item"
+                      data-active="false"
+                      data-current="false"
+                      data-step="2"
+                    >
+                      <span class="stepper__num"
+                        ><span><i>2</i></span></span
+                      ><span class="stepper__title">Payment method</span>
+                    </div>
+                    <div
+                      class="stepper__item"
+                      data-active="false"
+                      data-current="false"
+                      data-step="3"
+                    >
+                      <span class="stepper__num"
+                        ><span><i>3</i></span></span
+                      ><span class="stepper__title">Additional services</span>
+                    </div>
+                    <div
+                      class="stepper__item"
+                      data-active="false"
+                      data-current="false"
+                      data-step="4"
+                    >
+                      <span class="stepper__num"
+                        ><span><i>4</i></span></span
+                      ><span class="stepper__title">Summary</span>
+                    </div>
+                    <div
+                      class="stepper__item"
+                      data-active="false"
+                      data-current="false"
+                      data-step="5"
+                    >
+                      <span class="stepper__num"
+                        ><span><i>5</i></span></span
+                      ><span class="stepper__title">Cart</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STEP 1: Application readiness -->
+                <div class="dl-pane active" data-pane="1">
+                  <h2 class="dl-h2">Confirm application details</h2>
+                  <p class="dl-copy">
+                    Confirm the application is ready to be submitted.
+                  </p>
+
+                  <div class="dl-radio-list" id="readinessOptions">
+                    <label
+                      class="dl-row-choice active"
+                      data-readiness="ready-photo"
+                    >
+                      <input
+                        type="radio"
+                        name="readinessChoice"
+                        value="ready-photo"
+                        checked
+                      />
+                      <span class="dl-row-title"
+                        >D1 form completed and valid photo provided</span
+                      >
+                      <span class="dl-row-desc"
+                        >The form is fully completed and a valid passport-style
+                        photo is included</span
+                      >
+                    </label>
+                    <label
+                      class="dl-row-choice"
+                      data-readiness="ready-passport"
+                    >
+                      <input
+                        type="radio"
+                        name="readinessChoice"
+                        value="ready-passport"
+                      />
+                      <span class="dl-row-title"
+                        >D1 form completed and use passport photo</span
+                      >
+                      <span class="dl-row-desc"
+                        >The form is complete and the DVLA will use the passport
+                        photo</span
+                      >
+                    </label>
+                  </div>
+
+                  <div class="dl-btns">
+                    <button class="dl-btn-primary" data-next="2">
+                      Continue
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 2: Payment method -->
+                <div class="dl-pane" data-pane="2">
+                  <h2 class="dl-h2">Payment method</h2>
+                  <p class="dl-copy">
+                    Select how the application will be paid.
+                  </p>
+
+                  <div class="dl-radio-list" id="paymentOptions">
+                    <label class="dl-row-choice" data-payment="cheque">
+                      <input type="radio" name="paymentChoice" value="cheque" />
+                      <span class="dl-row-title">Cheque</span>
+                      <span class="dl-row-desc"
+                        >Payment will be sent directly to DVLA</span
+                      >
+                    </label>
+                    <label class="dl-row-choice active" data-payment="postal">
+                      <input
+                        type="radio"
+                        name="paymentChoice"
+                        value="postal"
+                        checked
+                      />
+                      <span class="dl-row-title">Postal order</span>
+                      <span class="dl-row-desc"
+                        >Purchase a postal order in branch</span
+                      >
+                    </label>
+                  </div>
+
+                  <div class="dl-btns">
+                    <button class="dl-btn-secondary" data-prev="1">Back</button>
+                    <button class="dl-btn-primary" data-next="3">
+                      Continue
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 3: Additional services -->
+                <div class="dl-pane" data-pane="3">
+                  <h2 class="dl-h2">Additional services</h2>
+                  <p class="dl-copy">
+                    Select one or more additional services, or continue without
+                    choosing any.
+                  </p>
+
+                  <label
+                    class="dl-row-choice service-choice"
+                    data-service="Signed For delivery"
+                    data-price="£3.99"
+                    data-price-value="3.99"
+                  >
+                    <input type="checkbox" value="Signed For delivery" />
+                    <span class="dl-row-title"
+                      >Signed For delivery<span class="dl-price"
+                        >£3.99</span
+                      ></span
+                    >
+                    <span class="dl-row-desc"
+                      >Require a signature on delivery</span
+                    >
+                  </label>
+                  <label
+                    class="dl-row-choice service-choice"
+                    data-service="Special Delivery"
+                    data-price="£7.95"
+                    data-price-value="7.95"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Special Delivery (next day / secure)"
+                    />
+                    <span class="dl-row-title"
+                      >Special Delivery (next day / secure)<span
+                        class="dl-price"
+                        >£7.95</span
+                      ></span
+                    >
+                    <span class="dl-row-desc"
+                      >Send your application securely and quickly</span
+                    >
+                  </label>
+
+                  <div class="dl-btns">
+                    <button class="dl-btn-secondary" data-prev="2">Back</button>
+                    <button class="dl-btn-primary" data-next="4">
+                      Continue
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 4: Summary -->
+                <div class="dl-pane" data-pane="4">
+                  <h2 class="dl-h2">Application summary</h2>
+                  <p class="dl-copy">
+                    Review the provisional driving licence application before
+                    adding it to your basket.
+                  </p>
+
+                  <div class="dl-summary-card">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                        align-items: center;
+                      "
+                    >
+                      <div>
+                        <div class="dl-small">Service</div>
+                        <div
+                          style="
+                            font-family:
+                              &quot;Proba Probold&quot;, ProbaPro-Bold, Arial,
+                              sans-serif;
+                            font-size: 28px;
+                          "
+                        >
+                          Provisional Driving Licence Application
+                        </div>
+                      </div>
+                      <span class="dl-badge">Status: Ready to submit</span>
+                    </div>
+
+                    <div style="margin-top: 18px">
+                      <div
+                        class="dl-label"
+                        style="font-size: 20px; margin-bottom: 0"
+                      >
+                        Included items
+                      </div>
+                      <ul class="dl-list">
+                        <li>DVLA D1 form completed</li>
+                        <li>Photo confirmed</li>
+                        <li>Payment method selected</li>
+                        <li>Application prepared</li>
+                      </ul>
+
+                      <div
+                        id="summaryServicesWrap"
+                        style="display: none; margin-top: 14px"
+                      >
+                        <div
+                          class="dl-label"
+                          style="font-size: 20px; margin-bottom: 8px"
+                        >
+                          Additional services
+                        </div>
+                        <ul class="dl-list" id="summaryServices"></ul>
+                      </div>
+                    </div>
+
+                    <div
+                      class="dl-summary-card"
+                      style="margin-top: 16px; background: #fff"
+                    >
+                      <dl
+                        class="dl-kv"
+                        id="summaryCharges"
+                        style="margin: 0"
+                      ></dl>
+                    </div>
+
+                    <div class="dl-total">
+                      <div>
+                        <div class="dl-small">Amount due</div>
+                        <div class="amount" id="summaryTotalAmount">£25.00</div>
+                      </div>
+                      <div class="dl-btns" style="margin-top: 0">
+                        <button class="dl-btn-secondary" data-cancel="true">
+                          Cancel
+                        </button>
+                        <button class="dl-btn-primary" id="addToBasketBtn">
+                          Add to basket
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STEP 5: Cart -->
+                <div class="dl-pane" data-pane="5">
+                  <h2 class="dl-h2">Endless Aisle cart</h2>
+                  <p class="dl-copy">
+                    The application has been added as a service item; continue
+                    through the standard checkout pattern.
+                  </p>
+                  <div class="dl-summary-card">
+                    <div class="dl-cart-item">
+                      <div class="dl-cart-name">
+                        Provisional driving licence application
+                      </div>
+                      <div class="dl-small">
+                        Service item · Prepared with representative example data
+                      </div>
+                    </div>
+                    <div id="cartCharges"></div>
+                    <div id="cartServices"></div>
+                    <div class="dl-total">
+                      <div>
+                        <div class="dl-small">Subtotal</div>
+                        <div class="amount" id="cartSubtotalAmount">£25.00</div>
+                      </div>
+                      <div class="dl-btns" style="margin-top: 0">
+                        <button class="dl-btn-secondary" data-prev="4">
+                          Back
+                        </button>
+                        <button class="dl-btn-primary" id="completeBtn">
+                          Continue to checkout
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STEP 6: Complete -->
+                <div class="dl-pane" data-pane="6">
+                  <div class="dl-complete" style="text-align:center; padding:30px 10px 8px;">
+                    <div class="dl-complete-icon" style="width:76px; height:76px; border-radius:50%; background:#dff4df; color:#2f7d32; display:inline-flex; align-items:center; justify-content:center; font-size:36px; font-family:ProbaPro-Bold, Arial, sans-serif; margin-bottom:18px;">✓</div>
+                    <h2 class="dl-h2">Application demo complete</h2>
+                    <p class="dl-copy" style="max-width:640px; margin:0 auto 24px;">
+                      The provisional driving licence application has been taken through the demo journey with representative data only.
+                    </p>
+                    <div class="dl-summary-card" style="max-width:720px; margin:0 auto; text-align:left;">
+                      <dl class="dl-kv">
+                        <div><dt>Service</dt><dd>Provisional driving licence application</dd></div>
+                        <div><dt>Status</dt><dd>Completed (demo)</dd></div>
+                      </dl>
+                    </div>
+                    <div class="dl-btns" style="justify-content:center; margin-top:22px;">
+                      <a class="dl-btn-secondary" href="dashboard.html">Return to dashboard</a>
+                      <button class="dl-btn-primary" id="restartBtnApply">Start another application</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              var currentStep = 1;
+              var panes = document.querySelectorAll(".dl-pane");
+              var stepperItems = document.querySelectorAll(".stepper__item");
+              var baseAmount = 25.0;
+
+              var fixedCharges = [
+                { name: "DVLA application", amount: 0.0 },
+                { name: "Postal order", amount: 25.0 },
+              ];
+
+              function renderStepper() {
+                stepperItems.forEach(function (item) {
+                  var step = parseInt(item.getAttribute("data-step"), 10);
+                  var active = step <= currentStep;
+                  var current = step === currentStep;
+                  item.setAttribute("data-active", active ? "true" : "false");
+                  item.setAttribute("data-current", current ? "true" : "false");
+                });
+              }
+
+              function showStep(step) {
+                currentStep = step;
+                panes.forEach(function (p) {
+                  p.classList.toggle(
+                    "active",
+                    parseInt(p.getAttribute("data-pane"), 10) === step,
+                  );
+                });
+                renderStepper();
+                updateSummary();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+
+              function resetServices() {
+                document
+                  .querySelectorAll('.service-choice input[type="checkbox"]')
+                  .forEach(function (cb) {
+                    cb.checked = false;
+                  });
+                document
+                  .querySelectorAll(".service-choice")
+                  .forEach(function (c) {
+                    c.classList.remove("active");
+                  });
+              }
+
+              function setRadioGroup(groupSelector, value) {
+                document.querySelectorAll(groupSelector).forEach(function (r) {
+                  var match = r.value === value;
+                  r.checked = match;
+                  var row = r.closest(".dl-row-choice");
+                  if (row) {
+                    row.classList.toggle("active", match);
+                  }
+                });
+              }
+
+              function updateSummary() {
+                var selectedServices = Array.from(
+                  document.querySelectorAll(".service-choice input:checked"),
+                );
+                var servicesWrap = document.getElementById(
+                  "summaryServicesWrap",
+                );
+                var servicesList = document.getElementById("summaryServices");
+                if (servicesList) servicesList.innerHTML = "";
+                if (selectedServices.length && servicesWrap) {
+                  servicesWrap.style.display = "block";
+                  selectedServices.forEach(function (input) {
+                    var row = input.closest(".service-choice");
+                    var priceLabel = row ? row.getAttribute("data-price") : "";
+                    var li = document.createElement("li");
+                    li.textContent = priceLabel
+                      ? input.value + " (" + priceLabel + ")"
+                      : input.value;
+                    servicesList.appendChild(li);
+                  });
+                } else if (servicesWrap) {
+                  servicesWrap.style.display = "none";
+                }
+
+                var extrasTotal = selectedServices.reduce(function (
+                  sum,
+                  input,
+                ) {
+                  var row = input.closest(".service-choice");
+                  return (
+                    sum +
+                    (row
+                      ? parseFloat(row.getAttribute("data-price-value") || "0")
+                      : 0)
+                  );
+                }, 0);
+                var total = baseAmount + extrasTotal;
+                var formattedTotal = "£" + total.toFixed(2);
+
+                var miniBasketAmount =
+                  document.getElementById("miniBasketAmount");
+                var miniBasketText = document.getElementById("miniBasketText");
+                var summaryTotalAmount =
+                  document.getElementById("summaryTotalAmount");
+                var cartSubtotalAmount =
+                  document.getElementById("cartSubtotalAmount");
+                if (miniBasketAmount)
+                  miniBasketAmount.textContent = formattedTotal;
+                if (summaryTotalAmount)
+                  summaryTotalAmount.textContent = formattedTotal;
+                if (cartSubtotalAmount)
+                  cartSubtotalAmount.textContent = formattedTotal;
+                if (miniBasketText) {
+                  miniBasketText.textContent = selectedServices.length
+                    ? "Selected: " +
+                      selectedServices
+                        .map(function (input) {
+                          var row = input.closest(".service-choice");
+                          var priceLabel = row
+                            ? row.getAttribute("data-price")
+                            : "";
+                          return priceLabel
+                            ? input.value + " (" + priceLabel + ")"
+                            : input.value;
+                        })
+                        .join(", ")
+                    : "No additional services selected.";
+                }
+
+                // Summary charge breakdown
+                var summaryCharges = document.getElementById("summaryCharges");
+                if (summaryCharges) {
+                  summaryCharges.innerHTML = "";
+
+                  function addCharge(name, amount) {
+                    var row = document.createElement("div");
+                    row.innerHTML =
+                      "<dt>" +
+                      name +
+                      "</dt><dd>£" +
+                      amount.toFixed(2) +
+                      "</dd>";
+                    summaryCharges.appendChild(row);
+                  }
+
+                  // Base application
+                  addCharge("Provisional driving licence application", 0.0);
+
+                  if (selectedServices.length) {
+                    // Show selected services (replaces default postage line)
+                    selectedServices.forEach(function (input) {
+                      var row = input.closest(".service-choice");
+                      var priceVal = row
+                        ? parseFloat(
+                            row.getAttribute("data-price-value") || "0",
+                          )
+                        : 0;
+                      addCharge(input.value, priceVal);
+                    });
+                  } else {
+                    // No selection: show standard postage
+                    addCharge("Postage", 0.65);
+                  }
+
+                  // Postal order (always)
+                  addCharge("Postal order", 25.0);
+                }
+
+                // Cart charges
+                var cartCharges = document.getElementById("cartCharges");
+                if (cartCharges) {
+                  cartCharges.innerHTML = "";
+
+                  // Prefer Special Delivery if selected, else first selected service
+                  var replacementInput = null;
+                  if (selectedServices.length) {
+                    replacementInput =
+                      selectedServices.find(function (input) {
+                        return (
+                          input.value
+                            .toLowerCase()
+                            .indexOf("special delivery") !== -1
+                        );
+                      }) || selectedServices[0];
+                  }
+
+                  fixedCharges.forEach(function (c) {
+                    var displayName = c.name;
+                    var displayAmount = c.amount;
+                    if (c.key === "postage" && replacementInput) {
+                      var repRow = replacementInput.closest(".service-choice");
+                      displayName = replacementInput.value;
+                      displayAmount = repRow
+                        ? parseFloat(
+                            repRow.getAttribute("data-price-value") || "0",
+                          )
+                        : 0;
+                    }
+
+                    var row = document.createElement("div");
+                    row.className = "dl-cart-item";
+                    row.innerHTML =
+                      '<div class="dl-cart-name">' +
+                      displayName +
+                      "</div>" +
+                      '<div class="dl-small">Price: £' +
+                      displayAmount.toFixed(2) +
+                      "</div>";
+                    cartCharges.appendChild(row);
+
+                    // Update summary charge row for postage replacement
+                    if (c.key === "postage") {
+                      var sumLabel = document.getElementById(
+                        "summaryCharge2Label",
+                      );
+                      var sumAmt = document.getElementById(
+                        "summaryCharge2Amount",
+                      );
+                      if (sumLabel && sumAmt) {
+                        sumLabel.textContent = displayName;
+                        sumAmt.textContent = "£" + displayAmount.toFixed(2);
+                      }
+                    }
+                  });
+                }
+
+                // Cart additional services
+                var cartServices = document.getElementById("cartServices");
+                if (cartServices) {
+                  cartServices.innerHTML = "";
+                  selectedServices.forEach(function (input) {
+                    var row = input.closest(".service-choice");
+                    var priceLabel = row ? row.getAttribute("data-price") : "";
+                    var priceVal = row
+                      ? parseFloat(
+                          row.getAttribute("data-price-value") || "0",
+                        ).toFixed(2)
+                      : "0.00";
+                    var item = document.createElement("div");
+                    item.className = "dl-cart-item";
+                    item.innerHTML =
+                      '<div class="dl-cart-name">' +
+                      input.value +
+                      "</div>" +
+                      '<div class="dl-small">Price: ' +
+                      (priceLabel || "£" + priceVal) +
+                      "</div>";
+                    cartServices.appendChild(item);
+                  });
+                }
+              }
+
+              // Navigation buttons
+              document.querySelectorAll("[data-next]").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                  showStep(parseInt(this.getAttribute("data-next"), 10));
+                });
+              });
+              document.querySelectorAll("[data-prev]").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                  showStep(parseInt(this.getAttribute("data-prev"), 10));
+                });
+              });
+
+              // Readiness selection
+              document
+                .querySelectorAll(".dl-row-choice[data-readiness]")
+                .forEach(function (row) {
+                  row.addEventListener("click", function () {
+                    var radio = row.querySelector(
+                      'input[name="readinessChoice"]',
+                    );
+                    if (radio) radio.checked = true;
+                    setRadioGroup('input[name="readinessChoice"]', radio.value);
+                  });
+                });
+              document
+                .querySelectorAll('input[name="readinessChoice"]')
+                .forEach(function (radio) {
+                  radio.addEventListener("change", function () {
+                    setRadioGroup('input[name="readinessChoice"]', this.value);
+                  });
+                });
+
+              // Payment selection
+              document
+                .querySelectorAll(".dl-row-choice[data-payment]")
+                .forEach(function (row) {
+                  row.addEventListener("click", function () {
+                    var radio = row.querySelector(
+                      'input[name="paymentChoice"]',
+                    );
+                    if (radio) radio.checked = true;
+                    setRadioGroup('input[name="paymentChoice"]', radio.value);
+                  });
+                });
+              document
+                .querySelectorAll('input[name="paymentChoice"]')
+                .forEach(function (radio) {
+                  radio.addEventListener("change", function () {
+                    setRadioGroup('input[name="paymentChoice"]', this.value);
+                  });
+                });
+
+              // Service selection toggle
+              document
+                .querySelectorAll(".service-choice")
+                .forEach(function (choice) {
+                  var cb = choice.querySelector('input[type="checkbox"]');
+                  if (!cb) return;
+                  choice.addEventListener("click", function (e) {
+                    if (e.target === cb) return;
+                    e.preventDefault();
+                    cb.checked = !cb.checked;
+                    cb.dispatchEvent(new Event("change", { bubbles: true }));
+                  });
+                  cb.addEventListener("change", function () {
+                    choice.classList.toggle("active", cb.checked);
+                    updateSummary();
+                  });
+                });
+
+              // Add to basket
+              document
+                .getElementById("addToBasketBtn")
+                .addEventListener("click", function () {
+                  updateSummary();
+
+                  if (typeof sendMessageToParent === "function") {
+                    var lineItems = [];
+
+                    // Base application item
+                    lineItems.push({
+                      productType: "Merchandise",
+                      name: "Provisional driving licence application",
+                      description: "Provisional driving licence application",
+                      qty: 1,
+                      productURL:
+                        "https://sales-endlessaisle.s3.us-east-1.amazonaws.com/ukpolnew/img/passportcheck.png",
+                      allowDiscounts: true,
+                      allowPromotions: true,
+                      allowPriceOverride: true,
+                      allowRefund: true,
+                      allowVoid: true,
+                      rollupEnabled: true,
+                      sku: "DL_APPLY",
+                      properties: [],
+                      price: { amount: "25.00", currencyId: "GBP" },
+                      allowQtyChange: true,
+                    });
+
+                    // Fixed charges: postage + postal order
+
+                    // Additional services
+                    Array.from(
+                      document.querySelectorAll(
+                        ".service-choice input[type='checkbox']:checked",
+                      ),
+                    ).forEach(function (input) {
+                      var row = input.closest(".service-choice");
+                      var priceVal = row
+                        ? parseFloat(
+                            row.getAttribute("data-price-value") || "0",
+                          ).toFixed(2)
+                        : "0.00";
+                      lineItems.push({
+                        productType: "Merchandise",
+                        name: input.value,
+                        description: input.value,
+                        qty: 1,
+                        productURL:
+                          "https://sales-endlessaisle.s3.us-east-1.amazonaws.com/ukpolnew/img/passportcheck.png",
+                        allowDiscounts: true,
+                        allowPromotions: true,
+                        allowPriceOverride: true,
+                        allowRefund: true,
+                        allowVoid: true,
+                        rollupEnabled: true,
+                        sku: input.value.includes("Special")
+                          ? "DL_SPECIAL_DELIVERY"
+                          : "DL_SIGNED_DELIVERY",
+                        properties: [],
+                        price: { amount: priceVal, currencyId: "GBP" },
+                        allowQtyChange: true,
+                      });
+                    });
+
+                    var objMes = { type: "addToBasket", message: [] };
+                    lineItems.forEach(function (productObj) {
+                      objMes.message.push(productObj);
+                    });
+                    console.log("Sending message to parent:", objMes);
+                    sendMessageToParent(objMes);
+                  }
+                  showStep(5);
+                });
+
+              // Continue to checkout (demo end)
+              document
+                .getElementById("completeBtn")
+                .addEventListener("click", function () {
+                  updateSummary();
+                  showStep(6);
+                });
+
+              // Restart from complete
+              var restartBtnApply = document.getElementById("restartBtnApply");
+              if (restartBtnApply) {
+                restartBtnApply.addEventListener("click", function () {
+                  resetServices();
+                  setRadioGroup('input[name="readinessChoice"]', "ready-photo");
+                  setRadioGroup('input[name="paymentChoice"]', "postal");
+                  updateSummary();
+                  showStep(1);
+                });
+              }
+
+              // Cancel
+              document
+                .querySelectorAll("[data-cancel]")
+                .forEach(function (btn) {
+                  btn.addEventListener("click", function () {
+                    resetServices();
+                    setRadioGroup(
+                      'input[name="readinessChoice"]',
+                      "ready-photo",
+                    );
+                    setRadioGroup('input[name="paymentChoice"]', "postal");
+                    updateSummary();
+                    showStep(1);
+                  });
+                });
+
+              // Initialise
+              setRadioGroup('input[name="readinessChoice"]', "ready-photo");
+              setRadioGroup('input[name="paymentChoice"]', "postal");
+              resetServices();
+              updateSummary();
+              renderStepper();
+            })();
+          </script>
+        </div>
+      </main>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

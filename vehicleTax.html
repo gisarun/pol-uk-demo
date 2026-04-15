@@ -1,0 +1,1321 @@
+<!doctype html>
+<html class="reb" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tax your vehicle</title>
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style-mortage.css" />
+    <link rel="stylesheet" type="text/css" href="css/overridden-style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="css/style-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/jquery-ui-1.10.3.custom.min.css"
+    />
+
+    <script>
+      var contextPath = "";
+    </script>
+    <script type="text/javascript">
+      var editMode = false;
+    </script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/main-min.js"></script>
+    <script type="text/javascript" src="js/init-min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/jquery.menu-aim.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/jqueryui.js"></script>
+    <style>
+      .est-nav-header
+        .est-row
+        .est-mobile-overlay.active
+        .est-find-branch::before,
+      .est-nav-header .est-row .est-header-element.est-find-branch::before {
+        background-image: url("img/Top-Nav.png");
+      }
+
+      .est-nav-header
+        .est-row
+        .est-mobile-overlay.active
+        .est-help-support::before,
+      .est-nav-header .est-row .est-header-element.est-help-support::before {
+        background-image: url("img/Help-support.png");
+      }
+
+      .est-nav-header .est-row .est-header-element.est-search::before {
+        background-image: url("img/Search.png");
+      }
+
+      .est-nav-header .est-row .est-header-element.est-search.active::before {
+        background-image: url("img/search_white.png");
+      }
+
+      .est-nav-header .est-row .po-logo {
+        margin-left: 0;
+      }
+
+      @media screen and (max-width: 767px) {
+        .est-nav-header .est-row .po-logo {
+          margin-left: -8px;
+        }
+      }
+
+      .ui-autocomplete {
+        z-index: 10001;
+      }
+
+      .vehicle-tax-page {
+        background: #f6f3f6;
+      }
+
+      .vehicle-tax-page .o-container--large {
+        box-sizing: border-box;
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+
+      .vehicle-tax-page .vehicle-tax-hero {
+        background: #fff1fa;
+        padding: 42px 0 48px;
+        margin-bottom: 24px;
+        border-top: 1px solid #e4dce3;
+        border-bottom: 1px solid #d7cfd6;
+      }
+
+      .vehicle-tax-page .vehicle-tax-breadcrumbs {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 12px;
+        padding-left: 32px;
+        color: #5f516a;
+      }
+
+      .vehicle-tax-page .vehicle-tax-breadcrumbs a {
+        color: #5f516a;
+        text-decoration: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-breadcrumbs a:hover {
+        text-decoration: underline;
+      }
+
+      .vehicle-tax-page .vehicle-tax-hero h1 {
+        margin: 0 0 12px;
+        color: #2d2237;
+        font-size: 42px;
+        line-height: 48px;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-weight: normal;
+        text-align: center;
+      }
+
+      .vehicle-tax-page .vehicle-tax-hero p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #54495d;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .vehicle-tax-page .vehicle-tax-layout {
+        padding-bottom: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-panel,
+      .vehicle-tax-page .vehicle-tax-card {
+        background: #fff;
+        padding: 32px;
+        margin-bottom: 24px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-section {
+        margin-top: 28px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-panel h2,
+      .vehicle-tax-page .vehicle-tax-card h3 {
+        margin: 0 0 16px;
+        color: #2d2237;
+        font-size: 30px;
+        line-height: 36px;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-weight: normal;
+      }
+
+      .vehicle-tax-page .vehicle-tax-panel p,
+      .vehicle-tax-page .vehicle-tax-card p,
+      .vehicle-tax-page .vehicle-tax-panel li,
+      .vehicle-tax-page .vehicle-tax-card li {
+        color: #4d4d4d;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-layout {
+        display: grid;
+        grid-template-columns: 310px minmax(0, 1fr);
+        gap: 0;
+        margin-top: 24px;
+        background: #fff;
+        align-items: start;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tabs {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 1px solid #e1dbe0;
+        border-right: 0;
+        border-radius: 6px 0 0 6px;
+        overflow: hidden;
+        background: #fff;
+        align-self: start;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tabs li {
+        margin: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-button {
+        width: 100%;
+        border: 0;
+        border-left: 4px solid transparent;
+        border-bottom: 1px solid #e1dbe0;
+        background: #faf8fa;
+        color: #2d2d2d;
+        text-align: left;
+        padding: 34px 28px;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        cursor: pointer;
+      }
+
+      .vehicle-tax-page
+        .vehicle-tax-tabs
+        li:last-child
+        .vehicle-tax-tab-button {
+        border-bottom: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-button.is-active {
+        border-left-color: #e50058;
+        background: #fff;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-panels {
+        background: #fff;
+        border: 1px solid #e1dbe0;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-panel {
+        display: none;
+        padding: 40px 48px 36px;
+        min-height: 100%;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-panel.is-active {
+        display: block;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-panel h3 {
+        margin: 0 0 22px;
+        color: #2d2d2d;
+        font-size: 28px;
+        line-height: 34px;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-weight: normal;
+      }
+
+      .vehicle-tax-page .vehicle-tax-tab-panel br {
+        content: "";
+        display: block;
+        margin-bottom: 1.5em;
+      }
+
+      .vehicle-tax-page .vehicle-tax-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-list li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: -3px;
+        color: #2d2237;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .vehicle-tax-page .vehicle-tax-steps {
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-step-copy strong,
+      .vehicle-tax-page .vehicle-tax-card strong {
+        display: block;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-weight: normal;
+        margin-bottom: 4px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-link {
+        color: #234cc5;
+        text-decoration: underline;
+      }
+
+      .vehicle-tax-page .vehicle-tax-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-split {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr) 70px minmax(240px, 0.9fr);
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-split::before,
+      .vehicle-tax-page .vehicle-tax-split::after {
+        content: "";
+        position: absolute;
+        left: calc(50% - 50vw);
+        width: 100vw;
+        border-top: 1px solid #e1dbe0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-split::before {
+        top: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-split::after {
+        bottom: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-card.compact {
+        padding: 24px 28px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-steps-actions {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-split-separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        color: #7b7086;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .vehicle-tax-page .vehicle-tax-accordion {
+        border: 1px solid #e2dbe6;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .vehicle-tax-page .vehicle-tax-accordion-toggle {
+        width: 100%;
+        border: 0;
+        background: #fff;
+        color: #2d2237;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px 22px;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: left;
+      }
+
+      .vehicle-tax-page .vehicle-tax-accordion-toggle::after {
+        content: "\2304";
+        flex: 0 0 auto;
+        color: #3f3155;
+        font-size: 18px;
+        line-height: 1;
+        transition: transform 0.2s ease;
+      }
+
+      .vehicle-tax-page .vehicle-tax-accordion.is-open .vehicle-tax-accordion-toggle::after {
+        transform: rotate(180deg);
+      }
+
+      .vehicle-tax-page .vehicle-tax-accordion-panel {
+        display: none;
+        padding: 0 22px 22px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-accordion.is-open .vehicle-tax-accordion-panel {
+        display: block;
+      }
+
+      .vehicle-tax-page .vehicle-tax-step-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-step-list li + li {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #ece7ec;
+      }
+
+      .vehicle-tax-page .vehicle-tax-step-title {
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-step-body {
+        margin-top: 6px;
+        color: #555;
+        font-size: 17px;
+        line-height: 27px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-online-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+      }
+
+      .vehicle-tax-page .vehicle-tax-online-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      .vehicle-tax-page .vehicle-tax-brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-brand img {
+        width: 68px;
+        height: auto;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-box {
+        background: #fff;
+        border-left: 10px solid #d93854;
+        border-radius: 0 14px 14px 0;
+        padding: 56px 140px 64px;
+        margin: 0 auto;
+        max-width: 1300px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-search-row {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 12px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-input {
+        flex: 0 1 480px;
+        min-height: 70px;
+        border: 2px solid #7f7a80;
+        border-radius: 6px;
+        padding: 18px 20px;
+        font-size: 18px;
+        line-height: 28px;
+        color: #333;
+        background: #fff;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-section {
+        background: #fcf4f8;
+        margin-top: 0;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 92px 0 96px;
+        border-bottom: 1px solid #e1dbe0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-section h3 {
+        margin: 0;
+        font-size: 34px;
+        line-height: 42px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-section h3 .vehicle-tax-accent {
+        color: #d93854;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-section > p {
+        margin: 18px 0 42px;
+        font-size: 25px;
+        line-height: 36px;
+        color: #4d4d4d;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-label {
+        display: block;
+        margin-bottom: 6px;
+        color: #222;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: normal;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-prompt {
+        margin: 0;
+        font-size: 24px;
+        line-height: 34px;
+        color: #4d4d4d;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 194px;
+        min-height: 68px;
+        padding: 0 28px;
+        border-radius: 6px;
+        background: #33214f;
+        color: #fff;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 22px;
+        line-height: 28px;
+        text-decoration: none;
+        text-transform: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-branch-button:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.7fr) minmax(420px, 1.3fr);
+        gap: 56px;
+        align-items: center;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo img {
+        width: 100%;
+        max-width: 420px;
+        min-height: 260px;
+        border-radius: 8px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo-copy h3 {
+        margin: 0 0 28px;
+        font-size: 30px;
+        line-height: 38px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo-copy p {
+        margin: 0 0 28px;
+        font-size: 18px;
+        line-height: 34px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo-copy .vehicle-tax-actions {
+        margin-top: 40px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border-radius: 999px;
+        background: #d81845;
+        color: #fff;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-promo-button:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-width: 960px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq li {
+        background: #fff;
+        border: 1px solid #ece7ec;
+        border-radius: 4px;
+        padding: 0;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq li + li {
+        margin-top: 20px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 22px 24px;
+        color: #2d2237;
+        font-family: ProbaPro-Bold, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: normal;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq-question::after {
+        content: "\2304";
+        flex: 0 0 auto;
+        color: #3f3155;
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq-section {
+        background: #f7f5f7;
+        border-top: 1px solid #e1dbe0;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq-inner {
+        max-width: none;
+        margin: 0;
+        padding: 0 15%;
+        box-sizing: border-box;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq-section h3 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-faq-section .vehicle-tax-actions {
+        margin-top: 34px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-note {
+        margin-top: 18px;
+        color: #666;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .vehicle-tax-page .vehicle-tax-inline-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .vehicle-tax-page .vehicle-tax-inline-list li + li {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid #ece7ec;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .vehicle-tax-page .o-container--large {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+
+        .vehicle-tax-page .vehicle-tax-faq-inner {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .vehicle-tax-page .o-container--large {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-faq-inner {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-hero {
+          padding: 28px 0 32px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-hero h1 {
+          font-size: 32px;
+          line-height: 38px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-hero p,
+        .vehicle-tax-page .vehicle-tax-panel p,
+        .vehicle-tax-page .vehicle-tax-card p,
+        .vehicle-tax-page .vehicle-tax-panel li,
+        .vehicle-tax-page .vehicle-tax-card li {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-panel,
+        .vehicle-tax-page .vehicle-tax-card {
+          padding: 24px 20px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-branch-section {
+          padding: 44px 0 48px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-branch-box {
+          padding: 32px 24px 36px;
+          border-left-width: 8px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-branch-section h3 {
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-branch-section > p,
+        .vehicle-tax-page .vehicle-tax-branch-prompt {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-branch-label {
+          font-size: 20px;
+          line-height: 28px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-input {
+          flex-basis: 100%;
+          min-height: 56px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-branch-button {
+          min-width: 170px;
+          min-height: 56px;
+          font-size: 18px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-breadcrumbs {
+          padding-left: 20px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-tab-layout,
+        .vehicle-tax-page .vehicle-tax-split,
+        .vehicle-tax-page .vehicle-tax-promo {
+          grid-template-columns: 1fr;
+        }
+
+        .vehicle-tax-page .vehicle-tax-split-separator {
+          min-height: 0;
+          padding: 4px 0;
+        }
+
+        .vehicle-tax-page .vehicle-tax-online-card {
+          justify-content: flex-start;
+        }
+
+        .vehicle-tax-page .vehicle-tax-promo {
+          gap: 28px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-promo img {
+          min-height: 280px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-promo-copy h3 {
+          margin-bottom: 18px;
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-promo-copy p {
+          margin-bottom: 20px;
+          font-size: 16px;
+          line-height: 28px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-promo-copy .vehicle-tax-actions {
+          margin-top: 28px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-tabs {
+          border-right: 0;
+          border-bottom: 1px solid #e1dbe0;
+        }
+
+        .vehicle-tax-page .vehicle-tax-tab-button {
+          padding: 20px 18px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .vehicle-tax-page .vehicle-tax-tab-panel {
+          padding: 24px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body class="vehicle-tax-page">
+    <div class="container" id="top">
+      <a href="#maincontent" class="no-vis-skip-main" id="skip-to-main"
+        >Skip to main content</a
+      >
+      <header class="header brace site" role="banner">
+        <header id="est-nav-container" class="est-nav-header">
+          <div>
+            <div class="est-row header-height">
+              <a href="index.html" tabindex="1" class="po-logo inline">
+                <img
+                  class="logo"
+                  src="img/po-logo.svg"
+                  alt="Post Office logo"
+                />
+              </a>
+              <div
+                id="est-search-btn"
+                class="est-header-element est-search"
+                tabindex="5"
+                role="button"
+              >
+                Search
+              </div>
+              <div class="est-mobile-overlay inactive">
+                <a
+                  tabindex="4"
+                  href="#"
+                  class="est-header-element est-find-branch"
+                  >Branch finder</a
+                >
+                <a
+                  tabindex="3"
+                  href="#"
+                  class="est-header-element est-help-support"
+                  >Help &amp; support</a
+                >
+              </div>
+              <a
+                tabindex="2"
+                href="#"
+                class="est-header-element est-login est-button"
+                >Log in</a
+              >
+            </div>
+            <nav class="nav-padding-zero" aria-hidden="true">
+              <div id="est-menu-button" class="est-tablet-menu-title-box">
+                <a
+                  href="#"
+                  role="button"
+                  class="est-tablet-menu-title"
+                  aria-expanded="false"
+                  >Menu</a
+                >
+              </div>
+            </nav>
+          </div>
+        </header>
+      </header>
+
+      <main class="main white" id="maincontent" role="main" tabindex="-1">
+        <section class="vehicle-tax-hero">
+          <div class="o-container o-container--large">
+            <div class="vehicle-tax-breadcrumbs">
+              <a href="index.html">Home</a> /
+              <span>Tax your vehicle</span>
+            </div>
+            <h1>Tax your vehicle</h1>
+            <p>
+              Need to tax a car or motorbike or truck? We’ve got payment options
+              to suit every driver.
+            </p>
+          </div>
+        </section>
+
+        <section class="vehicle-tax-layout">
+          <div class="o-container o-container--large">
+            <div class="vehicle-tax-panel">
+              <h2>How to tax your vehicle</h2>
+              <p>
+                Whether you have a car, a motorbike or even a truck, we make it
+                easy for you to pay your vehicle tax. There are plenty of
+                payment options available to suit you too. Just pop into your
+                nearest participating Post Office.
+              </p>
+
+              <div class="vehicle-tax-tab-layout">
+                <ul
+                  class="vehicle-tax-tabs"
+                  role="tablist"
+                  aria-label="Vehicle tax sections"
+                >
+                  <li>
+                    <button
+                      class="vehicle-tax-tab-button is-active"
+                      id="tab-vehicle-documents"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="panel-vehicle-documents"
+                      data-tab-target="panel-vehicle-documents"
+                    >
+                      Vehicle documents
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="vehicle-tax-tab-button"
+                      id="tab-other-documents"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="panel-other-documents"
+                      data-tab-target="panel-other-documents"
+                    >
+                      Other documents
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="vehicle-tax-tab-button"
+                      id="tab-payment"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="panel-payment"
+                      data-tab-target="panel-payment"
+                    >
+                      Payment
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="vehicle-tax-tab-panels">
+                  <div
+                    class="vehicle-tax-tab-panel is-active"
+                    id="panel-vehicle-documents"
+                    role="tabpanel"
+                    aria-labelledby="tab-vehicle-documents"
+                  >
+                    <h3>Vehicle documents</h3>
+                    <p>You’ll need one of the following:</p>
+                    <br />
+                    <ul class="vehicle-tax-list">
+                      <li>
+                        Your V5C logbook or your V5C/2 if you’ve just bought the
+                        vehicle
+                      </li>
+                      <li>Your V11</li>
+                      <li>Your V85/1 if it’s an HGV</li>
+                    </ul>
+                    <br />
+                    <p>
+                      If you don’t have any of these, you’ll need to apply for a
+                      new V5C. Fill out a V62 form, which you can pick up at
+                      your Post Office. The cost is £25.
+                    </p>
+                    <br />
+                    <p>
+                      Use our
+                      <a class="vehicle-tax-link" href="#"
+                        >Branch Finder tool</a
+                      >
+                      to find your nearest participating Post Office.
+                    </p>
+                  </div>
+
+                  <div
+                    class="vehicle-tax-tab-panel"
+                    id="panel-other-documents"
+                    role="tabpanel"
+                    aria-labelledby="tab-other-documents"
+                  >
+                    <h3>Other documents</h3>
+                    <p>
+                      Along with your vehicle document, you’ll need to bring the
+                      following:
+                    </p>
+                    <br />
+                    <ul class="vehicle-tax-list">
+                      <li>A valid MOT certificate</li>
+                      <li>
+                        A valid Exemption Certificate if you claim disabled
+                        vehicle tax
+                      </li>
+                      <li>
+                        A valid GVT or PSVC if this is mentioned on your
+                        reminder
+                      </li>
+                    </ul>
+                    <br />
+                    <p>
+                      If you live in Northern Ireland, you’ll also need a valid
+                      paper copy of your current certificate of insurance or a
+                      cover note.
+                    </p>
+                  </div>
+
+                  <div
+                    class="vehicle-tax-tab-panel"
+                    id="panel-payment"
+                    role="tabpanel"
+                    aria-labelledby="tab-payment"
+                  >
+                    <h3>Payment</h3>
+                    <p>There are plenty of ways to pay:</p>
+                    <br />
+                    <ul class="vehicle-tax-list">
+                      <li>Direct Debit</li>
+                      <li>Cheque</li>
+                      <li>Debit or credit card</li>
+                      <li>Cash</li>
+                      <li>Postal order</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vehicle-tax-section vehicle-tax-split">
+              <div class="vehicle-tax-card">
+                <div class="vehicle-tax-brand">
+                  <h3>DVLA Vehicle tax rates</h3>
+                </div>
+                <p>
+                  The GOV.UK website has a complete list of vehicle tax rates,
+                  so you can check the latest charge before visiting a branch.
+                </p>
+                <div class="vehicle-tax-actions">
+                  <a
+                    href="https://www.gov.uk/vehicle-tax-rate-tables"
+                    class="tdnone ctaAppendParam btn btn-small uppercase red brdr20 clrw fw400"
+                    title="Find your tax rate"
+                    >Find your tax rate</a
+                  >
+                </div>
+              </div>
+
+              <div class="vehicle-tax-card compact">
+                <div class="vehicle-tax-accordion" id="visit-branch-accordion">
+                  <button
+                    class="vehicle-tax-accordion-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="visit-branch-panel"
+                  >
+                    Visit a participating branch
+                  </button>
+                  <div class="vehicle-tax-accordion-panel" id="visit-branch-panel">
+                    <ul class="vehicle-tax-step-list">
+                      <li>
+                        <div class="vehicle-tax-step-title">Bring your documents</div>
+                        <div class="vehicle-tax-step-body">
+                          Check that your details match the vehicle you want to tax.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="vehicle-tax-step-title">Visit a participating branch</div>
+                        <div class="vehicle-tax-step-body">
+                          Ask the counter team to process the service.
+                        </div>
+                      </li>
+                      <li>
+                        <div class="vehicle-tax-step-title">Choose how to pay</div>
+                        <div class="vehicle-tax-step-body">
+                          Use the payment method that suits your renewal.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="vehicle-tax-split-separator">OR</div>
+
+              <div class="vehicle-tax-card compact vehicle-tax-online-card">
+                <div class="vehicle-tax-steps-actions">
+                  <a
+                    href="vehicleTaxJourney.html"
+                    class="tdnone ctaAppendParam btn btn-small uppercase red brdr20 clrw fw400 vehicle-tax-online-button"
+                    title="Complete online"
+                    >Complete online</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="vehicle-tax-section vehicle-tax-branch-section">
+              <div class="vehicle-tax-branch-box">
+                <h3>
+                  Find your nearest
+                  <span class="vehicle-tax-accent">Post Office branch</span>
+                </h3>
+                <br />
+                <p>
+                  Find your local Post Office where you can tax your vehicle
+                </p>
+                <br />
+                <br />
+                <p class="vehicle-tax-branch-label">Find a branch</p>
+                <p class="vehicle-tax-branch-prompt">
+                  Enter a postcode, town, or street name
+                </p>
+                <div class="vehicle-tax-search-row">
+                  <input class="vehicle-tax-input" type="text" placeholder="" />
+                  <a
+                    href="#"
+                    class="vehicle-tax-branch-button"
+                    title="Find branches"
+                    >Find branches</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="vehicle-tax-card vehicle-tax-section">
+              <div class="vehicle-tax-promo">
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+                    alt="Traveler on a road trip in a scenic landscape"
+                  />
+                </div>
+                <div class="vehicle-tax-promo-copy">
+                  <h3>Going off-road?</h3>
+                  <p>
+                    If you’re planning to take your vehicle off the road, for
+                    example if you’re keeping your vehicle in a garage, on a
+                    drive or on private land, you need to make a Statutory
+                    Off-Road Notification (SORN).
+                  </p>
+                  <p>
+                    It’s easy. Simply tick the SORN declaration box on your V11
+                    tax reminder form and bring it into your nearest
+                    participating Post Office.
+                  </p>
+                  <div class="vehicle-tax-actions">
+                    <a
+                      href="#"
+                      class="vehicle-tax-promo-button"
+                      title="Find your nearest branch"
+                      >Find your nearest branch</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vehicle-tax-section vehicle-tax-faq-section">
+              <div class="vehicle-tax-faq-inner">
+                <h3>Common vehicle tax questions</h3>
+                <ul class="vehicle-tax-faq">
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      Which documents do I need to renew my tax?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      How do I tax my new car?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      Do I still need a tax disc for my car?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      Can I tax my Heavy Goods Vehicle at the Post Office?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      How can I get in touch?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      I don’t have my DVLA reminder or my registration
+                      document. Can I still renew my vehicle tax at the Post
+                      Office?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      I’ve changed my vehicle’s tax class. Can I still pay tax
+                      at the Post Office?
+                    </div>
+                  </li>
+                  <li>
+                    <div class="vehicle-tax-faq-question">
+                      My vehicle has been off the road. Can I still tax it at
+                      the Post Office?
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="row">
+          <nav
+            class="nav span-4"
+            role="navigation"
+            aria-labelledby="footer-useful-information"
+          >
+            <h5 class="title js" id="footer-useful-information">
+              Useful information
+            </h5>
+            <ul class="content list-vertical">
+              <li class="children"><a href="#">Help &amp; support</a></li>
+              <li class="children"><a href="#">Terms of use</a></li>
+              <li class="children"><a href="#">Privacy policy</a></li>
+              <li class="children"><a href="#">Accessibility</a></li>
+            </ul>
+            <br />
+            <br />
+            <br />
+          </nav>
+          <nav
+            class="nav span-4"
+            role="navigation"
+            aria-labelledby="footer-products-services"
+          >
+            <h5 class="title js" id="footer-products-services">
+              Products &amp; services
+            </h5>
+            <ul class="content list-vertical">
+              <li class="children"><a href="index.html">Home</a></li>
+              <li class="children">
+                <a href="vehicleTax.html">Tax your vehicle</a>
+              </li>
+              <li class="children"><a href="index.html">Home</a></li>
+            </ul>
+          </nav>
+          <div class="nav span-4 end">
+            <div class="logo span-3">
+              <a href="index.html">
+                <img src="img/po-logo.svg" alt="Post Office logo" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="row">
+            <p>Copyright 2021 The Post Office</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var tabButtons = document.querySelectorAll(".vehicle-tax-tab-button");
+        var tabPanels = document.querySelectorAll(".vehicle-tax-tab-panel");
+
+        function activateTab(targetId) {
+          tabButtons.forEach(function (button) {
+            var isActive = button.getAttribute("data-tab-target") === targetId;
+            button.classList.toggle("is-active", isActive);
+            button.setAttribute("aria-selected", isActive ? "true" : "false");
+          });
+
+          tabPanels.forEach(function (panel) {
+            panel.classList.toggle("is-active", panel.id === targetId);
+          });
+        }
+
+        tabButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            activateTab(button.getAttribute("data-tab-target"));
+          });
+        });
+
+        var branchAccordion = document.getElementById("visit-branch-accordion");
+        var branchAccordionToggle = branchAccordion
+          ? branchAccordion.querySelector(".vehicle-tax-accordion-toggle")
+          : null;
+
+        if (branchAccordion && branchAccordionToggle) {
+          branchAccordionToggle.addEventListener("click", function () {
+            var isOpen = branchAccordion.classList.toggle("is-open");
+            branchAccordionToggle.setAttribute(
+              "aria-expanded",
+              isOpen ? "true" : "false"
+            );
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
